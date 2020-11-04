@@ -12,3 +12,5 @@ export class testme {
 
 
 //in terminal ng g(generate) c(compoment) test(name of compoment) 
+
+//ng g s(service) email
