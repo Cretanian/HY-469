@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { steliosservice } from './stelios.service';
 
@@ -7,7 +7,8 @@ import { steliosservice } from './stelios.service';
   templateUrl: './stelios.component.html',
   styleUrls: ['./stelios.component.css']
 })
-export class SteliosComponent implements OnInit {
+
+export class SteliosComponent {
 
   constructor(service: steliosservice) { 
     
