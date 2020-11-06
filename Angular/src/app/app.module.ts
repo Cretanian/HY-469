@@ -8,10 +8,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 
 import { MatSliderModule } from '@angular/material/slider';
+import { TestListComponent } from './test-list/test-list.component';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TestListComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +24,8 @@ import { MatSliderModule } from '@angular/material/slider';
     NbEvaIconsModule,
     NbStepperModule,
     AppRoutingModule,
-    MatSliderModule
+    MatSliderModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
