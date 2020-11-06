@@ -1,29 +1,29 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
-import { SteliosComponent } from './stelios/stelios.component';
-import { steliosservice } from './stelios/stelios.service';
-import { NavbarComponent } from './navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NbThemeModule, NbLayoutModule, NbStepperModule } from '@nebular/theme';
+import { AppRoutingModule } from './app-routing.module';
+import { NbEvaIconsModule } from '@nebular/eva-icons';
+
+import { MatSliderModule } from '@angular/material/slider';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    SteliosComponent,
-    NavbarComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    NbThemeModule.forRoot({ name: 'default' }),
+    NbLayoutModule,
+    NbEvaIconsModule,
+    NbStepperModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    MatSliderModule
   ],
-  providers: [
-    steliosservice
-  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
- 
