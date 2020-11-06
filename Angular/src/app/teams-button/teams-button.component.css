@@ -1,0 +1,33 @@
+.base {
+    height: 315px;
+    width: 315px;
+    background: linear-gradient(180deg, #468189 48.44%, #245056 100%);
+    border-radius: 2%;
+  }
+
+
+.my_image{
+    border: 0;
+    width:169px;
+    height:169px;
+    border-radius: 2%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.icons_div{
+    text-align: right; 
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 30px
+}
+
+.text{
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 24px;
+    padding: 25px;;
+}

@@ -3,18 +3,22 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NbThemeModule, NbLayoutModule, NbStepperModule } from '@nebular/theme';
+import { NbThemeModule, NbLayoutModule, NbStepperModule,NbSidebarModule, NbButtonModule } from '@nebular/theme';
 import { AppRoutingModule } from './app-routing.module';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 
-import { MatSliderModule } from '@angular/material/slider';
-import { TestListComponent } from './test-list/test-list.component';
-import {MatListModule} from '@angular/material/list';
+
+import {MatButtonModule} from '@angular/material/button';
+import { TeamsButtonComponent } from './teams-button/teams-button.component';
+
+import { OnlineDevicesComponent } from './online-devices/online-devices.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestListComponent
+    TeamsButtonComponent,
+    OnlineDevicesComponent
   ],
   imports: [
     BrowserModule,
@@ -24,10 +28,12 @@ import {MatListModule} from '@angular/material/list';
     NbEvaIconsModule,
     NbStepperModule,
     AppRoutingModule,
-    MatSliderModule,
-    MatListModule
+    NbSidebarModule.forRoot(),
+    NbButtonModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

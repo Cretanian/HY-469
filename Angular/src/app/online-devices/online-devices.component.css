@@ -1,0 +1,31 @@
+.wrapper {
+    height: 85px;
+    width: 720px;
+    display: grid;
+    grid-template-columns: 125px 553px 42px ;
+  }
+
+
+
+.text{
+    color: #3C3C3C;
+    height: 70px;
+    font-size: 24px;
+    margin-left: auto;
+}
+
+.icons_div{
+    float: right;
+    text-align: right;
+    height: 32px;
+    width: 14px;
+}
+
+.active{
+    display:block;margin:auto;
+}
+
+#center{
+    width: 100%; 
+    margin: auto;
+}
