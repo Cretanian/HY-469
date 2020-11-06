@@ -8,9 +8,9 @@ import { Component, OnInit, Input } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   @Input() name: string;
-  @Input() srcImg1: string;
-  @Input() srcImg2: string;
-  @Input() srcImg3: string;
+  @Input() src1: string;
+  @Input() src2: string;
+  @Input() src3: string;
 
   constructor() { }
 
