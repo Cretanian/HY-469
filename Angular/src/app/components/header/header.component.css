@@ -1,0 +1,60 @@
+@media (min-width: 468px) {
+  .container-1 {
+    display: flex;
+    background-color: #468189;
+    /*
+    align-items:flex-start;
+    align-items:flex-end;
+    align-items:center;
+    
+    flex-direction:column;
+    */
+  }
+}
+
+.container-1 div {
+  height: 92px;
+}
+
+.box-1 {
+  flex: 1;
+  order: 1;
+  background-color: #468189;
+}
+
+.box-2 {
+  flex: 3;
+  order: 2;
+  background-color: #468189;
+}
+
+.box-3 {
+  flex: 1;
+  order: 3;
+  background-color: #468189;
+}
+
+.box-4 {
+  flex: 1;
+  order: 4;
+  background-color: #468189;
+}
+
+.box-5 {
+  flex: 1;
+  order: 5;
+  background-color: #468189;
+}
+
+#Image {
+  padding-top: 8%;
+  padding-left: 15%;
+  width: 80%;
+}
+
+#pageName {
+  padding-left: 15%;
+  color: white;
+  font-size: 48px;
+  padding-top: 8%;
+}
