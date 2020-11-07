@@ -12,4 +12,8 @@ export class TestListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  save(){
+
+  }
+
 }

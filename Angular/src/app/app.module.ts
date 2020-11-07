@@ -9,12 +9,16 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
 
 import { MatSliderModule } from '@angular/material/slider';
 import { TestListComponent } from './test-list/test-list.component';
-import {MatListModule} from '@angular/material/list';
+import { MatListModule} from '@angular/material/list';
+import { GButtonComponent } from './g-button/g-button.component';
+import { MobileFooterComponent } from './mobile-footer/mobile-footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestListComponent
+    TestListComponent,
+    GButtonComponent,
+    MobileFooterComponent
   ],
   imports: [
     BrowserModule,
