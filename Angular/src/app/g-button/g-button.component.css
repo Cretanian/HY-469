@@ -1,7 +1,13 @@
+.container{
+    padding: 10px;
+}
+
 #icon{
     position: absolute;
+    transform: scale(0.5);
 }
 
 #name{
+    margin: auto;
     text-align: center;
 }
