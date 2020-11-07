@@ -17,6 +17,7 @@ export class GButtonComponent {
   @Input('iconSize') iconSize: number;
   @Input('backgroundSize') backgroundSize: number;
 
+  //Element References
   @ViewChild('background') backgroundRef: ElementRef;
   @ViewChild('icon') iconRef: ElementRef;
   @ViewChild('nameRef') nameRef: ElementRef;
@@ -47,6 +48,12 @@ export class GButtonComponent {
   }
 
   setIconOffset(): void{
+    if(this.backgroundSrc == undefined){
+      this.backgroundRef.nativeElement.remove();
+      this.iconRef.nativeElement.style.position = 'relative';
+      return;
+    }
+
     let backgroundWidth = this.backgroundSize || this.backgroundRef.nativeElement.naturalWidth;
     let backgroundHeigth = this.backgroundSize ||this.backgroundRef.nativeElement.naturalHeight;
     let iconWidth = this.iconSize || this.iconRef.nativeElement.naturalWidth;

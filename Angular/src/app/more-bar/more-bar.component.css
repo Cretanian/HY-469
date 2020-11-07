@@ -1,0 +1,13 @@
+#more-bar{
+    margin: auto;
+    width: 150px;
+    background-color: lightgrey;
+}
+
+#arrow-container{
+    background: #468189;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
