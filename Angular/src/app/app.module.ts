@@ -12,13 +12,15 @@ import { TestListComponent } from './test-list/test-list.component';
 import {MatListModule} from '@angular/material/list';
 import { HeaderComponent } from './components/header/header.component';
 import { TVGridComponent } from './components/tvgrid/tvgrid.component';
+import { TvgridListComponent } from './components/tvgrid-list/tvgrid-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TestListComponent,
     HeaderComponent,
-    TVGridComponent
+    TVGridComponent,
+    TvgridListComponent
   ],
   imports: [
     BrowserModule,

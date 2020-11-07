@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'tvgrid',
@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TVGridComponent implements OnInit {
 
-  constructor() { }
+  @Input() title: string;
+  @Input() src: string;
+
+
+
+  constructor() { 
+
+  }
 
   ngOnInit(): void {
+    
   }
 
 }
