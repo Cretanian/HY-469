@@ -17,6 +17,11 @@ import { VolumeSliderComponent } from './volume-slider/volume-slider.component';
 import { GenericVolumeEditorComponent } from './generic-volume-editor/generic-volume-editor.component';
 
 import { TvSpeakerComponent } from './tv-speaker/tv-speaker.component';
+import { ChatMessegesComponent } from './chat-messeges/chat-messeges.component';
+import { FilesComponent } from './files/files.component';
+import { CalendarEventComponent } from './calendar-event/calendar-event.component';
+import { DropdownComponent } from './dropdown/dropdown.component';
+
 
 @NgModule({
   declarations: [
@@ -25,7 +30,11 @@ import { TvSpeakerComponent } from './tv-speaker/tv-speaker.component';
     OnlineDevicesComponent,
     VolumeSliderComponent,
     GenericVolumeEditorComponent,
-    TvSpeakerComponent
+    TvSpeakerComponent,
+    ChatMessegesComponent,
+    FilesComponent,
+    CalendarEventComponent,
+    DropdownComponent
   ],
   imports: [
     BrowserModule,
@@ -39,8 +48,10 @@ import { TvSpeakerComponent } from './tv-speaker/tv-speaker.component';
     NbButtonModule,
     MatButtonModule,
     FormsModule,
+
     NbSelectModule,
     NbCardModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
