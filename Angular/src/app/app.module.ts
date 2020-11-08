@@ -12,13 +12,18 @@ import {MatButtonModule} from '@angular/material/button';
 import { TeamsButtonComponent } from './teams-button/teams-button.component';
 
 import { OnlineDevicesComponent } from './online-devices/online-devices.component';
+import { CallSetingsComponent } from './call-setings/call-setings.component';
+import { FormsModule } from '@angular/forms';
+import { VolumeSliderComponent } from './volume-slider/volume-slider.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TeamsButtonComponent,
-    OnlineDevicesComponent
+    OnlineDevicesComponent,
+    CallSetingsComponent,
+    VolumeSliderComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +35,8 @@ import { OnlineDevicesComponent } from './online-devices/online-devices.componen
     AppRoutingModule,
     NbSidebarModule.forRoot(),
     NbButtonModule,
-    MatButtonModule
+    MatButtonModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
