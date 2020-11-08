@@ -13,6 +13,10 @@ import {MatListModule} from '@angular/material/list';
 import { HeaderComponent } from './components/header/header.component';
 import { TVGridComponent } from './components/tvgrid/tvgrid.component';
 import { TvgridListComponent } from './components/tvgrid-list/tvgrid-list.component';
+import { ParticipantComponent } from './components/participant/participant.component';
+import { ParticipantsComponent } from './components/participants/participants.component';
+import { ParticipantTVComponent } from './participant-tv/participant-tv.component';
+import { ParticipantsTVComponent } from './participants-tv/participants-tv.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { TvgridListComponent } from './components/tvgrid-list/tvgrid-list.compon
     TestListComponent,
     HeaderComponent,
     TVGridComponent,
-    TvgridListComponent
+    TvgridListComponent,
+    ParticipantComponent,
+    ParticipantsComponent,
+    ParticipantTVComponent,
+    ParticipantsTVComponent
   ],
   imports: [
     BrowserModule,

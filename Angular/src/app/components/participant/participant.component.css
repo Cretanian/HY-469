@@ -1,0 +1,28 @@
+.containerAll {
+  margin-top: 44px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.name {
+  order: 1;
+  font-size: 40px;
+  margin-bottom: 0px;
+  margin-left: 4%;
+  flex: 4;
+  color: #656565;
+}
+
+.picture1 {
+  order: 2;
+  flex: 1;
+}
+.picture2 {
+  order: 3;
+  flex: 1;
+}
+.picture3 {
+  order: 4;
+  flex: 1;
+}
