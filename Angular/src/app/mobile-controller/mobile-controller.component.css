@@ -4,10 +4,6 @@
     height: 1560px;
 }
 
-.info-container{
-    
-}
-
 #speaker-photo{
     padding: 5px;
 }
@@ -20,6 +16,11 @@
     line-height: 125%;
     font-size: 250%;
     color: rgb(235, 235, 235);
+}
+
+.more-hamburger{
+    position: absolute;
+    top: 25%;
 }
 
 .button-container{

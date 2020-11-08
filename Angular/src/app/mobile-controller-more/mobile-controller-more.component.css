@@ -1,0 +1,52 @@
+.button-container{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+#circle-container{
+    position: relative;
+    width: 166%;
+    top: 0%;
+    left: 5%;
+}
+
+#x-button{
+    position: absolute;
+    top: 43%;
+    left: 72%;
+}
+
+.button{
+    position: absolute;
+}
+
+#call-settings{
+    top: 5%;
+    left: 70%;
+}
+
+#tv-grid{
+    top: 15%;
+    left: 38%;
+}
+
+#record-screen{
+    top: 32%;
+    left: 15%;
+}
+
+#share-screen{
+    top: 53%;
+    left: 19%;
+}
+
+#team-files{
+    top: 71%;
+    left: 40%;
+}
+
+#participants{
+    top: 77%;
+    left: 71%
+}
