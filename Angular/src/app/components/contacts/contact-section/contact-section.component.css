@@ -1,0 +1,12 @@
+.sectionContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.line {
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 9px;
+  border: 1px solid;
+  border-color: #555555;
+}

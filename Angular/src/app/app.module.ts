@@ -17,6 +17,10 @@ import { ParticipantComponent } from './components/participant/participant.compo
 import { ParticipantsComponent } from './components/participants/participants.component';
 import { ParticipantTVComponent } from './participant-tv/participant-tv.component';
 import { ParticipantsTVComponent } from './participants-tv/participants-tv.component';
+import { ContactComponent } from './components/contacts/contact/contact.component';
+import { ContactListComponent } from './components/contacts/contact-list/contact-list.component';
+import { ContactSectionComponent } from './components/contacts/contact-section/contact-section.component';
+import { ContactSectionListComponent } from './components/contacts/contact-section-list/contact-section-list.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,11 @@ import { ParticipantsTVComponent } from './participants-tv/participants-tv.compo
     ParticipantComponent,
     ParticipantsComponent,
     ParticipantTVComponent,
-    ParticipantsTVComponent
+    ParticipantsTVComponent,
+    ContactComponent,
+    ContactListComponent,
+    ContactSectionComponent,
+    ContactSectionListComponent
   ],
   imports: [
     BrowserModule,
