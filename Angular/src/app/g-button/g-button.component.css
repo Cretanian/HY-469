@@ -4,6 +4,14 @@
 
 #icon{
     position: absolute;
+    /* pointer-events: none | Will happen in the js
+    only if we have a background on the g-button. */
+}
+
+#container2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #name{
@@ -12,3 +20,16 @@
     padding-top: 5px;
     padding-bottom: 5px;
 }
+
+img {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+ }
+ 
+ img:hover {
+    -webkit-filter: brightness(70%);
+    filter: brightness(70%);
+ }

@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-mobile-controller',
+  selector: 'mobile-controller',
   templateUrl: './mobile-controller.component.html',
   styleUrls: ['./mobile-controller.component.css']
 })
