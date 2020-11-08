@@ -14,6 +14,7 @@ import { GButtonComponent } from './g-button/g-button.component';
 import { MobileFooterComponent } from './mobile-footer/mobile-footer.component';
 import { MobileFooterMoreComponent } from './mobile-footer-more/mobile-footer-more.component';
 import { MoreBarComponent } from './more-bar/more-bar.component';
+import { MobileControllerComponent } from './mobile-controller/mobile-controller.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MoreBarComponent } from './more-bar/more-bar.component';
     GButtonComponent,
     MobileFooterComponent,
     MobileFooterMoreComponent,
-    MoreBarComponent
+    MoreBarComponent,
+    MobileControllerComponent
   ],
   imports: [
     BrowserModule,
