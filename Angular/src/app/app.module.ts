@@ -3,27 +3,29 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NbThemeModule, NbLayoutModule, NbStepperModule,NbSidebarModule, NbButtonModule } from '@nebular/theme';
+import { NbThemeModule, NbLayoutModule, NbStepperModule, NbSidebarModule, NbButtonModule, NbSelectModule, NbCardModule } from '@nebular/theme';
 import { AppRoutingModule } from './app-routing.module';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 
-
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
 import { TeamsButtonComponent } from './teams-button/teams-button.component';
 
 import { OnlineDevicesComponent } from './online-devices/online-devices.component';
-import { CallSetingsComponent } from './call-setings/call-setings.component';
+
 import { FormsModule } from '@angular/forms';
 import { VolumeSliderComponent } from './volume-slider/volume-slider.component';
+import { GenericVolumeEditorComponent } from './generic-volume-editor/generic-volume-editor.component';
 
+import { TvSpeakerComponent } from './tv-speaker/tv-speaker.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TeamsButtonComponent,
     OnlineDevicesComponent,
-    CallSetingsComponent,
-    VolumeSliderComponent
+    VolumeSliderComponent,
+    GenericVolumeEditorComponent,
+    TvSpeakerComponent
   ],
   imports: [
     BrowserModule,
@@ -37,9 +39,12 @@ import { VolumeSliderComponent } from './volume-slider/volume-slider.component';
     NbButtonModule,
     MatButtonModule,
     FormsModule,
+    NbSelectModule,
+    NbCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 
-export class AppModule { }
+export class AppModule {
+}

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-volume-slider',
@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VolumeSliderComponent implements OnInit {
   value : number;
+  
+  @Input('image_url') url: string;
+  
   constructor() { }
 
   ngOnInit(): void {

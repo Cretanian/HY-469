@@ -1,0 +1,18 @@
+div.container3 {
+    width: 277px;
+    height: 40px;
+    position: relative;
+ }
+
+ div.container3 p {
+    font-size: 30px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%); 
+ }
+
+.align{
+    display: flex;
+    align-content: space-between;
+}
