@@ -15,6 +15,7 @@ import { MobileFooterComponent } from './mobile-footer/mobile-footer.component';
 import { MoreBarComponent } from './more-bar/more-bar.component';
 import { MobileControllerComponent } from './mobile-controller/mobile-controller.component';
 import { MobileControllerMoreComponent } from './mobile-controller-more/mobile-controller-more.component';
+import { MessageExtraComponent } from './message-extra/message-extra.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { MobileControllerMoreComponent } from './mobile-controller-more/mobile-c
     MobileFooterComponent,
     MoreBarComponent,
     MobileControllerComponent,
-    MobileControllerMoreComponent
+    MobileControllerMoreComponent,
+    MessageExtraComponent
   ],
   imports: [
     BrowserModule,

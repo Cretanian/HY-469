@@ -1,0 +1,22 @@
+.main-container{
+    position: relative;
+}
+
+#emojis{
+    position: absolute;
+    justify-content: center;
+    width: 100%;
+    top: 5%;
+}
+
+#options{
+    position: absolute;
+    justify-content: center;
+    width: 100%;
+    top: 43%;
+}
+
+.options-button{
+    padding-left: 2%;
+    padding-right: 2%;
+}
