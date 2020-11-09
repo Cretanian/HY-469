@@ -1,17 +1,14 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'participant',
-  templateUrl: './participant.component.html',
-  styleUrls: ['./participant.component.css']
+  selector: 'table-participant',
+  templateUrl: './table-participant.component.html',
+  styleUrls: ['./table-participant.component.css']
 })
-export class ParticipantComponent implements OnInit {
+export class TableParticipantComponent implements OnInit {
 
   @Input() name: string;
-  @Input() srcWall: string;
   @Input() src1: string;
-  @Input() src2: string;
-  @Input() src3: string;
   @Input() maxSize: number;
 
 

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import {contactSection} from "../contactSection";
-import {Contact} from "../contact";
+import {contactSection} from "../../utils/contactSection";
+import {Contact} from "../../utils/contact";
 
 @Component({
   selector: 'contact-section-list',

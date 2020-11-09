@@ -21,6 +21,10 @@ import { ContactComponent } from './components/contacts/contact/contact.componen
 import { ContactListComponent } from './components/contacts/contact-list/contact-list.component';
 import { ContactSectionComponent } from './components/contacts/contact-section/contact-section.component';
 import { ContactSectionListComponent } from './components/contacts/contact-section-list/contact-section-list.component';
+import { EmptyComponent } from './components/activities/empty/empty.component';
+import { TableParticipantsComponent } from './components/table-participants/table-participants/table-participants.component';
+import { TableParticipantComponent } from './components/table-participants/table-participant/table-participant.component';
+import { TableFooterComponent } from './components/table-utilComponents/table-footer/table-footer.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +40,11 @@ import { ContactSectionListComponent } from './components/contacts/contact-secti
     ContactComponent,
     ContactListComponent,
     ContactSectionComponent,
-    ContactSectionListComponent
+    ContactSectionListComponent,
+    EmptyComponent,
+    TableParticipantsComponent,
+    TableParticipantComponent,
+    TableFooterComponent
   ],
   imports: [
     BrowserModule,

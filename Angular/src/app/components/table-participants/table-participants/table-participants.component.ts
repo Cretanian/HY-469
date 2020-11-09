@@ -1,14 +1,13 @@
+import { participant } from './../../utils/participant';
 import { Component, OnInit } from '@angular/core';
-import {participant} from '../utils/participant'
 
 @Component({
-  selector: 'participants',
-  templateUrl: './participants.component.html',
-  styleUrls: ['./participants.component.css']
+  selector: 'table-participants',
+  templateUrl: './table-participants.component.html',
+  styleUrls: ['./table-participants.component.css']
 })
-export class ParticipantsComponent implements OnInit {
-
-  participants: participant[]; 
+export class TableParticipantsComponent implements OnInit {
+  participants: participant[];
 
   constructor() { }
 
@@ -56,9 +55,44 @@ export class ParticipantsComponent implements OnInit {
         src2: "../../../assets/icons/rec (3).svg",
         src3: "../../../assets/icons/rec (3).svg"
       },
+      {
+        name: "Savvidaros o magkas",
+        src1: "../../../assets/icons/rec (3).svg",
+        src2: "../../../assets/icons/rec (3).svg",
+        src3: "../../../assets/icons/rec (3).svg"
+      },
+      {
+        name: "Asteriakos",
+        src1: "../../../assets/icons/rec (3).svg",
+        src2: "../../../assets/icons/rec (3).svg",
+        src3: "../../../assets/icons/rec (3).svg"
+      },
+      {
+        name: "Savvidaros o magkas",
+        src1: "../../../assets/icons/rec (3).svg",
+        src2: "../../../assets/icons/rec (3).svg",
+        src3: "../../../assets/icons/rec (3).svg"
+      },
+      {
+        name: "Asteriakos",
+        src1: "../../../assets/icons/rec (3).svg",
+        src2: "../../../assets/icons/rec (3).svg",
+        src3: "../../../assets/icons/rec (3).svg"
+      },
+      {
+        name: "Savvidaros o magkas",
+        src1: "../../../assets/icons/rec (3).svg",
+        src2: "../../../assets/icons/rec (3).svg",
+        src3: "../../../assets/icons/rec (3).svg"
+      },
+      {
+        name: "Asteriakos",
+        src1: "../../../assets/icons/rec (3).svg",
+        src2: "../../../assets/icons/rec (3).svg",
+        src3: "../../../assets/icons/rec (3).svg"
+      },
       
     ]
-
   }
 
 }
