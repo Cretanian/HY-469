@@ -1,0 +1,48 @@
+.main-container{
+    width: 720px;
+    height: 510px;
+    position: relative;
+}
+
+.container{
+    width: 720px;
+    height: 510px;
+    position: absolute;
+    top: 0%;
+}
+
+#menus-container{
+    padding-top: 3%;
+}
+
+#shortcuts{
+    padding-left: 5%;
+}
+
+#menu-buttons{
+    align-items: center;
+    justify-content: center;
+}
+
+#menu-font{
+    font-size: 7vw;
+}
+
+#hr-menu{
+    border: 4px solid grey;
+    border-radius: 4px;
+}
+
+#shortcut-font{
+    font-size: 4vw;
+}
+
+#hr-shortcuts{
+    border: 3px solid grey;
+    border-radius: 3px;
+}
+
+#x-button{
+    position:absolute;
+    left: 46%;
+}

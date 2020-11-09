@@ -16,6 +16,8 @@ import { MoreBarComponent } from './more-bar/more-bar.component';
 import { MobileControllerComponent } from './mobile-controller/mobile-controller.component';
 import { MobileControllerMoreComponent } from './mobile-controller-more/mobile-controller-more.component';
 import { MessageExtraComponent } from './message-extra/message-extra.component';
+import { TableMenuComponent } from './table-menu/table-menu.component';
+import { TableMenuCarouselComponent } from './table-menu-carousel/table-menu-carousel.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { MessageExtraComponent } from './message-extra/message-extra.component';
     MoreBarComponent,
     MobileControllerComponent,
     MobileControllerMoreComponent,
-    MessageExtraComponent
+    MessageExtraComponent,
+    TableMenuComponent,
+    TableMenuCarouselComponent
   ],
   imports: [
     BrowserModule,
