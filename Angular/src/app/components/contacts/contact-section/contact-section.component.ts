@@ -8,6 +8,7 @@ import {Contact} from "../contact"
 })
 export class ContactSectionComponent implements OnInit {
   @Input() sameLetterList: Contact[];
+  @Input() firstLetter: string;
   constructor() { }
 
   ngOnInit(): void {

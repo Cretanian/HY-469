@@ -1,4 +1,3 @@
 <div *ngFor="let section of sections;" >
-    <contact-section *ngIf= "section.hasEntry" [sameLetterList] = "section.contactList" ></contact-section>
+    <contact-section *ngIf= "section.hasEntry" [sameLetterList] = "section.contactList" [firstLetter] = section.firstLetter ></contact-section>
 </div>
-<!-- <contact-section *ngFor = "let section of sections" [sameLetterList] = "section.contactList" ></contact-section> -->
