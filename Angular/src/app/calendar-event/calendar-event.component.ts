@@ -7,10 +7,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class CalendarEventComponent implements OnInit {
 
-  @Input ('image') image_avatar: string;
-  @Input ('name') name: string;
-  @Input ('last_msg') last_msg: string;
-  @Input ('active_state') active: string;
+  @Input ('event') event: string;
+  @Input ('time') time: string;
 
   constructor() { }
 
