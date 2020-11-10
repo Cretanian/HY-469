@@ -28,6 +28,8 @@ import { TableFooterComponent } from './components/table-utilComponents/table-fo
 import { NavigationButtonsComponent } from './components/table-participants/navigation-buttons/navigation-buttons.component';
 import { ParticipantsWindowComponent } from './components/table-participants/participants-window/participants-window.component';
 import { OptionsButtonsComponent } from './components/table-participants/options-buttons/options-buttons.component';
+import { ActivityComponent } from './components/activities/activity/activity.component';
+import { ActivityMessageComponent } from './components/activities/activity-message/activity-message.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,9 @@ import { OptionsButtonsComponent } from './components/table-participants/options
     TableFooterComponent,
     NavigationButtonsComponent,
     ParticipantsWindowComponent,
-    OptionsButtonsComponent
+    OptionsButtonsComponent,
+    ActivityComponent,
+    ActivityMessageComponent
   ],
   imports: [
     BrowserModule,

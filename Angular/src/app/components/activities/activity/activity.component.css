@@ -1,0 +1,44 @@
+.activityContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.bodyContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.profilePic {
+  max-width: 12.4vw;
+  min-width: 12.4vw;
+  max-height: 12.4vw;
+  min-height: 12.4vw;
+  border-radius: 50%;
+  order: 1;
+  flex: 2;
+  margin-left: 5.55555%;
+  margin-right: 2.365%;
+}
+
+.messageContainer {
+  order: 1;
+  flex: 5;
+  font-size: 23px;
+}
+
+.dateContainer {
+  font-size: 25px;
+  order: 2;
+  flex: 1;
+}
+
+.line {
+  margin-left: 3.47vw;
+  margin-right: 3.47vw;
+  border-color: #656565;
+  border-width: 1px;
+  margin-top: 4.1667‬vw;
+  margin-bottom: 4.8611‬vw;
+}
