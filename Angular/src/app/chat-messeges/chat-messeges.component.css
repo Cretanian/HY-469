@@ -1,14 +1,14 @@
 .size{
     width: 650px;
-    height: 99px;
+    height: 100px;
     display: flex;
     flex-direction: row;
 }
 
 .pic{  
     display: inline-block;
-    height: 90px;
-    width: 90px;
+    height: 90%;
+    width: 14%;
     position: relative;
 }
 
@@ -21,8 +21,8 @@
 }
 
 #status{
-    height: 22px;
-    width: 22px;
+    height: 24%;
+    width: 24%;
     border-radius: 50%;
     position: absolute; 
     bottom: 0;
@@ -32,12 +32,10 @@
 .info{
     display: flex;
     flex-direction: column;
-
-    width: 540px;
-    height: 90px;
-    padding-left: 20px;
-    padding-top: 3%;
-
+    width: 86%;
+    height: 90%;;
+    padding-left: 3.5%;
+    padding-top: 2.5%;
 }
 
 .name-date-msg{

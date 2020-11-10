@@ -21,6 +21,7 @@ import { ChatMessegesComponent } from './chat-messeges/chat-messeges.component';
 import { FilesComponent } from './files/files.component';
 import { CalendarEventComponent } from './calendar-event/calendar-event.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
+import { TVIncomingCallComponent } from './tv-incoming-call/tv-incoming-call.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { DropdownComponent } from './dropdown/dropdown.component';
     ChatMessegesComponent,
     FilesComponent,
     CalendarEventComponent,
-    DropdownComponent
+    DropdownComponent,
+    TVIncomingCallComponent
   ],
   imports: [
     BrowserModule,

@@ -8,18 +8,18 @@
 
 .pic{  
     display: inline-block;
-    height: 80px;
-    width: 80px;
+    height: 80%;
+    width: 12.3%;
     position: relative;
 }
 
 .info{
     display: flex;
     flex-direction: column;
-    width: 540px;
-    height: 100px;
-    padding-left: 20px;
-    padding-top: 2%;
+    width: 87.7%;
+    height: 100%;
+    padding-left: 3.5%;
+    padding-top: 1.5%;
 }
 
 .name-msg-more{
