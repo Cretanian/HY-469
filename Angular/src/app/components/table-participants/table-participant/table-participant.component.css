@@ -1,4 +1,5 @@
 .containerAll {
+  min-width: 326px;
   margin-top: 14px;
   display: flex;
   flex-direction: row;

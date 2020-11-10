@@ -25,6 +25,9 @@ import { EmptyComponent } from './components/activities/empty/empty.component';
 import { TableParticipantsComponent } from './components/table-participants/table-participants/table-participants.component';
 import { TableParticipantComponent } from './components/table-participants/table-participant/table-participant.component';
 import { TableFooterComponent } from './components/table-utilComponents/table-footer/table-footer.component';
+import { NavigationButtonsComponent } from './components/table-participants/navigation-buttons/navigation-buttons.component';
+import { ParticipantsWindowComponent } from './components/table-participants/participants-window/participants-window.component';
+import { OptionsButtonsComponent } from './components/table-participants/options-buttons/options-buttons.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +47,10 @@ import { TableFooterComponent } from './components/table-utilComponents/table-fo
     EmptyComponent,
     TableParticipantsComponent,
     TableParticipantComponent,
-    TableFooterComponent
+    TableFooterComponent,
+    NavigationButtonsComponent,
+    ParticipantsWindowComponent,
+    OptionsButtonsComponent
   ],
   imports: [
     BrowserModule,
