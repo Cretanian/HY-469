@@ -16,7 +16,7 @@ export class ParticipantTVComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {    
   }
 
   setMaxSize(width: number,percentage: number) {

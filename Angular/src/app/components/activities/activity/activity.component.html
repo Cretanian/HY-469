@@ -1,10 +1,14 @@
-<div class = bodyContainer>
-    <img class = profilePic src = "../../../../assets/icons/TV Grid 1 Grid.png">
-    <div class = messageContainer>
-        <activity-message></activity-message>
+<div style = "position:relative; margin-top: 4.86vw;">
+    <div class = bodyContainer>
+        <img class = profilePic src = "../../../../assets/icons/TV Grid 1 Grid.png">
+        <div class = messageContainer>
+            <activity-message [msg] = "msg"></activity-message>
+        </div>
+        <div class = dateContainer>
+            {{msg.date}}
+        </div>
     </div>
-    <div class = dateContainer>
-        {{date}}
-    </div>
-</div>
+
+
 <hr class = line>
+</div>

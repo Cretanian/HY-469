@@ -13,12 +13,7 @@ export class ActivityMessageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.msg = new Message(
-      "added you to ", 
-      "../../../../assets/icons/file (1).svg",
-      false,
-      "Team Zoume",
-      "Asterios");
+    
   }
 
 }

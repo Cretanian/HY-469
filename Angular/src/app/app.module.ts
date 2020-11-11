@@ -30,6 +30,7 @@ import { ParticipantsWindowComponent } from './components/table-participants/par
 import { OptionsButtonsComponent } from './components/table-participants/options-buttons/options-buttons.component';
 import { ActivityComponent } from './components/activities/activity/activity.component';
 import { ActivityMessageComponent } from './components/activities/activity-message/activity-message.component';
+import { ActivityListComponent } from './components/activities/activity-list/activity-list.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { ActivityMessageComponent } from './components/activities/activity-messa
     ParticipantsWindowComponent,
     OptionsButtonsComponent,
     ActivityComponent,
-    ActivityMessageComponent
+    ActivityMessageComponent,
+    ActivityListComponent
   ],
   imports: [
     BrowserModule,

@@ -11,9 +11,15 @@
 .primaryText {
   margin-left: 1.52vw;
   font-size: 4.17vw;
+  line-height: normal;
 }
 
-.secondaryText {
-  font-size: 4.17vw;
+#secondLineSecondary {
+  font-size: 3.194vw;
   margin-top: 1.52vw;
+}
+
+#secondLinePrimary {
+  line-height: normal;
+  font-size: 4.17vw;
 }

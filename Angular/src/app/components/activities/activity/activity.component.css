@@ -29,9 +29,10 @@
 }
 
 .dateContainer {
-  font-size: 25px;
-  order: 2;
-  flex: 1;
+  font-size: 3.4722vw;
+  position: absolute;
+  top: 2.78vw;
+  right: 4.86vw;
 }
 
 .line {
@@ -39,6 +40,6 @@
   margin-right: 3.47vw;
   border-color: #656565;
   border-width: 1px;
-  margin-top: 4.1667‬vw;
-  margin-bottom: 4.8611‬vw;
+  margin-top: 4.16vw;
+  margin-bottom: 0px;
 }

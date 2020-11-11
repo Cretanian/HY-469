@@ -1,21 +1,24 @@
 export class Message{
-    firstLine:     string;
+    firstLine:          string;
     src:                string;
-    hasSecondary:       boolean;
-    secondLine:   string;
-    personName:      string;
+    secondLine:         string;
+    personName:         string;
+    date:               string;
+    hasSecondaryText:   boolean;
 
     constructor(
-        firstLine: string, 
-        src: string,
-        hasSecondary:       boolean,
-        secondLine:   string,
-        personName:      string
+        firstLine:      string, 
+        src:            string,
+        hasSecondary:   boolean,
+        secondLine:     string,
+        personName:     string,
+        date:           string
         ){
-            this.hasSecondary = hasSecondary;
-            this.firstLine = firstLine;
-            this.secondLine = secondLine;
-            this.src = src;
-            this.personName = personName;
+            this.hasSecondaryText   = hasSecondary;
+            this.firstLine          = firstLine;
+            this.secondLine         = secondLine;
+            this.src                = src;
+            this.personName         = personName;
+            this.date               = date;
     };
 }
