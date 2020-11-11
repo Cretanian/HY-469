@@ -1,0 +1,38 @@
+.size{
+    width: 2065px;
+    height: 585px;
+    position: relative ;  
+
+}
+
+.color{  
+    position: absolute;      
+    left: 1%;             
+    
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18%;
+    height: 16.5%;
+    background-color: #373944;
+
+}
+div.color p{
+    font-size: 0.7vw;
+    color: white;
+    margin: 0;
+    font-weight: bold;
+    position: absolute;
+
+}
+
+.background{
+    position: absolute;   
+    z-index: -1;
+    bottom: 0;
+    background-color: #F3F3F3;
+    width: 100%;
+    height: 88%;
+}
+

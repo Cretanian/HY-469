@@ -1,6 +1,6 @@
 .size{
-    width: 650px;
-    height: 120px;
+    width: 235px;
+    height: 95px;
     display: flex;
     flex-direction: row;
     box-shadow: 2px 2px 5px grey;
@@ -9,7 +9,7 @@
 
 .color{  
     height: 100%;
-    width: 7%;
+    width: 14.5%;
     background-color: violet;
     border-radius: 1vw 0vw 0vw 1vw;
 }
@@ -20,7 +20,7 @@
     border-color: #7F8185;
     border-width: 0.4vw;
     height: 100%;
-    width: 93%;
+    width: 85.5%;
     border-radius: 0vw 1vw 1vw 0vw;
     display: flex;
     flex-direction: column;
@@ -35,7 +35,7 @@ div.container3 {
  }
 
  div.container3 p {
-    font-size: 7vw;
+    font-size: 4vw;
     margin: 0;
     position: absolute;
     top: 50%;
@@ -50,7 +50,7 @@ div.container3 {
 
  div.container4 p {
     padding-left: 1.5%;
-    font-size: 4vw;
+    font-size: 3vw;
     margin: 0;
     position: absolute;
     top: 40%;

@@ -22,6 +22,9 @@ import { FilesComponent } from './files/files.component';
 import { CalendarEventComponent } from './calendar-event/calendar-event.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { TVIncomingCallComponent } from './tv-incoming-call/tv-incoming-call.component';
+import { CallendaEventWallComponent } from './callenda-event-wall/callenda-event-wall.component';
+import { UpcomingEventsItemComponent } from './upcoming-events-item/upcoming-events-item.component';
+import { GenericUpcomingEventsBackgroundComponent } from './generic-upcoming-events-background/generic-upcoming-events-background.component';
 
 
 @NgModule({
@@ -36,7 +39,10 @@ import { TVIncomingCallComponent } from './tv-incoming-call/tv-incoming-call.com
     FilesComponent,
     CalendarEventComponent,
     DropdownComponent,
-    TVIncomingCallComponent
+    TVIncomingCallComponent,
+    CallendaEventWallComponent,
+    UpcomingEventsItemComponent,
+    GenericUpcomingEventsBackgroundComponent
   ],
   imports: [
     BrowserModule,

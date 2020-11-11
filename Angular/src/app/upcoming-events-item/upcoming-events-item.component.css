@@ -1,0 +1,22 @@
+.size{
+    width: 255px;
+    height: 485px;
+    display: flex;
+    flex-direction: column;
+    background-color: #FEFEFE;
+
+  
+}
+
+.color{  
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    background-color: #373944;
+    font-size: 3vw;
+    color: white;
+}
+
