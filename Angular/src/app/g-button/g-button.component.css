@@ -1,25 +1,39 @@
-.container{
-    padding: 5px;
+.main-container{
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-#icon{
+.button{
+    flex-shrink: 0;
+
+    position: relative;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+
+    padding: 0%;
+    margin: 0%;
+}
+
+.icon{
+    width: 100%;
     position: absolute;
     /* pointer-events: none | Will happen in the js
     only if we have a background on the g-button. */
 }
 
-#container2{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#name{
+.name{
     margin: auto;
     text-align: center;
-    padding-top: 5px;
-    padding-bottom: 5px;
 }
+
+
+/* FOR ANIMATION */
 
 img {
     -webkit-transition: all 0.5s ease;

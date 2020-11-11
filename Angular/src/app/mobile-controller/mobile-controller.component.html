@@ -1,16 +1,20 @@
-<div class='col main-container'>
+<div class='main-container'>
     <!-- (photo + timer) + Call name -->
-    <div class='row info-container'>
-        <g-button id='speaker-photo'
+    <div class='info-container'>
+
+        <g-button class='speaker-photo'
             background='../../assets/call_mode/green_indicator.png'
             icon='../../assets/call_mode/speaker_photo.png'
+            backgroundSize='105'
+            iconSize='100'
             name='01:12:13'
-            fontColor='rgb(235, 235, 235)'
-            fontSize='30'
+            fontColor='rgb(190, 190, 190)'
+            fontSize='4'
         ></g-button>
-        <div id='call-name'>
+        <div class='call-name'>
             {{callName}}
         </div>
+
     </div>
 
     <div class='button-container'>
@@ -20,32 +24,44 @@
         <img class='bone' id='bone3' src='../../assets/call_mode/controller_bone3.png' alt=''>
 
         <!-- Buttons -->
-        <g-button id='mic-button' class='controller-button darken'
+        <g-button id='mic-button' class='controller-button'
             background='../../assets/call_mode_icon_background.png'
             icon='../../assets/mic_icon.png'
+            backgroundSize='100'
+            iconSize='80'
         ></g-button>
         <g-button id='chat-button' class='controller-button'
             background='../../assets/call_mode_icon_background.png'
             icon='../../assets/chat2_icon.png'
+            backgroundSize='100'
+            iconSize='80'
         ></g-button>
         <g-button id='pin-button' class='controller-button'
             background='../../assets/call_mode_icon_background.png'
             icon='../../assets/pin_icon.png'
-        ></g-button>
-        <g-button id='hamburger-button' class='controller-button'
-            background='../../assets/call_mode_icon_background.png'
-            icon='../../assets/hamburger_icon.png'
+            backgroundSize='100'
+            iconSize='80'
         ></g-button>
         <g-button id='hangup-button' class='controller-button'
             background='../../assets/hangup_icon_background.png'
             icon='../../assets/hangup_icon.png'
+            backgroundSize='100'
+            iconSize='80'
+        ></g-button>
+        <g-button id='hamburger-button' class='controller-button'
+            background='../../assets/call_mode_icon_background.png'
+            icon='../../assets/hamburger_icon.png'
+            backgroundSize='100'
+            iconSize='80'
         ></g-button>
         <g-button id='back-button' class='controller-button'
             background='../../assets/call_mode_back_icon_background.png'
             icon='../../assets/back_icon.png'
+            backgroundSize='100'
+            iconSize='80'
         ></g-button>
     </div>
 
-    <mobile-controller-more class='more-hamburger'>
-    </mobile-controller-more>
+    <!-- <mobile-controller-more class='more-hamburger'>
+    </mobile-controller-more> -->
 </div>

@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, Input, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, Input, ViewChild, Renderer2 } from '@angular/core';
 import { NbIconLibraries } from '@nebular/theme';
 
 @Component({
@@ -23,10 +23,14 @@ export class GButtonComponent {
   @ViewChild('icon') iconRef: ElementRef;
   @ViewChild('nameRef') nameRef: ElementRef;
 
-  constructor() {
+  constructor(private renderer: Renderer2) {
   }
 
   ngAfterViewInit(): void {
+    if(this.name == undefined){
+      this.renderer.removeChild(this, this.nameRef.nativeElement);
+    }
+
     this.defineBackground();  
     this.setIconSize();
     this.setBackgroundSize();
@@ -35,17 +39,21 @@ export class GButtonComponent {
   }
 
   setIconSize(): void{
-    if(this.iconSize != undefined){
-      this.iconRef.nativeElement.style.width = this.toPixel(this.iconSize);
-      this.iconRef.nativeElement.style.heigth = 'auto';
-    }
+    if(this.iconSize != undefined)
+      this.iconRef.nativeElement.style.width = this.toPercent(this.iconSize);
+    else
+      this.iconRef.nativeElement.style.width= '100%';
+
+    this.iconRef.nativeElement.style.heigth = 'auto';
   }
 
   setBackgroundSize(): void{
-    if(this.backgroundSize != undefined){
-      this.backgroundRef.nativeElement.style.width = this.toPixel(this.backgroundSize);
-      this.backgroundRef.nativeElement.style.heigth = 'auto';
-    }
+    if(this.backgroundSize != undefined)
+      this.backgroundRef.nativeElement.style.width = this.toPercent(this.backgroundSize);
+    else
+      this.backgroundRef.nativeElement.style.width = "100%";
+
+    this.backgroundRef.nativeElement.style.heigth = 'auto';    
   }
 
   setIconOffset(): void{
@@ -75,12 +83,12 @@ export class GButtonComponent {
 
     //OffsetX
     this.iconRef.nativeElement.style.transform 
-          = "translate(" + this.toPixel(-iconOffsetX) + ", " + this.toPixel(iconOffsetY) + ")";
+          = "translate(" + this.toPercent(-iconOffsetX) + ", " + this.toPercent(iconOffsetY) + ")";
   }
 
   setFontSize(){
     if(this.fontSize != undefined){
-      this.nameRef.nativeElement.style.fontSize = this.toPixel(this.fontSize);
+      this.nameRef.nativeElement.style.fontSize = this.fontSize + "vw";
     }
   }
 
@@ -106,8 +114,8 @@ export class GButtonComponent {
   }
 
   //Util
-  toPixel = (arg: number): string => {
-    return (arg + "px");
+  toPercent = (arg: number): string => {
+    return (arg + "%");
   } 
 
 }

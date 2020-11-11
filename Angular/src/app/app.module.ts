@@ -18,6 +18,10 @@ import { MobileControllerMoreComponent } from './mobile-controller-more/mobile-c
 import { MessageExtraComponent } from './message-extra/message-extra.component';
 import { TableMenuComponent } from './table-menu/table-menu.component';
 import { TableMenuCarouselComponent } from './table-menu-carousel/table-menu-carousel.component';
+import { AccountMenuComponent } from './account-menu/account-menu.component';
+import { ConversationPreviewComponent } from './conversation-preview/conversation-preview.component';
+import { ConversationMessagePreviewComponent } from './conversation-message-preview/conversation-message-preview.component';
+import { EmojiCounterComponent } from './emoji-counter/emoji-counter.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,11 @@ import { TableMenuCarouselComponent } from './table-menu-carousel/table-menu-car
     MobileControllerMoreComponent,
     MessageExtraComponent,
     TableMenuComponent,
-    TableMenuCarouselComponent
+    TableMenuCarouselComponent,
+    AccountMenuComponent,
+    ConversationPreviewComponent,
+    ConversationMessagePreviewComponent,
+    EmojiCounterComponent
   ],
   imports: [
     BrowserModule,

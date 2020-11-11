@@ -1,8 +1,12 @@
-#footer{
+.main-container{
+    width: 100vw;
+    height: auto;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #468189;
+    padding: 5px;
 }
 
 .footer-button{

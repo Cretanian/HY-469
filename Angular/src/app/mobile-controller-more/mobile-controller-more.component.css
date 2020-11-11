@@ -20,6 +20,7 @@
 
 .button{
     position: absolute;
+    width: 25%;
 }
 
 #call-settings{

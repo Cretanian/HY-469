@@ -1,0 +1,25 @@
+.contents{
+    width: 100%;
+    min-width: 5px;
+
+    border-radius: 5px;
+    border-style: solid;
+    border-color: lightgrey;
+    background-color: white;
+    border-width: thin;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+.amount{
+    font-size: 2.5vw;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.emoji{
+    width: 50%;
+}

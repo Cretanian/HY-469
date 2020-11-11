@@ -1,19 +1,45 @@
 .main-container{
     position: relative;
+    width: 100%;
+    height: auto;
+    background-color: red;;
 }
 
-#emojis{
+.background{
+    width: 100%;
+}
+
+.emojis{
     position: absolute;
-    justify-content: center;
+
     width: 100%;
     top: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#options{
+.space{
+    flex: 1;
+}
+
+.emojis{
+    flex: 1;
+}
+
+
+.options{
     position: absolute;
-    justify-content: center;
+
     width: 100%;
     top: 43%;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .options-button{

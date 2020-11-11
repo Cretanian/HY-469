@@ -6,26 +6,27 @@
 
 .container{
     width: 720px;
-    height: 510px;
+    height: auto;;
     position: absolute;
     top: 0%;
+    left: 2%;
+    margin: auto;
 }
 
-#menus-container{
-    padding-top: 3%;
+#menu-buttons{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    margin: auto;
 }
 
 #shortcuts{
     padding-left: 5%;
 }
 
-#menu-buttons{
-    align-items: center;
-    justify-content: center;
-}
-
 #menu-font{
-    font-size: 7vw;
+    font-size: 3.5em;
 }
 
 #hr-menu{
@@ -34,7 +35,7 @@
 }
 
 #shortcut-font{
-    font-size: 4vw;
+    font-size: 2em;
 }
 
 #hr-shortcuts{
@@ -43,6 +44,7 @@
 }
 
 #x-button{
-    position:absolute;
-    left: 46%;
+    position: absolute;
+    top: 112%;
+    left: 44.7%;
 }
