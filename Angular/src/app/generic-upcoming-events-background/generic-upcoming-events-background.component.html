@@ -1,10 +1,14 @@
 
 <div class = "size">
     <div class="color">
-        <p>{{day}} | {{month}} {{date}} 
+        <p>{{day}}{{month}}{{date}} 
     </div>
 
-    <div class = "background">
-
+    <div class = "background">    
+        <app-todays-events
+        *ngFor="let border of border_array;"
+        [time] = border.border_time
+        [header] = border.border_header
+        ></app-todays-events>
     </div>
 </div>

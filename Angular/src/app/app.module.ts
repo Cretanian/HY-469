@@ -25,6 +25,11 @@ import { TVIncomingCallComponent } from './tv-incoming-call/tv-incoming-call.com
 import { CallendaEventWallComponent } from './callenda-event-wall/callenda-event-wall.component';
 import { UpcomingEventsItemComponent } from './upcoming-events-item/upcoming-events-item.component';
 import { GenericUpcomingEventsBackgroundComponent } from './generic-upcoming-events-background/generic-upcoming-events-background.component';
+import { TodaysEventsComponent } from './todays-events/todays-events.component';
+import { FDisplayUpcomingEventsComponent } from './f-display-upcoming-events/f-display-upcoming-events.component';
+import { CallendarHeadComponent } from './callendar-head/callendar-head.component';
+import { FinalCalendarComponent } from './final-calendar/final-calendar.component';
+import { TvCamerasWallComponent } from './tv-cameras-wall/tv-cameras-wall.component';
 
 
 @NgModule({
@@ -42,7 +47,12 @@ import { GenericUpcomingEventsBackgroundComponent } from './generic-upcoming-eve
     TVIncomingCallComponent,
     CallendaEventWallComponent,
     UpcomingEventsItemComponent,
-    GenericUpcomingEventsBackgroundComponent
+    GenericUpcomingEventsBackgroundComponent,
+    TodaysEventsComponent,
+    FDisplayUpcomingEventsComponent,
+    CallendarHeadComponent,
+    FinalCalendarComponent,
+    TvCamerasWallComponent
   ],
   imports: [
     BrowserModule,

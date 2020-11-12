@@ -1,31 +1,31 @@
 .size{
-    width: 235px;
-    height: 95px;
+    width: 5vw;
+    height: 1.5vw;
     display: flex;
     flex-direction: row;
-    box-shadow: 2px 2px 5px grey;
-    border-radius: 1vw 1vw 1vw 1vw;
+    box-shadow: 0.04vw 0.04vw 0.1vw grey;
+    border-radius: 0.02vw 0.02vw 0.02vw 0.02vw;
+    margin: auto;
+    margin-top: 0.40vw;
 }
 
 .color{  
     height: 100%;
     width: 14.5%;
     background-color: violet;
-    border-radius: 1vw 0vw 0vw 1vw;
+    border-radius: 0.02vw 0vw 0vw 0.02vw;
 }
 
 .info{
-    color: #373737;
-    border-style: solid solid solid none;
-    border-color: #7F8185;
-    border-width: 0.4vw;
+    background-color: #E3E3E3;
     height: 100%;
     width: 85.5%;
-    border-radius: 0vw 1vw 1vw 0vw;
+    border-radius: 0vw 0.02vw 0.02vw 0vw;
     display: flex;
     flex-direction: column;
     padding-left: 3%;
     float: left;
+    font-weight: medium;
 }
 
 div.container3 {
@@ -35,7 +35,9 @@ div.container3 {
  }
 
  div.container3 p {
-    font-size: 4vw;
+    color: black;
+    font-size: 0.5vw;
+    font-weight: medium;
     margin: 0;
     position: absolute;
     top: 50%;
@@ -49,8 +51,9 @@ div.container3 {
  }
 
  div.container4 p {
+    color: black;
     padding-left: 1.5%;
-    font-size: 3vw;
+    font-size: 0.44vw;
     margin: 0;
     position: absolute;
     top: 40%;
