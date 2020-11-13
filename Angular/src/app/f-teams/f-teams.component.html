@@ -1,0 +1,14 @@
+<div class="phone">
+    <div class="header"></div>
+
+    <div class="body">       
+        <app-teams-button
+            *ngFor= 'let team of teams_array'
+            [image] = 'team.image'
+            [groop_name] = 'team.groop_name'
+        ></app-teams-button>
+    </div>
+
+    <div class="navbar"></div>
+
+</div>

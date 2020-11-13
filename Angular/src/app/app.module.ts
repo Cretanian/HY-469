@@ -30,6 +30,16 @@ import { FDisplayUpcomingEventsComponent } from './f-display-upcoming-events/f-d
 import { CallendarHeadComponent } from './callendar-head/callendar-head.component';
 import { FinalCalendarComponent } from './final-calendar/final-calendar.component';
 import { TvCamerasWallComponent } from './tv-cameras-wall/tv-cameras-wall.component';
+import { Tv3mainComponent } from './tv3main/tv3main.component';
+import { Tv1mainComponent } from './tv1main/tv1main.component';
+import { Screenshare1mainComponent } from './screenshare1main/screenshare1main.component';
+import { Tv3x3mainComponent } from './tv3x3main/tv3x3main.component';
+import { TvChatOnComponent } from './tv-chat-on/tv-chat-on.component';
+import { FOnlineDivicesComponent } from './f-online-divices/f-online-divices.component';
+import { FTeamsComponent } from './f-teams/f-teams.component';
+import { GenDayCalendarComponent } from './gen-day-calendar/gen-day-calendar.component';
+import { FCalendarPhoneComponent } from './f-calendar-phone/f-calendar-phone.component';
+import { DaysCalendarListComponent } from './days-calendar-list/days-calendar-list.component';
 
 
 @NgModule({
@@ -52,7 +62,17 @@ import { TvCamerasWallComponent } from './tv-cameras-wall/tv-cameras-wall.compon
     FDisplayUpcomingEventsComponent,
     CallendarHeadComponent,
     FinalCalendarComponent,
-    TvCamerasWallComponent
+    TvCamerasWallComponent,
+    Tv3mainComponent,
+    Tv1mainComponent,
+    Screenshare1mainComponent,
+    Tv3x3mainComponent,
+    TvChatOnComponent,
+    FOnlineDivicesComponent,
+    FTeamsComponent,
+    GenDayCalendarComponent,
+    FCalendarPhoneComponent,
+    DaysCalendarListComponent
   ],
   imports: [
     BrowserModule,

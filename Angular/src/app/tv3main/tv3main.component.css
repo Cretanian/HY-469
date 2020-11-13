@@ -1,0 +1,15 @@
+.tv{
+    width: 1920px;
+    height: 1080px;
+    background-color: #373944;
+    display: flex;
+    flex-direction: row;
+}
+
+.cameras{
+    width: 34.375vw;
+    height: 100%;
+    background-color:  #373944(10, 14, 243);
+    display: flex;
+    flex-direction: column;
+}

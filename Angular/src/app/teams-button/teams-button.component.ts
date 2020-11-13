@@ -7,9 +7,9 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TeamsButtonComponent implements OnInit {
 
-  @Input('image_url') url: string;
+  @Input('image') image: string;
   @Input('redirect') redirect: string;
-  @Input('tag') groop_name: string;
+  @Input('groop_name') groop_name: string;
   constructor() {
     
   }

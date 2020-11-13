@@ -1,8 +1,9 @@
 .wrapper {
     height: 70px;
-    width: 720px;
+    width: 100%;
     display: flex;
     flex-direction: row;
+    margin: auto;
 }
 
 .active{

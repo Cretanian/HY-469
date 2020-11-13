@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-tv-cameras-wall',
-  templateUrl: './tv-cameras-wall.component.html',
-  styleUrls: ['./tv-cameras-wall.component.css']
+  selector: 'app-tv-chat-on',
+  templateUrl: './tv-chat-on.component.html',
+  styleUrls: ['./tv-chat-on.component.css']
 })
-export class TvCamerasWallComponent implements OnInit {
-  
+export class TvChatOnComponent implements OnInit {
   speakers_array:speakers[] = [
     {
       "image" : '/assets/tv-speaker/user.png',
@@ -27,30 +26,15 @@ export class TvCamerasWallComponent implements OnInit {
       "mic" : '/assets/slider/mic.png',
       "speaker" : 'Stelios stamatakis'
     },
-    {
-      "image" : '/assets/tv-speaker/user.png',
-      "mic" : '/assets/slider/mic.png',
-      "speaker" : 'Stelios stamatakis'
-    },
-    {
-      "image" : '/assets/tv-speaker/user.png',
-      "mic" : '/assets/slider/mic.png',
-      "speaker" : 'Stelios stamatakis'
-    },
-    {
-      "image" : '/assets/tv-speaker/user.png',
-      "mic" : '/assets/slider/mic.png',
-      "speaker" : 'Stelios stamatakis'
-    },
+    
     ]; 
-  constructor() { 
-  
-  }
+  constructor() { }
 
   ngOnInit(): void {
   }
 
 }
+
 class speakers{
   image:string;
   mic:string;
