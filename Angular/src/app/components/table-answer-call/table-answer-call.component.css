@@ -1,0 +1,51 @@
+.container1 {
+  position: relative;
+  max-width: 18.8vw;
+  max-height: 7.5vw;
+}
+
+.backgroundImage {
+  width: 18.8vw;
+  height: 7.5vw;
+}
+
+.text {
+  position: absolute;
+  top: 15px;
+  left: 6px;
+
+  max-width: 11.3vw;
+  color: white;
+  font-size: 1.07vw;
+  font-weight: 500;
+}
+
+.button {
+  width: 5.236vw;
+  height: 2.145vw;
+}
+
+#pickup {
+  position: absolute;
+  top: 4.794vw;
+  left: 0.378vw;
+}
+
+#hangup {
+  position: absolute;
+  top: 4.794vw;
+  left: 5.93vw;
+}
+
+.profilePic {
+  position: absolute;
+  left: 11.92vw;
+  top: 0.63vw;
+
+  height: 6.182vw;
+  width: 6.182vw;
+
+  border-radius: 50%;
+  background: radial-gradient(50% 50% at 50% 50%, #9c9c9c 94.27%, #ebebeb 100%);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}

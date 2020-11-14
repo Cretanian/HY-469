@@ -1,6 +1,6 @@
 .footer {
-  position: fixed;
-  min-width: 325px;
+  position: relative;
+  min-width: 100%;
   max-width: 325px;
   bottom: 0px;
   height: 41px;

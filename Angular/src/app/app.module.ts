@@ -31,6 +31,11 @@ import { OptionsButtonsComponent } from './components/table-participants/options
 import { ActivityComponent } from './components/activities/activity/activity.component';
 import { ActivityMessageComponent } from './components/activities/activity-message/activity-message.component';
 import { ActivityListComponent } from './components/activities/activity-list/activity-list.component';
+import { DropdownComponent } from './components/dropdown/dropdown.component';
+import { DropdownMenuComponent } from './components/dropdown-menu/dropdown-menu.component';
+import { TableAnswerCallComponent } from './components/table-answer-call/table-answer-call.component';
+import { TableTVgridComponent } from './components/table-tvgrid/table-tvgrid.component';
+import { TableTvgridButtonComponent } from './components/table-tvgrid-button/table-tvgrid-button.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +61,12 @@ import { ActivityListComponent } from './components/activities/activity-list/act
     OptionsButtonsComponent,
     ActivityComponent,
     ActivityMessageComponent,
-    ActivityListComponent
+    ActivityListComponent,
+    DropdownComponent,
+    DropdownMenuComponent,
+    TableAnswerCallComponent,
+    TableTVgridComponent,
+    TableTvgridButtonComponent
   ],
   imports: [
     BrowserModule,

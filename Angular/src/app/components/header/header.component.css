@@ -1,7 +1,14 @@
-@media (min-width: 468px) {
+.fixedContainer {
+  position: fixed;
+  top: 0px;
+}
+
+@media (min-width: 400px) {
   .container-1 {
     display: flex;
     background-color: #468189;
+    align-items: center;
+    min-height: 12.638vw;
   }
 }
 
@@ -40,16 +47,14 @@
 }
 
 #Image {
-  padding-top: 17%;
-  padding-bottom: 15%;
-  padding-left: 15%;
-  width: 70%;
+  max-height: 7.6388vw;
+  width: 100%;
 }
 
 #pageName {
   padding-left: 12%;
   color: white;
   font-size: 7vw;
-  padding-top: 9%;
-  padding-bottom: 5%;
+  margin-bottom: 0px;
+  /* padding-top: 4.027vw; */
 }
