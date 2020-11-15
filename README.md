@@ -1,5 +1,6 @@
 # HY469
-ZoomΕ
+
+ZoomΕ re
 
 git clone https://github.com/Cretanian/HY469.git
 
@@ -10,7 +11,6 @@ https://akveo.github.io/nebular/
 https://ionicframework.com/docs/intro/cli
 https://material.angular.io/guide/getting-started
 
-
-in terminal ng g(generate) c(compoment) test(name of compoment) 
+in terminal ng g(generate) c(compoment) test(name of compoment)
 
 ng g s(service) email
