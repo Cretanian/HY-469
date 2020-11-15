@@ -20,7 +20,7 @@ import { TvSpeakerComponent } from './tv-speaker/tv-speaker.component';
 import { ChatMessegesComponent } from './chat-messeges/chat-messeges.component';
 import { FilesComponent } from './files/files.component';
 import { CalendarEventComponent } from './calendar-event/calendar-event.component';
-import { DropdownComponent } from './dropdown/dropdown.component';
+
 import { TVIncomingCallComponent } from './tv-incoming-call/tv-incoming-call.component';
 import { CallendaEventWallComponent } from './callenda-event-wall/callenda-event-wall.component';
 import { UpcomingEventsItemComponent } from './upcoming-events-item/upcoming-events-item.component';
@@ -40,6 +40,16 @@ import { FTeamsComponent } from './f-teams/f-teams.component';
 import { GenDayCalendarComponent } from './gen-day-calendar/gen-day-calendar.component';
 import { FCalendarPhoneComponent } from './f-calendar-phone/f-calendar-phone.component';
 import { DaysCalendarListComponent } from './days-calendar-list/days-calendar-list.component';
+import { ChatListComponent } from './chat-list/chat-list.component';
+import { FChatComponent } from './f-chat/f-chat.component';
+import { FilesListComponent } from './files-list/files-list.component';
+import { FFilesComponent } from './f-files/f-files.component';
+import { OutAudioComponent } from './in/out-audio/out-audio.component';
+import { GenericHeaderItemComponent } from './generic-header-item/generic-header-item.component';
+import { AudioSettingsCameraComponent } from './audio-settings-camera/audio-settings-camera.component';
+import { CameraSettingsComponent } from './camera-settings/camera-settings.component';
+import { ParticipantsSettingsComponent } from './participants-settings/participants-settings.component';
+import { FCallSettingsComponent } from './f-call-settings/f-call-settings.component';
 
 
 @NgModule({
@@ -53,7 +63,6 @@ import { DaysCalendarListComponent } from './days-calendar-list/days-calendar-li
     ChatMessegesComponent,
     FilesComponent,
     CalendarEventComponent,
-    DropdownComponent,
     TVIncomingCallComponent,
     CallendaEventWallComponent,
     UpcomingEventsItemComponent,
@@ -72,7 +81,17 @@ import { DaysCalendarListComponent } from './days-calendar-list/days-calendar-li
     FTeamsComponent,
     GenDayCalendarComponent,
     FCalendarPhoneComponent,
-    DaysCalendarListComponent
+    DaysCalendarListComponent,
+    ChatListComponent,
+    FChatComponent,
+    FilesListComponent,
+    FFilesComponent,
+    OutAudioComponent,
+    GenericHeaderItemComponent,
+    AudioSettingsCameraComponent,
+    CameraSettingsComponent,
+    ParticipantsSettingsComponent,
+    FCallSettingsComponent
   ],
   imports: [
     BrowserModule,

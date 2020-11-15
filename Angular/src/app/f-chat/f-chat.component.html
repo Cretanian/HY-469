@@ -1,0 +1,13 @@
+<div class="phone">
+    <div class="header"></div>
+
+    <div class="body">       
+        <app-chat-list
+            *ngFor= 'let chat of chats_array'
+            [header] = 'chat.header'
+        ></app-chat-list>
+    </div>
+
+    <div class="navbar"></div>
+
+</div>

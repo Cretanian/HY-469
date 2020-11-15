@@ -3,6 +3,7 @@
     flex-direction: row;
     height: 40px;
     width: 395px;
+    padding-top: 5px;
 }
 
 .slider-align{

@@ -1,8 +1,9 @@
 .align{
     display: flex;
-    align-content: space-between;
+    align-items: baseline;
     height: 50px;
     width: 670px;
+    margin-bottom: 25px;
 }
 
 div.container3 {
@@ -12,9 +13,15 @@ div.container3 {
  }
 
  div.container3 p {
-    font-size: 4vw;
+    font-size: 36px;
     margin: 0;
     position: absolute;
     top: 50%;
     transform: translate(0, -50%); 
  }
+ .wrapper {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+   }
