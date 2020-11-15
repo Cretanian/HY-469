@@ -1,0 +1,9 @@
+.buttonsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttonImg {
+  margin-top: 10px;
+}

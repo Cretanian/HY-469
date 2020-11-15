@@ -1,0 +1,108 @@
+.ComponentContainer {
+  margin-top: 8%;
+  margin-left: 0%;
+  display: flex;
+  flex-direction: column;
+}
+
+.Image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.imageContainer {
+  display: block;
+  margin-top: 3.5%;
+  order: 2;
+}
+
+.CheckboxContainer {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  order: 1;
+}
+
+/* Hide the browser's default radio button */
+.CheckboxContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  order: 1;
+  position: relative;
+  height: 44px;
+  width: 44px;
+  border-style: solid;
+  border-color: #ffcd57;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  margin-left: 5.5%;
+  box-shadow: 0px 10px 8px #c8c8c8;
+}
+
+/* On mouse-over, add a grey background color */
+.CheckboxContainer:hover input ~ .checkmark {
+  background-color: rgb(236, 236, 236);
+}
+
+/* When the radio button is checked, add a blue background */
+.CheckboxContainer input:checked ~ .checkmark {
+  border-style: solid;
+  background-color: #ffffff;
+  border-color: #ffcd57;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.CheckboxContainer input:checked ~ .checkmark:after {
+  display: inline-block;
+}
+
+/* Style the indicator (dot/circle) */
+.CheckboxContainer .checkmark:after {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: #ffcd57;
+}
+
+.TextAndCheckContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.text {
+  order: 2;
+  margin-bottom: 0px;
+  margin-left: 2%;
+  font-weight: bolder;
+  font-size: 33px;
+  text-shadow: 0px 3px 8px #c8c8c8;
+}
+
+.line {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 4%;
+  border: 5px solid;
+  border-color: #f0f0f0;
+}

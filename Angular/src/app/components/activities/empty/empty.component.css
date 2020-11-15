@@ -1,0 +1,25 @@
+.activitiesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#image {
+  order: 1;
+  margin-top: 19%;
+  margin-bottom: 18%;
+}
+
+.header {
+  order: 2;
+  font-weight: 430;
+  font-size: 5vw;
+  margin-bottom: 5%;
+}
+
+.text {
+  text-align: center;
+  font-size: 4vw;
+  font-weight: 400;
+  order: 3;
+}

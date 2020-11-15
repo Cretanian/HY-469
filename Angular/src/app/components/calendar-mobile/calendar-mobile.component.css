@@ -1,0 +1,52 @@
+.componentContainer {
+  width: 98.61111vw;
+  height: 30.69444vw;
+  background: #ffffff;
+  box-sizing: border-box;
+  margin-top: 2px;
+  margin-left: 0.694vw;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.monthContainer {
+  position: relative;
+  top: 0px;
+  left: 17.77vw;
+  margin-right: 0px;
+  width: 63.75vw;
+  height: 9.72222vw;
+  background-color: #656565;
+  border-bottom-right-radius: 2.2vw;
+  border-bottom-left-radius: 2.2vw;
+  box-shadow: 0px 1.38vw 1.38vw rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+}
+
+.monthText {
+  font-size: 6vw;
+  margin: auto;
+  color: white;
+  font-weight: 370;
+  text-shadow: 0px 1.38vw 1.38vw rgba(0, 0, 0, 0.25);
+}
+
+.datesContainer {
+  position: relative;
+  top: 3.055vw;
+  left: 2.8vw;
+  display: grid;
+  grid-template-columns: repeat(7, 13.05555555555556vw);
+  grid-template-rows: repeat(2, 6.944444444444444vw);
+  vertical-align: auto;
+  align-items: center;
+  justify-items: center;
+}
+
+.day {
+  font-size: 3.34vw;
+}
+
+.number {
+  font-size: 3.34vw;
+}
