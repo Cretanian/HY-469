@@ -36,6 +36,7 @@ import { DropdownMenuComponent } from './components/dropdown-menu/dropdown-menu.
 import { TableAnswerCallComponent } from './components/table-answer-call/table-answer-call.component';
 import { TableTVgridComponent } from './components/table-tvgrid/table-tvgrid.component';
 import { TableTvgridButtonComponent } from './components/table-tvgrid-button/table-tvgrid-button.component';
+import { CalendarMobileComponent } from './components/calendar-mobile/calendar-mobile.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { TableTvgridButtonComponent } from './components/table-tvgrid-button/tab
     DropdownMenuComponent,
     TableAnswerCallComponent,
     TableTVgridComponent,
-    TableTvgridButtonComponent
+    TableTvgridButtonComponent,
+    CalendarMobileComponent
   ],
   imports: [
     BrowserModule,
