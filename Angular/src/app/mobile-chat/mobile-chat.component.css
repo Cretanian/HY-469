@@ -32,15 +32,16 @@
 
 .chat-start-text-container{
     width: 100%;
+    margin: 0px;
     position: absolute;
-    top: 25%;
 
     display: flex;
     justify-content: center;
-    align-items: center;;
+    align-items: center;
 }
 
 .chat-start-text{
+    margin: 0px;
     padding-left: 3%;
     padding-right: 3%;
     background-color: white;
@@ -55,8 +56,13 @@
     color: #5C5C5C;
 }
 
-
 .chat-bar{
-    position: sticky;
-    bottom: 0px;
+    width: 100%;
+    bottom: 20vw;
+    position: fixed;
+}
+
+.chat-bar-container{
+    background-color: aliceblue;
+    margin-top: 18vw;
 }

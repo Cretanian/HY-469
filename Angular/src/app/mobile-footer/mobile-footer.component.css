@@ -1,16 +1,13 @@
 .main-container{
     width: 100vw;
-    height: auto;
+    height: 100%;
 
     display: flex;
     align-items: center;
-    justify-content: space-between;
     background-color: #468189;
-    padding: 5px;
 }
 
 .footer-button{
-    margin: auto;
-    padding-left: 5px;
-    padding-right: 5px;
+    width: 100%;
+    height: auto;
 }

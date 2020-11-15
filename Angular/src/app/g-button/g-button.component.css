@@ -9,8 +9,6 @@
 }
 
 .button{
-    flex-shrink: 0;
-
     position: relative;
     display: flex; 
     justify-content: center;

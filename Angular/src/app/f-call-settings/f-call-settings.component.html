@@ -1,19 +1,15 @@
 <div class="phone">
-    <div class="header"></div>
+    <header class='header'
+        name='ZoomE'
+        src1='../../assets/emojis/hearts_for_eyes_icon.png'
+        src2='../../assets/emojis/hearts_for_eyes_icon.png'
+        src3='../../assets/emojis/hearts_for_eyes_icon.png'
+    ></header>
 
     <div class="body">       
-        <app-generic-header-item
-        ></app-generic-header-item>
-        
-        <app-audio-settings-camera
-            image = '\assets\tv-speaker\user.png'
-        ></app-audio-settings-camera>
-        
-        <app-participants-settings>
-        
-        </app-participants-settings>
+        <router-outlet style='height: 100%'></router-outlet>
     </div>
 
-    <div class="navbar"></div>
+    <mobile-footer class='navbar'></mobile-footer>
 
 </div>
