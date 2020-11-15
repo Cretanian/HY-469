@@ -1,0 +1,54 @@
+.main-container{
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.sender-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+.sender-profile{
+    width: 18%;
+}
+
+.sender-name{
+    margin: 0px;
+    padding-left: 2%;
+
+    white-space: nowrap;
+    font-size: 4vw;
+    font-weight: bold;
+}
+
+.message-container{
+    position: relative;
+
+    width: 71%;
+
+    border-radius: 5%;
+    border-style: solid;
+    border-color: rgb(236, 236, 236);
+    background-color: rgb(236, 236, 236);
+    border-width: thin;
+}
+
+.message-text{
+    padding: 2%;
+    padding-bottom: 8%;
+    font-weight: 400;
+}
+
+.message-time{
+    position: absolute;
+    top: 80%;
+    left: 89%;
+
+    font-size: 2.2vw;
+}

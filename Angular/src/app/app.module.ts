@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NbThemeModule, NbLayoutModule, NbStepperModule } from '@nebular/theme';
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 
 import { MatSliderModule } from '@angular/material/slider';
@@ -22,6 +22,11 @@ import { AccountMenuComponent } from './account-menu/account-menu.component';
 import { ConversationPreviewComponent } from './conversation-preview/conversation-preview.component';
 import { ConversationMessagePreviewComponent } from './conversation-message-preview/conversation-message-preview.component';
 import { EmojiCounterComponent } from './emoji-counter/emoji-counter.component';
+import { MobileChatComponent } from './mobile-chat/mobile-chat.component';
+import { MobileMessageLeftComponent } from './mobile-message-left/mobile-message-left.component';
+import { MobileMessageComponent } from './mobile-message/mobile-message.component';
+import { MobileChatBarComponent } from './mobile-chat-bar/mobile-chat-bar.component';
+import { MobileTeamMoreComponent } from './mobile-team-more/mobile-team-more.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +43,12 @@ import { EmojiCounterComponent } from './emoji-counter/emoji-counter.component';
     AccountMenuComponent,
     ConversationPreviewComponent,
     ConversationMessagePreviewComponent,
-    EmojiCounterComponent
+    EmojiCounterComponent,
+    MobileChatComponent,
+    MobileMessageLeftComponent,
+    MobileMessageComponent,
+    MobileChatBarComponent,
+    MobileTeamMoreComponent
   ],
   imports: [
     BrowserModule,

@@ -11,6 +11,7 @@ export class GButtonComponent {
   @Input('background') backgroundSrc: string;
   @Input('icon') iconSrc: string;
   @Input('name') name: string;
+  @Input('')
 
   //Extra Parameters
   @Input('fontColor') fontColor: string;

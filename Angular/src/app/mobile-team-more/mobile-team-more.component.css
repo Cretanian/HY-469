@@ -1,0 +1,22 @@
+.main-container{
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-row{
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.button{
+    padding: 2%;
+}
