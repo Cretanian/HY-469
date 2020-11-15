@@ -1,0 +1,18 @@
+.size{
+    
+    width: 1920px;
+    height: 1080px;
+    position: relative;
+    overflow:hidden;
+}
+
+.topcorner{
+    width: 375px;
+    height: 310px;
+    position:absolute;
+    top : 0;
+    right:0;
+    margin-top: 0.7vw;
+    margin-right: 1.2vw;
+
+}

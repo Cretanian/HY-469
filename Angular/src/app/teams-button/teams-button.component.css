@@ -1,0 +1,52 @@
+.base {
+    height: 315px;
+    width: 315px;
+    background: linear-gradient(180deg, #468189 48.44%, #245056 100%);
+    border-radius: 2%;
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+}
+
+.size-img{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center 
+}
+
+.size-img img{
+    border: 0;
+    width:58%;
+    height:97%;
+    border-radius: 2%;
+}
+
+.icons_div{
+    width:100%;
+    height:18%;
+    text-align: right;
+    padding-right: 8%;
+    padding-top: 4%;
+
+}
+
+.icons_div img{
+    width: 10.9%;
+    height: 18%;
+}
+
+.ez{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    height:15%;
+}
+
+.ez p{
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 3.2vw;
+}
