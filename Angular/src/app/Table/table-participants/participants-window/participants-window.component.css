@@ -1,0 +1,26 @@
+.window {
+  display: flex;
+  flex-direction: row;
+  background-color: transparent;
+}
+
+.participantsContainer {
+  max-width: 326px;
+  min-height: 316px;
+  order: 2;
+  border: solid 1px black;
+  display: flex;
+  flex-direction: column;
+}
+
+.navigationButtons {
+  position: fixed;
+  bottom: 0;
+  margin-right: 14px;
+}
+
+.optionsButtons {
+  position: fixed;
+  bottom: 0;
+  margin-left: 6px;
+}

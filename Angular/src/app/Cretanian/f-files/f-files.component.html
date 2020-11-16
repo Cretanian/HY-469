@@ -1,0 +1,14 @@
+<div class="phone">
+    <div class="header"></div>
+
+    <div class="body">   
+        <app-files-list
+            *ngFor= 'let files of files_array'
+            [header] = 'files.header'
+            [icon] = 'files.icon'
+        ></app-files-list>
+    </div>
+
+    <div class="navbar"></div>
+
+</div>
