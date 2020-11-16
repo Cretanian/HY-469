@@ -7,11 +7,16 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TeamsButtonComponent implements OnInit {
 
-  @Input('image') image: string;
+  @Input('icon') iconSrc: string;
   @Input('redirect') redirect: string;
-  @Input('groop_name') groop_name: string;
+  @Input('groupName') groupName: string;
+
   constructor() {
-    
+    if(this.iconSrc == undefined)  
+      this.iconSrc = '../../assets/steli.png'
+
+    if(this.groupName == undefined)
+      this.groupName = 'ZoomE'
   }
 
   ngOnInit(): void {

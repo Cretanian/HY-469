@@ -1,15 +1,20 @@
-<div class = "base">
+<div class = "main-container">
 
-    <div class="icons_div">
-        <img ng-click="myFunction()" src="\assets\teams-button\more_icon.png">
+    <g-button
+        class='main-button'
+        background='../../assets/team_background.png'
+        icon={{iconSrc}}
+        backgroundSize='43'
+        iconSize='23'
+    ></g-button>
+
+    <div class='text-container'>
+        <p>{{groupName}}</p>
     </div>
 
-    <div class="size-img">
-        <img ng-click="myFunction()" src = {{image}}>
-    </div>
- 
-    <div class="ez">
-        <p>{{groop_name}}
-    </div>
+    <g-button
+        class='more-dots'
+        icon='../../assets/more_dots_icon.png'
+    ></g-button>
+
 </div>
-
