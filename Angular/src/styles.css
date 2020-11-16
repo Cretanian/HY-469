@@ -3,28 +3,28 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 */
-.phone{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+.phone {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
-.header{
-    width: 100%;
-    height: 12.639vw;
+.header {
+  width: 100%;
+  height: 12.639vw;
 }
 
-.body{
-    width: 100%;
-    height: 183.333vw;
-    display: flex;
-    overflow-y: auto;
+.body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  overflow-y: auto;
 }
 
-.navbar{
-    width: 100vw;
-    height: 20.69vw;
-    padding: 0px;
+.navbar {
+  width: 100vw;
+  height: 20.69vw;
+  padding: 0px;
 }

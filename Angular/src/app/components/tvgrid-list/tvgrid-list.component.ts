@@ -15,15 +15,15 @@ export class TvgridListComponent implements OnInit {
     this.grids = [
       {
         title: "Grid 1",
-        src: './assets/icons/TV Grid 1 Grid.png'
+        src: './assets/tv-grid/1.png'
       },
       {
         title: "Grid 2",
-        src: './assets/icons/TV Grid 1 Grid.png'
+        src: './assets/tv-grid/1-2.png'
       },
       {
         title: "Grid 3",
-        src: "./assets/icons/TV Grid 1 Grid.png"
+        src: "./assets/tv-grid/3-3.png"
       },
     ]
   }

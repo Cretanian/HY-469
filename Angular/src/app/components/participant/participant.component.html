@@ -1,6 +1,19 @@
-<div #aname class = "containerAll" >{{this.setMaxSize(aname.offsetWidth, 2.083333333333333)}}
+<div #aname class = "containerAll" >{{this.setMaxSize(aname.offsetWidth, 2.283333333333333)}}
     <h1 class = name>{{this.format(name)}}</h1>
-    <img class = picture1 src = {{src1}} width = "51.46px" height = "46.38px">
-    <img class = picture2 src = {{src2}} width = "51.46px" height = "46.38px">
-    <img class = picture3 src = "../../../assets/icons/rec (3).svg" width = "51.46px" height = "46.38px">
+        <g-button  class='picture1'
+            icon= {{src1}}
+            iconSize='7.083'
+        ></g-button>
+
+        <g-button class='picture2'
+            icon= {{src2}}
+            iconSize='6.805'
+        ></g-button>
+
+        <g-button class='picture3'
+            icon= {{src3}}
+            iconSize='4.3055'
+        ></g-button>
+
+    
 </div>

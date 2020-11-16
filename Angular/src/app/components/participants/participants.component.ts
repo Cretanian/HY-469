@@ -16,45 +16,45 @@ export class ParticipantsComponent implements OnInit {
     this.participants = [
       {
         name: "Zacharias Pervolarakis",
-        src1: "../../../assets/icons/rec (3).svg",
-        src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg"
+        src1: "../../../assets/participants-mobile/chat-gray.png",
+        src2: "../../../assets/participants-mobile/sound-gray.png",
+        src3: "../../../assets/participants-mobile/microphone-gray.png"
       },
       {
         name: "Stylianos Stamatakis",
-        src1: "../../../assets/icons/rec (3).svg",
-        src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg"
+        src1: "../../../assets/participants-mobile/chat-gray.png",
+        src2: "../../../assets/participants-mobile/sound-gray.png",
+        src3: "../../../assets/participants-mobile/microphone-gray.png"
       },
       {
         name: "Antonis Agapakis",
-        src1: "../../../assets/icons/rec (3).svg",
-        src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg"
+        src1: "../../../assets/participants-mobile/chat-gray.png",
+        src2: "../../../assets/participants-mobile/sound-gray.png",
+        src3: "../../../assets/participants-mobile/microphone-muted.png"
       },
       {
-        name: "Magkoytara",
-        src1: "../../../assets/icons/rec (3).svg",
-        src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg"
+        name: "Magkoyths Kwnstantinos",
+        src1: "../../../assets/participants-mobile/chat-gray.png",
+        src2: "../../../assets/participants-mobile/sound-gray.png",
+        src3: "../../../assets/participants-mobile/microphone-gray.png"
       },
       {
         name: "Youla Faturu",
-        src1: "../../../assets/icons/rec (3).svg",
-        src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg"
+        src1: "../../../assets/participants-mobile/chat-gray.png",
+        src2: "../../../assets/participants-mobile/sound-gray.png",
+        src3: "../../../assets/participants-mobile/microphone-muted.png"
       },
       {
-        name: "Savvidaros o magkas",
-        src1: "../../../assets/icons/rec (3).svg",
-        src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg"
+        name: "Savvidis Antonis",
+        src1: "../../../assets/participants-mobile/chat-gray.png",
+        src2: "../../../assets/participants-mobile/sound-gray.png",
+        src3: "../../../assets/participants-mobile/microphone-gray.png"
       },
       {
-        name: "Asteriakos",
-        src1: "../../../assets/icons/rec (3).svg",
-        src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg"
+        name: "Leonidis Asterios",
+        src1: "../../../assets/participants-mobile/chat-gray.png",
+        src2: "../../../assets/participants-mobile/sound-gray.png",
+        src3: "../../../assets/participants-mobile/microphone-muted.png"
       },
       
     ]

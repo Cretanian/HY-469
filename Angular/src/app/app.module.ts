@@ -90,6 +90,11 @@ import { CameraSettingsComponent } from './Cretanian/camera-settings/camera-sett
 import { ParticipantsSettingsComponent } from './Cretanian/participants-settings/participants-settings.component';
 import { FCallSettingsComponent } from './Cretanian/f-call-settings/f-call-settings.component';
 import { TeamsComponent } from './Final-Cretanian/teams/teams.component';
+import { ContactsComponent } from './Final-Cretanian/contacts/contacts.component';
+import { ActivityEmptyComponent } from './Final-Cretanian/activity-empty/activity-empty.component';
+import { ActivitiesComponent } from './Final-Cretanian/activities/activities.component';
+import { TVGridMobileComponent } from './Final-Cretanian/tv-grid-mobile/tv-grid-mobile.component';
+import { ParticipantsMobileComponent } from './Final-Cretanian/participants-mobile/participants-mobile.component';
 
 
 
@@ -176,7 +181,12 @@ import { TeamsComponent } from './Final-Cretanian/teams/teams.component';
     CameraSettingsComponent,
     ParticipantsSettingsComponent,
     FCallSettingsComponent,
-    TeamsComponent
+    TeamsComponent,
+    ContactsComponent,
+    ActivityEmptyComponent,
+    ActivitiesComponent,
+    TVGridMobileComponent,
+    ParticipantsMobileComponent
   ],
   imports: [
     BrowserModule,
