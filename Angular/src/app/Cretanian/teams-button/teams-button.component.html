@@ -1,11 +1,21 @@
 <div class = "base">
 
     <div class="icons_div">
-        <img ng-click="myFunction()" src="\assets\teams-button\more_icon.png">
+
+        <g-button
+            class='image'
+            iconSize='5'
+            icon='\assets\teams-button\more_icon.png'
+      ></g-button>
+
     </div>
 
     <div class="size-img">
-        <img ng-click="myFunction()" src = {{image}}>
+        <g-button
+            class='image'
+            iconSize='23'
+            icon='{{image}}'
+      ></g-button>
     </div>
  
     <div class="ez">

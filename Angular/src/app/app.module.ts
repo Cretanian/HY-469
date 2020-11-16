@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms'; 
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -74,7 +76,6 @@ import { Screenshare1mainComponent } from './TV/screenshare1main/screenshare1mai
 import { Tv3x3mainComponent } from './TV/tv3x3main/tv3x3main.component';
 import { TvChatOnComponent } from './TV/tv-chat-on/tv-chat-on.component';
 import { FOnlineDivicesComponent } from './Cretanian/f-online-divices/f-online-divices.component';
-import { FTeamsComponent } from './Cretanian/f-teams/f-teams.component';
 import { GenDayCalendarComponent } from './Cretanian/gen-day-calendar/gen-day-calendar.component';
 import { FCalendarPhoneComponent } from './Cretanian/f-calendar-phone/f-calendar-phone.component';
 import { DaysCalendarListComponent } from './Cretanian/days-calendar-list/days-calendar-list.component';
@@ -88,6 +89,8 @@ import { AudioSettingsCameraComponent } from './Cretanian/audio-settings-camera/
 import { CameraSettingsComponent } from './Cretanian/camera-settings/camera-settings.component';
 import { ParticipantsSettingsComponent } from './Cretanian/participants-settings/participants-settings.component';
 import { FCallSettingsComponent } from './Cretanian/f-call-settings/f-call-settings.component';
+import { TeamsComponent } from './Final-Cretanian/teams/teams.component';
+
 
 
 @NgModule({
@@ -160,7 +163,6 @@ import { FCallSettingsComponent } from './Cretanian/f-call-settings/f-call-setti
     Tv3x3mainComponent,
     TvChatOnComponent,
     FOnlineDivicesComponent,
-    FTeamsComponent,
     GenDayCalendarComponent,
     FCalendarPhoneComponent,
     DaysCalendarListComponent,
@@ -173,14 +175,16 @@ import { FCallSettingsComponent } from './Cretanian/f-call-settings/f-call-setti
     AudioSettingsCameraComponent,
     CameraSettingsComponent,
     ParticipantsSettingsComponent,
-    FCallSettingsComponent
+    FCallSettingsComponent,
+    TeamsComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-
     AppRoutingModule,
-    MatListModule    
+    MatListModule,    
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
