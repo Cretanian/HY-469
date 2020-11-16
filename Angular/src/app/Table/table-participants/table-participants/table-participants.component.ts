@@ -1,4 +1,4 @@
-import { participant } from './../../utils/participant';
+import { participant } from 'app/components/utils/participant';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
