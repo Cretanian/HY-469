@@ -92,6 +92,8 @@ import { ExplorerCalendarComponent } from './Final-Cretanian/explorer-calendar/e
 import { OncallCallSettingsComponent } from './Final-Cretanian/oncall-call-settings/oncall-call-settings.component';
 import { GenericVolumeDropdownComponent } from './Cretanian/generic-volume-dropdown/generic-volume-dropdown.component';
 import { ManyUsersComponent } from './Final-Wall/many-users/many-users.component';
+import { PinboardComponent } from './Wall/pinboard/pinboard.component';
+import { FParticipantsComponent } from './Wall/f-participants/f-participants.component';
 
 
 
@@ -180,7 +182,9 @@ import { ManyUsersComponent } from './Final-Wall/many-users/many-users.component
     ExplorerCalendarComponent,
     OncallCallSettingsComponent,
     GenericVolumeDropdownComponent,
-    ManyUsersComponent
+    ManyUsersComponent,
+    PinboardComponent,
+    FParticipantsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,26 @@
+
+.size{
+    width: 550px;
+    height: 1140px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    width: 100%;
+    background: #373944;
+    color: white;
+    height: 80.75px;
+    font-size: 1.22vw;
+    display: flex;
+    align-items: center;
+    padding-left: 2%;
+}
+
+.board{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 1059.25px;
+    background: #F1F1F1;
+}
