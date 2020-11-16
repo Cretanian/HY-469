@@ -11,7 +11,6 @@ export class GButtonComponent {
   @Input('background') backgroundSrc: string;
   @Input('icon') iconSrc: string;
   @Input('name') name: string;
-  @Input('')
 
   //Extra Parameters
   @Input('fontColor') fontColor: string;
@@ -41,7 +40,7 @@ export class GButtonComponent {
 
   setIconSize(): void{
     if(this.iconSize != undefined)
-      this.iconRef.nativeElement.style.width = this.toPercent(this.iconSize);
+      this.iconRef.nativeElement.style.width = this.toVW(this.iconSize);
     else
       this.iconRef.nativeElement.style.width= '100%';
 
@@ -50,7 +49,7 @@ export class GButtonComponent {
 
   setBackgroundSize(): void{
     if(this.backgroundSize != undefined)
-      this.backgroundRef.nativeElement.style.width = this.toPercent(this.backgroundSize);
+      this.backgroundRef.nativeElement.style.width = this.toVW(this.backgroundSize);
     else
       this.backgroundRef.nativeElement.style.width = "100%";
 
@@ -84,7 +83,7 @@ export class GButtonComponent {
 
     //OffsetX
     this.iconRef.nativeElement.style.transform 
-          = "translate(" + this.toPercent(-iconOffsetX) + ", " + this.toPercent(iconOffsetY) + ")";
+          = "translate(" + this.toVW(-iconOffsetX) + ", " + this.toVW(iconOffsetY) + ")";
   }
 
   setFontSize(){
@@ -115,8 +114,8 @@ export class GButtonComponent {
   }
 
   //Util
-  toPercent = (arg: number): string => {
-    return (arg + "%");
+  toVW = (arg: number): string => {
+    return (arg + "vw");
   } 
 
 }
