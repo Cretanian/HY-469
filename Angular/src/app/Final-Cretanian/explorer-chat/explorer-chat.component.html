@@ -1,0 +1,17 @@
+<div class="phone">
+    <header class='header'
+        name= 'Chat'
+        src1 = '\assets\test.png'
+        src3 = '\assets\fakos.png'
+    ></header>
+
+    <div class="body">     
+        <app-chat-list
+            *ngFor= 'let chat of chats_array'
+            [header] = 'chat.header'
+        ></app-chat-list>
+    </div>
+
+    <mobile-footer class='navbar'></mobile-footer>
+
+</div>

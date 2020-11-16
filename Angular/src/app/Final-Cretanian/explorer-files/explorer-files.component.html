@@ -1,0 +1,18 @@
+<div class="phone">
+    <header class='header'
+        name= 'Files'
+        src1 = '\assets\test.png'
+        src3 = '\assets\fakos.png'
+    ></header>
+
+    <div class="body">     
+        <app-files-list
+            *ngFor= 'let files of files_array'
+            [header] = 'files.header'
+            [icon] = 'files.icon'
+        ></app-files-list>
+    </div>
+
+    <mobile-footer class='navbar'></mobile-footer>
+
+</div>

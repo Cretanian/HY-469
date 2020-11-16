@@ -1,0 +1,19 @@
+<div class="phone">
+    <header class='header'
+        name= 'SmartHome'
+        src1 = '\assets\test.png'
+        src3 = '\assets\fakos.png'
+    ></header>
+
+    <div class="body">     
+        <app-teams-button
+            class='body-item'
+            *ngFor= 'let team of teams_array'
+            [icon] = 'team.iconSrc'
+            [groupName] = 'team.groupName'
+        ></app-teams-button>
+    </div>
+
+    <mobile-footer class='navbar'></mobile-footer>
+
+</div>
