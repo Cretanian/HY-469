@@ -8,41 +8,19 @@ import { Component, OnInit } from '@angular/core';
 export class TeamsComponent implements OnInit {
   teams_array:team[] = [
     {
-      "image" : '/assets/teams-button/a.png',
-      "groop_name" : 'yolololololol'
+      "iconSrc" : '/assets/teams-button/a.png',
+      "groupName" : 'yolololololol'
     },
     {
-      "image" : '/assets/teams-button/a.png',
-      "groop_name" : 'yolololololol'
-    } , 
-    {
-      "image" : '/assets/teams-button/a.png',
-      "groop_name" : 'yolololololol'
-    } ,{
-      "image" : '/assets/teams-button/a.png',
-      "groop_name" : 'yolololololol'
+      "iconSrc" : '/assets/teams-button/a.png',
+      "groupName" : 'yolololololol'
     },
     {
-      "image" : '/assets/teams-button/a.png',
-      "groop_name" : 'yolololololol'
-    } , 
-    {
-      "image" : '/assets/teams-button/a.png',
-      "groop_name" : 'yolololololol'
-    } ,{
-      "image" : '/assets/teams-button/a.png',
-      "groop_name" : 'yolololololol'
-    },
-    {
-      "image" : '/assets/teams-button/a.png',
-      "groop_name" : 'yolololololol'
-    } , 
-    {
-      "image" : '/assets/teams-button/a.png',
-      "groop_name" : 'yolololololol'
-    } 
-    
-    ];
+      "iconSrc" : '/assets/teams-button/a.png',
+      "groupName" : 'yolololololol'
+    }    
+  ];
+
   constructor() { }
 
   ngOnInit(): void {
@@ -51,11 +29,11 @@ export class TeamsComponent implements OnInit {
 }
 
 class team{
-  image:string;
-  groop_name:string;
+  iconSrc:string;
+  groupName:string;
 
   constructor() { 
-    this.image ='';
-    this.groop_name ='';
+    this.iconSrc ='';
+    this.groupName ='';
   }
 }

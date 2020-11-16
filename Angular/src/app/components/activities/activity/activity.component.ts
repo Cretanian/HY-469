@@ -1,4 +1,4 @@
-import { Message } from './../activity-message/activity-message';
+import { Message } from '../activity-message/activity-message';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({

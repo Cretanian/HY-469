@@ -1,4 +1,3 @@
-<<<<<<< HEAD:Angular/src/app/teams-button/teams-button.component.css
 .main-container{   
     width: 100%;
     height: auto;
@@ -8,33 +7,6 @@
 
 .text-container{
     width: 100%;
-=======
-.base {
-    height: 43.75vh;
-    width: 20.50vw;
-    background: linear-gradient(180deg, #468189 48.44%, #245056 100%);
-    border-radius: 2%;
-    display: flex;
-    flex-direction: column;
-    margin: 2.75vw;
-    
-}
-
-.size-img{
-    width: 100%;
-    height: 57%;
-}
-
-.icons_div{
-    width:100%;
-    height:20%;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    padding-right: 7%;
-    padding-top: 7%;
-}
->>>>>>> 1099bab1767c5886e7ecf935401d0dfebde20fda:Angular/src/app/Cretanian/teams-button/teams-button.component.css
 
     position: absolute;;
     top: 76.75%;
