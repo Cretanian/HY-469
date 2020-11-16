@@ -18,30 +18,7 @@ export class TeamsComponent implements OnInit {
     {
       "image" : '/assets/teams-button/a.png',
       "groop_name" : 'yolololololol'
-    } ,{
-      "image" : '/assets/teams-button/a.png',
-      "groop_name" : 'yolololololol'
-    },
-    {
-      "image" : '/assets/teams-button/a.png',
-      "groop_name" : 'yolololololol'
-    } , 
-    {
-      "image" : '/assets/teams-button/a.png',
-      "groop_name" : 'yolololololol'
-    } ,{
-      "image" : '/assets/teams-button/a.png',
-      "groop_name" : 'yolololololol'
-    },
-    {
-      "image" : '/assets/teams-button/a.png',
-      "groop_name" : 'yolololololol'
-    } , 
-    {
-      "image" : '/assets/teams-button/a.png',
-      "groop_name" : 'yolololololol'
-    } 
-    
+    }     
     ];
   constructor() { }
 
