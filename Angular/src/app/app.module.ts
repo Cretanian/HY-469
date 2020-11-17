@@ -52,7 +52,7 @@ import { TableTvgridButtonComponent } from './Table/table-tvgrid-button/table-tv
 import { CalendarMobileComponent } from './components/calendar-mobile/calendar-mobile.component';
 
 /*Cretanian*/
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { TeamsButtonComponent } from './Cretanian/teams-button/teams-button.component';
 import { OnlineDevicesComponent } from './Cretanian/online-devices/online-devices.component';
 import { VolumeSliderComponent } from './Cretanian/volume-slider/volume-slider.component';
@@ -83,18 +83,12 @@ import { OutAudioComponent } from './Cretanian/in/out-audio/out-audio.component'
 import { GenericHeaderItemComponent } from './Cretanian/generic-header-item/generic-header-item.component';
 import { AudioSettingsCameraComponent } from './Cretanian/audio-settings-camera/audio-settings-camera.component';
 import { ParticipantsSettingsComponent } from './Cretanian/participants-settings/participants-settings.component';
-import { ExplorerChatComponent } from './Final-Cretanian/explorer-chat/explorer-chat.component';
-import { ExplorerSmarthomeComponent } from './Final-Cretanian/explorer-smarthome/explorer-smarthome.component';
-import { ExplorerFilesComponent } from './Final-Cretanian/explorer-files/explorer-files.component';
-import { ExplorerTeamsComponent } from './Final-Cretanian/explorer-teams/explorer-teams.component';
-import { ExplorerOnlineDevicesComponent } from './Final-Cretanian/explorer-online-devices/explorer-online-devices.component';
-import { ExplorerCalendarComponent } from './Final-Cretanian/explorer-calendar/explorer-calendar.component';
 import { OncallCallSettingsComponent } from './Final-Cretanian/oncall-call-settings/oncall-call-settings.component';
 import { GenericVolumeDropdownComponent } from './Cretanian/generic-volume-dropdown/generic-volume-dropdown.component';
 import { ManyUsersComponent } from './Final-Wall/many-users/many-users.component';
 import { PinboardComponent } from './Wall/pinboard/pinboard.component';
 import { FParticipantsComponent } from './Wall/f-participants/f-participants.component';
-import { NotFoundComponent } from './Final-Cretanian/not-found/not-found.component';
+
 
 
 
@@ -174,19 +168,13 @@ import { NotFoundComponent } from './Final-Cretanian/not-found/not-found.compone
     OutAudioComponent,
     GenericHeaderItemComponent,
     AudioSettingsCameraComponent,
-    ParticipantsSettingsComponent,
-    ExplorerChatComponent,
-    ExplorerSmarthomeComponent,
-    ExplorerFilesComponent,
-    ExplorerTeamsComponent,
-    ExplorerOnlineDevicesComponent,
-    ExplorerCalendarComponent,
+    ParticipantsSettingsComponent,    
     OncallCallSettingsComponent,
     GenericVolumeDropdownComponent,
     ManyUsersComponent,
     PinboardComponent,
-    FParticipantsComponent,
-    NotFoundComponent
+    FParticipantsComponent,    
+    routingComponents,
   ],
   imports: [
     BrowserModule,

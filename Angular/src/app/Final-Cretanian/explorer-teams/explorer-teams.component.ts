@@ -9,15 +9,15 @@ export class ExplorerTeamsComponent implements OnInit {
   teams_array:team[] = [
     {
       "iconSrc" : '/assets/teams-button/a.png',
-      "groupName" : 'yolololololol'
+      "groupName" : 'ZoomE'
     },
     {
       "iconSrc" : '/assets/teams-button/a.png',
-      "groupName" : 'yolololololol'
-    } , 
+      "groupName" : 'DnD | Reloaded'
+    }, 
     {
       "iconSrc" : '/assets/teams-button/a.png',
-      "groupName" : 'yolololololol'
+      "groupName" : 'Intelligent Living Room'
     }     
     ];
   constructor() { }

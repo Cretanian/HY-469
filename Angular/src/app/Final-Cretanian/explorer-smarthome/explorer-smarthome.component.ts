@@ -9,16 +9,9 @@ export class ExplorerSmarthomeComponent implements OnInit {
   teams_array:team[] = [
     {
       "iconSrc" : '/assets/teams-button/a.png',
-      "groupName" : 'yolololololol'
+      "groupName" : 'Ami Living Room',
+      "routing" : '/explorer-mobile-onlinedevices'
     },
-    {
-      "iconSrc" : '/assets/teams-button/a.png',
-      "groupName" : 'yolololololol'
-    } , 
-    {
-      "iconSrc" : '/assets/teams-button/a.png',
-      "groupName" : 'yolololololol'
-    }     
     ];
   constructor() { }
 
@@ -30,8 +23,10 @@ export class ExplorerSmarthomeComponent implements OnInit {
 class team{
   iconSrc:string;
   groupName:string;
+  routing:string;
   constructor() { 
     this.iconSrc ='';
     this.groupName ='';
+    this.routing ='';
   }
 }

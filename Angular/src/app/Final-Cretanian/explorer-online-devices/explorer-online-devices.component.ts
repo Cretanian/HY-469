@@ -7,74 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExplorerOnlineDevicesComponent implements OnInit {
   devices_array:device[] = [
-    {
-      "icon" : '/assets/online-devices/device_active.png',
-      "name" : 'yolololololol'
-    },
-    {
-      "icon" : '/assets/online-devices/device_active.png',
-      "name" : 'yolololololol'
-    },
-    {
-      "icon" : '/assets/online-devices/device_deactive.png',
-      "name" : 'yolololololol'
-    }, {
-      "icon" : '/assets/online-devices/device_active.png',
-      "name" : 'yolololololol'
-    },
-    {
-      "icon" : '/assets/online-devices/device_active.png',
-      "name" : 'yolololololol'
-    },
-    {
-      "icon" : '/assets/online-devices/device_deactive.png',
-      "name" : 'yolololololol'
-    }, {
-      "icon" : '/assets/online-devices/device_active.png',
-      "name" : 'yolololololol'
-    },
-    {
-      "icon" : '/assets/online-devices/device_active.png',
-      "name" : 'yolololololol'
-    },
-    {
-      "icon" : '/assets/online-devices/device_deactive.png',
-      "name" : 'yolololololol'
-    }, {
-      "icon" : '/assets/online-devices/device_active.png',
-      "name" : 'yolololololol'
-    },
-    {
-      "icon" : '/assets/online-devices/device_active.png',
-      "name" : 'yolololololol'
-    },
-    {
-      "icon" : '/assets/online-devices/device_deactive.png',
-      "name" : 'yolololololol'
-    }, {
-      "icon" : '/assets/online-devices/device_active.png',
-      "name" : 'yolololololol'
-    },
-    {
-      "icon" : '/assets/online-devices/device_active.png',
-      "name" : 'yolololololol'
-    },
-    {
-      "icon" : '/assets/online-devices/device_deactive.png',
-      "name" : 'yolololololol'
-    }, {
-      "icon" : '/assets/online-devices/device_active.png',
-      "name" : 'yolololololol'
-    },
-    {
-      "icon" : '/assets/online-devices/device_active.png',
-      "name" : 'yolololololol'
-    },
-    {
-      "icon" : '/assets/online-devices/device_deactive.png',
-      "name" : 'yolololololol'
-    },
-    
+      {
+        "icon" : '/assets/online-devices/device_active.png',
+        "name" : 'LG Smart TV'
+      },
+      {
+        "icon" : '/assets/online-devices/device_active.png',
+        "name" : 'Smart Table'
+      },
+      {
+        "icon" : '/assets/online-devices/device_deactive.png',
+        "name" : 'Alexa'
+      }    
     ]; 
   constructor() { }
 
