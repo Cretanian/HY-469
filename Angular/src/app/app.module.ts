@@ -94,6 +94,7 @@ import { GenericVolumeDropdownComponent } from './Cretanian/generic-volume-dropd
 import { ManyUsersComponent } from './Final-Wall/many-users/many-users.component';
 import { PinboardComponent } from './Wall/pinboard/pinboard.component';
 import { FParticipantsComponent } from './Wall/f-participants/f-participants.component';
+import { NotFoundComponent } from './Final-Cretanian/not-found/not-found.component';
 
 
 
@@ -184,7 +185,8 @@ import { FParticipantsComponent } from './Wall/f-participants/f-participants.com
     GenericVolumeDropdownComponent,
     ManyUsersComponent,
     PinboardComponent,
-    FParticipantsComponent
+    FParticipantsComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
