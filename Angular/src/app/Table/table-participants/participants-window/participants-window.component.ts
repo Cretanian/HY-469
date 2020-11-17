@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'participants-window',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./participants-window.component.css']
 })
 export class ParticipantsWindowComponent implements OnInit {
+  @Input() navigationButtons: boolean;
+  @Input() participantSelected: boolean;
+
 
   constructor() { }
 

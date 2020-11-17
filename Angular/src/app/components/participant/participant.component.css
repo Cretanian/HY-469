@@ -20,17 +20,17 @@
   color: #656565;
 }
 
-.picture1 {
+.chat {
   order: 2;
   flex: 1;
   margin-left: 12.638vw;
 }
-.picture2 {
+.speaker {
   order: 3;
   flex: 1;
   margin-left: 8.69vw;
 }
-.picture3 {
+.microphone {
   order: 4;
   flex: 1;
   margin-left: 8.05vw;

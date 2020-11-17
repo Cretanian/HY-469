@@ -1,15 +1,25 @@
 <div class = "window">
-    
-    <div class = "participantsContainer" >
-        <table-participants></table-participants>
-        <table-footer title = "Participants"></table-footer>
+    <div 
+        class = "participantsContainer " 
+        style = "overflow-y: scroll;"
+    >
+        <table-participants (click) = "participantSelected = true"></table-participants>
+        <table-footer 
+            title = "Participants"
+            (click) = "navigationButtons = !navigationButtons; participantSelected = false;"
+        ></table-footer>
     </div>
-    <div style=" order:1; margin-right: 77px;">
+    <div 
+        *ngIf = "navigationButtons === true" 
+        style=" order:1; margin-right: 77px;">
         <div class = "navigationButtons">
             <navigation-buttons></navigation-buttons>
         </div>
     </div>
-    <div style=" order:3; margin-right: 77px;">
+    <div 
+        *ngIf = "participantSelected && navigationButtons" 
+         style=" order:3; margin-right: 77px;" 
+    >
         <div class = "optionsButtons">
             <app-options-buttons></app-options-buttons>
         </div>

@@ -1,7 +1,8 @@
 .footer {
-  position: relative;
-  min-width: 100%;
-  max-width: 325px;
+  position: fixed;
+  max-width: 324px;
+  min-width: 324px;
+  max-height: 41px;
   bottom: 0px;
   height: 41px;
   background-color: #373944;
@@ -15,5 +16,6 @@
   font-size: 24px;
   color: white;
   margin-bottom: 0px;
+  margin-top: 0px;
   margin-left: 14px;
 }

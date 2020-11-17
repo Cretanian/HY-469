@@ -13,14 +13,15 @@ export class ParticipantComponent implements OnInit {
   @Input() src2: string;
   @Input() src3: string;
   @Input() maxSize: number;
+  @Input() muted: boolean;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.muted = false;
   }
 
   setMaxSize(width: number,percentage: number) {
-    console.log(width);
     this.maxSize = width * (40.27/100) * (30/720);
   }
 

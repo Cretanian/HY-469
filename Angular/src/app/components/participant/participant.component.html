@@ -1,17 +1,29 @@
 <div #aname class = "containerAll" >{{this.setMaxSize(aname.offsetWidth, 2.283333333333333)}}
     <h1 class = name>{{this.format(name)}}</h1>
-        <g-button  class='picture1'
-            icon= {{src1}}
+        <g-button  class='chat'
+            icon= "../../../assets/participants-mobile/chat-gray.png"
             iconSize='7.083'
         ></g-button>
 
-        <g-button class='picture2'
-            icon= {{src2}}
+        <g-button 
+            class='speaker'
+            icon= "../../../assets/participants-mobile/sound-gray.png"
             iconSize='6.805'
         ></g-button>
 
-        <g-button class='picture3'
-            icon= {{src3}}
+        <g-button 
+            *ngIf = "muted === false" 
+            (click) = "muted = true"
+            class='microphone'
+            icon= "../../../assets/participants-mobile/microphone-gray.png"
+            iconSize='5'
+        ></g-button>
+
+        <g-button 
+            class='microphone'
+            *ngIf = "muted === true" 
+            (click) = "muted = false"  
+            icon= "../../../assets/participants-mobile/microphone-muted.png"
             iconSize='5'
         ></g-button>
 
