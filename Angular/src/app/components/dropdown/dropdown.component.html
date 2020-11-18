@@ -1,13 +1,10 @@
 <div class="dropdown">
-    <div>
-        <div (click) = "dropdownOpen = !dropdownOpen" class = dropdownButtonContainer>   
-            <div class = dropdownButtonText>{{name}}</div>
-            <img class = dropdownButtonImage *ngIf = "dropdownOpen === false" src = "../../../assets/icons/downArrowGray.png">
-            <img class = upButtonImage *ngIf = "dropdownOpen === true" src = "../../../assets/icons/upArrowGray.png">
-        </div>
-        <div *ngIf ="dropdownOpen === true" class="dropdownContentContainer">
-          <dropdown-menu class = "option" (click) = "dropdownOpen = !dropdownOpen" ></dropdown-menu>
-        </div>
-    </div>
-    
+  <div (click) = "dropdownOpen = !dropdownOpen" class = dropdownButtonContainer>   
+      <div class = dropdownButtonText>{{name}}</div>
+      <img class = dropdownButtonImage *ngIf = "dropdownOpen === false" src = "../../../assets/icons/downArrowGray.png">
+      <img class = upButtonImage *ngIf = "dropdownOpen === true" src = "../../../assets/icons/upArrowGray.png">
   </div>
+  <div *ngIf ="dropdownOpen === true" class="dropdownContentContainer">
+    <dropdown-menu class = "option" (click) = "dropdownOpen = !dropdownOpen" ></dropdown-menu>
+  </div>
+</div>
