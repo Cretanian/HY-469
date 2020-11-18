@@ -14,7 +14,7 @@ export class MobileControllerComponent implements OnInit{
   moreOpen: boolean = false;
 
   constructor() { 
-    
+    this.callName = 'Intelligent Living Room Team';
   }
 
   ngOnInit(): void{

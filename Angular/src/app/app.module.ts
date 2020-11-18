@@ -9,7 +9,6 @@ import { MatListModule} from '@angular/material/list';
 import { GButtonComponent } from './g-button/g-button.component';
 import { MobileFooterComponent } from './mobile-footer/mobile-footer.component';
 import { MoreBarComponent } from './more-bar/more-bar.component';
-import { MobileControllerComponent } from './mobile-controller/mobile-controller.component';
 import { MobileControllerMoreComponent } from './mobile-controller-more/mobile-controller-more.component';
 import { MessageExtraComponent } from './message-extra/message-extra.component';
 import { TableMenuComponent } from './Table/table-menu/table-menu.component';
@@ -18,7 +17,6 @@ import { AccountMenuComponent } from './account-menu/account-menu.component';
 import { ConversationPreviewComponent } from './conversation-preview/conversation-preview.component';
 import { ConversationMessagePreviewComponent } from './conversation-message-preview/conversation-message-preview.component';
 import { EmojiCounterComponent } from './emoji-counter/emoji-counter.component';
-import { MobileChatComponent } from './mobile-chat/mobile-chat.component';
 import { MobileMessageLeftComponent } from './mobile-message-left/mobile-message-left.component';
 import { MobileMessageComponent } from './mobile-message/mobile-message.component';
 import { MobileChatBarComponent } from './mobile-chat-bar/mobile-chat-bar.component';
@@ -83,24 +81,14 @@ import { OutAudioComponent } from './Cretanian/in/out-audio/out-audio.component'
 import { GenericHeaderItemComponent } from './Cretanian/generic-header-item/generic-header-item.component';
 import { AudioSettingsCameraComponent } from './Cretanian/audio-settings-camera/audio-settings-camera.component';
 import { ParticipantsSettingsComponent } from './Cretanian/participants-settings/participants-settings.component';
-import { ContactsComponent } from './Final-Cretanian/contacts/contacts.component';
 import { ActivityEmptyComponent } from './Final-Cretanian/activity-empty/activity-empty.component';
-import { ActivitiesComponent } from './Final-Cretanian/activities/activities.component';
-import { TVGridMobileComponent } from './Final-Cretanian/tv-grid-mobile/tv-grid-mobile.component';
-import { ParticipantsMobileComponent } from './Final-Cretanian/participants-mobile/participants-mobile.component';
-import { ConversationsComponent } from './Final-Cretanian/conversations/conversations.component';
 import { MobileControllerCallInfoComponent } from './mobile-controller-call-info/mobile-controller-call-info.component';
-import { MobileJoinMeetingComponent } from './mobile-join-meeting/mobile-join-meeting.component';
 import { MobileMeetingDeviceSettingComponent } from './mobile-meeting-device-setting/mobile-meeting-device-setting.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DimmerComponent } from './dimmer/dimmer.component';
-import { OncallCallSettingsComponent } from './Final-Cretanian/oncall-call-settings/oncall-call-settings.component';
 import { GenericVolumeDropdownComponent } from './Cretanian/generic-volume-dropdown/generic-volume-dropdown.component';
 import { ManyUsersComponent } from './Final-Wall/many-users/many-users.component';
 import { PinboardComponent } from './Wall/pinboard/pinboard.component';
 import { FParticipantsComponent } from './Wall/f-participants/f-participants.component';
-
-
 
 
 @NgModule({
@@ -109,7 +97,6 @@ import { FParticipantsComponent } from './Wall/f-participants/f-participants.com
     GButtonComponent,
     MobileFooterComponent,
     MoreBarComponent,
-    MobileControllerComponent,
     MobileControllerMoreComponent,
     MessageExtraComponent,
     TableMenuComponent,
@@ -118,7 +105,6 @@ import { FParticipantsComponent } from './Wall/f-participants/f-participants.com
     ConversationPreviewComponent,
     ConversationMessagePreviewComponent,
     EmojiCounterComponent,
-    MobileChatComponent,
     MobileMessageLeftComponent,
     MobileMessageComponent,
     MobileChatBarComponent,
@@ -180,18 +166,11 @@ import { FParticipantsComponent } from './Wall/f-participants/f-participants.com
     GenericHeaderItemComponent,
     AudioSettingsCameraComponent,
     ParticipantsSettingsComponent,
-    ContactsComponent,
     ActivityEmptyComponent,
-    ActivitiesComponent,
-    TVGridMobileComponent,
-    ParticipantsMobileComponent,
-    ConversationsComponent,
     MobileControllerCallInfoComponent,
-    MobileJoinMeetingComponent,
     MobileMeetingDeviceSettingComponent,
     DimmerComponent,
     ParticipantsSettingsComponent,    
-    OncallCallSettingsComponent,
     GenericVolumeDropdownComponent,
     ManyUsersComponent,
     PinboardComponent,
@@ -205,7 +184,6 @@ import { FParticipantsComponent } from './Wall/f-participants/f-participants.com
     MatListModule,    
     FormsModule,
     ReactiveFormsModule,
-    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

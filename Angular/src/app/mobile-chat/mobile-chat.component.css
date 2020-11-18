@@ -1,5 +1,5 @@
 .header{
-    background-color: #468189;
+    background-color: #373944;
 }
 
 .main-container{
@@ -73,6 +73,7 @@ mobile-message{
     width: 100%;
     bottom: 20vw;
     position: fixed;
+    bottom: 0px;
 }
 
 .chat-bar-container{

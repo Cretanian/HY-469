@@ -46,5 +46,6 @@
   color: white;
   font-size: 6.66vw;
   margin: 0px;
+  white-space: nowrap;
   /* padding-top: 4.027vw; */
 }

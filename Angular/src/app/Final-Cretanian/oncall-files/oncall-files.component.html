@@ -1,0 +1,15 @@
+<div class="phone">
+    <header class='header' style = "background-color: #373944 ;"
+        name= 'Team Files'
+        src1 = '\assets\tv-grid\back-header.png'
+    ></header>
+
+    <div class="body">     
+        <app-files-list
+            *ngFor= 'let files of files_array'
+            [header] = 'files.header'
+            [icon] = 'files.icon'
+        ></app-files-list>
+    </div>
+
+</div>

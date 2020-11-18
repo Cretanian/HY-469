@@ -1,49 +1,47 @@
 <div class='phone'>
     <header
         class='header'
-        name='Chat Call'
+        name='Current Chat Call'
         src1='../../assets/left_arrow_icon.png'
     ></header>
+    <div class="body">
+        <div class='main-container'>
 
-    <div class='main-container'>
+            <div class='messages'> <!-- Here somehow they will be dynamically created. -->
 
-        <div class='messages'> <!-- Here somehow they will be dynamically created. -->
-
-            <!-- This is the HR bar -->
-            <div class='chat-start'>
-                <hr class='chat-start-hr'>
-                <div class='chat-start-text-container'>
-                    <p class='chat-start-text'>{{messages[0].name}} started a call</p>
+                <!-- This is the HR bar -->
+                <div class='chat-start'>
+                    <hr class='chat-start-hr'>
+                    <div class='chat-start-text-container'>
+                        <p class='chat-start-text'>{{messages[0].name}} started a call</p>
+                    </div>
                 </div>
+
+                <mobile-message
+                    *ngFor='let message of messages'
+                    [photo]='message.photo'
+                    [name]='message.name'
+                    [message]='message.message'
+                    [time]='message.time'
+                    [alignment]='message.alignment'
+                    (click)='openExtras($event)'
+                ></mobile-message>
+
+                <!-- Extras  for when message is clicked -->
+                <message-extra
+                    *ngIf='extrasOpened'
+                    class='message-extra'
+                    (closeEmitter)='closeExtras()'
+                ></message-extra>
+
             </div>
 
-            <mobile-message
-                *ngFor='let message of messages'
-                [photo]='message.photo'
-                [name]='message.name'
-                [message]='message.message'
-                [time]='message.time'
-                [alignment]='message.alignment'
-                (click)='openExtras($event)'
-            ></mobile-message>
-
-            <!-- Extras  for when message is clicked -->
-            <message-extra
-                *ngIf='extrasOpened'
-                class='message-extra'
-                (closeEmitter)='closeExtras()'
-            ></message-extra>
-
-        </div>
-
-        <div class='chat-bar-container'>
-            <mobile-chat-bar
-                #chatBar
-                class='chat-bar'
-            ></mobile-chat-bar>
+            <div class='chat-bar-container'>
+                <mobile-chat-bar
+                    #chatBar
+                    class='chat-bar'
+                ></mobile-chat-bar>
+            </div>
         </div>
     </div>
-
-
-    <mobile-footer class='navbar'></mobile-footer>
 </div>
