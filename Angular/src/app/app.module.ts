@@ -90,6 +90,12 @@ import { CameraSettingsComponent } from './Cretanian/camera-settings/camera-sett
 import { ParticipantsSettingsComponent } from './Cretanian/participants-settings/participants-settings.component';
 import { FCallSettingsComponent } from './Cretanian/f-call-settings/f-call-settings.component';
 import { TeamsComponent } from './Final-Cretanian/teams/teams.component';
+import { ConversationsComponent } from './Final-Cretanian/conversations/conversations.component';
+import { MobileControllerCallInfoComponent } from './mobile-controller-call-info/mobile-controller-call-info.component';
+import { MobileJoinMeetingComponent } from './mobile-join-meeting/mobile-join-meeting.component';
+import { MobileMeetingDeviceSettingComponent } from './mobile-meeting-device-setting/mobile-meeting-device-setting.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { DimmerComponent } from './dimmer/dimmer.component';
 
 
 
@@ -176,7 +182,12 @@ import { TeamsComponent } from './Final-Cretanian/teams/teams.component';
     CameraSettingsComponent,
     ParticipantsSettingsComponent,
     FCallSettingsComponent,
-    TeamsComponent
+    TeamsComponent,
+    ConversationsComponent,
+    MobileControllerCallInfoComponent,
+    MobileJoinMeetingComponent,
+    MobileMeetingDeviceSettingComponent,
+    DimmerComponent
   ],
   imports: [
     BrowserModule,
@@ -184,7 +195,8 @@ import { TeamsComponent } from './Final-Cretanian/teams/teams.component';
     AppRoutingModule,
     MatListModule,    
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

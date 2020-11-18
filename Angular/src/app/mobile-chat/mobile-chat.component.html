@@ -1,108 +1,49 @@
-<div class='main-container' (scroll)="onScroll($event)">
+<div class='phone'>
+    <header
+        class='header'
+        name='Chat Call'
+        src1='../../assets/left_arrow_icon.png'
+    ></header>
 
-    <div class='messages'> <!-- Here somehow they will be dynamically created. -->
-        <div class='chat-start'>
+    <div class='main-container'>
 
-            <hr class='chat-start-hr'>
-            <div class='chat-start-text-container'>
-                <p class='chat-start-text'>China Guy started a call</p>
+        <div class='messages'> <!-- Here somehow they will be dynamically created. -->
+
+            <!-- This is the HR bar -->
+            <div class='chat-start'>
+                <hr class='chat-start-hr'>
+                <div class='chat-start-text-container'>
+                    <p class='chat-start-text'>{{messages[0].name}} started a call</p>
+                </div>
             </div>
-    
+
+            <mobile-message
+                *ngFor='let message of messages'
+                [photo]='message.photo'
+                [name]='message.name'
+                [message]='message.message'
+                [time]='message.time'
+                [alignment]='message.alignment'
+                (click)='openExtras($event)'
+            ></mobile-message>
+
+            <!-- Extras  for when message is clicked -->
+            <message-extra
+                *ngIf='extrasOpened'
+                class='message-extra'
+                (closeEmitter)='closeExtras()'
+            ></message-extra>
+
         </div>
 
-        <mobile-message
-            photo='../../assets/profile_picture.png'
-            name='China Guy'
-            message='Random Shit about some random shit asdasdas asdaa we sda sd sd asd  sadasd a'
-            time='15:32'
-        ></mobile-message>
-
-        <mobile-message
-            name='China Guy'
-            message='Random Shit about some random shit asdasdas asdaa we sda sd sd asd  sadasd a'
-            time='15:32'
-            alignment='right'
-        ></mobile-message>
-
-        <mobile-message
-            photo='../../assets/profile_picture.png'
-            name='China Guy'
-            message='Random Shit about some random shit asdasdas asdaa we sda sd sd asd  sadasd a'
-            time='15:32'
-        ></mobile-message>
-
-        <mobile-message
-            name='China Guy'
-            message='Random Shit about some random shit asdasdas asdaa we sda sd sd asd  sadasd a'
-            time='15:32'
-            alignment='right'
-        ></mobile-message>
-
-        <mobile-message
-            photo='../../assets/profile_picture.png'
-            name='China Guy'
-            message='Random Shit about some random shit asdasdas asdaa we sda sd sd asd  sadasd a'
-            time='15:32'
-        ></mobile-message>
-
-        <mobile-message
-            name='China Guy'
-            message='Random Shit about some random shit asdasdas asdaa we sda sd sd asd  sadasd a'
-            time='15:32'
-            alignment='right'
-        ></mobile-message>
-
-        <mobile-message
-            photo='../../assets/profile_picture.png'
-            name='China Guy'
-            message='Random Shit about some random shit asdasdas asdaa we sda sd sd asd  sadasd a'
-            time='15:32'
-        ></mobile-message>
-
-        <mobile-message
-            name='China Guy'
-            message='Random Shit about some random shit asdasdas asdaa we sda sd sd asd  sadasd a'
-            time='15:32'
-            alignment='right'
-        ></mobile-message>
-
-        <mobile-message
-            photo='../../assets/profile_picture.png'
-            name='China Guy'
-            message='Random Shit about some random shit asdasdas asdaa we sda sd sd asd  sadasd a'
-            time='15:32'
-        ></mobile-message>
-
-        <mobile-message
-            name='China Guy'
-            message='Random Shit about some random shit asdasdas asdaa we sda sd sd asd  sadasd a'
-            time='15:32'
-            alignment='right'
-        ></mobile-message>
-
-        <mobile-message
-            photo='../../assets/profile_picture.png'
-            name='China Guy'
-            message='Random Shit about some random shit asdasdas asdaa we sda sd sd asd  sadasd a'
-            time='15:32'
-        ></mobile-message>
-
-        <mobile-message
-            name='China Guy'
-            message='Random Shit about some random shit asdasdas asdaa we sda sd sd asd  sadasd a'
-            time='15:32'
-            alignment='right'
-        ></mobile-message>
-
-
-    </div>
-
-    <div class='chat-bar-container'>
-        <mobile-chat-bar
-            #chatBar
-            class='chat-bar'
-        ></mobile-chat-bar>
+        <div class='chat-bar-container'>
+            <mobile-chat-bar
+                #chatBar
+                class='chat-bar'
+            ></mobile-chat-bar>
+        </div>
     </div>
 
 
+    <mobile-footer class='navbar'></mobile-footer>
 </div>

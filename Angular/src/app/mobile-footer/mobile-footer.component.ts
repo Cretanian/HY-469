@@ -9,9 +9,18 @@ import { GButtonComponent } from '../g-button/g-button.component';
 
 export class MobileFooterComponent implements OnInit {
 
+  morePressed: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  enableMore(): void{
+    this.morePressed = true;
+  }  
+
+  disableMore(): void{
+    this.morePressed =  false;
+  }
 }

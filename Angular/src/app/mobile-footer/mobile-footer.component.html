@@ -28,6 +28,7 @@
         iconSize='13.5'
     ></g-button>
     <g-button  class='footer-button'
+        (click)='enableMore()'
         background='../assets/footer_icon_background.png'
         icon='../assets/more_icon.png'
         name='More'
@@ -36,4 +37,10 @@
         backgroundSize='15.52'
         iconSize='13.5'
     ></g-button>
+
+    <more-bar
+        *ngIf='morePressed'
+        (closeEvent)="this.disableMore()"
+        class='more-bar'>
+    </more-bar>
 </div>

@@ -1,0 +1,19 @@
+<div class="phone">
+    <header class='header'
+        name= 'Teams'
+        src1='\assets\Hamburger.png'
+        src2='../../../assets/call_icon.png' 
+        src3='../../../assets/team_more_icon.png'
+    ></header>
+
+    <div class="body">    
+        <conversation-preview 
+            *ngFor= 'let conversation of conversations'
+            [initialMessage] = 'printAndReturn(conversation.initialMessage)'
+            [replyMessage] = 'printAndReturn(conversation.replyMessage)'
+        ></conversation-preview>
+    </div>
+
+    <mobile-footer class='navbar'></mobile-footer>
+
+</div>

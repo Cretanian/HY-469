@@ -1,21 +1,25 @@
 <div class='main-container'>
 
-    <img class='profile' src='../../assets/profile_picture.png' alt=''> 
+    <img class='profile' src={{findPhoto(message.photo)}} alt=''> 
 
     <div class='message-container'>
 
         <div class='name-area'>
-            <h1 class='name'>China Guy</h1>
-            <p class='time'>15:13</p>
+            <p class='name'>{{message.name}}</p>
+            <p class='time'>{{message.time}}</p>
         </div>
 
         <p class='message'>
-            Sample text. Lorem Ipsum latinic NONSENSE and some more. Of this NONSENSE..
+            {{message.message}}
         </p>
 
         <div class='emoji-area'>
-            <emoji-counter class='emoji'></emoji-counter>
-            <emoji-counter class='emoji'></emoji-counter>
+            <emoji-counter 
+                *ngFor= 'let emoji of message.emojis'
+                class='emoji'
+                [amount]='emoji.amount'
+                [emojiSrc]='findEmoji(emoji.emojiSrc)'
+            ></emoji-counter>
         </div>
 
     </div>

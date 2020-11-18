@@ -1,0 +1,27 @@
+.main-container{
+    width: 100vw;
+    height: 100vh;
+
+    background-color: #373944;
+
+    display: flex;
+    flex-direction: column;   
+}
+
+.join-meeting-text{
+    color: white;
+    margin-bottom: 18%;
+}
+
+.join-meeting-text p{
+    font-size: 6vw;
+    text-align: center;
+    font-weight: 100;
+    font-family: (Red Hat Display);
+}
+
+.settings{
+    margin: 1%;
+    margin-left: 5%;
+    margin-right: 5%;
+}

@@ -1,10 +1,8 @@
 .main-container{
     width: 100%;
-    max-width: 720px;
     height: 100%;
     
     display: flex;
-    justify-content: space-evenly;
     align-items: center;;
 }
 
@@ -29,14 +27,14 @@
 .name{
     padding-bottom: 0px;
     font-weight: bold;
-    font-size: 3.2vw;
+    font-size: 3.6vw;
     margin-top: 0px;
     margin-bottom: 0px;
 }
 
 .time{
     transform: translate(20%, 30%);
-    font-size: 2.5vw;
+    font-size: 2.8vw;
     padding-bottom: 0px;
     margin-top: 0px;
     margin-bottom: 0px;
@@ -45,21 +43,30 @@
 .message{
     line-height: 110%;
     width: 100% !important;
-    font-size: 3vw;
+    font-size: 3.2vw;
     margin-top: 0px;
     margin-bottom: 0px;
+
+    color: rgb(19, 19, 19);
+
+    text-align: left;
 }
 
 .emoji-area{
     padding-top: 2%;
-    width: 23%;
+    width: 15vw;
     height: auto;
 
     display: flex;
 }
 
 .emoji{
-    padding-top: 1%;
-    padding-right: 0.15%;
-    padding-left: 0.15%;
+    width: 8.8vw;
+    height: 5.8vw;
+}
+
+@media only screen and (max-width: 660px) {
+    .emoji{
+        display: none;
+    }
 }
