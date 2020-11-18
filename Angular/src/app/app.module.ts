@@ -95,6 +95,12 @@ import { ActivityEmptyComponent } from './Final-Cretanian/activity-empty/activit
 import { ActivitiesComponent } from './Final-Cretanian/activities/activities.component';
 import { TVGridMobileComponent } from './Final-Cretanian/tv-grid-mobile/tv-grid-mobile.component';
 import { ParticipantsMobileComponent } from './Final-Cretanian/participants-mobile/participants-mobile.component';
+import { ConversationsComponent } from './Final-Cretanian/conversations/conversations.component';
+import { MobileControllerCallInfoComponent } from './mobile-controller-call-info/mobile-controller-call-info.component';
+import { MobileJoinMeetingComponent } from './mobile-join-meeting/mobile-join-meeting.component';
+import { MobileMeetingDeviceSettingComponent } from './mobile-meeting-device-setting/mobile-meeting-device-setting.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { DimmerComponent } from './dimmer/dimmer.component';
 
 
 
@@ -186,7 +192,12 @@ import { ParticipantsMobileComponent } from './Final-Cretanian/participants-mobi
     ActivityEmptyComponent,
     ActivitiesComponent,
     TVGridMobileComponent,
-    ParticipantsMobileComponent
+    ParticipantsMobileComponent,
+    ConversationsComponent,
+    MobileControllerCallInfoComponent,
+    MobileJoinMeetingComponent,
+    MobileMeetingDeviceSettingComponent,
+    DimmerComponent
   ],
   imports: [
     BrowserModule,
@@ -194,7 +205,8 @@ import { ParticipantsMobileComponent } from './Final-Cretanian/participants-mobi
     AppRoutingModule,
     MatListModule,    
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

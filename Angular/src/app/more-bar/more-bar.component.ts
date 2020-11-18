@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'more-bar',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MoreBarComponent implements OnInit {
 
+  @Output() closeEvent: any = new EventEmitter<void>();
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-}
+  disableMore(): void{
+    console.log('emitting event');
+    this.closeEvent.emit();
+  }  
+} 

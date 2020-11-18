@@ -14,12 +14,13 @@ export class TeamsComponent implements OnInit {
     {
       "iconSrc" : '/assets/teams-button/a.png',
       "groupName" : 'yolololololol'
-    } , 
+    },
     {
       "iconSrc" : '/assets/teams-button/a.png',
       "groupName" : 'yolololololol'
-    }     
-    ];
+    }    
+  ];
+
   constructor() { }
 
   ngOnInit(): void {

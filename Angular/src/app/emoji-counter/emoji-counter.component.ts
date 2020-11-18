@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'emoji-counter',
@@ -7,7 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmojiCounterComponent implements OnInit {
 
-  constructor() { }
+  @Input('amount') ammount: number;
+  @Input('emojiSrc') emojiSrc: string;
+
+  constructor() { 
+    if(this.emojiSrc == undefined)
+      this.emojiSrc = '../../assets/emojis/hearts_for_eyes_icon.png'
+    if(this.ammount == undefined)
+      this.ammount = -1;
+  }
 
   ngOnInit(): void {
   }

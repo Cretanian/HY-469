@@ -1,24 +1,46 @@
+@keyframes rise{
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0vw);
+    }
+}
+
+
 .main-container{
+    width: 28.333vw;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;    
+
+    position: relative;
+
+    animation-name: rise;
+    animation-duration: 1s;
 }
 
 .buttons-container{
-    padding: 5%;;
-    background-color: lightgrey;
-
+    width: 100%;
+    background-color: white;
+    
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;;
+    align-items: center;
 }
     
+.button{
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+}
 
 #arrow-container{
+    width: 100%;
     background: #468189;
-    margin: auto;
     display: flex;
     justify-content: center;
 }
+

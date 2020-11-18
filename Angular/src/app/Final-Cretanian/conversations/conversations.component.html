@@ -1,0 +1,39 @@
+<div class="phone">
+    <header class='header'
+        name= 'Team 1'
+        src1='\assets\Hamburger.png'
+        src2='../../../assets/call_icon.png' 
+        src3='../../../assets/team_more_icon.png'
+        (event1)='enableAccountMenu()'
+        (event3)='this.moreOpen = true'
+    ></header>
+
+    <div class="body">    
+        <conversation-preview 
+            *ngFor= 'let conversation of conversations'
+            [initialMessage] = 'conversation.initialMessage'
+            [replyMessage] = 'conversation.replyMessage'
+        ></conversation-preview>
+    </div>
+
+    <mobile-footer class='navbar'></mobile-footer>
+
+    <div 
+        class='team-more-container'
+        *ngIf='moreOpen'
+    >
+        <dimmer
+            (click)='disableMore()'
+        ></dimmer>
+        <mobile-team-more
+            class='team-more'
+        ></mobile-team-more>
+    </div>
+
+    <!-- <div
+        class=''
+    >
+        <dimmer></dimmer>
+        <account-menu></account-menu>
+    </div> -->
+</div>

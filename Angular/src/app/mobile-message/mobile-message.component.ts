@@ -24,6 +24,13 @@ export class MobileMessageComponent {
   }
 
   ngAfterViewInit(): void{
+    if(this.senderName == undefined)
+      this.senderName = 'undef';
+    if(this.messageSent == undefined)
+      this.messageSent = 'undef';
+    if(this.timeSent == undefined)
+      this.timeSent = 'undef';
+
     if(this.alignment == 'left'){
       this.mainContainerRef.nativeElement.style.alignItems = 'flex-start';
       this.senderContainerRef.nativeElement.style.justifyContent = "flex-start";

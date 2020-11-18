@@ -1,34 +1,41 @@
-<div class='main-container' style='width: 100px'>
+<dimmer (click)='disableMore()'></dimmer>
+
+<div class='main-container'>
     <div id='arrow-container'>
         <g-button
+            (click)='disableMore()'
             icon='../../assets/down_arrow_icon.png'
-            iconSize='60'
+            iconSize='15'
         ></g-button>
     </div>
-    <div id='more-bar' class='buttons-container'>
-        <g-button class=''
+    <div class='buttons-container'>
+        <g-button
+            class='button'
             icon='../../assets/files_icon.png'
-            iconSize='60'
+            iconSize='18'
             name='Files'
-            fontSize='3'
+            fontSize='4.5'
         ></g-button>
         <g-button
+            class='button'
             icon='../../assets/smart_home_icon.png'
-            iconSize='60'
+            iconSize='18'
             name='Files'
-            fontSize='3'
+            fontSize='4.5'
         ></g-button>
         <g-button
+            class='button'
             icon='../../assets/contants_icon.png'
-            iconSize='60'
+            iconSize='18'
             name='Files'
-            fontSize='3'
+            fontSize='4.5'
         ></g-button>
         <g-button
+            class='button'
             icon='../../assets/calendar_icon.png'
-            iconSize='60'
+            iconSize='18'
             name='Files'
-            fontSize='3'
+            fontSize='4.5'
         ></g-button>
     </div>
 </div>
