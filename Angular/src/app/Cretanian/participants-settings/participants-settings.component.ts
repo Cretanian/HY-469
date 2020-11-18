@@ -13,6 +13,16 @@ export class ParticipantsSettingsComponent implements OnInit {
     },
     {
       "name" : "stelios stam"
+    },{
+      "name" : "stelios stam"
+    },
+    {
+      "name" : "stelios stam"
+    },{
+      "name" : "stelios stam"
+    },
+    {
+      "name" : "stelios stam"
     }
   ];
   constructor() { }

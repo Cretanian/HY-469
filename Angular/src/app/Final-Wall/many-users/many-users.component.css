@@ -1,0 +1,33 @@
+.Wall{
+    display: flex;
+    flex-direction: row;
+    width: 4750px;
+    height: 1140px;
+}
+
+.pin-tvspeak{
+    display: flex;
+    flex-direction: column;
+    width: 289.50vw;
+    height: 100%;
+}
+
+.pinboard{
+    width: 100%;
+    height: 111vw;
+}
+
+.tv-speakers{
+    width: 100%;
+    height: 35.45vw;
+}
+
+.Participants{
+    width: 76vw;
+    height: 100%;  
+}
+
+.calendar{
+    width: 289.50vw;
+    height: 100%;
+}

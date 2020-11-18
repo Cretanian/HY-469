@@ -28,8 +28,8 @@ import { TVGridComponent } from './components/tvgrid/tvgrid.component';
 import { TvgridListComponent } from  './components/tvgrid-list/tvgrid-list.component';
 import { ParticipantComponent } from  './components/participant/participant.component';
 import { ParticipantsComponent } from './components/participants/participants.component';
-import { ParticipantTVComponent } from './TV/participant-tv/participant-tv.component';
-import { ParticipantsTVComponent } from './TV/participants-tv/participants-tv.component';
+import { ParticipantTVComponent } from './Wall/participant-tv/participant-tv.component';
+import { ParticipantsTVComponent } from './Wall/participants-tv/participants-tv.component';
 import { ContactComponent } from  './components/contacts/contact/contact.component';
 import { ContactListComponent } from './components/contacts/contact-list/contact-list.component';
 import { ContactSectionComponent } from './components/contacts/contact-section/contact-section.component';
@@ -52,7 +52,7 @@ import { TableTvgridButtonComponent } from './Table/table-tvgrid-button/table-tv
 import { CalendarMobileComponent } from './components/calendar-mobile/calendar-mobile.component';
 
 /*Cretanian*/
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { TeamsButtonComponent } from './Cretanian/teams-button/teams-button.component';
 import { OnlineDevicesComponent } from './Cretanian/online-devices/online-devices.component';
 import { VolumeSliderComponent } from './Cretanian/volume-slider/volume-slider.component';
@@ -68,28 +68,21 @@ import { GenericUpcomingEventsBackgroundComponent } from './Wall/generic-upcomin
 import { TodaysEventsComponent } from './Wall/todays-events/todays-events.component';
 import { FDisplayUpcomingEventsComponent } from './Wall/f-display-upcoming-events/f-display-upcoming-events.component';
 import { CallendarHeadComponent } from './Wall/callendar-head/callendar-head.component';
-import { FinalCalendarComponent } from './Cretanian/final-calendar/final-calendar.component';
+import { FinalCalendarComponent } from './Wall/final-calendar/final-calendar.component';
 import { TvCamerasWallComponent } from './Wall/tv-cameras-wall/tv-cameras-wall.component';
 import { Tv3mainComponent } from './TV/tv3main/tv3main.component';
 import { Tv1mainComponent } from './TV/tv1main/tv1main.component';
 import { Screenshare1mainComponent } from './TV/screenshare1main/screenshare1main.component';
 import { Tv3x3mainComponent } from './TV/tv3x3main/tv3x3main.component';
 import { TvChatOnComponent } from './TV/tv-chat-on/tv-chat-on.component';
-import { FOnlineDivicesComponent } from './Cretanian/f-online-divices/f-online-divices.component';
-import { GenDayCalendarComponent } from './Cretanian/gen-day-calendar/gen-day-calendar.component';
-import { FCalendarPhoneComponent } from './Cretanian/f-calendar-phone/f-calendar-phone.component';
+import { GenDayCalendarComponent } from './Wall/gen-day-calendar/gen-day-calendar.component';
 import { DaysCalendarListComponent } from './Cretanian/days-calendar-list/days-calendar-list.component';
 import { ChatListComponent } from './Cretanian/chat-list/chat-list.component';
-import { FChatComponent } from './Cretanian/f-chat/f-chat.component';
 import { FilesListComponent } from './Cretanian/files-list/files-list.component';
-import { FFilesComponent } from './Cretanian/f-files/f-files.component';
 import { OutAudioComponent } from './Cretanian/in/out-audio/out-audio.component';
 import { GenericHeaderItemComponent } from './Cretanian/generic-header-item/generic-header-item.component';
 import { AudioSettingsCameraComponent } from './Cretanian/audio-settings-camera/audio-settings-camera.component';
-import { CameraSettingsComponent } from './Cretanian/camera-settings/camera-settings.component';
 import { ParticipantsSettingsComponent } from './Cretanian/participants-settings/participants-settings.component';
-import { FCallSettingsComponent } from './Cretanian/f-call-settings/f-call-settings.component';
-import { TeamsComponent } from './Final-Cretanian/teams/teams.component';
 import { ContactsComponent } from './Final-Cretanian/contacts/contacts.component';
 import { ActivityEmptyComponent } from './Final-Cretanian/activity-empty/activity-empty.component';
 import { ActivitiesComponent } from './Final-Cretanian/activities/activities.component';
@@ -101,6 +94,12 @@ import { MobileJoinMeetingComponent } from './mobile-join-meeting/mobile-join-me
 import { MobileMeetingDeviceSettingComponent } from './mobile-meeting-device-setting/mobile-meeting-device-setting.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DimmerComponent } from './dimmer/dimmer.component';
+import { OncallCallSettingsComponent } from './Final-Cretanian/oncall-call-settings/oncall-call-settings.component';
+import { GenericVolumeDropdownComponent } from './Cretanian/generic-volume-dropdown/generic-volume-dropdown.component';
+import { ManyUsersComponent } from './Final-Wall/many-users/many-users.component';
+import { PinboardComponent } from './Wall/pinboard/pinboard.component';
+import { FParticipantsComponent } from './Wall/f-participants/f-participants.component';
+
 
 
 
@@ -173,21 +172,14 @@ import { DimmerComponent } from './dimmer/dimmer.component';
     Screenshare1mainComponent,
     Tv3x3mainComponent,
     TvChatOnComponent,
-    FOnlineDivicesComponent,
     GenDayCalendarComponent,
-    FCalendarPhoneComponent,
     DaysCalendarListComponent,
     ChatListComponent,
-    FChatComponent,
     FilesListComponent,
-    FFilesComponent,
     OutAudioComponent,
     GenericHeaderItemComponent,
     AudioSettingsCameraComponent,
-    CameraSettingsComponent,
     ParticipantsSettingsComponent,
-    FCallSettingsComponent,
-    TeamsComponent,
     ContactsComponent,
     ActivityEmptyComponent,
     ActivitiesComponent,
@@ -197,7 +189,14 @@ import { DimmerComponent } from './dimmer/dimmer.component';
     MobileControllerCallInfoComponent,
     MobileJoinMeetingComponent,
     MobileMeetingDeviceSettingComponent,
-    DimmerComponent
+    DimmerComponent,
+    ParticipantsSettingsComponent,    
+    OncallCallSettingsComponent,
+    GenericVolumeDropdownComponent,
+    ManyUsersComponent,
+    PinboardComponent,
+    FParticipantsComponent,    
+    routingComponents,
   ],
   imports: [
     BrowserModule,

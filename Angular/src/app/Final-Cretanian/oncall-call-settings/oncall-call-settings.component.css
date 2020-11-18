@@ -1,0 +1,13 @@
+.aling{
+    display: flex;
+    flex-direction: column;
+    width: 93vw;
+}
+.body{
+    display: flex;
+    justify-content: center;
+}
+
+.header{
+    margin-bottom: 1vw;
+}

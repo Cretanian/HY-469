@@ -15,6 +15,22 @@ export class DaysCalendarListComponent implements OnInit {
       "event" : 'ela re pame volta',
       "time" : '11:00 - 5:40'
     },
+    {
+      "event" : 'ela re pame volta',
+      "time" : '11:00 - 5:40'
+    },
+    {
+      "event" : 'ela re pame volta',
+      "time" : '11:00 - 5:40'
+    },
+    {
+      "event" : 'ela re pame volta',
+      "time" : '11:00 - 5:40'
+    },
+    {
+      "event" : 'ela re pame volta',
+      "time" : '11:00 - 5:40'
+    },
     
     ]; 
   constructor() { }

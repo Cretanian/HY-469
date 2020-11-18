@@ -7,11 +7,11 @@
     width: 100%;
     font-weight: bold;
     font-size: 33px;
-    line-height: 44px;
+    line-height: 33px;
     display: flex;
     align-items: center;
     color: #000000;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .pic{
