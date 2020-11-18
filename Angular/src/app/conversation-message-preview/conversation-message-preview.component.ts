@@ -29,9 +29,6 @@ export class ConversationMessagePreviewComponent implements OnInit {
   ngOnInit(): void {
     if(this.message == undefined)
       console.log('MP: Message is undef');
-    else{
-      console.log('MP name: ' + this.message.name);
-    }
   }
 
   findPhoto(photo: string): string{
@@ -39,7 +36,6 @@ export class ConversationMessagePreviewComponent implements OnInit {
   }
 
   findEmoji(emoji: string): string{
-    console.log('Finding: '+ emoji)
     return '../../assets/emojis/' + emoji;
   }
 

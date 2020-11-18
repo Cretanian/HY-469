@@ -1,6 +1,8 @@
 .dropdown {
   position: relative;
   display: inline-block;
+  height: 100%;
+  width: 100%;
 }
 
 .dropdownButtonContainer {
@@ -10,8 +12,9 @@
   background-color: #f9f9f9;
   border: solid 2px #c4c4c4;
   border-radius: 15px;
-  width: 54.3vw;
-  height: 7.22vw;
+
+  width: 100%;
+  height: 100%;
 }
 
 .dropdownButtonText {

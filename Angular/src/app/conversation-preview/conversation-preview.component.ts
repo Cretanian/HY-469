@@ -29,9 +29,4 @@ export class ConversationPreviewComponent {
     
     
   }
-
-  printAndReturn(message: Message){
-    console.log('CP return: ' + message.name);
-    return message;
-  }
 }

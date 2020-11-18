@@ -2,6 +2,8 @@
     width: 100vw;
     height: 100vh;
 
+    overflow-y: scroll;
+
     background-color: #373944;
 
     display: flex;
@@ -10,7 +12,8 @@
 
 .join-meeting-text{
     color: white;
-    margin-bottom: 18%;
+    padding-top: 6vw;
+    padding-bottom: 6vw;
 }
 
 .join-meeting-text p{
@@ -25,3 +28,24 @@
     margin-left: 5%;
     margin-right: 5%;
 }
+
+.decline-join-container{
+    padding-top: 15.41vw;
+
+    display: flex;
+    justify-content: center;;
+}
+
+.decline-join{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    width: auto;
+    height: auto;
+
+    background-color: #f9f9f9;
+    border: solid 2px #c4c4c4;
+    border-radius: 7.2vw;
+}
+  

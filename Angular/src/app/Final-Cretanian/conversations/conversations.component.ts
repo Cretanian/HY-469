@@ -9,11 +9,10 @@ import { ConversationMessagePreviewComponent } from 'src/app/conversation-messag
 export class ConversationsComponent implements OnInit {
   conversations: Array<Conversation>;
   moreOpen: boolean = false;
+  accountMenuOpen: boolean = false;
+  
 
-
-  constructor() {
-    console.log('Conversation: Sending message');
-  }
+  constructor() {}
 
   ngOnInit(): void {
     this.conversations = new Array<Conversation>(1);
@@ -28,12 +27,6 @@ export class ConversationsComponent implements OnInit {
                               new Message('profile_picture.png', 'Stylianos Stamatakis', '13:32', 'Stfu boss. You are cringy. #noshame', '', [new Reaction(1, 'hearts_for_eyes_icon.png')] as Reaction[])
                             );
                             
-    console.log(this.conversations);
-  }
-
-  printAndReturn(message: Message){
-    console.log('C return: ' + message.name);
-    return message;
   }
 
   enableMore(){
@@ -43,6 +36,15 @@ export class ConversationsComponent implements OnInit {
   disableMore(){
     this.moreOpen = false;
   }
+
+  enableAccountMenu(){
+    this.accountMenuOpen = true;
+  }
+
+  disableAccountMenu(){
+    this.accountMenuOpen= false;
+  }
+
 }
 
 
@@ -85,9 +87,5 @@ export class Message{
     else
       this.alignment = alignment;
     this.emojis = emojis;
-  }
-
-  copy(): Message{
-    return new Message(this.photo, this.name, this.time, this.message, this.alignment, this.emojis);
   }
 }

@@ -12,21 +12,20 @@ export class DropdownMenuComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.options = [
-      {
-        name:"Samsung TV"
-      },
-      {
-        name:"Speaker Default"
-      },
-      {
-        name:"Speaker (1)"
-      },
-    ]
+    if(this.options == undefined){
+      console.log(this.options);
+      this.options = [
+        {
+          name:"Samsung TV"
+        },
+        {
+          name:"Speaker Default"
+        },
+        {
+          name:"Speaker (1)"
+        },
+      ]
+    }
   }
 
-}
-
-function fun(){
-  console.log("asdads");
 }
