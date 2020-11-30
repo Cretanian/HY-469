@@ -1,0 +1,49 @@
+<div class='main-container'>
+
+    <mobile-controller-call-info
+        callName='AMI Living room'
+    ></mobile-controller-call-info>
+
+    <div class='join-meeting-text'>
+        <p>Join Meeting?</p>
+        <p>Have your settings ready!</p>
+    </div>
+
+    <div class='camera settings'>
+        <mobile-meeting-device-setting
+            label='Camera:'
+            [options]='this.cameraOptions'
+        ></mobile-meeting-device-setting>
+    </div>
+    
+    <div class='input settings'>
+        <mobile-meeting-device-setting
+            label='Input Device:'
+            [options]='this.inputOptions'
+        ></mobile-meeting-device-setting>
+    </div>
+    
+    <div class='output settings'>
+        <mobile-meeting-device-setting
+            label='Output Device:'
+            [options]='this.outputOptions'
+        ></mobile-meeting-device-setting>
+    </div>
+    
+    <div class='decline-join-container'>
+        <div class='decline-join'>
+            <g-button
+                class='decline-join-button'
+                icon='../../assets/call_mode/decline_button.png'
+                iconSize='44.027'
+            ></g-button>
+            <g-button
+                class='decline-join-button'
+                routerLink ='/explorer-mobile-team-controller'
+                icon='../../assets/call_mode/join_button.png'
+                iconSize='44.027'
+            ></g-button>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,33 @@
+.containerAll {
+  margin-top: 20px;
+  height: 0.78vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.name {
+  order: 2;
+  font-weight: 700;
+  font-size: 21px;
+  margin: 0px;
+  flex: 8;
+  color: #656565;
+}
+
+.imgProfile {
+  order: 1;
+  margin-left: 6%;
+  margin-right: 2%;
+  border-radius: 50%;
+}
+
+.imgVideo {
+  order: 3;
+  flex: 1;
+}
+.imgMic {
+  order: 4;
+  flex: 1;
+}

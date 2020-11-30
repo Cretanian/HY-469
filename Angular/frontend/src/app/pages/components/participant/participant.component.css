@@ -1,0 +1,38 @@
+.containerAll {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  min-height: 17vw;
+  max-height: 17vw;
+}
+
+.name {
+  margin-top: 0px;
+  order: 1;
+  min-width: 45.138vw;
+  max-width: 45.138vw;
+  font-weight: 400;
+  font-size: 5.5555vw;
+  margin-bottom: 0px;
+  padding-left: 3.6111111vw;
+  flex: 4;
+  color: #656565;
+}
+
+.chat {
+  order: 2;
+  flex: 1;
+  margin-left: 12.638vw;
+}
+.speaker {
+  order: 3;
+  flex: 1;
+  margin-left: 8.69vw;
+}
+.microphone {
+  order: 4;
+  flex: 1;
+  margin-left: 8.05vw;
+  margin-right: 3.611vw;
+}

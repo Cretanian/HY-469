@@ -1,0 +1,28 @@
+<div class='main-container'>
+    
+    <p class='label'>{{label}}</p>
+    
+    <div class="options">
+        <dropdown 
+            class='dropdown'
+            [dropdownOptions]='this.dropdownOptions'
+        ></dropdown>
+        <div>
+            <img 
+                class='toggler'
+                *ngIf='!toggler'
+                src='../../assets/call_mode/toggler_off.png'
+                alt=''
+                (click)='toggler = true'
+            >
+            <img 
+                class='toggler'
+                *ngIf='toggler'
+                src='../../assets/call_mode/toggler_on.png'
+                alt=''
+                (click)='toggler = false'
+            >
+        </div>
+    </div>  
+    
+</div>

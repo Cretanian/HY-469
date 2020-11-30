@@ -1,0 +1,14 @@
+<div class="size">
+    <div class="header">
+       {{header}}
+    </div>
+  
+        <app-chat-messeges
+            *ngFor = "let chat of chat_array"
+            [image] = 'chat.image'
+            [name] = 'chat.name'
+            [last_msg] = 'chat.last_msg'
+            [active_state] = 'chat.active_state'
+        ></app-chat-messeges>
+
+</div>

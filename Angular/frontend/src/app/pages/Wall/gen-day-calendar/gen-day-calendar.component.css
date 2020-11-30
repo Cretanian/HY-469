@@ -1,0 +1,52 @@
+.size{
+    width: 660px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.header{
+    width: 100%;
+    height: 10.02vw;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 2.5vw;
+}
+
+.date{
+    width: 70px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.numb{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+}
+
+.month{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+}
+
+.day{
+    color: #666666;
+    width: 590px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 40px;
+    align-items: center;
+    margin-left: 2%;
+}

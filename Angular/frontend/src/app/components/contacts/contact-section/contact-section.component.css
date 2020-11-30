@@ -1,0 +1,47 @@
+.sectionContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.letter {
+  margin-top: 3vw;
+  margin-bottom: 1.25‬vw;
+  margin-left: 7.083vw;
+  order: 1;
+  font-size: 4.16vw;
+  font-weight: bold;
+  color: #656565;
+}
+
+.line {
+  order: 2;
+  margin-left: 3.472vw;
+  margin-right: 3.472vw;
+  margin-top: 1.25vw;
+  border: 1px solid;
+  border-color: #555555;
+}
+
+.contactList {
+  order: 3;
+}
+
+.favoritesContainer {
+  margin-top: 3vw;
+  margin-bottom: 1.25vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 5.416vw;
+}
+
+.favoritesText {
+  color: #414141;
+  font-size: 3.472vw;
+  margin-left: 0.555vw;
+}
+
+.favoritesImg {
+  width: 5vw;
+  height: 4.583vw;
+}

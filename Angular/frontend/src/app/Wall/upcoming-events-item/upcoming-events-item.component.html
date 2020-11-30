@@ -1,0 +1,17 @@
+<div class = "size">
+    <div class="color">
+        {{day}} | {{month}} {{date}} 
+    </div>
+
+    <div class = "events" >
+
+        <app-callenda-event-wall
+            *ngFor="let event of event_array;"
+            [event] = event.event_header
+            [time] = event.event_time
+        ></app-callenda-event-wall>
+      
+    </div>
+
+
+</div>

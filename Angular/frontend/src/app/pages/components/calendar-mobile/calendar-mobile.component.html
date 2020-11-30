@@ -1,0 +1,10 @@
+
+<div class = componentContainer>
+    <div class = monthContainer>
+        <p class = monthText> October </p>
+    </div>
+    <div class = datesContainer>  
+          <div class = day *ngFor = "let day of daysNames">{{day}}</div>
+          <div class = number *ngFor = "let num of daysNums">{{num}}</div>   
+    </div>
+</div>

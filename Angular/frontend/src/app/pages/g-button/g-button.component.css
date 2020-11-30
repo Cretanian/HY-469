@@ -1,0 +1,47 @@
+.main-container{
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button{
+    position: relative;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+
+    padding: 0%;
+    margin: 0%;
+}
+
+.icon{
+    width: 100%;
+    position: absolute;
+    /* pointer-events: none | Will happen in the js
+    only if we have a background on the g-button. */
+}
+
+.name{
+    margin: auto;
+    text-align: center;
+}
+
+
+/* FOR ANIMATION */
+
+img {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+ }
+ 
+ img:hover {
+    -webkit-filter: brightness(70%);
+    filter: brightness(70%);
+ }

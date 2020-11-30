@@ -1,0 +1,50 @@
+.main-container{
+    width: 75%;
+    height: auto;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-info{
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-photo{
+    width: 15%;
+    height: auto;
+}
+
+.profile-name{
+    font-weight: bold;
+    font-size: 5vw;
+    text-align: left;
+}
+
+.option{
+    width: 100%;;
+    padding-left: 5%;
+    font-size: 4.5vw;
+    display: flex;
+}
+
+p{
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-left: 5%;
+}
+
+hr{
+    width: 85%;
+    border: 1.5px solid lightgrey;
+    border-radius: 1px;
+    margin: 2%;
+    margin-left: auto;
+    margin-right: auto;
+}
+

@@ -1,0 +1,23 @@
+.tv{
+    width: 1920px;
+    height: 1080px;
+    background-color: #7489ff;
+    display: flex;
+    flex-direction: row;
+}
+
+.cameras{
+    width: 66.67vw;
+    height: 100%;
+    background-color: #373944;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat{
+    width: 33.33vw;
+    height: 100%;
+    background-color: #02f016;
+}

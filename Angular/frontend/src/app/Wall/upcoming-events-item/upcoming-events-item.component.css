@@ -1,0 +1,30 @@
+.size{
+    width: 5.36vw;
+    height: 9.7vw;
+    display: flex;
+    flex-direction: column;
+    background-color: #FEFEFE;
+    margin-right: 00.52vw;
+}
+
+.color{  
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+    background-color: #373944;
+    font-size: 0.56vw;
+    color: white;
+}
+
+.events{  
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90%;
+    box-shadow: 0.2vw  0.2vw 0.2vw rgba(0, 0, 0, 0.25), 0.2vw 0.2vw 0.2vw rgba(0, 0, 0, 0.25);
+}
+

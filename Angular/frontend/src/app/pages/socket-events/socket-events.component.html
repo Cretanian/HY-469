@@ -1,0 +1,11 @@
+<div class="container mt-4">
+  <h3>Socket Events</h3>
+
+  <ul class="list-group">
+    <li *ngFor="let event of socketEvents" class="list-group-item">
+      <h5>{{event.event}}</h5>
+      <p>{{event.message | json}}</p>
+    </li>
+  </ul>
+
+</div>

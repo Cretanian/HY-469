@@ -1,0 +1,22 @@
+.contactContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 2.22vw;
+  padding-bottom: 2.22vw;
+  padding-left: 3.472vw;
+}
+
+.profileImg {
+  width: 9.72vw;
+  height: 9.72vw;
+  border-radius: 50%;
+}
+
+.name {
+  margin-left: 2.361vw;
+  font-size: 3.88vw;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  font-weight: bold;
+}

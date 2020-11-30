@@ -1,0 +1,48 @@
+<div class='main-container'>
+    <g-button class='footer-button'
+        routerLink='/explorer-mobile-activities'
+        background='../assets/footer_icon_background.png'
+        icon='../assets/activity_icon.png'
+        name='Activity'
+        fontColor='white'
+        fontSize='4.166'
+        backgroundSize='15.52'
+        iconSize='13.5'
+    ></g-button>
+    <g-button  class='footer-button'
+        routerLink='/'
+        background='../assets/footer_icon_background.png'
+        icon='../assets/team_icon.png'
+        name='Teams'
+        fontColor='white'
+        fontSize='4.166'
+        backgroundSize='15.52'
+        iconSize='13.5'
+    ></g-button>
+    <g-button  class='footer-button'
+        routerLink='/explorer-mobile-chat'
+        background='../assets/footer_icon_background.png'
+        icon='../assets/chat_icon.png'
+        name='Chat'
+        fontColor='white'
+        fontSize='4.166'
+        backgroundSize='15.52'
+        iconSize='13.5'
+    ></g-button>
+    <g-button  class='footer-button'
+        (click)='enableMore()'
+        background='../assets/footer_icon_background.png'
+        icon='../assets/more_icon.png'
+        name='More'
+        fontColor='white'
+        fontSize='4.166'
+        backgroundSize='15.52'
+        iconSize='13.5'
+    ></g-button>
+
+    <more-bar
+        *ngIf='morePressed'
+        (closeEvent)="this.disableMore()"
+        class='more-bar'>
+    </more-bar>
+</div>

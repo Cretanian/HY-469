@@ -1,0 +1,68 @@
+.main-container{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #373944;
+
+    overflow: hidden;;
+}
+
+.more-hamburger{
+    position: absolute;
+    top: 25%;
+}
+
+.bone{
+    position: absolute;
+    width: 30%;
+}
+
+#bone1{
+    top: 70.8%;
+    left: 4%;
+}
+
+#bone2{
+    top: 48%;
+    left: 16%;
+}
+
+#bone3{
+    top: 29%;
+    left: 47%;
+}
+
+.controller-button{
+    position: absolute;
+    width:23%;
+}
+
+#back-button{
+    top: 83%;
+    left: 72%;
+}
+
+#hangup-button{
+    top: 83%;
+    left: 6%
+}
+
+#mic-button{
+    top: 61%;
+    left: 10%;
+}
+
+#chat-button{
+    top: 38.5%;
+    lefT:29%;
+}
+
+#pin-button{
+    top: 23%;
+    left: 72%;
+}
+
+#hamburger-button{
+    top: 56%;
+    left: 72%;
+}
