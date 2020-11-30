@@ -1,0 +1,51 @@
+# ---------------------------------------------------------------------------------
+# Docker compose file for development, for enabling  this execute:
+# docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build
+# OR
+# Copy and rename this file as docker-compose.override.yml and run:
+# docker-compose up -d --build
+# ---------------------------------------------------------------------------------
+
+version: "3.7"
+
+services: 
+
+  backend:
+    image: ${APP_NAME}-backend:${APP_VERSION}-dev
+    environment:
+      - ENVIRONMENT=development
+      - EXPOSED_PORT=${DEV_BACKEND_PORT}
+    ports:
+      # Expose backend port at host machine
+      - ${DEV_BACKEND_PORT}:80
+    volumes:
+      # Sync source code
+      - ../backend/src/:/backend/src
+
+  frontend:
+    image: ${APP_NAME}-frontend:${APP_VERSION}-dev
+    build:
+      dockerfile: dev.Dockerfile
+    ports:
+      # Expose frontend port at host machine
+      - ${DEV_FRONTEND_PORT}:4200
+      # Webpack uses a port to do live reload of the application. That port is 49153 by default.
+      - 49153:49153
+    volumes:
+      # Sync source code
+      - ../frontend/src/:/frontend/src
+
+  database:
+    ports:
+      # Expose DB port at host machine
+      - ${DB_PORT}:${DB_PORT}
+
+  redis:
+    ports:
+      # Expose redis port at host machine
+      - ${REDIS_PORT}:${REDIS_PORT}
+
+  minio:
+    ports:
+      # Expose minio port at host machine
+      - ${MINIO_PORT}:${MINIO_PORT}
