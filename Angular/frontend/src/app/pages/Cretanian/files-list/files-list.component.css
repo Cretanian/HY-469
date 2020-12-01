@@ -15,13 +15,11 @@
     font-size: 35px;
     display: flex;
     flex-direction: row;
+    align-items: baseline;
     margin-bottom: 2%;
 }
 
-.header img{
-    max-width: 30px;
-    max-height: 15px;
-    margin-left: 15px;
-    margin-top: 7px;
+.aling-g-button{
+    margin: 2vw;
 }
 

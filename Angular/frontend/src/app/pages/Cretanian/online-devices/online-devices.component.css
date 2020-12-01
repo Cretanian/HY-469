@@ -29,8 +29,8 @@
     color: #3C3C3C;
     font-size: 3.5vw;
     position: absolute;
-    top: 10%;                  
-    transform: translate(0, -50%);
+    font-weight: medium;                  
+    transform: translate(0, 40%);
 }
 
 .icons_div{
