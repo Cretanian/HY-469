@@ -1,7 +1,7 @@
 import * as express from 'express';
 import { ResourceController } from '../shared';
 import { ITask, TaskModel } from '@app/models';
-// import { FilesController } from './files/files.controller';
+//import { FilesController } from './files/files.controller';
 import { SocketEventsController } from './socket-events/socket-events.controller';
 import { ExampleController } from './example/example.controller';
 
