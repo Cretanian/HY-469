@@ -3,16 +3,17 @@
     height: 10.5vw;
     width: 100%;
     display: flex;
-    align-items: center;
     margin-bottom: 2vw;
+    position: relative;
 }
 
 .title{
     color: #ffffff;
     font-size: 4.15vw;
     margin-left: 4.45vw;
-    padding-bottom: 2%;
-    
+    position: absolute;              
+    top: 50%;                         
+    transform: translate(0, -50%);
 }
 
 
