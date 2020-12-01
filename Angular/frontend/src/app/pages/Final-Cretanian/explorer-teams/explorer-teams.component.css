@@ -4,13 +4,12 @@
     margin-bottom: 1.75vw;
  }
  
- 
- .body{
-     display: flex;
-     flex-wrap: wrap;
-     align-content: flex-start;
- }
- 
- .header{
-     margin-bottom: 2vw;
- }
+.body{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.header{
+    margin-bottom: 2vw;
+}
