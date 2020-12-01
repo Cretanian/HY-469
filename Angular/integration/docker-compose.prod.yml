@@ -1,0 +1,31 @@
+# ---------------------------------------------------------------------------------
+# Docker compose file for production, for enabling  this execute:
+# docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build
+# OR
+# Copy and rename this file as docker-compose.override.yml and run:
+# docker-compose up -d --build
+# ---------------------------------------------------------------------------------
+
+version: "3.7"
+
+services: 
+
+  backend:
+    environment:
+      - ENVIRONMENT=production
+      - PROTOCOL=${PROD_PROTOCOL}
+      - HOST=${PROD_HOST}
+      - EXPOSED_PORT=${PROD_PORT}
+
+  frontend:
+    build:
+      args:
+        - API_HOST=${PROD_PROTOCOL}://${PROD_HOST}:${PROD_PORT}
+
+  reverse-proxy:
+    ports:
+      - ${PROD_PORT}:80
+    volumes: 
+      - ./config/reverse-proxy/conf.d:/etc/nginx/conf.d
+      - ./config/reverse-proxy/nginx.conf:/etc/nginx/nginx.conf
+      

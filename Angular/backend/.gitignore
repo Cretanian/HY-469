@@ -1,0 +1,24 @@
+# Generic folders
+logs
+tmp
+.tmp
+coverage
+
+# Dependency directory
+node_modules
+bower_components
+npm-debug.log
+
+# Editors
+.idea
+*.iml
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Ignore built ts files
+dist
+
+# ignore yarn.lock
+yarn.lock

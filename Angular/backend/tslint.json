@@ -1,0 +1,31 @@
+{
+  "extends": "tslint:recommended",
+  "rules": {
+    "indent": [
+      true,
+      "spaces",
+      2
+    ],
+    "quotemark": [
+      true,
+      "single"
+    ],
+    "trailing-comma": [
+      false
+    ],
+    "ordered-imports": false,
+    "no-consecutive-blank-lines": [
+      true,
+      2
+    ],
+    "arrow-parens": [
+      true,
+      "ban-single-arg-parens"
+    ],
+    "object-literal-sort-keys": false,
+    "no-empty": [
+      false
+    ],
+    "space-before-function-paren": false
+  }
+}
