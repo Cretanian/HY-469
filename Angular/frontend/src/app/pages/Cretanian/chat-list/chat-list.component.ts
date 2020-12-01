@@ -20,6 +20,24 @@ export class ChatListComponent implements OnInit {
       "name" : "Stelios stamatakis",
       "last_msg" : "Ela re stam poy eosao re man",
       "active_state" : "/assets/tv-speaker/green.png"
+    },
+    {
+      "image" : "/assets/tv-speaker/user.png",
+      "name" : "Stelios stamatakis",
+      "last_msg" : "Ela re stam poy eosao re man",
+      "active_state" : "/assets/tv-speaker/green.png"
+    },
+    {
+      "image" : "/assets/tv-speaker/user.png",
+      "name" : "Stelios stamatakis",
+      "last_msg" : "Ela re stam poy eosao re man",
+      "active_state" : "/assets/tv-speaker/green.png"
+    },
+    {
+      "image" : "/assets/tv-speaker/user.png",
+      "name" : "Stelios stamatakis",
+      "last_msg" : "Ela re stam poy eosao re man",
+      "active_state" : "/assets/tv-speaker/green.png"
     }
     ]; 
   constructor() { }
