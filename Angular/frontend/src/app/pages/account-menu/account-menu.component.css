@@ -1,10 +1,35 @@
+@keyframes slide{
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0vw);
+    }
+}
+
+.invisible-button{
+    width: 8vw;
+    height: 8vw;
+    position: fixed;
+    top: 3.18vw;
+    left: 3.2vw
+}
+
 .main-container{
-    width: 75%;
-    height: auto;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+    width: 80vw;
+    height: 100vh;
+    
     background-color: white;
 
     display: flex;
     flex-direction: column;
+
+    animation-name: slide;
+    animation-duration: 0.5s;
 }
 
 .profile-info{
@@ -22,6 +47,7 @@
     font-weight: bold;
     font-size: 5vw;
     text-align: left;
+    white-space: nowrap;
 }
 
 .option{

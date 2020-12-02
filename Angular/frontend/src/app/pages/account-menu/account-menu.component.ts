@@ -9,6 +9,8 @@ export class AccountMenuComponent implements OnInit {
 
   @Input('name') name: string;
 
+  enabled: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
