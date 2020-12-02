@@ -1,11 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, Input, OnInit } from '@angular/core';
+import {Location} from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-explorer-online-devices',
   templateUrl: './explorer-online-devices.component.html',
   styleUrls: ['./explorer-online-devices.component.css']
 })
 export class ExplorerOnlineDevicesComponent implements OnInit {
+  @Input() Team_name: string;
+
   devices_array:device[] = [
       {
         "icon" : '/assets/online-devices/device_active.png',
@@ -20,9 +23,16 @@ export class ExplorerOnlineDevicesComponent implements OnInit {
         "name" : 'Alexa'
       }    
     ]; 
-  constructor() { }
+  constructor(private _location: Location,
+              private _Activatedroute:ActivatedRoute
+              ) 
+  {}
 
+  backClicked() {
+    this._location.back();
+  }
   ngOnInit(): void {
+    this.Team_name=this._Activatedroute.snapshot.paramMap.get("team_name");
   }
 
 }

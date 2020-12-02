@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Message } from '../Final-Cretanian/conversations/conversations.component';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'mobile-chat',
@@ -25,6 +26,12 @@ export class MobileChatComponent {
     // this.chatBarRef.nativeElement.style.position = 'sticky';
   }
 
+  constructor(private _location: Location) 
+  {}
+
+  backClicked() {
+    this._location.back();
+  }
   openExtras($event?): void{
     this.extrasOpened = true;
   }

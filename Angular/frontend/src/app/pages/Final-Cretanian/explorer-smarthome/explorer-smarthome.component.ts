@@ -10,7 +10,6 @@ export class ExplorerSmarthomeComponent implements OnInit {
     {
       "iconSrc" : '/assets/teams-button/a.png',
       "groupName" : 'Ami Living Room',
-      "routing" : '/explorer-mobile-onlinedevices'
     },
     ];
   constructor() { }
@@ -23,10 +22,8 @@ export class ExplorerSmarthomeComponent implements OnInit {
 class team{
   iconSrc:string;
   groupName:string;
-  routing:string;
   constructor() { 
     this.iconSrc ='';
     this.groupName ='';
-    this.routing ='';
   }
 }

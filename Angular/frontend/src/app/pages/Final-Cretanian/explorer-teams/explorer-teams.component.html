@@ -10,9 +10,10 @@
         <app-teams-button
             class='body-item'
             *ngFor= 'let team of teams_array'
-            [routerLink] ='team.routing'
             [icon] = 'team.iconSrc'
             [groupName] = 'team.groupName'
+            [routerLink] = "['/explorer-mobile-team-conversations', team.groupName]"
+            
         ></app-teams-button>
     </div>
 

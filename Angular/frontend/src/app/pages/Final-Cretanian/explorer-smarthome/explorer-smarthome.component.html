@@ -9,7 +9,7 @@
         <app-teams-button
             class='body-item'
             *ngFor= 'let team of teams_array'
-            [routerLink] ='team.routing'
+            [routerLink] = "['/explorer-mobile-onlinedevices', team.groupName]"
             [icon] = 'team.iconSrc'
             [groupName] = 'team.groupName'
         ></app-teams-button>

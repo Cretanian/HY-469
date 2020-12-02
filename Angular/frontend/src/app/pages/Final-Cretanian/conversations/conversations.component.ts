@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ConversationMessagePreviewComponent } from 'src/app/pages/conversation-message-preview/conversation-message-preview.component';
-
+import { Component, OnInit, Input } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-conversations',
@@ -11,11 +10,13 @@ export class ConversationsComponent implements OnInit {
   conversations: Array<Conversation>;
   moreOpen: boolean = false;
   accountMenuOpen: boolean = false;
-  
+ 
+  @Input() Team_name: string;
 
-  constructor() {}
+  constructor(private _Activatedroute:ActivatedRoute) {}
 
   ngOnInit(): void {
+    this.Team_name=this._Activatedroute.snapshot.paramMap.get("team_name");
     this.conversations = new Array<Conversation>(1);
     // Array == []
     this.conversations[0] = new Conversation(
@@ -29,7 +30,7 @@ export class ConversationsComponent implements OnInit {
                             );
                             
   }
-
+  
   enableMore(){
     this.moreOpen = true;
   }

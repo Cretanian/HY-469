@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-teams-button',
   templateUrl: './teams-button.component.html',
@@ -8,15 +9,16 @@ import { Component, Input, OnInit } from '@angular/core';
 export class TeamsButtonComponent implements OnInit {
 
   @Input('icon') iconSrc: string;
-  @Input('redirect') redirect: string;
   @Input('groupName') groupName: string;
-
+  
+ 
+  
   constructor() {
-    if(this.iconSrc == undefined)  
-      this.iconSrc = '../../assets/steli.png'
+    // if(this.iconSrc == undefined)  
+    //   this.iconSrc = '../../assets/steli.png'
 
-    if(this.groupName == undefined)
-      this.groupName = 'ZoomE'
+    // if(this.groupName == undefined)
+    //   this.groupName = 'ZoomE'
   }
 
   ngOnInit(): void {

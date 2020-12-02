@@ -10,20 +10,16 @@ export class ExplorerTeamsComponent implements OnInit {
     {
       "iconSrc" : '/assets/teams-button/a.png',
       "groupName" : 'ZoomE',
-      "routing" : '/explorer-mobile-team-conversations'
     },
     {
       "iconSrc" : '/assets/teams-button/a.png',
       "groupName" : 'DnD | Reloaded',
-      "routing" : '/'
     }, 
     {
       "iconSrc" : '/assets/teams-button/a.png',
-      "groupName" : 'Intelligent Living Room',
-      "routing" : '/'
+      "groupName" : 'Intelligent Living Room'
     }     
     ];
-  constructor() { }
 
   ngOnInit(): void {
   }
@@ -34,11 +30,11 @@ export class ExplorerTeamsComponent implements OnInit {
 class team{
   iconSrc:string;
   groupName:string;
-  routing:string;
+
   constructor() { 
     this.iconSrc ='';
     this.groupName ='';
-    this.routing ='';
+
   }
 }
 

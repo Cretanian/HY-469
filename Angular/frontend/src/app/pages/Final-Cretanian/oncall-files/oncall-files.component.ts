@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-oncall-files',
@@ -16,8 +17,12 @@ export class OncallFilesComponent implements OnInit {
       "icon"  : '/assets/files/show.png'
     }
   ];
-  constructor() { }
+  constructor(private _location: Location) 
+  {}
 
+  backClicked() {
+    this._location.back();
+  }
   ngOnInit(): void {
   }
 
