@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-participants-mobile',
@@ -7,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ParticipantsMobileComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _location: Location) 
+  {}
 
+  backClicked() {
+    this._location.back();
+  }
   ngOnInit(): void {
   }
 

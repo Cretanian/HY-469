@@ -1,6 +1,6 @@
 <div class="phone">
     <header class='header'
-        name= 'Team 1'
+        name = {{Team_name}}
         src1='\assets\Hamburger.png'
         src2='../../../assets/call_icon.png' 
         src3='../../../assets/team_more_icon.png'
@@ -27,13 +27,12 @@
         ></dimmer>
         <mobile-team-more
             class='team-more'
+            (disableMore) = "disableMore()"
+            [Team_name] = "Team_name"
         ></mobile-team-more>
     </div>
 
-    <!-- <div
-        class=''
-    >
-        <dimmer></dimmer>
-        <account-menu></account-menu>
-    </div> -->
+    <account-menu
+        name='Stylianos Stamatakis'
+    ></account-menu>
 </div>

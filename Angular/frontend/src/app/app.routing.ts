@@ -31,7 +31,6 @@ const routes: Routes = [
   { path: 'explorer-mobile-team-chat', component: MobileChatComponent },
   { path: 'explorer-mobile-team-call-setting', component: OncallCallSettingsComponent },
   { path: 'explorer-mobile-team-participants', component: ParticipantsMobileComponent },
-  { path: 'explorer-mobile-team-conversations', component: ConversationsComponent },
   { path: 'explorer-mobile-team-files', component: OncallFilesComponent },
   /*Mobile*/
   { path: 'explorer-mobile-activities', component: ActivitiesComponent },
@@ -41,9 +40,10 @@ const routes: Routes = [
   { path: 'explorer-mobile-files', component: ExplorerFilesComponent },
   { path: 'explorer-mobile-calendar', component: ExplorerCalendarComponent },
   { path: 'explorer-mobile-smarthome', component: ExplorerSmarthomeComponent },
-  { path: 'explorer-mobile-onlinedevices', component: ExplorerOnlineDevicesComponent },
-  { path: 'explorer-mobile-teams-files', component: ExplorerTeamsFilesComponent },
-  { path: 'explorer-mobile-teams-calendar', component: ExplorerTeamsCalendarComponent },
+  { path: 'explorer-mobile-onlinedevices/:team_name', component: ExplorerOnlineDevicesComponent },
+  { path: 'explorer-mobile-teams-files/:team_name', component: ExplorerTeamsFilesComponent },
+  { path: 'explorer-mobile-teams-calendar/:team_name', component: ExplorerTeamsCalendarComponent },
+  { path: 'explorer-mobile-team-conversations/:team_name', component: ConversationsComponent },
   { path: '**', component: NotFoundComponent },
 ];
 

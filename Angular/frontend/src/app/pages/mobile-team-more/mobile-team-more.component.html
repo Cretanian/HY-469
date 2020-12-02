@@ -16,18 +16,19 @@
     </div>
     <div class='button-row'>
         <g-button
-            routerLink='/explorer-mobile-teams-files'
+            [routerLink] = "['/explorer-mobile-teams-files', Team_name]"
             class='button'
             icon='../../assets/more_files_icon.png'
         ></g-button>
         <g-button
-            routerLink='/explorer-mobile-teams-calendar'
+            [routerLink] = "['/explorer-mobile-teams-calendar', Team_name]"
             class='button'
             icon='../../assets/more_calendar_icon.png'
         ></g-button>
         <g-button
             class='button'
             icon='../../assets/more_x_icon.png'
+            (click) = 'DisableMore()'
         ></g-button>
     </div>
 
