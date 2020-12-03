@@ -20,11 +20,7 @@
 
                 <mobile-message
                     *ngFor='let message of messages'
-                    [photo]='message.photo'
-                    [name]='message.name'
-                    [message]='message.message'
-                    [time]='message.time'
-                    [alignment]='message.alignment'
+                        [message]='message'
                     (click)='openExtras($event)'
                 ></mobile-message>
 

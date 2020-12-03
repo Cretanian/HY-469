@@ -1,5 +1,5 @@
 import { Component, ElementRef,Input, OnInit, ViewChild } from '@angular/core';
-
+import { Message, Reaction } from '../Final-Cretanian/conversations/conversations.component';
 
 @Component({
   selector: 'mobile-message',
@@ -8,37 +8,19 @@ import { Component, ElementRef,Input, OnInit, ViewChild } from '@angular/core';
 })
 export class MobileMessageComponent {
 
-  @Input('photo') senderPhoto: string;
-  @Input('name') senderName: string;
-  @Input('message') messageSent: string;l
-  @Input('time') timeSent: string;
-  @Input('alignment') alignment: string;
-  
-  @ViewChild('mainContainer', {static:true}) mainContainerRef: ElementRef;
-  @ViewChild('senderContainer', {static:true}) senderContainerRef: ElementRef;
-
-  emojis: HTMLElement[];
+  @Input('message') message: Message;
 
   constructor() { 
     
   }
 
-  ngAfterViewInit(): void{
-    if(this.senderName == undefined)
-      this.senderName = 'undef';
-    if(this.messageSent == undefined)
-      this.messageSent = 'undef';
-    if(this.timeSent == undefined)
-      this.timeSent = 'undef';
+  findPhoto(photo: string): string{
+    return '../../../assets/' + photo;
+  }
 
-    if(this.alignment == 'left'){
-      this.mainContainerRef.nativeElement.style.alignItems = 'flex-start';
-      this.senderContainerRef.nativeElement.style.justifyContent = "flex-start";
-    }
-    else if(this.alignment == 'right'){
-      this.mainContainerRef.nativeElement.style.alignItems = 'flex-end';
-      this.senderContainerRef.nativeElement.style.justifyContent = "flex-end";
-    }
+  findEmoji(emoji: string): string{
+    console.log('HALLOOOOO: ' + emoji);
+    return '../../../assets/emojis/' + emoji;
   }
 
 }

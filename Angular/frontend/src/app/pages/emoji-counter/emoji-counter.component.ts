@@ -18,6 +18,10 @@ export class EmojiCounterComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+      console.log('HALO Emojisrc: ' + this.emojiSrc);
+      this.emojiSrc = '../../../assets/emojis/' + this.emojiSrc;
+
   }
 
 }

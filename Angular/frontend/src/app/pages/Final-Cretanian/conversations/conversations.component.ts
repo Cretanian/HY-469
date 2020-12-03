@@ -15,20 +15,69 @@ export class ConversationsComponent implements OnInit {
 
   constructor(private _Activatedroute:ActivatedRoute) {}
 
+  data = [ 
+    {
+      message1: {
+        photo: 'profile_picture.png',
+        name:  'China Guy',
+        time: '12:25',
+        message: 'Have you EVER seen a koala? They are SUPPPER cute lmao.',
+        alignment: '',
+        emojis: [
+          {
+            amount: 8,
+            emojiSrc: 'hearts_for_eyes_icon.png'
+          },
+          {
+            amount: 2,
+            emojiSrc: 'thumbs_up_icon.png'
+          }
+        ]
+      },
+      message2: {
+        photo: 'profile_picture.png',
+        name:  'Asterios Leonidis',
+        time: '12:27',
+        message: 'Oh my god never in my life haha! They must be SUPER cute!.',
+        emojis: [
+          {
+          amount: 3,
+          emojiSrc: 'hearts_for_eyes_icon.png'
+          }
+        ]
+      }
+    },
+    {
+      message1: {
+        photo: 'profile_picture.png',
+        name:  'AMI Lab',
+        time: '14:25',
+        message: 'Great work everybody on your projects so far, keep it up!',
+        alignment: '',
+        reactions: []
+      },
+      message2: {
+        photo: 'profile_picture.png',
+        name:  'Stylianos Stamatakis',
+        time: '14:35',
+        message: 'STFU boss. You are getting cringy.',
+        alignment: '',
+        reactions: []
+      }
+    },
+    
+  ]
+
   ngOnInit(): void {
     this.Team_name=this._Activatedroute.snapshot.paramMap.get("team_name");
-    this.conversations = new Array<Conversation>(1);
-    // Array == []
-    this.conversations[0] = new Conversation(
-                              new Message('profile_picture.png', 'China Guy', '12:25', 'Have you EVER seen a koala? They are SUPPPER cute lmao.', '', [new Reaction(2, 'skeptical_icon.png')] as Reaction[]),
-                              new Message('profile_picture.png', 'Asterios', '13:32', 'Damnnn I\'ve never seen one up close!.', '', [new Reaction(1, 'hearts_for_eyes_icon.png')] as Reaction[])
-                            );
 
-    this.conversations[1] = new Conversation(
-                              new Message('profile_picture.png', 'HCI Lab', '12:25', 'Good morning EVERYBODY! Lets grind this company to the heavens! <3', '', [new Reaction(2, 'skeptical_icon.png')] as Reaction[]),
-                              new Message('profile_picture.png', 'Stylianos Stamatakis', '13:32', 'Stfu boss. You are cringy. #noshame', '', [new Reaction(1, 'hearts_for_eyes_icon.png')] as Reaction[])
-                            );
-                            
+    //Dynamically load conversations from base!
+    this.conversations = [];
+    for(let i: number = 0; i < this.data.length; i++){
+      let message1: Message = new Message(this.data[i].message1);
+      let message2: Message = new Message(this.data[i].message2);
+      this.conversations.push(new Conversation(message1, message2));
+    }              
   }
   
   enableMore(){
@@ -55,9 +104,9 @@ class Conversation{
   initialMessage: Message;
   replyMessage: Message;
 
-  constructor(initialMessaga: Message, replyMessage: Message){
-    this.initialMessage = initialMessaga;
-    this.replyMessage = replyMessage;
+  constructor(message1: Message, message2: Message){
+    this.initialMessage = message1;
+    this.replyMessage = message2;
   }
 }
 
@@ -79,15 +128,33 @@ export class Message{
   alignment: string;
   emojis: Reaction[];
 
-  constructor (photo:string, name: string, time:string, message:string, alignment?: string, emojis?: Reaction[]){
-    this.photo = photo;
-    this.name = name;
-    this.time = time;
-    this.message = message;
-    if(alignment == undefined)
+  constructor(json: {
+    photo:string,
+    name: string,
+    time:string,
+    message:string,
+    alignment?: string,
+    emojis?: {
+       amount: number,
+       emojiSrc: string 
+    }[]
+  }){
+    this.photo = json.photo;
+    this.name = json.name;
+    this.time = json.time;
+    this.message = json.message;
+    if(json.alignment == undefined)
       this.alignment = 'left'
     else
-      this.alignment = alignment;
+      this.alignment = json.alignment;
+
+    let emojis: Reaction[] = [];
+    console.log('nani');
+    if(json.emojis != undefined)
+      for(let i = 0; i < json.emojis.length; i++){
+        console.log('Hallo?! reactions: ' + json.emojis[i].amount);
+        emojis[i] = new Reaction(json.emojis[i].amount, json.emojis[i].emojiSrc);
+      }
     this.emojis = emojis;
   }
 }

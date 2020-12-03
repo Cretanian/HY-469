@@ -16,6 +16,23 @@
     padding-bottom: 2%;
 }
 
+.main-container-right{
+    width: 100%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    font-family: (Roboto);
+}
+.sender-container-right{
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    padding-bottom: 2%;
+}
+
 .sender-profile{
     width: 9vw;
 }
@@ -43,6 +60,7 @@
 }
 
 .message-text{
+    position: relative;
     margin: 0px;
     padding: 3vw;
     padding-bottom: 7vw;
@@ -54,8 +72,28 @@
 .message-time{
     position: absolute;
     left: 61vw;
-    top: 80%;
+    bottom: 0%;
     margin: 0px;
-
     font-size: 2.8vw;
+}
+
+.emoji-area{
+    width: 70vw;
+    display: flex;
+    flex-direction: row-reverse;
+
+    padding-top: 1vw;
+}
+
+.emoji-area-right{
+    width: 70vw;
+    display: flex;
+    flex-direction: row;
+
+    padding-top: 1vw;
+}
+
+.emoji{
+    padding-left: 1vw;
+    padding-right: 1vw;
 }

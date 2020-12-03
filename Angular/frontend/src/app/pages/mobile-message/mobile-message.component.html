@@ -1,12 +1,33 @@
-<div #mainContainer class='main-container'>
+<div
+    [ngClass]="{
+        'main-container' : message.alignment == 'left' || message.alignment == '',
+        'main-container-right' : message.alignment == 'right'
+    }"
+>
 
-    <div #senderContainer class='sender-container'>
-        <img #profile class='sender-profile' src='{{senderPhoto}}' alt=''>
-        <p #name class='sender-name'>{{senderName}}</p>
+    <div class='sender-container'
+        [ngClass]="{
+            'sender-container' : message.alignment == 'left' || message.alignment == '',
+            'sender-container-right' : message.alignment == 'right'
+        }"
+    >
+        <img class='sender-profile' src='{{findPhoto(message.photo)}}' alt=''>
+        <p class='sender-name'>{{message.name}}</p>
     </div>
     <div class='message-container'>
-        <p #message class='message-text'>{{messageSent}}</p>
-        <p #time class='message-time'>{{timeSent}}</p>
+        <p class='message-text'>{{message.message}}</p>
+        <p class='message-time'>{{message.time}}</p>
+    </div>
+    <div 
+        class='emoji-area'
+        [ngClass]="{'emoji-area-right' : message.alignment == 'right' }"
+    >
+        <emoji-counter 
+            *ngFor= 'let emoji of message.emojis'
+            class='emoji'
+            [amount]='emoji.amount'
+            [emojiSrc]='findEmoji(findEmoji(emoji.emojiSrc))'
+        ></emoji-counter>
     </div>
 
 </div>  

@@ -41,9 +41,9 @@ mobile-message{
 
 .chat-start-text-container{
     width: 100%;
+    position: absolute;
     top: 0px;
     margin: 0px;
-    position: absolute;
 
     display: flex;
     justify-content: center;

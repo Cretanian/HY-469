@@ -10,13 +10,71 @@ import {Location} from '@angular/common';
 export class MobileChatComponent {
   @ViewChild('chatBar', {static:true}) chatBarRef: ElementRef;
 
-  messages: Message[] = [
-    new Message('../../assets/profile_picture.png', 'China Guy', '13:50','Random Shit about some random shit asdasdas asdaa we sda sd sd asd  sadasd a', 'left'),
-    new Message('', 'Asterios', '13:52', 'Oh thats so intresting! We have to take a more HCI approach in this issue tho. Lets try to do it again!', 'right')
+  data = [
+    {
+      photo: 'profile_picture.png',
+      name:  'Steli',
+      time: '12:25',
+      message: 'DnD session twice per week. Please.',
+      alignment: 'left',
+      emojis: [
+        {
+          amount: 2,
+          emojiSrc: 'skeptical_icon.png'
+        }
+      ]
+    },
+    {
+      photo: 'profile_picture.png',
+      name:  'Steli',
+      time: '12:25',
+      message: 'For the love of god. Hear me out. I-NEED-THIS. Zack needs this. PLEAAAASE. PLLLLLEEEEAAASEEE.',
+      alignment: 'left',
+      emojis: []
+    },
+    {
+      photo: '',
+      name:  'agantos',
+      time: '22:20',
+      message: '*cries in DM*.',
+      alignment: 'right',
+      emojis: [
+        {
+          amount: 1,
+          emojiSrc: 'skeptical_icon.png'
+        }
+      ]
+    }
   ]
+
+  messages: Message[];
 
   extrasOpened: boolean = false;
 
+  constructor(private _location: Location) 
+  {}
+
+  ngOnInit(): void{
+    this.messages = [];
+    for(let i = 0; i < this.data.length; i++){
+      this.messages[i] = new Message(this.data[i]);
+      //Fix photo path.
+      this.messages[i].photo = '../../../assets/' + this.data[i].photo;
+    }
+  }
+
+  backClicked() {
+    this._location.back();
+  }
+
+  openExtras($event?): void{
+    this.extrasOpened = true;
+  }
+
+  closeExtras($event?): void{
+    this.extrasOpened = false;
+  }
+  
   onScroll(event: any){
     if(this.chatBarRef == undefined){
       console.log('Chat bar is not defined in angular');
@@ -25,20 +83,5 @@ export class MobileChatComponent {
 
     // this.chatBarRef.nativeElement.style.position = 'sticky';
   }
-
-  constructor(private _location: Location) 
-  {}
-
-  backClicked() {
-    this._location.back();
-  }
-  openExtras($event?): void{
-    this.extrasOpened = true;
-  }
-
-  closeExtras($event?): void{
-    this.extrasOpened = false;
-  }
-
 }
 
