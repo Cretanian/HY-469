@@ -163,7 +163,7 @@ export class ResourceController<T extends Document> implements ICrudController {
           .findOneAndUpdate(
             { _id: modelId },
             req.body,
-            { new: true, runValidators: true, context: 'query' }
+            { new: true, runValidators: true, context: 'query' } as unknown as QueryOptions
           )
           .orFail(new NotFound())
           .exec();
