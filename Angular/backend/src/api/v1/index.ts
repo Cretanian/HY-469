@@ -1,3 +1,4 @@
+import { ContactsController } from './contacts/contacts.controller';
 import * as express from 'express';
 import { ResourceController } from '../shared';
 import { ITask, TaskModel } from '@app/models';
@@ -6,7 +7,6 @@ import { SocketEventsController } from './socket-events/socket-events.controller
 import { ExampleController } from './example/example.controller';
 
 const apiV1Router = express.Router();
-
 
 apiV1Router
   // Sockets events routes
@@ -31,8 +31,11 @@ apiV1Router
   .use(
     '/example',
     new ExampleController().applyRoutes()
+  )
+
+  .use(
+    '/contacts',
+    new ContactsController().applyRoutes()
   );
-
-
+  
 export { apiV1Router };
-
