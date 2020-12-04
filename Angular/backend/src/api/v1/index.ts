@@ -1,3 +1,4 @@
+import { ParticipantsController } from './participants/participants.controller';
 import { ContactsController } from './contacts/contacts.controller';
 import * as express from 'express';
 import { ResourceController } from '../shared';
@@ -36,6 +37,11 @@ apiV1Router
   .use(
     '/contacts',
     new ContactsController().applyRoutes()
+  )
+  
+  .use(
+    '/participants',
+    new ParticipantsController().applyRoutes()
   );
   
 export { apiV1Router };
