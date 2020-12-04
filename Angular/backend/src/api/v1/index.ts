@@ -1,3 +1,4 @@
+import { TvGridController } from './tvgrid/tvgrid.controller';
 import { ActivityController } from './activity/activity.controller';
 import { ParticipantsController } from './participants/participants.controller';
 import { ContactsController } from './contacts/contacts.controller';
@@ -45,8 +46,15 @@ apiV1Router
     new ParticipantsController().applyRoutes()
   )
   
-  .use(('/activity'),
+  .use(
+    '/activity',
     new ActivityController().applyRoutes()
+  )
+  
+  .use(
+    '/tvgrid',
+    new TvGridController().applyRoutes()
   );
+
   
 export { apiV1Router };

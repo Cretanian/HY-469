@@ -21,7 +21,6 @@ export class TVGridComponent implements OnInit {
   }
 
   select(){
-    console.log("CHILD " + this.selected);
     this.selectEvent.emit(this.grid.id);
   }
 
