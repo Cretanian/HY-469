@@ -31,108 +31,58 @@ export class ContactsController {
             {
               name: 'Antonis Agapakis',
               srcProfile: '../../../../assets/icons/TV Grid 1 Grid.png',
-              isFavourite: true,
-            },
-            {
-              name: 'Andreas Lenakakis',
-              srcProfile: '../../../../assets/icons/TV Grid 1 Grid.png',
               isFavourite: false,
             },
             {
-              name: 'Bllos enas malakas',
-              srcProfile: '../../../../assets/icons/TV Grid 1 Grid.png',
-              isFavourite: false,
-            },
-            {
-              name: 'bntonis Agapakis',
-              srcProfile: '../../../../assets/icons/TV Grid 1 Grid.png',
-              isFavourite: false,
-            },
-            {
-              name: 'cndreas Lenakakis',
-              srcProfile: '../../../../assets/icons/TV Grid 1 Grid.png',
-              isFavourite: false,
-            },
-            {
-              name: 'dllos enas malakas',
-              srcProfile: '../../../../assets/icons/TV Grid 1 Grid.png',
-              isFavourite: false,
-            },
-            {
-              name: 'entonis Agapakis',
-              srcProfile: '../../../../assets/icons/TV Grid 1 Grid.png',
-              isFavourite: false,
-            },
-            {
-              name: 'endreas Lenakakis',
-              srcProfile: '../../../../assets/icons/TV Grid 1 Grid.png',
-              isFavourite: false,
-            },
-            {
-              name: 'Fllos enas malakas',
-              srcProfile: '../../../../assets/icons/TV Grid 1 Grid.png',
-              isFavourite: false,
-            },
-            {
-              name: 'Gntonis Agapakis',
-              srcProfile: '../../../../assets/icons/TV Grid 1 Grid.png',
-              isFavourite: false,
-            },
-            {
-              name: 'Endreas Lenakakis',
-              srcProfile: '../../../../assets/icons/TV Grid 1 Grid.png',
-              isFavourite: false,
-            },
-            {
-              name: 'fllos enas malakas',
-              srcProfile: '../../../../assets/icons/TV Grid 1 Grid.png',
-              isFavourite: false,
-            },
-            {
-              name: 'gntonis Agapakis',
-              srcProfile: '../../../../assets/icons/TV Grid 1 Grid.png',
-              isFavourite: false,
-            },
-            {
-              name: 'Hndreas Lenakakis',
-              srcProfile: '../../../../assets/icons/TV Grid 1 Grid.png',
-              isFavourite: false,
-            },
-            {
-              name: 'Illos enas malakas',
-              srcProfile: '../../../../assets/icons/TV Grid 1 Grid.png',
-              isFavourite: false,
-            },
-            {
-              name: 'Kntonis Agapakis',
-              srcProfile: '../../../../assets/icons/TV Grid 1 Grid.png',
-              isFavourite: false,
-            },
-            {
-              name: 'Lndreas Lenakakis',
-              srcProfile: '../../../../assets/icons/TV Grid 1 Grid.png',
-              isFavourite: false,
-            },
-            {
-              name: 'Mllos enas malakas',
-              srcProfile: '../../../../assets/icons/TV Grid 1 Grid.png',
-              isFavourite: false,
-            },
-            {
-              name: 'Nntonis Agapakis',
-              srcProfile: '../../../../assets/icons/TV Grid 1 Grid.png',
-              isFavourite: false,
-            },
-            {
-              name: 'Ondreas Lenakakis',
+              name: 'Zacharias Pervolarakis',
               srcProfile: '../../../../assets/icons/TV Grid 1 Grid.png',
               isFavourite: true,
             },
             {
-              name: 'Pllos enas malakas',
+              name: 'Stelios Stamatakis',
+              srcProfile: '../../../../assets/icons/TV Grid 1 Grid.png',
+              isFavourite: true,
+            },
+            {
+              name: 'Youla Fatouroy',
               srcProfile: '../../../../assets/icons/TV Grid 1 Grid.png',
               isFavourite: false,
             },
+            {
+              name: 'Asterios Lewnidhs',
+              srcProfile: '../../../../assets/icons/TV Grid 1 Grid.png',
+              isFavourite: false,
+            },
+            {
+              name: 'CS',
+              srcProfile: '../../../../assets/icons/TV Grid 1 Grid.png',
+              isFavourite: false,
+            },
+            {
+              name: 'Manolis Agapakis',
+              srcProfile: '../../../../assets/icons/TV Grid 1 Grid.png',
+              isFavourite: false,
+            },
+            {
+              name: 'Dude',
+              srcProfile: '../../../../assets/icons/TV Grid 1 Grid.png',
+              isFavourite: false,
+            },
+            {
+              name: 'Guy',
+              srcProfile: '../../../../assets/icons/TV Grid 1 Grid.png',
+              isFavourite: false,
+            },
+            {
+              name: 'Person',
+              srcProfile: '../../../../assets/icons/TV Grid 1 Grid.png',
+              isFavourite: false,
+            },
+            {
+              name: 'Dudette',
+              srcProfile: '../../../../assets/icons/TV Grid 1 Grid.png',
+              isFavourite: false,
+            }
         ];
     }
 
