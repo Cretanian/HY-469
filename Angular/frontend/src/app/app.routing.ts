@@ -20,6 +20,7 @@ import { ParticipantsMobileComponent } from './pages/Final-Cretanian/participant
 import { MobileControllerComponent } from './pages/mobile-controller/mobile-controller.component';
 import { MobileJoinMeetingComponent } from './pages/mobile-join-meeting/mobile-join-meeting.component';
 import { OncallFilesComponent } from './pages/Final-Cretanian/oncall-files/oncall-files.component';
+import { ControllerCallChatComponent } from './pages/Final-Cretanian/controller-call-chat/controller-call-chat.component';
 
 
 const routes: Routes = [
@@ -28,7 +29,7 @@ const routes: Routes = [
   { path: 'explorer-mobile-team-joinmeeting', component: MobileJoinMeetingComponent },
   { path: 'explorer-mobile-team-controller', component: MobileControllerComponent },
   { path: 'explorer-mobile-team-tvgrid', component: TVGridMobileComponent },
-  { path: 'explorer-mobile-team-chat', component: MobileChatComponent },
+  { path: 'explorer-mobile-team-chat', component: ControllerCallChatComponent },
   { path: 'explorer-mobile-team-call-setting', component: OncallCallSettingsComponent },
   { path: 'explorer-mobile-team-participants', component: ParticipantsMobileComponent },
   { path: 'explorer-mobile-team-files', component: OncallFilesComponent },

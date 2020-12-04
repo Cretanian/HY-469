@@ -1,4 +1,5 @@
 import { ContactsController } from './contacts/contacts.controller';
+import { MessagesController } from './messages/messages.controller';
 import * as express from 'express';
 import { ResourceController } from '../shared';
 import { ITask, TaskModel } from '@app/models';
@@ -36,6 +37,11 @@ apiV1Router
   .use(
     '/contacts',
     new ContactsController().applyRoutes()
+  )
+
+  .use(
+    '/messages',
+    new MessagesController().applyRoutes()
   );
   
 export { apiV1Router };

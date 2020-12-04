@@ -97,3 +97,12 @@
     padding-left: 1vw;
     padding-right: 1vw;
 }
+
+.message-extra{
+    width: 100vw;
+
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    z-index: 99999;
+}

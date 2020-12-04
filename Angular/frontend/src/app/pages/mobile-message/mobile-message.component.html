@@ -3,8 +3,8 @@
         'main-container' : message.alignment == 'left' || message.alignment == '',
         'main-container-right' : message.alignment == 'right'
     }"
+    (click)='openExtras($event)'
 >
-
     <div class='sender-container'
         [ngClass]="{
             'sender-container' : message.alignment == 'left' || message.alignment == '',
@@ -31,3 +31,11 @@
     </div>
 
 </div>  
+
+<!-- Extras  for when message is clicked -->
+<message-extra
+    *ngIf='extrasOpened'
+    class='message-extra'
+    (closeEmitter)='closeExtras()'
+    (emojiEmitter)="reactTo($event.emojiSrc)"
+></message-extra>
