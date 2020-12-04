@@ -1,61 +1,30 @@
 import { Component,Input, OnInit } from '@angular/core';
+import { ChatHeadersService } from 'src/app/global/services/Cretanian/chat-headers/explorer-teams.service';
 
 @Component({
   selector: 'app-chat-list',
   templateUrl: './chat-list.component.html',
   styleUrls: ['./chat-list.component.css']
 })
-export class ChatListComponent implements OnInit {
+export class ChatListComponent{
   @Input ('header') header: string;
-
-  chat_array:chat[] = [
-    {
-      "image" : '/assets/tv-speaker/user.png',
-      "name" : "Stelios stamatakis",
-      "last_msg" : "Ela re stam poy eosao re man",
-      "active_state" : "/assets/tv-speaker/green.png"
-    },
-    {
-      "image" : "/assets/tv-speaker/user.png",
-      "name" : "Stelios stamatakis",
-      "last_msg" : "Ela re stam poy eosao re man",
-      "active_state" : "/assets/tv-speaker/green.png"
-    },
-    {
-      "image" : "/assets/tv-speaker/user.png",
-      "name" : "Stelios stamatakis",
-      "last_msg" : "Ela re stam poy eosao re man",
-      "active_state" : "/assets/tv-speaker/green.png"
-    },
-    {
-      "image" : "/assets/tv-speaker/user.png",
-      "name" : "Stelios stamatakis",
-      "last_msg" : "Ela re stam poy eosao re man",
-      "active_state" : "/assets/tv-speaker/green.png"
-    },
-    {
-      "image" : "/assets/tv-speaker/user.png",
-      "name" : "Stelios stamatakis",
-      "last_msg" : "Ela re stam poy eosao re man",
-      "active_state" : "/assets/tv-speaker/green.png"
-    }
-    ]; 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  @Input ('chat') chat: chat_list[];
 }
 
-class chat{
+
+class chat_list{
   image:string;
   name:string;
   last_msg:string;
   active_state:string;
+  date:string;
+  Favorites:string;
   constructor() { 
     this.image ='';
     this.name ='';
     this.active_state ='';
     this.last_msg ='';
+    this.date ='';
+    this.Favorites ='';
   }
 }

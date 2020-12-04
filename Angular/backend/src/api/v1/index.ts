@@ -9,7 +9,7 @@ import { TeamsListController } from './Cretanian/lists/teams-list/teams-list.con
 import { SmarthomeListController } from './Cretanian/lists/smarthome-list/smarthome-list.controller';
 import { OnlineDevicesListController } from './Cretanian/lists/online-devices-list/online-devices-list.controller';
 import { FilesHeadersController } from './Cretanian/files-headers/files-headers.controller';
-import { ChatHeadersController } from './Cretanian/chat-headers/explrorer-chat.controller';
+import { ChatHeadersController } from './Cretanian/chat-headers/chat-header.controller';
 
 const apiV1Router = express.Router();
 

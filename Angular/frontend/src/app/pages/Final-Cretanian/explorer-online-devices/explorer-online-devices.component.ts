@@ -7,6 +7,7 @@ import { OnlineDevicesListService } from 'src/app/global/services/Cretanian/list
   templateUrl: './explorer-online-devices.component.html',
   styleUrls: ['./explorer-online-devices.component.css']
 })
+
 export class ExplorerOnlineDevicesComponent implements OnInit {
   @Input() Team_name: string;
 

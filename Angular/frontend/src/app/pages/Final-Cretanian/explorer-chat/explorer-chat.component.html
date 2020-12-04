@@ -7,8 +7,9 @@
 
     <div class="body">     
         <app-chat-list
-            *ngFor= 'let chat of chats_array'
-            [header] = 'chat.header'
+             *ngFor= 'let chat_item of chat'
+            [header] = 'chat_item.header'
+            [chat] = 'chat_item.chat_list'
         ></app-chat-list>
     </div>
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 
 @Component({
   selector: 'app-days-calendar-list',
@@ -6,40 +6,33 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./days-calendar-list.component.css']
 })
 export class DaysCalendarListComponent implements OnInit {
-  events_array:event[] = [
-    {
-      "event" : 'ela re pame volta',
-      "time" : '11:00 - 5:40'
-    },
-    {
-      "event" : 'ela re pame volta',
-      "time" : '11:00 - 5:40'
-    },
-    {
-      "event" : 'ela re pame volta',
-      "time" : '11:00 - 5:40'
-    },
-    {
-      "event" : 'ela re pame volta',
-      "time" : '11:00 - 5:40'
-    },
-    {
-      "event" : 'ela re pame volta',
-      "time" : '11:00 - 5:40'
-    },
-    {
-      "event" : 'ela re pame volta',
-      "time" : '11:00 - 5:40'
-    },
-    
-    ]; 
-  constructor() { }
+  
+  event_A: events;
+  @Input() day: string;
+  @Input() date: string;
+  @Input() month: string;
+ 
+  constructor() {}
 
   ngOnInit(): void {
+    this.event_A = new events();
+    //vres ta sosta events me vasi tis meres kai ftiakse to sosto pinaka  events_array
+    this.event_A.date = this.date;
+    this.event_A.month = this.month;
+    this.event_A.day = this.day;
+    
+    this.event_A.events_array =  [
+      {
+        "event" : '16',
+        "time" : 'OCT',
+      },{
+        "event" : '16',
+        "time" : 'OCT',
+      }
+      ]; 
   }
 
 }
-
 class event{
   event:string;
   time:string;
@@ -47,4 +40,11 @@ class event{
     this.event = '';
     this.time = '';
   }
+}
+
+class events{
+  day: string;
+  date: string;
+  month: string;
+  events_array: event[] = [];
 }
