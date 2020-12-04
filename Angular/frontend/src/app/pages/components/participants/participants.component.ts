@@ -1,5 +1,5 @@
 import { ParticipantsService } from './../../../global/services/participants/participants.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {participant} from '../utils/participant'
 
 
@@ -10,16 +10,11 @@ import {participant} from '../utils/participant'
 })
 export class ParticipantsComponent implements OnInit {
 
-  participants: participant[]; 
-   ;
-  constructor(private participantsService: ParticipantsService) { }
+  @Input() participants: participant[]; 
+  
+  constructor() { }
 
   ngOnInit(): void {
-    this.participantsService.getAll().subscribe(data =>
-      {
-          this.participants = data as participant[];
-      }
-    );
 
   }
 

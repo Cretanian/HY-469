@@ -1,1 +1,1 @@
-<tvgrid *ngFor = "let grid of grids" [title] = "grid.title" [src] = "grid.src"></tvgrid>
+<tvgrid *ngFor = "let grid of grids" [grid] = "grid" [selected] = selected (selectEvent)="changeSelected($event)"></tvgrid>

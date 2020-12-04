@@ -22,7 +22,7 @@ export class ParticipantComponent implements OnInit {
   }
 
   setMaxSize(width: number,percentage: number) {
-    this.maxSize = width * (38.27/100) * (30/720);
+    this.maxSize = width * (40.27/100) * (30/720);
   }
 
   format(name: string): string {

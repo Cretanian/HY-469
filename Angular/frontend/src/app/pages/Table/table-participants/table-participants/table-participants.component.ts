@@ -17,79 +17,92 @@ export class TableParticipantsComponent implements OnInit {
         name: "Zacharias Pervolarakis",
         src1: "../../../assets/icons/rec (3).svg",
         src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg"
+        src3: "../../../assets/icons/rec (3).svg",
+        srcProfile: ""
       },
       {
         name: "Stylianos Stamatakis",
         src1: "../../../assets/icons/rec (3).svg",
         src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg"
+        src3: "../../../assets/icons/rec (3).svg",
+        srcProfile: ""
       },
       {
         name: "Antonis Agapakis",
         src1: "../../../assets/icons/rec (3).svg",
         src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg"
+        src3: "../../../assets/icons/rec (3).svg",
+        srcProfile: ""
       },
       {
         name: "Magkoytara",
         src1: "../../../assets/icons/rec (3).svg",
         src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg"
+        src3: "../../../assets/icons/rec (3).svg",
+        srcProfile: ""
       },
       {
         name: "Youla Faturu",
         src1: "../../../assets/icons/rec (3).svg",
         src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg"
+        src3: "../../../assets/icons/rec (3).svg",
+        srcProfile: ""
       },
       {
         name: "Savvidaros o magkas",
         src1: "../../../assets/icons/rec (3).svg",
         src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg"
+        src3: "../../../assets/icons/rec (3).svg",
+        srcProfile: ""
       },
       {
         name: "Asteriakos",
         src1: "../../../assets/icons/rec (3).svg",
         src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg"
+        src3: "../../../assets/icons/rec (3).svg",
+        srcProfile: ""
       },
       {
         name: "Savvidaros o magkas",
         src1: "../../../assets/icons/rec (3).svg",
         src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg"
+        src3: "../../../assets/icons/rec (3).svg",
+        srcProfile: ""
       },
       {
         name: "Asteriakos",
         src1: "../../../assets/icons/rec (3).svg",
         src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg"
+        src3: "../../../assets/icons/rec (3).svg",
+        srcProfile: ""
       },
       {
         name: "Savvidaros o magkas",
         src1: "../../../assets/icons/rec (3).svg",
         src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg"
+        src3: "../../../assets/icons/rec (3).svg",
+        srcProfile: ""
       },
       {
         name: "Asteriakos",
         src1: "../../../assets/icons/rec (3).svg",
         src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg"
+        src3: "../../../assets/icons/rec (3).svg",
+        srcProfile: ""
       },
       {
         name: "Savvidaros o magkas",
         src1: "../../../assets/icons/rec (3).svg",
         src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg"
+        src3: "../../../assets/icons/rec (3).svg",
+        srcProfile: ""
       },
       {
         name: "Asteriakos",
         src1: "../../../assets/icons/rec (3).svg",
         src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg"
+        src3: "../../../assets/icons/rec (3).svg",
+        srcProfile: ""
       },
       
     ]
