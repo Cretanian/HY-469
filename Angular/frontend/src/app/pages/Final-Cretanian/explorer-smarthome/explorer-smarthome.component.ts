@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SmarthomeListService } from 'src/app/global/services/Cretanian/lists/smarthome-list/smarthome-list.service';
 
 @Component({
   selector: 'app-explorer-smarthome',
@@ -6,17 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./explorer-smarthome.component.css']
 })
 export class ExplorerSmarthomeComponent implements OnInit {
-  teams_array:team[] = [
-    {
-      "iconSrc" : '/assets/teams-button/a.png',
-      "groupName" : 'Ami Living Room',
-    },
-    ];
-  constructor() { }
+  teams_array:team[];
+
+ constructor(private smarthomelistService: SmarthomeListService) {}
 
   ngOnInit(): void {
-  }
 
+    this.smarthomelistService.getAll("asd").subscribe(data => {
+        this.teams_array = data as team[];
+    });
+
+  }
 }
 
 class team{

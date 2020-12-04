@@ -10,6 +10,7 @@ export class ContactsController {
      *
      * @returns {Router}
      */
+
     public applyRoutes(): Router {
         const router = Router();       
         router
@@ -22,10 +23,9 @@ export class ContactsController {
      */
     public getMessage(req: Request, res: Response) {
         logger.info('E getMessage request print message');
-
         res.json({ message: 'hello' });
     }
-
+    
     constructor(){
         this.data =[
             {
@@ -141,7 +141,8 @@ export class ContactsController {
      */
     public getAll = (req: Request, res: Response) => {
         const person: string = req.body.message;
-        res.send(this.data);       
-    }
+        logger.info(this.data);
+        res.send(this.data);
+      }
 
 }
