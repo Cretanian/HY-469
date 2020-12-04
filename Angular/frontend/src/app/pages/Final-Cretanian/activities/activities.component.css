@@ -1,3 +1,7 @@
 #activitiesBody {
   display: block;
 }
+
+#emptyActivityBody {
+  display: block;
+}

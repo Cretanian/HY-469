@@ -1,3 +1,4 @@
+import { ActivityController } from './activity/activity.controller';
 import { ParticipantsController } from './participants/participants.controller';
 import { ContactsController } from './contacts/contacts.controller';
 import * as express from 'express';
@@ -42,6 +43,10 @@ apiV1Router
   .use(
     '/participants',
     new ParticipantsController().applyRoutes()
+  )
+  
+  .use(('/activity'),
+    new ActivityController().applyRoutes()
   );
   
 export { apiV1Router };
