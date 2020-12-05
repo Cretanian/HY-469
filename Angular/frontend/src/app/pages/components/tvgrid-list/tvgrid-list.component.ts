@@ -12,11 +12,13 @@ export class TvgridListComponent implements OnInit {
   
   grids: TvGrid[];
   selected: number;
+  idsToPicture: string[]; 
 
   constructor(private tvgridService: TvGridService){}
 
   ngOnInit(): void {
-    this.tvgridService.getAll().subscribe(data =>{
+
+    this.tvgridService.getAllMobile().subscribe(data =>{
       this.grids = data as TvGrid[];
     })
   }

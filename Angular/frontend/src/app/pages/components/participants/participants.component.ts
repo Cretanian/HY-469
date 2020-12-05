@@ -1,4 +1,3 @@
-import { ParticipantsService } from './../../../global/services/participants/participants.service';
 import { Component, OnInit, Input } from '@angular/core';
 import {participant} from '../utils/participant'
 

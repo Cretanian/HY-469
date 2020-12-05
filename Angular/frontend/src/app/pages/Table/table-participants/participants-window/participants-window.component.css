@@ -1,26 +1,24 @@
-.window {
+.participantsContainer {
   display: flex;
   flex-direction: row;
   background-color: transparent;
-}
-
-.participantsContainer {
-  max-width: 326px;
-  min-height: 316px;
+  position: relative;
   order: 2;
   border: solid 1px black;
   display: flex;
   flex-direction: column;
+  width: 21.261vw;
+  height: 21.261vw;
 }
 
-.navigationButtons {
-  position: fixed;
+.table-footer {
+  position: absolute;
   bottom: 0;
-  margin-right: 14px;
-}
-
-.optionsButtons {
-  position: fixed;
-  bottom: 0;
-  margin-left: 6px;
+  background-color: #373944;
+  font-weight: 400;
+  width: 100%;
+  color: white;
+  padding-left: 0.88vw;
+  font-size: 24px;
+  height: 41px;
 }

@@ -5,6 +5,7 @@ import { logger } from '../../../utils/logger';
 
 export class TvGridController {
     public data: object[] ;
+    public dataTv: object[];
     /**
      * Apply all routes for example
      *
@@ -13,7 +14,7 @@ export class TvGridController {
     public applyRoutes(): Router {
         const router = Router();       
         router
-            .get('/getAll', this.getAll);
+            .get('/getAllMobile', this.getAllMobile);
         return router;
     }
 
@@ -45,14 +46,22 @@ export class TvGridController {
               id: 4
             },
           ];
+
+
     }
 
     /**
      * Broadcasts a received message to all connected clients
      */
-    public getAll = (req: Request, res: Response) => {
-        const person: string = req.body.message;
+    public getAllMobile = (req: Request, res: Response) => {
         res.send(this.data);       
+    }
+
+    /**
+     * Broadcasts a received message to all connected clients
+     */
+    public getAllTv = (req: Request, res: Response) => {
+      res.send(this.dataTv);       
     }
 
 }

@@ -14,8 +14,13 @@ import * as _ from 'lodash';
       this.hostURl = environment.host;
     }
      
-    public getAll(){
+    public getAllMobile(){
         const headers = { 'content-type': 'application/json'}
-        return this.http.get(`${this.hostURl}/api/tvgrid/getAll`,{'headers':headers});
+        return this.http.get(`${this.hostURl}/api/tvgrid/getAllMobile`,{'headers':headers});
     } 
+
+    public getAllTable(){
+      const headers = { 'content-type': 'application/json'}
+      return this.http.get(`${this.hostURl}/api/tvgrid/getAllTable`,{'headers':headers});
+  } 
   }

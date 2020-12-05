@@ -1,3 +1,4 @@
+import { ParticipantsService } from './../../../../global/services/participants/participants.service';
 import { participant } from 'src/app/pages/components/utils/participant';
 import { Component, OnInit } from '@angular/core';
 
@@ -6,106 +7,19 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './table-participants.component.html',
   styleUrls: ['./table-participants.component.css']
 })
+
 export class TableParticipantsComponent implements OnInit {
   participants: participant[];
 
-  constructor() { }
+  constructor(private participantsService: ParticipantsService) 
+  {}
+
 
   ngOnInit(): void {
-    this.participants = [
-      {
-        name: "Zacharias Pervolarakis",
-        src1: "../../../assets/icons/rec (3).svg",
-        src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg",
-        srcProfile: ""
-      },
-      {
-        name: "Stylianos Stamatakis",
-        src1: "../../../assets/icons/rec (3).svg",
-        src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg",
-        srcProfile: ""
-      },
-      {
-        name: "Antonis Agapakis",
-        src1: "../../../assets/icons/rec (3).svg",
-        src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg",
-        srcProfile: ""
-      },
-      {
-        name: "Magkoytara",
-        src1: "../../../assets/icons/rec (3).svg",
-        src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg",
-        srcProfile: ""
-      },
-      {
-        name: "Youla Faturu",
-        src1: "../../../assets/icons/rec (3).svg",
-        src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg",
-        srcProfile: ""
-      },
-      {
-        name: "Savvidaros o magkas",
-        src1: "../../../assets/icons/rec (3).svg",
-        src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg",
-        srcProfile: ""
-      },
-      {
-        name: "Asteriakos",
-        src1: "../../../assets/icons/rec (3).svg",
-        src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg",
-        srcProfile: ""
-      },
-      {
-        name: "Savvidaros o magkas",
-        src1: "../../../assets/icons/rec (3).svg",
-        src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg",
-        srcProfile: ""
-      },
-      {
-        name: "Asteriakos",
-        src1: "../../../assets/icons/rec (3).svg",
-        src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg",
-        srcProfile: ""
-      },
-      {
-        name: "Savvidaros o magkas",
-        src1: "../../../assets/icons/rec (3).svg",
-        src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg",
-        srcProfile: ""
-      },
-      {
-        name: "Asteriakos",
-        src1: "../../../assets/icons/rec (3).svg",
-        src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg",
-        srcProfile: ""
-      },
-      {
-        name: "Savvidaros o magkas",
-        src1: "../../../assets/icons/rec (3).svg",
-        src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg",
-        srcProfile: ""
-      },
-      {
-        name: "Asteriakos",
-        src1: "../../../assets/icons/rec (3).svg",
-        src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg",
-        srcProfile: ""
-      },
-      
-    ]
+    this.participantsService.getAll().subscribe(data =>{
+      this.participants = data as participant[];
+    }
+    );        
   }
 
 }
