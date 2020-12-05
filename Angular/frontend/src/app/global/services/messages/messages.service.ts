@@ -17,6 +17,22 @@ export class MessagesService {
     this.hostURL = environment.host;
   }
 
+  public getTeamConversation(teamName: string, conversationID: number){
+    return this.http.post(
+      `${this.hostURL}/api/messages/getTeamConversation`,
+      { teamName: teamName, conversationID: conversationID },
+      { headers: this.headers }
+    )
+  }
+
+  public getTeamConversations(teamName: string){
+    return this.http.post(
+      `${this.hostURL}/api/messages/getTeamConversations`,
+      { teamName: teamName },
+      { headers: this.headers }
+    )
+  }
+
   public getMessagesFrom(contact: string) {
     return this.http.post(
       `${this.hostURL}/api/messages/getMessagesFrom`,
@@ -25,12 +41,20 @@ export class MessagesService {
     );
   }
 
-  public reactTo(contact: string, messageID: number, emojiSrc: string) {
+  public reactTo(
+      destination: {
+        contat?: string,
+        teamName?: string,
+        conversationID?: number
+      },
+      messageID: number,
+      emojiSrc: string
+    ){
     console.log('halo');
     return this.http.post(
         `${this.hostURL}/api/messages/reactTo`,
         {
-            contact: contact,
+            destination: destination,
             messageID: messageID,
             emojiSrc: emojiSrc
         },

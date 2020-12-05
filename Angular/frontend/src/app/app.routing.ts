@@ -21,6 +21,8 @@ import { MobileControllerComponent } from './pages/mobile-controller/mobile-cont
 import { MobileJoinMeetingComponent } from './pages/mobile-join-meeting/mobile-join-meeting.component';
 import { OncallFilesComponent } from './pages/Final-Cretanian/oncall-files/oncall-files.component';
 import { ControllerCallChatComponent } from './pages/Final-Cretanian/controller-call-chat/controller-call-chat.component';
+import { ExplorerTeamConversationComponent } from './pages/Final-Cretanian/explorer-team-conversation/explorer-team-conversation.component';
+
 
 
 const routes: Routes = [
@@ -45,6 +47,7 @@ const routes: Routes = [
   { path: 'explorer-mobile-teams-files/:team_name', component: ExplorerTeamsFilesComponent },
   { path: 'explorer-mobile-teams-calendar/:team_name', component: ExplorerTeamsCalendarComponent },
   { path: 'explorer-mobile-team-conversations/:team_name', component: ConversationsComponent },
+  { path: 'explorer-mobile-team-conversation/:team_name/:conversationID', component: ExplorerTeamConversationComponent },
   { path: '**', component: NotFoundComponent },
 ];
 

@@ -12,6 +12,8 @@ import { Message, Reaction } from '../Final-Cretanian/conversations/conversation
 export class MobileMessageComponent {
 
   @Input('contact') contact: string;
+  @Input('teamName') teamName: string;
+  @Input('conversationID') conversationID: number;
   @Input('message') message: Message;
 
   extrasOpened: boolean = false;
@@ -37,6 +39,20 @@ export class MobileMessageComponent {
 
   reactTo(emojiSrc: string): void{
     console.log('contact: ' + this.contact);
-    this.messageService.reactTo(this.contact ,this.message.id, emojiSrc);
+    console.log('team: ' + this.teamName);
+    console.log('conv: ' + this.conversationID);
+    
+    let destination: any = {};
+
+    if(this.contact != ''){
+      console.log('a perasoume mia epafi');
+      destination.contact = this.contact;
+    }
+    else{
+      destination.teamName = this.teamName;
+      destination.conversationID = this.conversationID;
+    }
+    
+    this.messageService.reactTo(destination,this.message.id, emojiSrc);
   }
 }

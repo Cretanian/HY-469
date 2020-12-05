@@ -89,6 +89,7 @@ import { ManyUsersComponent } from './pages/Final-Wall/many-users/many-users.com
 import { PinboardComponent } from './pages/Wall/pinboard/pinboard.component';
 import { FParticipantsComponent } from './pages/Wall/f-participants/f-participants.component';
 import { ControllerCallChatComponent } from './pages/Final-Cretanian/controller-call-chat/controller-call-chat.component';
+import { ExplorerTeamConversationComponent } from './pages/Final-Cretanian/explorer-team-conversation/explorer-team-conversation.component';
 
 @NgModule({
   declarations: [
@@ -174,7 +175,7 @@ import { ControllerCallChatComponent } from './pages/Final-Cretanian/controller-
     ManyUsersComponent,
     PinboardComponent,
     FParticipantsComponent,    
-    routingComponents, ControllerCallChatComponent,
+    routingComponents, ControllerCallChatComponent, ExplorerTeamConversationComponent,
   ],
   imports: [
     BrowserModule,

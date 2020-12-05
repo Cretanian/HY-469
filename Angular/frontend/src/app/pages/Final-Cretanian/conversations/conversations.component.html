@@ -13,6 +13,7 @@
             *ngFor= 'let conversation of conversations'
             [initialMessage] = 'conversation.initialMessage'
             [replyMessage] = 'conversation.replyMessage'
+            [routerLink] = "['/explorer-mobile-team-conversation', Team_name, conversation.id]"
         ></conversation-preview>
     </div>
 

@@ -4,21 +4,38 @@ import { DIContainer, MinioService, SocketsService } from "@app/services";
 import { logger } from "../../../utils/logger";
 import { ContactsController } from "../contacts/contacts.controller";
 
+export interface TeamMessages_I{
+  teamName: string,
+  conversations: Conversation_I[]
+}
+
+export interface Conversation_I{
+  teamName?: string,
+  id: number,
+  messages: Message_I[]
+}
+
+export interface ConversationPreview_I{
+  id: number,
+  message1: Message_I,
+  message2: Message_I
+}
+
 export interface ContactMessages_I {
-  contact: string;
-  messages: Message_I[];
+  contact: string,
+  messages: Message_I[]
 }
 
 export interface Message_I {
-  id: number;
-  photo: string;
-  name: string;
-  time: string;
-  message: string;
-  alignment: string;
+  id: number,
+  photo: string,
+  name: string,
+  time: string,
+  message: string,
+  alignment: string,
   emojis: {
-    amount: number;
-    emojiSrc: string;
+    amount: number,
+    emojiSrc: string
   }[];
 }
 
@@ -31,16 +48,19 @@ export class MessagesController {
   public applyRoutes(): Router {
     const router = Router();
     router
+      .post("/getTeamConversation", this.getTeamConversation)
+      .post("/getTeamConversations", this.getTeamConversations)
       .post("/getMessagesFrom", this.getMessagesFrom)
       .post("/reactTo", this.reactTo);
       
     return router;
   }
 
-  public data: ContactMessages_I[];
+  public teamMessages: TeamMessages_I[];
+  public contactMessages: ContactMessages_I[];
 
   constructor() {
-    this.data = [
+    this.contactMessages = [
       {
         contact: "Stylianos Stamatakis",
         messages: [
@@ -213,20 +233,154 @@ export class MessagesController {
         ],
       },
     ];
+
+    this.teamMessages = [
+      {
+        teamName: 'ZoomE',
+        conversations: [
+          {
+            id: 0,
+            messages: [
+              {
+                id: 0,
+                photo: 'profile_picture.png',
+                name: 'China Guy',
+                time: '11:03',
+                message: "Have you EVER seen a koala? They are SUPPERRR cute lmao!",
+                alignment: 'left',
+                emojis: [
+                  {
+                    amount: 8,
+                    emojiSrc: 'hearts_for_eyes_icon.png'
+                  },
+                  {
+                    amount: 2,
+                    emojiSrc: 'thumbs_up_icon.png'
+                  }
+                ]
+              },
+              {
+                id: 1,
+                photo: 'profile_picture.png',
+                name: 'Stylianos Stamatakis',
+                time: '11:03',
+                message: "Yes... like 1m times from youtube. Why are you all so cringy today? ZACK GET ME OUT OF HERE.",
+                alignment: 'left',
+                emojis: []
+              },
+              {
+                id: 2,
+                photo: 'profile_picture.png',
+                name: 'Asterios Leonidis',
+                time: '14:32',
+                message: "Oh my god never in my life haha! They must be SUPER cute!",
+                alignment: 'left',
+                emojis: [
+                  {
+                    amount: 3,
+                    emojiSrc: 'hearts_for_eyes_icon.png'
+                  }
+                ]
+              },
+            ]
+          },
+          {
+            id: 1,
+            messages: [
+              {
+                id: 0,
+                photo: 'profile_picture.png',
+                name: 'Aldo Jhaco',
+                time: '11:03',
+                message: "Telikos fanatic, opoios thelei join sto spiti mou gia nargile negroi.",
+                alignment: 'left',
+                emojis: [
+                  {
+                    amount: 3,
+                    emojiSrc: 'hearts_for_eyes_icon.png'
+                  },
+                  {
+                    amount: 1,
+                    emojiSrc: 'thumbs_up_icon.png'
+                  }
+                ]
+              },
+              {
+                id: 1,
+                photo: 'profile_picture.png',
+                name: 'Stylianos Stamatakis',
+                time: '11:03',
+                message: "Lets go!",
+                alignment: 'left',
+                emojis: []
+              },
+              {
+                id: 2,
+                photo: 'profile_picture.png',
+                name: 'agantos',
+                time: '14:32',
+                message: "Ti lol re kathusterimene, 2020 exoume",
+                alignment: 'left',
+                emojis: [
+                  {
+                    amount: 5,
+                    emojiSrc: 'tears_of_joy_icon.png'
+                  }
+                ]
+              },
+            ]
+          }
+        ]
+      }
+    ]
   }
 
 
-  private BroadcastChanges(contact: string): void{
+  private BroadcastChanges(event: string, message: string): void{
     const socketService: SocketsService = DIContainer.get(SocketsService);
-    socketService.broadcast('messages/change', contact);
+    socketService.broadcast(event, message);
+  }
+
+  public getTeamConversation = (req: Request, res: Response) => {
+    const teamName: string = req.body.teamName;
+    const conversationID: number = req.body.conversationID;
+
+    let team = this.findTeam(teamName);
+    for(let i = 0; i < team.conversations.length; i++){
+      if(conversationID == team.conversations[i].id){
+        team.conversations[i].teamName = teamName; // fill team name for reacts to know were to post.
+        res.send(team.conversations[i]);
+        return;
+      }
+    }
+
+    res.send(undefined);
+  }
+
+  public getTeamConversations = (req: Request, res: Response) => {
+    const teamName: string = req.body.teamName;
+    let data: ConversationPreview_I[] = [];
+    
+    let team = this.findTeam(teamName);
+    let conversations = team.conversations;
+    for(let j = 0; j < conversations.length; j++){
+      data.push({
+        id: conversations[j].id,
+        message1: conversations[j].messages[0],
+        message2: conversations[j].messages[conversations[j].messages.length - 1]
+      })
+    }
+
+
+    res.send(data);
   }
 
   public getMessagesFrom = (req: Request, res: Response) => {
     const contact: string = req.body.contact;
     logger.info('Get Messages From: ' + contact);
-    for (let i = 0; i < this.data.length; i++) {
-      if (this.data[i].contact == contact) {
-        res.send(this.data[i]);
+    for (let i = 0; i < this.contactMessages.length; i++) {
+      if (this.contactMessages[i].contact == contact) {
+        res.send(this.contactMessages[i]);
         return;
       }
     }
@@ -234,31 +388,78 @@ export class MessagesController {
   };
 
   public reactTo = (req: Request, res: Response) => {
-    logger.info('nai geia sas? eena emoji thelw na valw?');
-    const contact: string = req.body.contact;
+    const destination: any = req.body.destination;
     const messageID: number = req.body.messageID;
-    const emojiSrc: string = req.body.emojiSrc;
+    const emojiSr: string = req.body.emojiSrc;
 
-    for (let i = 0; i < this.data.length; i++) {
-      if (this.data[i].contact == contact) {
-        for (let j = 0; j < this.data[i].messages[messageID].emojis.length; j++) {
-          if (this.data[i].messages[messageID].emojis[j].emojiSrc == emojiSrc) {
-            this.data[i].messages[messageID].emojis[j].amount++;
-            res.send('200');
-            this.BroadcastChanges(contact);
-            return;
-          }
-        }
+    let message: Message_I = this.findMessage(destination, messageID);
+    
+    let increasedFlag: boolean = false;
 
-        this.data[i].messages[messageID].emojis.push({
-          amount: 1,
-          emojiSrc: emojiSrc,
-        });
-        break;
+    for(let i = 0; i < message.emojis.length; i++){
+      if(emojiSr == message.emojis[i].emojiSrc){
+        ++message.emojis[i].amount;
+        increasedFlag = true;
       }
     }
+    if(increasedFlag == false){
+      message.emojis.push({
+        amount: 1,
+        emojiSrc: emojiSr
+      })
+    }
 
-    this.BroadcastChanges(contact);
-    res.send('200');
-  };
+    //Broadcast changes.
+    logger.info(destination.contact || destination.teamName);
+    this.BroadcastChanges('messages/change', destination.contact || destination.teamName)
+
+    res.send(201);
+    return;
+  }
+
+  private findMessage(destination: any, messageID: number): Message_I{
+    const contact = destination.contact;
+    logger.info('contact: ' + contact);
+    if(contact != undefined){
+      let contactMessages = this.findContact(contact);
+
+      for(let i = 0; i < contactMessages.messages.length; i++){
+        if(messageID == contactMessages.messages[i].id)
+          return contactMessages.messages[i];
+      }
+    }
+    else{ //Team message
+      let teamName = destination.teamName;
+      let conversationID = destination.conversationID;
+      logger.info('teamname: ' + teamName);
+      let team = this.findTeam(teamName)
+
+      for(let i = 0; i < team.conversations.length; i++){
+        if(conversationID == team.conversations[i].id)
+          for(let j = 0; j < team.conversations[i].messages.length; j++)
+            if(messageID == team.conversations[i].messages[j].id)
+              return team.conversations[i].messages[j];
+      }
+    }
+  }
+
+
+  //~~~~~~~~~~~~~~~~
+  private findTeam(teamName: string): TeamMessages_I{
+    for(let i = 0; i < this.teamMessages.length; i++){
+      if(this.teamMessages[i].teamName == teamName)
+        return this.teamMessages[i];
+    }
+
+    return undefined;
+  }
+
+  private findContact(contact: string): ContactMessages_I{
+    for(let i = 0; i < this.contactMessages.length; i++){
+      if(this.contactMessages[i].contact == contact)
+        return this.contactMessages[i];
+    }
+
+    return undefined;
+  }
 }

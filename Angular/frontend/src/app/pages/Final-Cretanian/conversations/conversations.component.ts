@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
-import { ContactMessages_I, Message_I } from '../../../../../../backend/src/api/v1/messages/messages.controller'
+import { ConversationPreview_I, Conversation_I, ContactMessages_I, Message_I } from '../../../../../../backend/src/api/v1/messages/messages.controller'
+import { MessagesService } from "../../../global/services/messages/messages.service"
 
 @Component({
   selector: "app-conversations",
@@ -14,70 +15,20 @@ export class ConversationsComponent implements OnInit {
 
   @Input() Team_name: string;
 
-  constructor(private _Activatedroute: ActivatedRoute) {}
-
-  data = [
-    {
-      message1: {
-        photo: "profile_picture.png",
-        name: "China Guy",
-        time: "12:25",
-        message: "Have you EVER seen a koala? They are SUPPPER cute lmao.",
-        alignment: "",
-        emojis: [
-          {
-            amount: 8,
-            emojiSrc: "hearts_for_eyes_icon.png",
-          },
-          {
-            amount: 2,
-            emojiSrc: "thumbs_up_icon.png",
-          },
-        ],
-      },
-      message2: {
-        photo: "profile_picture.png",
-        name: "Asterios Leonidis",
-        time: "12:27",
-        message: "Oh my god never in my life haha! They must be SUPER cute!.",
-        emojis: [
-          {
-            amount: 3,
-            emojiSrc: "hearts_for_eyes_icon.png",
-          },
-        ],
-      },
-    },
-    {
-      message1: {
-        photo: "profile_picture.png",
-        name: "AMI Lab",
-        time: "14:25",
-        message: "Great work everybody on your projects so far, keep it up!",
-        alignment: "",
-        reactions: [],
-      },
-      message2: {
-        photo: "profile_picture.png",
-        name: "Stylianos Stamatakis",
-        time: "14:35",
-        message: "STFU boss. You are getting cringy.",
-        alignment: "",
-        reactions: [],
-      },
-    },
-  ];
+  constructor(private messagesService: MessagesService, private _Activatedroute: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.Team_name = this._Activatedroute.snapshot.paramMap.get("team_name");
 
-    //Dynamically load conversations from base!
-    this.conversations = [];
-    for (let i: number = 0; i < this.data.length; i++) {
-      let message1: Message = new Message(this.data[i].message1);
-      let message2: Message = new Message(this.data[i].message2);
-      this.conversations.push(new Conversation(message1, message2));
-    }
+    this.messagesService.getTeamConversations(this.Team_name).subscribe((data: ConversationPreview_I[]) => {
+      this.conversations = [];
+      for (let i: number = 0; i < data.length; i++) {
+        let id: number = data[i].id;
+        let message1: Message = new Message(data[i].message1);
+        let message2: Message = new Message(data[i].message2);
+        this.conversations.push(new Conversation(id, message1, message2));
+      }
+    })
   }
 
   enableMore() {
@@ -98,10 +49,12 @@ export class ConversationsComponent implements OnInit {
 }
 
 class Conversation {
+  id: number;
   initialMessage: Message;
   replyMessage: Message;
 
-  constructor(message1: Message, message2: Message) {
+  constructor(id: number, message1: Message, message2: Message) {
+    this.id = id;
     this.initialMessage = message1;
     this.replyMessage = message2;
   }
