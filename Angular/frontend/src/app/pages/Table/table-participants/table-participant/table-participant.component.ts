@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'table-participant',
@@ -10,11 +10,14 @@ export class TableParticipantComponent implements OnInit {
   @Input() name: string;
   @Input() src1: string;
   @Input() maxSize: number;
+  @Output() selectEvent = new EventEmitter<string>();
 
+  @Input() isSelected: boolean;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.isSelected = false;
   }
 
   setMaxSize(width: number,percentage: number) {
@@ -33,4 +36,7 @@ export class TableParticipantComponent implements OnInit {
       return name;
   }
 
+  selectedFunction(){
+    this.selectEvent.emit(this.name);
+  }
 }

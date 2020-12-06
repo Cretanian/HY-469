@@ -1,8 +1,18 @@
-<div  (click) = "select()">
+<div 
+    (click) = "select()"
+>
     <div class = ComponentContainer>
             <div class = "TextAndCheckContainer">
-                <img *ngIf = "selected !== grid.id"  class = "check" src = "../../../../assets/tv-grid/notSelected.png">
-                <img *ngIf = "selected === grid.id"  class = "check" src = "../../../../assets/tv-grid/Selected.png">
+                <img 
+                    *ngIf = "selected !== grid.id"  
+                    class = "check" 
+                    src = "../../../../assets/tv-grid/notSelected.png"
+                >
+                <img 
+                    *ngIf = "selected === grid.id"  
+                    class = "check" 
+                    src = "../../../../assets/tv-grid/Selected.png"
+                >
                 <h1 class = "text">{{grid.title}}</h1>
             </div>
             

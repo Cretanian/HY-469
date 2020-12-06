@@ -1,12 +1,15 @@
-.participantsContainer {
+.particpantsWindow {
+  display: flex;
+  flex-direction: row;
+  max-width: 21.261vw;
+}
+
+.participants {
   display: flex;
   flex-direction: row;
   background-color: transparent;
   position: relative;
-  order: 2;
   border: solid 1px black;
-  display: flex;
-  flex-direction: column;
   width: 21.261vw;
   height: 21.261vw;
 }
@@ -21,4 +24,28 @@
   padding-left: 0.88vw;
   font-size: 24px;
   height: 41px;
+}
+
+#navigation {
+  margin-right: 0.3785vw;
+}
+
+#options {
+  margin-left: 0.3785vw;
+}
+
+.buttonsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttonImg {
+  margin-right: 0.3785vw;
+  margin-top: 10px;
+}
+
+#participants {
+  overflow-y: scroll;
+  width: 100%;
 }

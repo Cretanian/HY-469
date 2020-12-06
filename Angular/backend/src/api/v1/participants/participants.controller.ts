@@ -1,7 +1,5 @@
 import { Request, Response, NextFunction, Router } from 'express';
-import { NotFound, BadRequest } from 'http-errors';
-import { DIContainer, MinioService, SocketsService } from '@app/services';
-import { logger } from '../../../utils/logger';
+
 
 export class ParticipantsController {
     public data: object[] ;
@@ -61,7 +59,42 @@ export class ParticipantsController {
               src2: '../../../assets/participants-mobile/sound-gray.png',
               src3: '../../../assets/participants-mobile/microphone-muted.png'
             },
-            
+            {
+              name: 'Giorgos Georgioy',
+              src1: '../../../assets/participants-mobile/chat-gray.png',
+              src2: '../../../assets/participants-mobile/sound-gray.png',
+              src3: '../../../assets/participants-mobile/microphone-muted.png'
+            },
+            {
+              name: 'Kwstas Oman',
+              src1: '../../../assets/participants-mobile/chat-gray.png',
+              src2: '../../../assets/participants-mobile/sound-gray.png',
+              src3: '../../../assets/participants-mobile/microphone-muted.png'
+            },
+            {
+              name: 'Giannhs Iowannoy',
+              src1: '../../../assets/participants-mobile/chat-gray.png',
+              src2: '../../../assets/participants-mobile/sound-gray.png',
+              src3: '../../../assets/participants-mobile/microphone-muted.png'
+            },
+            {
+              name: 'Maria yas',
+              src1: '../../../assets/participants-mobile/chat-gray.png',
+              src2: '../../../assets/participants-mobile/sound-gray.png',
+              src3: '../../../assets/participants-mobile/microphone-muted.png'
+            },
+            {
+              name: 'Cool Dude',
+              src1: '../../../assets/participants-mobile/chat-gray.png',
+              src2: '../../../assets/participants-mobile/sound-gray.png',
+              src3: '../../../assets/participants-mobile/microphone-muted.png'
+            },
+            {
+              name: 'Notcool Dude',
+              src1: '../../../assets/participants-mobile/chat-gray.png',
+              src2: '../../../assets/participants-mobile/sound-gray.png',
+              src3: '../../../assets/participants-mobile/microphone-muted.png'
+            },                     
         ];
     }
 

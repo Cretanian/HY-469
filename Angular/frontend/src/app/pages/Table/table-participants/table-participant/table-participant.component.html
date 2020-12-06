@@ -1,4 +1,9 @@
-<div #aname class = "containerAll" >{{this.setMaxSize(aname.offsetWidth, 7.4)}}
-    <h1 class = name>{{this.format(name)}}</h1>
+<div 
+    #aname 
+    [ngClass] = "{'containerAll' : !this.isSelected, 'isSelected': this.isSelected}"
+    (click) = "this.selectedFunction()"
+>
+    {{this.setMaxSize(aname.offsetWidth, 7.4)}}
+    <h1 class = name>{{this.name}}</h1>
     <img class = picture1 src = {{src1}} width = "27px" height = "23px">
 </div>
