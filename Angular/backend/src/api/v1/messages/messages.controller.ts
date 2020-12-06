@@ -51,7 +51,8 @@ export class MessagesController {
       .post("/getTeamConversation", this.getTeamConversation)
       .post("/getTeamConversations", this.getTeamConversations)
       .post("/getMessagesFrom", this.getMessagesFrom)
-      .post("/reactTo", this.reactTo);
+      .post("/reactTo", this.reactTo)
+      .post("/sendMessage", this.sendMessage)
       
     return router;
   }
@@ -341,6 +342,33 @@ export class MessagesController {
     socketService.broadcast(event, message);
   }
 
+  public sendMessage = (req: Request, res: Response) => {
+    const destination: any = req.body.destination;
+    const message: string = req.body.message;
+
+    let date: Date = new Date();
+
+    logger.info('message: ' + message);
+
+    let newMessage: Message_I ;
+    let messages = this.findMessages(destination);
+    logger.info('messages: length' + message.length);
+    const time: string = date.getHours() + ":" + date.getMinutes();
+
+    newMessage = {
+      name: 'agantos',
+      photo: '',
+      time: time,
+      message: message,
+      id: messages.length,
+      alignment: 'right',
+      emojis: []
+    }
+    messages.push(newMessage);
+    this.BroadcastChanges('messages/change', destination.contact || destination.teamName)
+    res.send("200");
+  }
+
   public getTeamConversation = (req: Request, res: Response) => {
     const teamName: string = req.body.teamName;
     const conversationID: number = req.body.conversationID;
@@ -417,33 +445,6 @@ export class MessagesController {
     return;
   }
 
-  private findMessage(destination: any, messageID: number): Message_I{
-    const contact = destination.contact;
-    logger.info('contact: ' + contact);
-    if(contact != undefined){
-      let contactMessages = this.findContact(contact);
-
-      for(let i = 0; i < contactMessages.messages.length; i++){
-        if(messageID == contactMessages.messages[i].id)
-          return contactMessages.messages[i];
-      }
-    }
-    else{ //Team message
-      let teamName = destination.teamName;
-      let conversationID = destination.conversationID;
-      logger.info('teamname: ' + teamName);
-      let team = this.findTeam(teamName)
-
-      for(let i = 0; i < team.conversations.length; i++){
-        if(conversationID == team.conversations[i].id)
-          for(let j = 0; j < team.conversations[i].messages.length; j++)
-            if(messageID == team.conversations[i].messages[j].id)
-              return team.conversations[i].messages[j];
-      }
-    }
-  }
-
-
   //~~~~~~~~~~~~~~~~
   private findTeam(teamName: string): TeamMessages_I{
     for(let i = 0; i < this.teamMessages.length; i++){
@@ -461,5 +462,30 @@ export class MessagesController {
     }
 
     return undefined;
+  }
+
+  private findMessage(destination: any, messageID: number): Message_I{
+    const messages: Message_I[] = this.findMessages(destination);
+    return messages[messageID];
+  }
+
+  private findMessages(destination: any): Message_I[]{
+    const contact = destination.contact;
+    logger.info('contact: ' + contact);
+    if(contact != undefined){
+      let contactMessages = this.findContact(contact);
+      return contactMessages.messages;
+    }
+    else{ //Team message
+      let teamName = destination.teamName;
+      let conversationID = destination.conversationID;
+      logger.info('teamname: ' + teamName);
+      let team = this.findTeam(teamName)
+
+      for(let i = 0; i < team.conversations.length; i++){
+        if(conversationID == team.conversations[i].id)
+          return team.conversations[i].messages;
+      }
+    }
   }
 }

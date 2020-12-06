@@ -17,6 +17,25 @@ export class MessagesService {
     this.hostURL = environment.host;
   }
 
+  public sendMessage(
+    destination: {
+      contact?: string,
+      teamName?: string,
+      conversationID?: number
+    },
+    message: string
+  ){
+    console.log('service, message: ' + message);
+    return this.http.post(
+      `${this.hostURL}/api/messages/sendMessage`,
+      {
+          destination: destination,
+          message: message
+      },
+      { headers: this.headers }
+    )
+  }
+
   public getTeamConversation(teamName: string, conversationID: number){
     return this.http.post(
       `${this.hostURL}/api/messages/getTeamConversation`,
@@ -50,7 +69,6 @@ export class MessagesService {
       messageID: number,
       emojiSrc: string
     ){
-    console.log('halo');
     return this.http.post(
         `${this.hostURL}/api/messages/reactTo`,
         {
