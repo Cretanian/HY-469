@@ -6,7 +6,7 @@
     (click)='openExtras($event)'
 >
     <div class='sender-container'
-        [ngClass]="{
+        [ngClass]="{ 
             'sender-container' : message.alignment == 'left' || message.alignment == '',
             'sender-container-right' : message.alignment == 'right'
         }"

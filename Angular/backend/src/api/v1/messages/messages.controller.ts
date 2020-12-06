@@ -344,6 +344,7 @@ export class MessagesController {
 
   public sendMessage = (req: Request, res: Response) => {
     const destination: any = req.body.destination;
+    const sender: string = req.body.sender;
     const message: string = req.body.message;
 
     let date: Date = new Date();
@@ -356,12 +357,12 @@ export class MessagesController {
     const time: string = date.getHours() + ":" + date.getMinutes();
 
     newMessage = {
-      name: 'agantos',
+      name: sender,
       photo: '',
       time: time,
       message: message,
       id: messages.length,
-      alignment: 'right',
+      alignment: 'left',
       emojis: []
     }
     messages.push(newMessage);

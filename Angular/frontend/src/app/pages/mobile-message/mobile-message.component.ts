@@ -37,15 +37,10 @@ export class MobileMessageComponent {
     this.extrasOpened = false;
   }
 
-  reactTo(emojiSrc: string): void{
-    console.log('contact: ' + this.contact);
-    console.log('team: ' + this.teamName);
-    console.log('conv: ' + this.conversationID);
-    
+  reactTo(emojiSrc: string): void{    
     let destination: any = {};
 
     if(this.contact != ''){
-      console.log('a perasoume mia epafi');
       destination.contact = this.contact;
     }
     else{

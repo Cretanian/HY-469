@@ -19,6 +19,7 @@ export class MobileChatComponent {
 
   @ViewChild('chatBar', {static:true}) chatBarRef: ElementRef;
 
+  user: string = 'undef';
   messages: Message[];
 
   extrasOpened: boolean = false;
@@ -29,7 +30,7 @@ export class MobileChatComponent {
       private socketService: SocketsService
     ) 
   {
-
+    this.user = 'Aldo Jhaco';
   }
 
   ngOnInit(): void{
@@ -45,12 +46,33 @@ export class MobileChatComponent {
     )
   }
 
-  loadMessages(): void{
-    if(this.contact != undefined)
-      this.loadContactMessages();
-    else{
-      this.loadTeamConversationMessages();
+  successCallback(result){
+
   }
+
+  failureCallback(error){
+
+  }
+
+  loadMessages(): any{
+      new Promise((resolve, reject) =>{
+        if(this.contact != undefined)
+          this.loadContactMessages();
+        else
+          this.loadTeamConversationMessages();
+      })
+
+      //Fix messages sent by current user.
+      setTimeout(() => {
+        console.log('fix my meessages...');
+        for(let i = 0; i < this.messages.length; i++){
+          if(this.messages[i].name == this.user){
+            console.log('alignment: ' + this.messages[i].alignment);
+            this.messages[i].alignment = 'right';
+            this.messages[i].photo = '';
+          }
+        }
+      }, 100)
   }
 
   loadContactMessages(): void{

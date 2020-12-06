@@ -23,6 +23,7 @@ export class MessagesService {
       teamName?: string,
       conversationID?: number
     },
+    sender: string,
     message: string
   ){
     console.log('service, message: ' + message);
@@ -30,6 +31,7 @@ export class MessagesService {
       `${this.hostURL}/api/messages/sendMessage`,
       {
           destination: destination,
+          sender: sender,
           message: message
       },
       { headers: this.headers }

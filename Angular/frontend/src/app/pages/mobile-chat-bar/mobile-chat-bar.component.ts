@@ -10,16 +10,20 @@ export class MobileChatBarComponent {
   @Input('contact') contact: string;
   @Input('teamName') teamName: string;
   @Input('conversationID') conversationID: number;
+  @Input('user') user: string = 'undef_user';
 
   @ViewChild('input', {static: false}) inputForm: ElementRef;
   @ViewChild('primaryButton', {static: false}) primaryButton: ElementRef;
+
 
   emojiIconSrc: string = '../../assets/emoji_icon.png';
   sendIconSrc: string = '../../assets/send_icon.png';
 
   sendIconActive: boolean = false;
 
-  constructor(private messagesService: MessagesService) { }
+  constructor(private messagesService: MessagesService) {
+    this.user = 'Aldo Jhaco';
+  }
 
   ngOnInit(): void {
   }
@@ -29,30 +33,31 @@ export class MobileChatBarComponent {
   }
 
   UserTypingHandler = () => {
-    console.log('detected input!');
-    let form = this.inputForm.nativeElement;
-    let input: string = form.value;
-    if(input.length > 0)
-      this.sendIconActive = true;
-    else
-      this.sendIconActive = false;
+    setTimeout(() => {
+      let form = this.inputForm.nativeElement;
+      let input: string = form.value;
+      if(input[0] != undefined)
+        this.sendIconActive = true;
+      else
+        this.sendIconActive = false;
+    }, 200)
   }
-
 
   sendInput(): void{
     let form = this.inputForm.nativeElement;
     let input: string = form.value;
   
-    console.log('this.inputForm.value: ' + input);
     this.messagesService.sendMessage(
       {
         contact: this.contact,
         teamName: this.teamName,
         conversationID: this.conversationID
       },
+      this.user,
       input
     ).subscribe( (data) => {
-      this.inputForm.value = '';
+      form.value = '';
+      this.sendIconActive = false;
     })
   }
 
