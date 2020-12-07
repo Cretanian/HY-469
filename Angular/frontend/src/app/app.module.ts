@@ -88,6 +88,7 @@ import { GenericVolumeDropdownComponent } from './pages/Cretanian/generic-volume
 import { ManyUsersComponent } from './pages/Final-Wall/many-users/many-users.component';
 import { PinboardComponent } from './pages/Wall/pinboard/pinboard.component';
 import { FParticipantsComponent } from './pages/Wall/f-participants/f-participants.component';
+import { FinalTableComponent } from './pages/Table/final-table/final-table.component';
 
 @NgModule({
   declarations: [
@@ -173,7 +174,7 @@ import { FParticipantsComponent } from './pages/Wall/f-participants/f-participan
     ManyUsersComponent,
     PinboardComponent,
     FParticipantsComponent,    
-    routingComponents,
+    routingComponents, FinalTableComponent,
   ],
   imports: [
     BrowserModule,

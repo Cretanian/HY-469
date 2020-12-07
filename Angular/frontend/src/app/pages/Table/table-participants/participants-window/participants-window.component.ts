@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ElementRef,ViewChild } from '@angular/core';
+import { Component, OnInit, Input, ElementRef, ViewChild, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'participants-window',
@@ -10,15 +10,14 @@ export class ParticipantsWindowComponent implements OnInit {
   @ViewChild('participants', { read: ElementRef, static: false }) public participants: ElementRef<any>;
   @Input() participantSelected: boolean;
   @Input() selectedParticipantName: string;
+  @Input() display: boolean;
+  @Output() displayEvent = new EventEmitter<boolean>();
 
-  display: boolean;
   participantOptions: boolean;
 
   constructor() { }
 
   ngOnInit(): void {
-
-    this.display = true;
   }
 
   public scrollDown(): void {
@@ -39,6 +38,11 @@ export class ParticipantsWindowComponent implements OnInit {
       this.participantSelected = true;
     }
     console.log(name);
+  }
+
+  emitDisplayEvent(){
+    this.display = false;
+    this.displayEvent.emit(this.display);
   }
 
 }
