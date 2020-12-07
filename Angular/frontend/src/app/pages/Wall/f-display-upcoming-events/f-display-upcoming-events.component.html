@@ -1,16 +1,15 @@
 <div class = "size">
     <div class="color">
-        <p>{{day}}{{month}}{{date}} 
+        <p>{{day}}
     </div>
 
     <div class = "background">
-
-    
         <app-upcoming-events-item
-        *ngFor="let border of border_array;"
-        [date] = border.border_date
-        [month] = border.border_month
-        [day] = border.border_day
+        *ngFor="let event of current_events_array;"
+        [date] = event.date
+        [month] = event.month
+        [day] = event.day
+        [team_name] = 'team_name'
         ></app-upcoming-events-item>
     </div>
 </div>

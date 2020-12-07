@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ExplorerCalendarHeaderListService } from 'src/app/global/services/Cretanian/lists/explorer-calendar-header-list/explorer-calendar-header-list.service';
 
 @Component({
   selector: 'app-explorer-calendar',
@@ -7,65 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExplorerCalendarComponent implements OnInit {
   
-  events_array:event[] = [
-    {
-      "date" : '16',
-      "month" : 'OCT',
-      "day" : 'Today',
-    },
-    {
-      "date" : '17',
-      "month" : 'OCT',
-      "day" : 'Tommorow',
-    },
-    {
-      "date" : '18',
-      "month" : 'OCT',
-      "day" : 'Mon.',
-    },
-    {
-      "date" : '19',
-      "month" : 'OCT',
-      "day" : 'Tue.',
-    },
-    {
-      "date" : '20',
-      "month" : 'OCT',
-      "day" : 'Wed.',
-    },
-    {
-      "date" : '21',
-      "month" : 'OCT',
-      "day" : 'Thu.',
-    },
-    {
-      "date" : '22',
-      "month" : 'OCT',
-      "day" : 'Fri.',
-    },
-    {
-      "date" : '23',
-      "month" : 'OCT',
-      "day" : 'Sat.',
-    },
-    {
-      "date" : '24',
-      "month" : 'OCT',
-      "day" : 'Sun.',
-    },
+  events_array:event[]; 
     
-    ]; 
-    
-  constructor() { }
+  constructor(private fileheadersService: ExplorerCalendarHeaderListService) {}
 
   ngOnInit(): void {
+    this.fileheadersService.getAll("asd").subscribe(data => {
+      this.events_array = data as event[];
+    });
   }
-
 }
-
 class event{
   date:string;
   month:string;
   day: string
-
 }

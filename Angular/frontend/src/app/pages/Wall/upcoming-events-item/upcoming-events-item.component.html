@@ -7,8 +7,8 @@
 
         <app-callenda-event-wall
             *ngFor="let event of event_array;"
-            [event] = event.event_header
-            [time] = event.event_time
+            [event] = event.event
+            [time] = event.time
         ></app-callenda-event-wall>
       
     </div>

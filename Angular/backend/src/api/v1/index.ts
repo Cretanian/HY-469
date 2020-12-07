@@ -10,6 +10,10 @@ import { SmarthomeListController } from './Cretanian/lists/smarthome-list/smarth
 import { OnlineDevicesListController } from './Cretanian/lists/online-devices-list/online-devices-list.controller';
 import { FilesHeadersController } from './Cretanian/files-headers/files-headers.controller';
 import { ChatHeadersController } from './Cretanian/chat-headers/chat-header.controller';
+import { ExplorerDayCalendarListController } from './Cretanian/lists/explorer-day-calendar-list/explorer-day-calendar-list.controller';
+import { ExplorerCalendarHeaderListController } from './Cretanian/lists/explorer-calendar-header-list/explorer-calendar-header-list.controller';
+import { TeamCalendarHeaderListController } from './Cretanian/lists/team-calendar-header-list/team-calendar-header-list.controller';
+import { TeamDayCalendarListController } from './Cretanian/lists/team-day-calendar-list/team-explorer-day-calendar-list.controller';
 
 const apiV1Router = express.Router();
 
@@ -43,6 +47,7 @@ apiV1Router
     new ContactsController().applyRoutes()
   )
 
+  /* Cretanian */
   .use(
     '/smarthome-list',
     new SmarthomeListController().applyRoutes()
@@ -61,6 +66,26 @@ apiV1Router
   .use(
     '/chat-headers',
     new ChatHeadersController().applyRoutes()
+  )
+
+  .use(
+    '/explorer-calendar-headers-list',
+    new ExplorerCalendarHeaderListController().applyRoutes()
+  )
+
+  .use(
+    '/explorer-day-calendar-list',
+    new ExplorerDayCalendarListController().applyRoutes()
+  )
+
+  .use(
+    '/team-header-calendar-list',
+    new TeamCalendarHeaderListController().applyRoutes()
+  )
+
+  .use(
+    '/team-day-calendar-list',
+    new TeamDayCalendarListController().applyRoutes()
   )
  
   .use(

@@ -1,4 +1,5 @@
 import { Component, OnInit,Input } from '@angular/core';
+import { TeamDayCalendarListService } from 'src/app/global/services/Cretanian/lists/team-day-calendar-list/team-day-calendar-list.service';
 
 @Component({
   selector: 'app-days-calendar-list',
@@ -8,37 +9,52 @@ import { Component, OnInit,Input } from '@angular/core';
 export class DaysCalendarListComponent implements OnInit {
   
   event_A: events;
+
   @Input() day: string;
   @Input() date: string;
   @Input() month: string;
+  @Input() team_name: string;
+
+  helper: helper[];
+
  
-  constructor() {}
+  constructor(private fileheadersService: TeamDayCalendarListService) {}
 
   ngOnInit(): void {
     this.event_A = new events();
-    //vres ta sosta events me vasi tis meres kai ftiakse to sosto pinaka  events_array
     this.event_A.date = this.date;
     this.event_A.month = this.month;
     this.event_A.day = this.day;
-    
-    this.event_A.events_array =  [
-      {
-        "event" : '16',
-        "time" : 'OCT',
-      },{
-        "event" : '16',
-        "time" : 'OCT',
-      }
-      ]; 
-  }
 
+    this.fileheadersService.getAll("asd").subscribe(data => {
+      this.helper = data as helper[];
+      for (let entry of this.helper) {
+        if(this.team_name == entry.team && 
+           this.date === entry.date && 
+           this.month === entry.month)
+        {
+          this.event_A.events_array = [];
+          this.event_A.events_array.push(new event(entry.event, entry.time));
+        }
+        
+      }
+    });
+  }
+}
+class helper{
+  team:string;
+  date: string;
+  month: string;
+  event: string;
+  time: string;
 }
 class event{
   event:string;
   time:string;
-  constructor(){
-    this.event = '';
-    this.time = '';
+
+  constructor(event:string, time:string){
+    this.event = event;
+    this.time = time;
   }
 }
 

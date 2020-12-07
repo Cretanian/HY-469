@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { TeamDayCalendarListService } from 'src/app/global/services/Cretanian/lists/team-day-calendar-list/team-day-calendar-list.service';
 
 @Component({
   selector: 'app-generic-upcoming-events-background',
@@ -8,38 +9,56 @@ import { Component, Input, OnInit } from '@angular/core';
 
 //to do: only 7 displayed not more
 export class GenericUpcomingEventsBackgroundComponent implements OnInit {
-  @Input ('date') date: string;
-  @Input ('month') month: string;
-  @Input ('day') day: string;
+  @Input() day: string;
+  @Input() date: string;
+  @Input() month: string;
+  @Input() team_name: string;
 
-  border_array:border_event[] = [
-    {
-      "border_time" : "14:00 - 15:30",
-      "border_header" : "JULasdadad asdada asda"
-    },
-    {
-      "border_time" : "14:00 - 15:30",
-      "border_header" : "JULasdadad asdada asda"
-    },{
-      "border_time" : "14:00 - 15:30",
-      "border_header" : "JULasdadad asdada asda"
-    },
-  
-    ]; 
+  helper:helper[] = [];
+  event_array:event[] = [];
 
-  constructor() { }
+  constructor(private fileheadersService: TeamDayCalendarListService) {}
 
   ngOnInit(): void {
+    
+    this.fileheadersService.getAll("asd").subscribe(data => {
+      this.helper = data as helper[];
+
+      for (let entry of this.helper) {
+        if(this.team_name == entry.team && 
+           this.date === entry.date && 
+           this.month === entry.month)
+        {
+          this.event_array = [];
+          this.event_array.push(new event(entry.event, entry.time));
+        }
+        
+      }
+
+      if(this.event_array.length > 6){
+        this.event_array = this.event_array.splice(0,6);;
+      }else{
+        this.event_array = this.event_array;
+      }
+   
+
+    });
   }
 
 }
+class helper{
+  team:string;
+  date: string;
+  month: string;
+  event: string;
+  time: string;
+}
 
-class border_event{
-  border_time:string;
-  border_header:string;
-
-  constructor() { 
-    this.border_time ='';
-    this.border_header ='';
+class event{
+  event:string;
+  time:string;
+  constructor(event:string, time:string){
+    this.event = event;
+    this.time = time;
   }
 }
