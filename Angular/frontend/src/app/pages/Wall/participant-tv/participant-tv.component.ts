@@ -25,8 +25,7 @@ export class ParticipantTVComponent implements OnInit {
 
   format(name: string): string {
     this.maxSize = Math.trunc(this.maxSize); 
-    console.log("Max Size is " + this.maxSize);
-    console.log("Name Length is" + name.length);
+
 
     let decr = name.length-this.maxSize;
     if(decr < 2)

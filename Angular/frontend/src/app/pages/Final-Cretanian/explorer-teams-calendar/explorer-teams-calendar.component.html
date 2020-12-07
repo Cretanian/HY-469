@@ -12,8 +12,11 @@
         <div class="align">
             <app-days-calendar-list
             *ngFor="let device of events_array"
-            >
-            </app-days-calendar-list>
+            [date] = "device.date"
+            [month] = "device.month"
+            [day] = "device.day"
+            [team_name] = 'Team_name'
+            ></app-days-calendar-list>
         </div>  
     </div>
 

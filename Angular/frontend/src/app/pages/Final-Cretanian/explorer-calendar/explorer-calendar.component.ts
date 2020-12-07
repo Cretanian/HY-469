@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ExplorerCalendarHeaderListService } from 'src/app/global/services/Cretanian/lists/explorer-calendar-header-list/explorer-calendar-header-list.service';
 
 @Component({
   selector: 'app-explorer-calendar',
@@ -6,26 +7,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./explorer-calendar.component.css']
 })
 export class ExplorerCalendarComponent implements OnInit {
-  events_array:event[] = [
-    {
-      "event" : 'ela re pame volta',
-      "time" : '11:00 - 5:40'
-    },
+  
+  events_array:event[]; 
     
-    ]; 
-    
-  constructor() { }
+  constructor(private fileheadersService: ExplorerCalendarHeaderListService) {}
 
   ngOnInit(): void {
+    this.fileheadersService.getAll("asd").subscribe(data => {
+      this.events_array = data as event[];
+    });
   }
-
 }
-
 class event{
-  event:string;
-  time:string;
-  constructor(){
-    this.event = '';
-    this.time = '';
-  }
+  date:string;
+  month:string;
+  day: string
 }
