@@ -22,7 +22,7 @@ export class MobileChatBarComponent {
   sendIconActive: boolean = false;
 
   constructor(private messagesService: MessagesService) {
-    this.user = 'Aldo Jhaco';
+    this.user = 'agantos';
   }
 
   ngOnInit(): void {

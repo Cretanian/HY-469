@@ -30,7 +30,7 @@ export class MobileChatComponent {
       private socketService: SocketsService
     ) 
   {
-    this.user = 'Aldo Jhaco';
+    this.user = 'agantos';
   }
 
   ngOnInit(): void{
