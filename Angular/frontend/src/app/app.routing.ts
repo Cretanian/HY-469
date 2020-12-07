@@ -22,8 +22,8 @@ import { MobileJoinMeetingComponent } from './pages/mobile-join-meeting/mobile-j
 import { OncallFilesComponent } from './pages/Final-Cretanian/oncall-files/oncall-files.component';
 import { ControllerCallChatComponent } from './pages/Final-Cretanian/controller-call-chat/controller-call-chat.component';
 import { ExplorerTeamConversationComponent } from './pages/Final-Cretanian/explorer-team-conversation/explorer-team-conversation.component';
-
-
+import { ExplorerContactChatComponent } from './pages/Final-Cretanian/explorer-contact-chat/explorer-contact-chat.component'
+import { SetUserComponent } from './pages/set-user/set-user.component'
 
 const routes: Routes = [
   { path: '', redirectTo: '/explorer-mobile-teams', pathMatch: 'full'},
@@ -48,6 +48,8 @@ const routes: Routes = [
   { path: 'explorer-mobile-teams-calendar/:team_name', component: ExplorerTeamsCalendarComponent },
   { path: 'explorer-mobile-team-conversations/:team_name', component: ConversationsComponent },
   { path: 'explorer-mobile-team-conversation/:team_name/:conversationID', component: ExplorerTeamConversationComponent },
+  { path: 'explorer-mobile-contact-chat/:contact', component: ExplorerContactChatComponent },
+  { path: 'set-user', component: SetUserComponent},
   { path: '**', component: NotFoundComponent },
 ];
 

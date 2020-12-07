@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router'
 import { TeamsListService } from 'src/app/global/services/Cretanian/lists/teams-lists/teams-list.service';
 
 @Component({
@@ -10,7 +11,7 @@ export class ExplorerTeamsComponent implements OnInit {
 
   teams_array:team[];
 
-  constructor(private teamslistService: TeamsListService) {}
+  constructor( activatedRoute: ActivatedRoute, private teamslistService: TeamsListService) {}
 
   ngOnInit(): void {
 

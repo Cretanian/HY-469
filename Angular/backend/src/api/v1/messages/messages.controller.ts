@@ -233,11 +233,51 @@ export class MessagesController {
           },
         ],
       },
+      {
+        contact: "ZackPer",
+        messages: [
+          {
+            id: 0,
+            photo: "profile_picture.png",
+            name: "ZackPer",
+            time: "12:25",
+            message:
+              "Eukolo tha elega.",
+            alignment: "left",
+            emojis: [
+              {
+                amount: 4,
+                emojiSrc: "tears_of_joy_icon.png",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        contact: "Trent Awooouu",
+        messages: [
+          {
+            id: 0,
+            photo: "profile_picture.png",
+            name: "Trent Awooouu",
+            time: "12:25",
+            message:
+              "Tha paiksoume re bro. Arakse arakse...",
+            alignment: "left",
+            emojis: [
+              {
+                amount: 4,
+                emojiSrc: "tears_of_joy_icon.png",
+              },
+            ],
+          },
+        ],
+      },
     ];
 
     this.teamMessages = [
       {
-        teamName: 'ZoomE',
+        teamName: 'YeetFleet',
         conversations: [
           {
             id: 0,
@@ -345,6 +385,7 @@ export class MessagesController {
   public sendMessage = (req: Request, res: Response) => {
     const destination: any = req.body.destination;
     const sender: string = req.body.sender;
+    const senderPhoto: string = req.body.senderPhoto;
     const message: string = req.body.message;
 
     let date: Date = new Date();
@@ -358,7 +399,7 @@ export class MessagesController {
 
     newMessage = {
       name: sender,
-      photo: '',
+      photo: senderPhoto,
       time: time,
       message: message,
       id: messages.length,

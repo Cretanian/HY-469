@@ -24,6 +24,7 @@ export class MessagesService {
       conversationID?: number
     },
     sender: string,
+    senderPhoto: string,
     message: string
   ){
     console.log('service, message: ' + message);
@@ -32,6 +33,7 @@ export class MessagesService {
       {
           destination: destination,
           sender: sender,
+          senderPhoto: senderPhoto,
           message: message
       },
       { headers: this.headers }

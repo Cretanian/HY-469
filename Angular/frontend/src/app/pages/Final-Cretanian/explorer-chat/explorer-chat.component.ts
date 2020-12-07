@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ChatHeadersService } from 'src/app/global/services/Cretanian/chat-headers/explorer-teams.service';
+import { MessagesService } from '../../../global/services/messages/messages.service'
 
 @Component({
   selector: 'app-explorer-chat',
@@ -11,7 +12,7 @@ export class ExplorerChatComponent implements OnInit {
   headers:chat_header[];
   chat_list:chat_list[];
 
-  constructor(private chatheadersService: ChatHeadersService) {}
+  constructor(private chatheadersService: ChatHeadersService, private messagesService:MessagesService) {}
 
   ngOnInit(): void {
     this.chat = new Array();
@@ -29,6 +30,15 @@ export class ExplorerChatComponent implements OnInit {
       this.chat_list = data as chat_list[];
       this.chat[0].set_param_chat(this.chat_list, '1' );
       this.chat[1].set_param_chat(this.chat_list, '0' );
+      
+      //TODO: Add zack's last (this can easily be done for everyone with a forloop)
+      this.messagesService
+        .getMessagesFrom(this.chat[0].chat_list[0].name)
+        .subscribe((data: any) => {
+          let messages = data.messages;
+          let lastMessage = messages[messages.length - 1];
+          this.chat[0].chat_list[0].last_msg = lastMessage.message;
+        });
     });
   }
 }
@@ -67,10 +77,8 @@ class Chat{
       if(chats_list_param[i].Favorites === fav)
       {
         this.chat_list.push(chats_list_param[i]);
-      }else{
-        console.log("this.TRash");
       }
     }
-    console.log(this.chat_list);
+
   }
 }

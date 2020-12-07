@@ -16,7 +16,13 @@
         iconSize='10'
     ></g-button>
 
-    <input #input class="form-control form-control-lg form" type="text" placeholder="Write here...">
+    <input 
+        #input
+        class="form-control form-control-lg form"
+        type="text"
+        placeholder="Write here..."
+        (keypress)="keyPress($event)"
+    >
     
     <g-button
         *ngIf="sendIconActive == false"

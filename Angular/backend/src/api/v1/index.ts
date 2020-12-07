@@ -1,5 +1,6 @@
 import { ContactsController } from './contacts/contacts.controller';
 import { MessagesController } from './messages/messages.controller';
+import { UserController } from './user/user.controller';
 import * as express from 'express';
 import { ResourceController } from '../shared';
 import { ITask, TaskModel } from '@app/models';
@@ -51,6 +52,11 @@ apiV1Router
   .use(
     '/messages',
     new MessagesController().applyRoutes()
+  )
+  
+  .use(
+    '/user',
+    new UserController().applyRoutes()
   )
 
   /* Cretanian */

@@ -1,5 +1,13 @@
 import { Component, OnInit, Input, ViewChild, ElementRef } from '@angular/core';
 import { MessagesService } from '../../global/services/messages/messages.service'
+import { UserService } from '../../global/services/user/user.service'
+import { IpService  } from '../../global/services/user/ip.service'
+
+interface User_I{
+  ip: string,
+  username: string,
+  profile: string
+}
 
 @Component({
   selector: 'mobile-chat-bar',
@@ -10,22 +18,33 @@ export class MobileChatBarComponent {
   @Input('contact') contact: string;
   @Input('teamName') teamName: string;
   @Input('conversationID') conversationID: number;
-  @Input('user') user: string = 'undef_user';
 
   @ViewChild('input', {static: false}) inputForm: ElementRef;
   @ViewChild('primaryButton', {static: false}) primaryButton: ElementRef;
 
-
+  user: User_I;
   emojiIconSrc: string = '../../assets/emoji_icon.png';
   sendIconSrc: string = '../../assets/send_icon.png';
 
   sendIconActive: boolean = false;
 
-  constructor(private messagesService: MessagesService) {
-    this.user = 'agantos';
-  }
+  constructor(
+    private messagesService: MessagesService,
+    private userService: UserService,
+    private ipService: IpService
+  ) 
+  {}
 
   ngOnInit(): void {
+    this.ipService.getIPAddress().subscribe(
+      (data: any) => {
+         this.userService.getUserData(data.ip).subscribe(
+           (data: User_I) => {
+             this.user = data;
+           }
+         )
+      }
+    )
   }
 
   ngAfterViewInit(): void{
@@ -43,6 +62,15 @@ export class MobileChatBarComponent {
     }, 200)
   }
 
+  keyPress($event){
+    let form = this.inputForm.nativeElement;
+    let input: string = form.value;
+    if(input[0] != undefined && event.keyCode == 13){
+      this.sendInput();
+      this.sendIconActive = false;
+    }
+  }
+
   sendInput(): void{
     let form = this.inputForm.nativeElement;
     let input: string = form.value;
@@ -53,7 +81,8 @@ export class MobileChatBarComponent {
         teamName: this.teamName,
         conversationID: this.conversationID
       },
-      this.user,
+      this.user.username,
+      this.user.profile,
       input
     ).subscribe( (data) => {
       form.value = '';

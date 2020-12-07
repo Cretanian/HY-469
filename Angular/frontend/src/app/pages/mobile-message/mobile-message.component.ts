@@ -22,7 +22,7 @@ export class MobileMessageComponent {
 
 
   findPhoto(photo: string): string{
-    return '../../../assets/' + photo;
+    return '../../../assets/profile_photos/' + photo;
   }
 
   findEmoji(emoji: string): string{
