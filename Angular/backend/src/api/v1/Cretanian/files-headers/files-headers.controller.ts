@@ -3,6 +3,7 @@ import { logger } from '../../../../utils/logger';
 
 export class FilesHeadersController {
     public data: object[] ;
+    public data2: object[] ;
     /**
      * Apply all routes for example
      *
@@ -11,7 +12,8 @@ export class FilesHeadersController {
     public applyRoutes(): Router {
         const router = Router();       
         router
-            .post('/getAll', this.getAll);
+            .post('/getAll', this.getAll)
+            .post('/getAll2', this.getAll2);
         return router;
     }
 
@@ -35,6 +37,23 @@ export class FilesHeadersController {
                 icon: '../../../../assets/files/show.png',
             },
         ];
+
+        this.data2 =[
+            {
+                image: '../../../../assets/files/show.png',
+                name: 'cat.xl',
+                last_edit: '50/11',
+                Favorites: '1',
+                Team: 'YeetFleet',
+            },
+            {
+                image: '../../../../assets/files/show.png',
+                name: 'cat.pdf',
+                last_edit: '10/11',
+                Favorites: '0',
+                Team: '0',
+            },
+        ];
     }
 
     /**
@@ -43,6 +62,11 @@ export class FilesHeadersController {
     public getAll = (req: Request, res: Response) => {
         const person: string = req.body.message;
         res.send(this.data);       
+    }
+
+    public getAll2 = (req: Request, res: Response) => {
+        const person: string = req.body.message;
+        res.send(this.data2);       
     }
 
 }

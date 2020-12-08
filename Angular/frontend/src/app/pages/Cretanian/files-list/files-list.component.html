@@ -4,16 +4,16 @@
       
       <g-button
       class='aling-g-button'
-      icon='{{icon}}'
+      icon= '{{icon}}'
       ></g-button>
 
     </div>
   
         <app-files
-            *ngFor = "let file of file_array"
-            [icon] = 'file.image'
-            [name] = 'file.name'
-            [last_edit] = 'file.last_edit'
+            *ngFor = "let file_item of file_list"
+            [icon] = 'file_item.image'
+            [name] = 'file_item.name'
+            [last_edit] = 'file_item.last_edit'
         ></app-files>
 
 </div>

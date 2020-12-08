@@ -2,11 +2,9 @@ import { Component, ElementRef, OnInit, ViewChild, Input } from '@angular/core';
 import { Message } from '../Final-Cretanian/conversations/conversations.component';
 import { Location } from '@angular/common';
 import { MessagesService } from '../../global/services/messages/messages.service'
-import { ContactMessages_I, Message_I, Conversation_I } from '../../../../../backend/src/api/v1/messages/messages.controller'
 import { SocketsService } from 'src/app/global/services';
 import { UserService } from '../../global/services/user/user.service'
 import { IpService  } from '../../global/services/user/ip.service'
-import { map } from "rxjs/operators";
 
 interface User_I{
   ip: string,
