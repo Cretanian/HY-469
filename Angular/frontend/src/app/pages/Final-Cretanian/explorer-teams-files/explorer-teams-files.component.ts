@@ -45,8 +45,6 @@ export class ExplorerTeamsFilesComponent implements OnInit {
       this.file_list = data as file_list[];
       this.file[0].set_param_chat(this.file_list, '0', this.Team_name);
       this.file[1].set_param_chat(this.file_list, '1', this.Team_name);
-      //to do teams
-    
     });
 
   }

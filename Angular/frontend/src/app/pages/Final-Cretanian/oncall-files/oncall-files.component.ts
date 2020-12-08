@@ -12,9 +12,12 @@ export class OncallFilesComponent implements OnInit {
   file_list:file_list[];
 
   file: file[];
+  Team_name: string;
   constructor(private _location: Location,
           private fileheadersService: FilesHeadersService) 
-  {}
+  {
+    this.Team_name = 'YeetFleet'; //To be changes
+  }
 
   backClicked() {
     this._location.back();
@@ -27,15 +30,17 @@ export class OncallFilesComponent implements OnInit {
 
     this.fileheadersService.getAll("asd").subscribe(data => {
       this.headers = data as files_header[];
-      this.file[0].header = this.headers[0];
-      this.file[1].header = this.headers[1];
+      this.file[0].header = this.headers[0].header;
+      this.file[0].icon = this.headers[0].icon;
+
+      this.file[1].header = this.headers[1].header;
+      this.file[1].icon = this.headers[1].icon;
     });
 
-    this.fileheadersService.getAll2("asd").subscribe(data => {
+   this.fileheadersService.getAll2("asd").subscribe(data => {
       this.file_list = data as file_list[];
-      this.file[0].set_param_chat(this.file_list, '1' );
-      this.file[1].set_param_chat(this.file_list, '0' );
-      //to do teams
+      this.file[0].set_param_chat(this.file_list, '0', this.Team_name);
+      this.file[1].set_param_chat(this.file_list, '1', this.Team_name);   
     });
 
   }
@@ -43,15 +48,17 @@ export class OncallFilesComponent implements OnInit {
 }
 
 class file{
-  header:files_header;
+  header:string;
+  icon: string;
   file_list:file_list[] = [];
 
   constructor(){}
 
-  set_param_chat(chats_list_param: file_list[], fav:string) {
+  set_param_chat(chats_list_param: file_list[], fav:string, myteam:string) {
 
     for (let i = 0; i < chats_list_param.length; i++) {
-      if(chats_list_param[i].Favorites === fav)
+      if(chats_list_param[i].Favorites === fav &&
+        chats_list_param[i].Team === myteam)
       {
         this.file_list.push(chats_list_param[i]);
       }

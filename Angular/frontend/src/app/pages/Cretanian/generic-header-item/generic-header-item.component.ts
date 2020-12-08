@@ -11,5 +11,4 @@ export class GenericHeaderItemComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }

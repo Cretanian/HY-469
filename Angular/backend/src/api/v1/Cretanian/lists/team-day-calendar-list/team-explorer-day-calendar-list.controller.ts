@@ -71,7 +71,7 @@ export class TeamDayCalendarListController {
             month : 'OCT',
             day : 'Sat.',
             event : 'Cook soup',
-            time : '10:00 - 11:00',
+            time : '19:00 - 20:00',
           },
           {
             team: 'DnD | Reloaded',
@@ -124,7 +124,7 @@ export class TeamDayCalendarListController {
             month : 'OCT',
             day : 'Sat.',
             event : 'Cook soup',
-            time : '10:00 - 11:00',
+            time : '12:00 - 14:00',
           },
           {
             team: '0',

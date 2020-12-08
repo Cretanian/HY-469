@@ -13,7 +13,6 @@ export class DropdownMenuComponent implements OnInit {
 
   ngOnInit(): void {
     if(this.options == undefined){
-      console.log(this.options);
       this.options = [
         {
           name:"Samsung TV"

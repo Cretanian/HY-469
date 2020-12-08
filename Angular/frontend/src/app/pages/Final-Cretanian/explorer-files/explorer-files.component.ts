@@ -36,7 +36,7 @@ export class ExplorerFilesComponent implements OnInit {
       this.file_list = data as file_list[];
       this.file[0].set_param_chat(this.file_list, '0', '0' );
       this.file[1].set_param_chat(this.file_list, '1', '0' );
-      //to do teams
+      
     });
     console.log(this.file);
   }

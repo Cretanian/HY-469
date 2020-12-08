@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ExplorerDayCalendarListService } from 'src/app/global/services/Cretanian/lists/explorer-day-calendar-list/explorer-day-calendar-list.service';
 import { TeamDayCalendarListService } from 'src/app/global/services/Cretanian/lists/team-day-calendar-list/team-day-calendar-list.service';
 
 @Component({
