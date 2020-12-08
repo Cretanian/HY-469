@@ -1,7 +1,12 @@
-<div class='main-container'>
+<participants-window (displayEvent)="receiveDisplayParticipantEvent($event)" [display]="!this.enableParticipantSpawn">
+</participants-window>
+
+<div [ngClass]="{'menu-container' : !this.display}" (click)='this.spawnMenu()'>
+</div>
+<div class='main-container' *ngIf=" this.display">
     <img src='../../assets/table/table_menu_background.png' alt=''>
     <div class='container col'>
-        
+
         <div>
 
             <br>
@@ -9,26 +14,14 @@
             <hr id='hr-menu'>
 
             <div id='menu-buttons' class='row '>
-                <g-button
-                    icon='../../assets/table/table_left_arrow.png'
-                ></g-button>
+                <g-button icon='../../assets/table/table_left_arrow.png'></g-button>
 
-                <g-button
-                    icon='../../assets/table/manage_sound.png'
-                    iconSize='10'
-                ></g-button>
-                <g-button
-                    icon='../../assets/table/files.png'
-                    iconSize='10'
-                ></g-button>
-                <g-button
-                    icon='../../assets/table/participants.png'
-                    iconSize='10'
-                ></g-button>
+                <g-button icon='../../assets/table/manage_sound.png' iconSize='10'></g-button>
+                <g-button icon='../../assets/table/files.png' iconSize='10'></g-button>
+                <g-button (click)="this.spawnParticipantsButton()" icon='../../assets/table/participants.png'
+                    iconSize='10'></g-button>
 
-                <g-button
-                    icon='../../assets/table/table_right_arrow.png'
-                ></g-button>
+                <g-button icon='../../assets/table/table_right_arrow.png'></g-button>
             </div>
 
         </div>
@@ -38,25 +31,13 @@
             <hr id='hr-shortcuts'>
 
             <div id='shortcuts' class='row'>
-                <g-button
-                    icon='../../assets/table/mute.png'
-                    iconSize='3'
-                ></g-button>
-                <g-button
-                    icon='../../assets/table/chat.png'
-                    iconSize='3'
-                ></g-button>
-                <g-button
-                    icon='../../assets/table/end_call.png'
-                    iconSize='3'
-                ></g-button>
+                <g-button icon='../../assets/table/mute.png' iconSize='3'></g-button>
+                <g-button icon='../../assets/table/chat.png' iconSize='3'></g-button>
+                <g-button icon='../../assets/table/end_call.png' iconSize='3'></g-button>
             </div>
         </div>
 
-        <g-button
-            id='x-button'
-            icon='../../assets/table/table_x_button.png'
-        ></g-button>
+        <g-button id='x-button' (click)='this.despawnMenu()' icon='../../assets/table/table_x_button.png'></g-button>
 
     </div>
 </div>
