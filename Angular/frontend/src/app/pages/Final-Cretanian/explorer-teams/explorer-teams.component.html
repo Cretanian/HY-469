@@ -6,18 +6,17 @@
         src3 = '\assets\fakos.png'
     ></header>
 
-    <div class="body">     
+    <div class="body">
         <app-teams-button
             class='body-item'
             *ngFor= 'let team of teams_array'
             [icon] = 'team.iconSrc'
             [groupName] = 'team.groupName'
             [routerLink] = "['/explorer-mobile-team-conversations', team.groupName]"
-            
         ></app-teams-button>
     </div>
 
-    <mobile-footer class='footer'></mobile-footer>
+    <mobile-footer class='footer' activeTab='teams'></mobile-footer>
 
     <account-menu
         name='Stylianos Stamatakis'

@@ -15,6 +15,7 @@ export class GButtonComponent {
   //Extra Parameters
   @Input('fontColor') fontColor: string;
   @Input('fontSize') fontSize: number;
+  @Input('fontWeight') fontWeight: string;
   @Input('iconSize') iconSize: number;
   @Input('backgroundSize') backgroundSize: number;
 
@@ -24,6 +25,10 @@ export class GButtonComponent {
   @ViewChild('nameRef', {static:true}) nameRef: ElementRef;
 
   constructor(private renderer: Renderer2) {
+  }
+
+  ngOnChanges(): void{
+    this.setFontSize();
   }
 
   ngAfterViewInit(): void {
@@ -89,6 +94,9 @@ export class GButtonComponent {
   setFontSize(){
     if(this.fontSize != undefined){
       this.nameRef.nativeElement.style.fontSize = this.fontSize + "vw";
+    }
+    if(this.fontWeight != undefined){
+      this.nameRef.nativeElement.style.fontWeight = this.fontWeight;
     }
   }
 
