@@ -38,45 +38,45 @@ export class ChatHeadersController {
         ];
         this.data2 =[
             {
-               image: '/assets/tv-speaker/user.png',
+               image: '/assets/profile_photos/zackper.png',
                name: 'ZackPer',
                last_msg: 'Ma pou eisai pia?',
-               active_state: '/assets/tv-speaker/green.png',
+               active_state: '/assets/profile_photos/yellow.png',
                date: '10',
                Favorites: '1',
             }, 
             {
-                image: '/assets/tv-speaker/user.png',
-                name: 'Stelios stamatakis',
-                last_msg: 'EEe to HY469 einai meme mathima..',
-                active_state: '/assets/tv-speaker/green.png',
+                image: '/assets/profile_photos/asterios2.png',
+                name: 'Asterios Leonidis',
+                last_msg: 'Pixel perfect ola paidia.',
+                active_state: '/assets/profile_photos/green.png',
                 date: '11',
                 Favorites: '0',
-             }, 
-             {
-                 image: '/assets/tv-speaker/user.png',
-                 name: 'Elos',
-                 last_msg: 'Variemai na kano tin anafora.',
-                 active_state: '/assets/tv-speaker/green.png',
-                 date: '11',
-                 Favorites: '0',
-              }, 
-              {
-                  image: '/assets/tv-speaker/user.png',
-                  name: 'Trent Awooouu',
-                  last_msg: 'Dnd pote? Avrio?',
-                  active_state: '/assets/tv-speaker/green.png',
-                  date: '11',
-                  Favorites: '1',
-               }, 
-               {
-                   image: '/assets/tv-speaker/user.png',
-                   name: 'vAchilleas ',
-                   last_msg: 'Grafika Grafika Grafika...',
-                   active_state: '/assets/tv-speaker/green.png',
-                   date: '11',
-                   Favorites: '0',
-                }
+            },
+            {
+                image: '/assets/profile_photos/steli.png',
+                name: 'steli',
+                last_msg: 'Variemai na kano tin anafora.',
+                active_state: '/assets/profile_photos/red.png',
+                date: '11',
+                Favorites: '0',
+            }, 
+            {
+                image: '/assets/profile_photos/agantosProfile.png',
+                name: 'Antos2',
+                last_msg: 'Dnd pote? Avrio?',
+                active_state: '/assets/profile_photos/green.png',
+                date: '11',
+                Favorites: '1',
+            }, 
+            {
+                image: '/assets/profile_photos/profile_picture.png',
+                name: 'vAchilleas ',
+                last_msg: 'Grafika Grafika Grafika...',
+                active_state: '/assets/profile_photos/yellow.png',
+                date: '11',
+                Favorites: '0',
+            }
         ];
     }
 

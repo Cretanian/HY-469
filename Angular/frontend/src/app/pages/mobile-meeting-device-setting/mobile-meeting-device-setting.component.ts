@@ -1,6 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { dropdownOption } from '../components/dropdown-menu/dropdown-option';
-
 @Component({
   selector: 'mobile-meeting-device-setting',
   templateUrl: './mobile-meeting-device-setting.component.html',
@@ -17,4 +15,8 @@ export class MobileMeetingDeviceSettingComponent implements OnInit {
   ngOnInit(): void {
   }
 
+}
+
+class dropdownOption{
+  name: string;
 }

@@ -7,9 +7,15 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class GenericVolumeDropdownComponent implements OnInit {
   @Input("dropdown-label") label: string;
+  @Input() dropdownOptions: dropdownOption[] ;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+}
+
+class dropdownOption{
+  name: string;
 }

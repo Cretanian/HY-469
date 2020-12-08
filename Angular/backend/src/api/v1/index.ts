@@ -15,6 +15,8 @@ import { ChatHeadersController } from './Cretanian/chat-headers/chat-header.cont
 import { ExplorerCalendarHeaderListController } from './Cretanian/lists/explorer-calendar-header-list/explorer-calendar-header-list.controller';
 import { TeamCalendarHeaderListController } from './Cretanian/lists/team-calendar-header-list/team-calendar-header-list.controller';
 import { TeamDayCalendarListController } from './Cretanian/lists/team-day-calendar-list/team-explorer-day-calendar-list.controller';
+import { InOutDevicesController } from './Cretanian/InOut-devices/inout-devices.controller';
+import { OutVideoController } from './Cretanian/out-video/out-video.controller';
 
 const apiV1Router = express.Router();
 
@@ -92,6 +94,16 @@ apiV1Router
   .use(
     '/team-day-calendar-list',
     new TeamDayCalendarListController().applyRoutes()
+  )
+
+  .use(
+    '/in-out-devices',
+    new InOutDevicesController().applyRoutes()
+  )
+
+  .use(
+    '/out-video',
+    new OutVideoController().applyRoutes()
   )
  
   .use(

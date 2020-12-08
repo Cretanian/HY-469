@@ -34,7 +34,7 @@ export class DaysCalendarListComponent implements OnInit {
            this.month === entry.month)
         {
           this.event_A.events_array = [];
-          this.event_A.events_array.push(new event(entry.event, entry.time));
+          this.event_A.events_array.push(new event(entry.event, entry.time, entry.color));
         }
         
       }
@@ -47,14 +47,16 @@ class helper{
   month: string;
   event: string;
   time: string;
+  color: string;
 }
 class event{
   event:string;
   time:string;
-
-  constructor(event:string, time:string){
+  color: string;
+  constructor(event:string, time:string, color: string){
     this.event = event;
     this.time = time;
+    this.color = color;
   }
 }
 

@@ -21,5 +21,5 @@ export class ExplorerCalendarComponent implements OnInit {
 class event{
   date:string;
   month:string;
-  day: string
+  day: string;
 }

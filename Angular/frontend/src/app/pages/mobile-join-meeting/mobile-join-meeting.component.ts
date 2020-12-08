@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { dropdownOption } from '../components/dropdown-menu/dropdown-option';
+import { InOutDevicesService } from 'src/app/global/services/Cretanian/InOut-devices/inout-devices.service';
+import { OutVideoService } from 'src/app/global/services/Cretanian/out-video/out-video.service';
 
 @Component({
   selector: 'mobile-join-meeting',
@@ -13,26 +14,20 @@ export class MobileJoinMeetingComponent implements OnInit {
   inputOptions: dropdownOption[];
   outputOptions: dropdownOption[];
 
-  constructor() { }
+  constructor(private outvideoService: OutVideoService,private inoutdevicesService: InOutDevicesService) { }
 
   ngOnInit(): void {
+    this.outvideoService.getAll("asd").subscribe(data => {
+      this.cameraOptions = data as dropdownOption[];
+    });
 
-  this.cameraOptions = [
-    { name: 'Samsung TV' },
-    { name: 'Samsugn A20e Mobile' }
-  ]
-  this.inputOptions = [
-    { name: 'Samsung TV' },
-    { name: 'Samsugn A20e Mobile' },
-    { name: 'Alexa Home Assistant' }
-  ]
-  this.outputOptions = [
-    { name: 'Samsung TV' },
-    { name: 'Samsugn A20e Mobile' },
-    { name: 'Alexa Home Assistant' },
-    { name: 'Bluetooth 8DD Speaker'}
-  ]
-
+    this.inoutdevicesService.getAll("asd").subscribe(data => {
+      this.inputOptions = data as dropdownOption[];
+      this.outputOptions = data as dropdownOption[];
+    });
   }
+}
 
+class dropdownOption{
+  name: string;
 }

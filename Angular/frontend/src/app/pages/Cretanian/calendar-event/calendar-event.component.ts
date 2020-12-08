@@ -9,16 +9,9 @@ export class CalendarEventComponent implements OnInit {
 
   @Input ('event') event: string;
   @Input ('time') time: string;
-  color:string;
-  num:number;
-  constructor() { 
-    this.num = this.getRandomInt(100000,999999);
-    this.color = '#' + this.num.toString();   
-    let shand = document.getElementsByClassName('color') as HTMLCollectionOf<HTMLElement>;
-    if (shand.length != 0) {
-      shand[0].style.backgroundColor = this.color;
-    }
-  }
+  @Input () color: string;
+ 
+  constructor() {}
 
   ngOnInit(): void {
    

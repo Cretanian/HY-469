@@ -1,5 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { dropdownOption } from '../dropdown-menu/dropdown-option'
+import { Component, OnInit, Input} from '@angular/core';
 
 @Component({
   selector: 'dropdown',
@@ -11,11 +10,18 @@ export class DropdownComponent implements OnInit {
   @Input() dropdownOpen: boolean;
   @Input() dropdownOptions: dropdownOption[];
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
     this.name = "Default Device";
     this.dropdownOpen = false;
   }
 
+  set_name(device_name:string){
+    this.name = device_name;
+  }
+}
+
+class dropdownOption{
+  name: string;
 }
