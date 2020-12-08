@@ -62,7 +62,7 @@ export class MobileChatBarComponent {
     }, 200)
   }
 
-  keyPress($event){
+  keyPress($event: any){
     let form = this.inputForm.nativeElement;
     let input: string = form.value;
     if(input[0] != undefined && event.keyCode == 13){

@@ -92,6 +92,7 @@ import { ControllerCallChatComponent } from './pages/Final-Cretanian/controller-
 import { ExplorerTeamConversationComponent } from './pages/Final-Cretanian/explorer-team-conversation/explorer-team-conversation.component';
 import { ExplorerContactChatComponent } from './pages/Final-Cretanian/explorer-contact-chat/explorer-contact-chat.component';
 import { SetUserComponent } from './pages/set-user/set-user.component';
+import { TvMasterComponent } from './pages/Final-Cretanian/tv-master/tv-master.component';
 
 @NgModule({
   declarations: [
@@ -177,7 +178,7 @@ import { SetUserComponent } from './pages/set-user/set-user.component';
     ManyUsersComponent,
     PinboardComponent,
     FParticipantsComponent,    
-    routingComponents, ControllerCallChatComponent, ExplorerTeamConversationComponent, ExplorerContactChatComponent, SetUserComponent,
+    routingComponents, ControllerCallChatComponent, ExplorerTeamConversationComponent, ExplorerContactChatComponent, SetUserComponent, TvMasterComponent,
   ],
   imports: [
     BrowserModule,
