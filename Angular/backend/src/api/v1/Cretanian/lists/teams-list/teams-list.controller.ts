@@ -27,15 +27,15 @@ export class TeamsListController {
     constructor(){
         this.data =[
             {
-              iconSrc: '../../../../assets/teams-button/a.png',
+              iconSrc: '../../../../assets/teams-button/yeet.png',
               groupName: 'YeetFleet',
             },
             {
-              iconSrc: '../../../../assets/teams-button/a.png',
+              iconSrc: '../../../../assets/teams-button/test.png',
               groupName: 'DnD | Reloaded',
             },
             {
-              iconSrc: '../../../../assets/teams-button/a.png',
+              iconSrc: '../../../../assets/teams-button/TeamIcon.png',
               groupName: 'AMI Living Room',
             },
         ];

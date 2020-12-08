@@ -27,7 +27,7 @@ export class SmarthomeListController {
     constructor(){
         this.data =[
             {
-              iconSrc: '../../../../assets/teams-button/a.png',
+              iconSrc: '../../../../assets/teams-button/TeamIcon.png',
               groupName: 'AMI Living Room',
             },
         ];
