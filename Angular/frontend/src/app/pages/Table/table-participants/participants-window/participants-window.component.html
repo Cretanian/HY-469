@@ -1,46 +1,54 @@
-
-<div 
-    style = "max-width: 30.41vw;" 
-    *ngIf = "this.display"
->
-    <div style = "display:flex; flex-direction: row; align-items:flex-end">
-
-        <div  class = buttonsContainer >
-            <img 
-                (click) = 'this.scrollUp()'            
-                class = buttonImg    
-                style = "order:1" 
-                src = "../../../../assets/icons/tableDownButton.png">
-            <img 
-                (click) = 'this.scrollDown()'          
-                class = buttonImg    
-                style = "order:2" 
-                src = "../../../../assets/icons/tableUpButton.png">
-            <img 
-                (click) = 'this.emitDisplayEvent()'    
-                class = buttonImg 
-                style = "order:3" 
-                src = "../../../../assets/icons/tableXButton.png">
-        </div>
-
-        <div class = "participants">
-            <table-participants
-                (participantEvent) = "participantClicked($event)" 
-                #participants 
-                id = "participants"               
-            >
-            </table-participants>
-            
-            <div class = "table-footer">
-                Participants
-            </div>
-        </div>
-
-        <div *ngIf = "!this.participantSelected" style = "margin-left: 77px"></div>
-
-        <app-options-buttons *ngIf = "this.participantSelected" id = "options"></app-options-buttons>
+<div style="max-width: 30.41vw" *ngIf="this.display">
+  <div style="display: flex; flex-direction: row; align-items: flex-end">
+    <div class="buttonsContainer">
+      <img
+        (click)="this.scrollUp()"
+        class="buttonImg"
+        style="order: 1"
+        src="../../../../assets/icons/tableDownButton.png"
+      />
+      <img
+        (click)="this.scrollDown()"
+        class="buttonImg"
+        style="order: 2"
+        src="../../../../assets/icons/tableUpButton.png"
+      />
+      <img
+        (click)="this.emitDisplayEvent()"
+        class="buttonImg"
+        style="order: 3"
+        src="../../../../assets/icons/tableXButton.png"
+      />
     </div>
+
+    <div class="participants">
+      <table-participants
+        (participantEvent)="participantClicked($event)"
+        #participants
+        id="participants"
+      >
+      </table-participants>
+
+      <div class="table-footer">Participants</div>
+    </div>
+
+    <div *ngIf="!this.participantSelected" style="margin-left: 77px"></div>
+
+    <div
+      *ngIf="this.participantSelected"
+      class="optionButtonsContainer"
+      id="options"
+    >
+      <g-button
+        class="optionButtonImg"
+        icon="../../../../assets/table/participants/buttonMute.png"
+        iconSize="4.4794"
+      ></g-button>
+      <g-button
+        class="optionButtonImg"
+        icon="../../../../assets/icons/chat.png"
+        iconSize="4.4794"
+      ></g-button>
+    </div>
+  </div>
 </div>
-
-
-

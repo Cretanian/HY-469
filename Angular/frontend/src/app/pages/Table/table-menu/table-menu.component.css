@@ -1,3 +1,18 @@
+.allContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.spawn-menu {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 70vw;
+  height: 30vw;
+  background-color: gray;
+  z-index: -1;
+}
+
 .rotateContainer {
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
@@ -67,12 +82,6 @@
   bottom: -90px;
   position: absolute;
   left: 173px;
-}
-
-.spawn-menu {
-  width: 100px;
-  height: 100px;
-  background-color: black;
 }
 
 .menu-button {

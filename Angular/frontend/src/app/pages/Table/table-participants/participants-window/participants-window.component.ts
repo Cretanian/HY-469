@@ -1,13 +1,21 @@
-import { Component, OnInit, Input, ElementRef, ViewChild, Output, EventEmitter } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  Input,
+  ElementRef,
+  ViewChild,
+  Output,
+  EventEmitter,
+} from "@angular/core";
 
 @Component({
-  selector: 'participants-window',
-  templateUrl: './participants-window.component.html',
-  styleUrls: ['./participants-window.component.css']
+  selector: "participants-window",
+  templateUrl: "./participants-window.component.html",
+  styleUrls: ["./participants-window.component.css"],
 })
 export class ParticipantsWindowComponent implements OnInit {
-
-  @ViewChild('participants', { read: ElementRef, static: false }) public participants: ElementRef<any>;
+  @ViewChild("participants", { read: ElementRef, static: false })
+  public participants: ElementRef<any>;
   @Input() participantSelected: boolean;
   @Input() selectedParticipantName: string;
   @Input() display: boolean;
@@ -15,10 +23,9 @@ export class ParticipantsWindowComponent implements OnInit {
 
   participantOptions: boolean;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   public scrollDown(): void {
     this.participants.nativeElement.scrollTop += 106;
@@ -28,21 +35,19 @@ export class ParticipantsWindowComponent implements OnInit {
     this.participants.nativeElement.scrollTop -= 106;
   }
 
-  participantClicked(name: string){
-    if(this.selectedParticipantName == name){
+  participantClicked(name: string) {
+    if (this.selectedParticipantName == name) {
       this.participantSelected = false;
       this.selectedParticipantName = undefined;
-    }
-    else{
+    } else {
       this.selectedParticipantName = name;
       this.participantSelected = true;
     }
     console.log(name);
   }
 
-  emitDisplayEvent(){
+  emitDisplayEvent() {
     this.display = false;
     this.displayEvent.emit(this.display);
   }
-
 }
