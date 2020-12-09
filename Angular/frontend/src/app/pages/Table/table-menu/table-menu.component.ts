@@ -7,7 +7,6 @@ import { Component, OnInit, Input, ViewChild, ElementRef } from "@angular/core";
 })
 export class TableMenuComponent implements OnInit {
   @Input() enableParticipantSpawn: boolean;
-  @ViewChild("menu") menuElementRef: ElementRef;
   tvGridWindowSpawned: boolean;
   display: boolean;
   muted: boolean;
