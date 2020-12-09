@@ -8,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class TodaysEventsComponent implements OnInit {
   @Input ('time') time: string;
   @Input ('header') header: string;
-
+  @Input ('color') color: string;
   constructor() { }
 
   ngOnInit(): void {

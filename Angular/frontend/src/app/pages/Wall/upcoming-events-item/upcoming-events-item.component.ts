@@ -16,12 +16,14 @@ export class UpcomingEventsItemComponent implements OnInit {
   @Input() month: string;
   @Input() team_name: string;
 
+  color:string;
   event_array:event[] = [];
   helper: helper[] = [];
 
   constructor(private fileheadersService: TeamDayCalendarListService) {}
 
   ngOnInit(): void {
+    this.color = "white";
     this.fileheadersService.getAll("asd").subscribe(data => {
     this.helper = data as helper[];
     for (let entry of this.helper) {
@@ -30,7 +32,7 @@ export class UpcomingEventsItemComponent implements OnInit {
          this.month === entry.month)
       {
         this.event_array = [];
-        this.event_array.push(new event(entry.event, entry.time));
+        this.event_array.push(new event(entry.event, entry.time, entry.color));
       }
       
     }
@@ -39,6 +41,10 @@ export class UpcomingEventsItemComponent implements OnInit {
       this.event_array = this.event_array.splice(0,4);;
     }else{
       this.event_array = this.event_array;
+    }
+
+    if(this.event_array.length == 0){
+      this.color = "#9E9E9E";
     }
 
     });
@@ -50,14 +56,16 @@ class helper{
   month: string;
   event: string;
   time: string;
+  color: string;
 }
 class event{
   event:string;
   time:string;
-
-  constructor(event:string, time:string){
+  color: string;
+  constructor(event:string, time:string, color:string){
     this.event = event;
     this.time = time;
+    this.color = color;
   }
 }
 

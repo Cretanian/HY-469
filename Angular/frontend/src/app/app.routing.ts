@@ -26,7 +26,7 @@ import { ExplorerContactChatComponent } from './pages/Final-Cretanian/explorer-c
 import { SetUserComponent } from './pages/set-user/set-user.component'
 
 const routes: Routes = [
-  { path: '', redirectTo: '/explorer-mobile-teams', pathMatch: 'full'},
+  { path: '', redirectTo: '/explorer-mobile-team-controller', pathMatch: 'full'},
   /*Oncall*/
   { path: 'explorer-mobile-team-joinmeeting', component: MobileJoinMeetingComponent },
   { path: 'explorer-mobile-team-controller', component: MobileControllerComponent },
