@@ -1,95 +1,97 @@
-<!-- Participants Window-->
-<div>
-  <participants-window
-    (displayEvent)="receiveDisplayParticipantEvent($event)"
-    [display]="!this.enableParticipantSpawn"
-  >
-  </participants-window>
-</div>
+<div class="allContainer">
+  <!-- Participants Window-->
+  <div>
+    <participants-window
+      (displayEvent)="receiveDisplayParticipantEvent($event)"
+      [display]="!this.enableParticipantSpawn"
+    >
+    </participants-window>
+  </div>
 
-<!-- Tv Grid Window -->
-<div class="tv-grid-container" *ngIf="tvGridWindowSpawned">
-  <img
-    (click)="this.buttonDespawnTvGrid()"
-    src="../../../../assets/icons/tableXButton.png"
-    style="display: block; height: 71px; margin-right: 0.3vw"
-  />
-  <table-tvgrid></table-tvgrid>
-</div>
+  <!-- Tv Grid Window -->
+  <div class="tv-grid-container" *ngIf="tvGridWindowSpawned">
+    <img
+      (click)="this.buttonDespawnTvGrid()"
+      src="../../../../assets/icons/tableXButton.png"
+      style="display: block; height: 71px; margin-right: 0.3vw"
+    />
+    <table-tvgrid></table-tvgrid>
+  </div>
 
-<!-- Menu Window -->
-<div
-  [ngClass]="{ 'spawn-menu': !this.display }"
-  (click)="this.spawnMenu()"
-></div>
-<div class="main-container" *ngIf="this.display">
-  <img
-    class="background"
-    src="../../assets/table/background.png"
-    style="width: inherit; height: inherit"
-  />
-  <div class="menu-container">
-    <div id="menu-font">Menus</div>
-    <hr id="hr-menu" />
+  <!-- Menu Window -->
+  <div
+    [ngClass]="{ 'spawn-menu': !this.display }"
+    (click)="this.spawnMenu($event)"
+  ></div>
+  <div class="main-container" *ngIf="this.display">
+    <img
+      class="background"
+      src="../../assets/table/background.png"
+      style="width: inherit; height: inherit"
+    />
+    <div class="menu-container">
+      <div id="menu-font">Menus</div>
+      <hr id="hr-menu" />
 
-    <div id="menu-buttons">
-      <g-button
-        icon="../../assets/table/leftArrow.png"
-        iconSize="2.509"
-      ></g-button>
-      <g-button
-        class="menu-button"
-        icon="../../assets/table/buttonManageSound.png"
-        iconSize="6"
-      ></g-button>
-      <g-button
-        class="menu-button"
-        (click)="this.buttonSpawnTvGrid()"
-        icon="../../assets/table/buttonFiles.png"
-        iconSize="6"
-      ></g-button>
-      <g-button
-        class="menu-button"
-        (click)="this.buttonSpawnParticipants()"
-        icon="../../assets/table/buttonParticipants.png"
-        iconSize="6"
-      ></g-button>
-      <g-button
-        icon="../../assets/table/rightArrow.png"
-        iconSize="2.509"
-      ></g-button>
-    </div>
-
-    <div>
-      <p id="shortcut-font">Shortcuts</p>
-      <hr id="hr-shortcuts" />
-
-      <div id="shortcuts">
+      <div id="menu-buttons">
         <g-button
-          (click)="this.buttonMute()"
-          class="menu-button"
-          icon="{{ this.iconMuted }}"
-          iconSize="4.5"
+          icon="../../assets/table/leftArrow.png"
+          iconSize="2.509"
         ></g-button>
         <g-button
           class="menu-button"
-          icon="../../assets/table/buttonChat.png"
-          iconSize="4.5"
+          icon="../../assets/table/buttonManageSound.png"
+          iconSize="6"
         ></g-button>
         <g-button
           class="menu-button"
-          icon="../../assets/table/buttonEndCall.png"
-          iconSize="4.5"
+          (click)="this.buttonSpawnTvGrid()"
+          icon="../../assets/table/buttonFiles.png"
+          iconSize="6"
+        ></g-button>
+        <g-button
+          class="menu-button"
+          (click)="this.buttonSpawnParticipants()"
+          icon="../../assets/table/buttonParticipants.png"
+          iconSize="6"
+        ></g-button>
+        <g-button
+          icon="../../assets/table/rightArrow.png"
+          iconSize="2.509"
         ></g-button>
       </div>
-    </div>
 
-    <g-button
-      id="x-button"
-      (click)="this.despawnMenu()"
-      icon="../../assets/table/table_x_button.png"
-      iconSize="4.5"
-    >
-    </g-button>
+      <div>
+        <p id="shortcut-font">Shortcuts</p>
+        <hr id="hr-shortcuts" />
+
+        <div id="shortcuts">
+          <g-button
+            (click)="this.buttonMute()"
+            class="menu-button"
+            icon="{{ this.iconMuted }}"
+            iconSize="4.5"
+          ></g-button>
+          <g-button
+            class="menu-button"
+            icon="../../assets/table/buttonChat.png"
+            iconSize="4.5"
+          ></g-button>
+          <g-button
+            class="menu-button"
+            icon="../../assets/table/buttonEndCall.png"
+            iconSize="4.5"
+          ></g-button>
+        </div>
+      </div>
+
+      <g-button
+        id="x-button"
+        (click)="this.despawnMenu()"
+        icon="../../assets/table/table_x_button.png"
+        iconSize="4.5"
+      >
+      </g-button>
+    </div>
   </div>
 </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, OnInit, Input, ViewChild, ElementRef } from "@angular/core";
 
 @Component({
   selector: "app-table-menu",
@@ -7,10 +7,13 @@ import { Component, OnInit, Input } from "@angular/core";
 })
 export class TableMenuComponent implements OnInit {
   @Input() enableParticipantSpawn: boolean;
+  @ViewChild("menu") menuElementRef: ElementRef;
   tvGridWindowSpawned: boolean;
   display: boolean;
   muted: boolean;
   iconMuted: string;
+
+  @Input() as: string;
 
   constructor() {
     this.muted = false;
@@ -47,11 +50,13 @@ export class TableMenuComponent implements OnInit {
     else this.iconMuted = "../../assets/table/buttonMute.png";
   }
 
-  spawnMenu() {
+  spawnMenu($event) {
     this.display = true;
+    console.log($event.clientX);
+    console.log($event.clientY);
   }
 
-  despawnMenu() {
+  despawnMenu($event) {
     this.display = false;
   }
 

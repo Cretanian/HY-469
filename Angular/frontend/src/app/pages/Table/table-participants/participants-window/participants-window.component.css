@@ -49,3 +49,13 @@
   overflow-y: scroll;
   width: 100%;
 }
+
+.optionButtonsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.optionButtonImg {
+  margin-top: 10px;
+}
