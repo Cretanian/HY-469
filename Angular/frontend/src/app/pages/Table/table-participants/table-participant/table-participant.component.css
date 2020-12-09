@@ -1,24 +1,32 @@
 .containerAll {
-  min-width: 326px;
-  max-height: 29px;
-  margin-top: 14px;
+  max-height: 1.8296vw;
+  margin-top: 1.8927vw;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
+.isSelected {
+  height: 2.8vw;
+  margin-top: 1.8927vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #eaeaea;
+}
+
 .name {
   order: 1;
-  font-size: 18px;
+  font-size: 1.135vw;
   margin-bottom: 0px;
-  margin-left: 11px;
+  margin-left: 0.694vw;
   flex: 15;
   color: #656565;
   margin-top: 0px;
 }
 
 .picture1 {
-  margin-right: 15px;
+  margin-right: 0.98vw;
   order: 2;
   flex: 1;
 }

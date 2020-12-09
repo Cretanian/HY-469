@@ -1,30 +1,46 @@
-<div class = "window">
-    <div 
-        class = "participantsContainer " 
-        style = "overflow-y: scroll;"
-    >
-        <table-participants (click) = "participantSelected = true"></table-participants>
-        <table-footer 
-            title = "Participants"
-            (click) = "navigationButtons = !navigationButtons; participantSelected = false;"
-        ></table-footer>
-    </div>
-    <div 
-        *ngIf = "navigationButtons === true" 
-        style=" order:1; margin-right: 77px;">
-        <div class = "navigationButtons">
-            <navigation-buttons></navigation-buttons>
+
+<div 
+    style = "max-width: 30.41vw;" 
+    *ngIf = "this.display"
+>
+    <div style = "display:flex; flex-direction: row; align-items:flex-end">
+
+        <div  class = buttonsContainer >
+            <img 
+                (click) = 'this.scrollUp()'            
+                class = buttonImg    
+                style = "order:1" 
+                src = "../../../../assets/icons/tableDownButton.png">
+            <img 
+                (click) = 'this.scrollDown()'          
+                class = buttonImg    
+                style = "order:2" 
+                src = "../../../../assets/icons/tableUpButton.png">
+            <img 
+                (click) = 'this.emitDisplayEvent()'    
+                class = buttonImg 
+                style = "order:3" 
+                src = "../../../../assets/icons/tableXButton.png">
         </div>
-    </div>
-    <div 
-        *ngIf = "participantSelected && navigationButtons" 
-         style=" order:3; margin-right: 77px;" 
-    >
-        <div class = "optionsButtons">
-            <app-options-buttons></app-options-buttons>
+
+        <div class = "participants">
+            <table-participants
+                (participantEvent) = "participantClicked($event)" 
+                #participants 
+                id = "participants"               
+            >
+            </table-participants>
+            
+            <div class = "table-footer">
+                Participants
+            </div>
         </div>
+
+        <div *ngIf = "!this.participantSelected" style = "margin-left: 77px"></div>
+
+        <app-options-buttons *ngIf = "this.participantSelected" id = "options"></app-options-buttons>
     </div>
-    
-    
 </div>
+
+
 

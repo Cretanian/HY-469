@@ -98,6 +98,7 @@ import { FilesWindowComponent } from './pages/Table/files-window/files-window.co
 import { FilesWindowListComponent } from './pages/Table/files-window-list/files-window-list.component';
 import { TableFilesComponent } from './pages/Table/table-files/table-files.component';
 import { OpenFileComponent } from './pages/Table/open-file/open-file.component';
+import { FinalTableComponent } from './pages/Table/final-table/final-table.component';
 
 @NgModule({
   declarations: [
@@ -183,7 +184,19 @@ import { OpenFileComponent } from './pages/Table/open-file/open-file.component';
     ManyUsersComponent,
     PinboardComponent,
     FParticipantsComponent,    
-    routingComponents, ControllerCallChatComponent, ExplorerTeamConversationComponent, ExplorerContactChatComponent, SetUserComponent, AddButtonComponent, ReturnOncallButtonComponent, FilesWindowComponent, FilesWindowListComponent, TableFilesComponent, OpenFileComponent,
+    routingComponents, 
+    ControllerCallChatComponent, 
+    ExplorerTeamConversationComponent, 
+    ExplorerContactChatComponent, 
+    SetUserComponent, 
+    AddButtonComponent, 
+    ReturnOncallButtonComponent, 
+    FilesWindowComponent, 
+    FilesWindowListComponent, 
+    TableFilesComponent, 
+    OpenFileComponent,
+    routingComponents, 
+    FinalTableComponent,
   ],
   imports: [
     BrowserModule,

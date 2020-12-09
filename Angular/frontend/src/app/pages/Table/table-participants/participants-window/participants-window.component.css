@@ -1,26 +1,51 @@
-.window {
+.particpantsWindow {
+  display: flex;
+  flex-direction: row;
+  max-width: 21.261vw;
+}
+
+.participants {
   display: flex;
   flex-direction: row;
   background-color: transparent;
+  position: relative;
+  border: solid 1px black;
+  width: 21.261vw;
+  height: 21.261vw;
 }
 
-.participantsContainer {
-  max-width: 326px;
-  min-height: 316px;
-  order: 2;
-  border: solid 1px black;
+.table-footer {
+  position: absolute;
+  bottom: 0;
+  background-color: #373944;
+  font-weight: 400;
+  width: 100%;
+  color: white;
+  padding-left: 0.88vw;
+  font-size: 24px;
+  height: 41px;
+}
+
+#navigation {
+  margin-right: 0.3785vw;
+}
+
+#options {
+  margin-left: 0.3785vw;
+}
+
+.buttonsContainer {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
-.navigationButtons {
-  position: fixed;
-  bottom: 0;
-  margin-right: 14px;
+.buttonImg {
+  margin-right: 0.3785vw;
+  margin-top: 10px;
 }
 
-.optionsButtons {
-  position: fixed;
-  bottom: 0;
-  margin-left: 6px;
+#participants {
+  overflow-y: scroll;
+  width: 100%;
 }

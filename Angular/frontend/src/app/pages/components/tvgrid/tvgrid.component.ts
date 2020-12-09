@@ -1,4 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { TvGrid } from './../tvgrid-list/tvgrid';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'tvgrid',
@@ -7,17 +8,20 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TVGridComponent implements OnInit {
 
-  @Input() title: string;
-  @Input() src: string;
-
-
+  @Input() grid: TvGrid;
+  @Input() selected: number;
+  @Output() selectEvent = new EventEmitter<number>();
 
   constructor() { 
 
   }
 
   ngOnInit(): void {
-    
+
+  }
+
+  select(){
+    this.selectEvent.emit(this.grid.id);
   }
 
 }

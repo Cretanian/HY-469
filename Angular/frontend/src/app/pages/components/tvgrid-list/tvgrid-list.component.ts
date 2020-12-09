@@ -1,3 +1,4 @@
+import { TvGridService } from './../../../global/services/tvgrid/tvgrid.service';
 import { Component, OnInit } from '@angular/core';
 import {TvGrid} from './tvgrid';
 
@@ -8,24 +9,22 @@ import {TvGrid} from './tvgrid';
 })
 export class TvgridListComponent implements OnInit {
 
-  constructor() { }
+  
   grids: TvGrid[];
+  selected: number;
+  idsToPicture: string[]; 
+
+  constructor(private tvgridService: TvGridService){}
 
   ngOnInit(): void {
-    this.grids = [
-      {
-        title: "Grid 1",
-        src: './assets/tv-grid/1.png'
-      },
-      {
-        title: "Grid 2",
-        src: './assets/tv-grid/1-2.png'
-      },
-      {
-        title: "Grid 3",
-        src: "./assets/tv-grid/3-3.png"
-      },
-    ]
+
+    this.tvgridService.getAllMobile().subscribe(data =>{
+      this.grids = data as TvGrid[];
+    })
+  }
+
+  changeSelected(id: number){
+    this.selected = id;
   }
 
 }

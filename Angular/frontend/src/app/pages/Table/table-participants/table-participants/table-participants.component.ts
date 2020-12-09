@@ -1,98 +1,34 @@
+import { ParticipantsService } from './../../../../global/services/participants/participants.service';
 import { participant } from 'src/app/pages/components/utils/participant';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'table-participants',
   templateUrl: './table-participants.component.html',
   styleUrls: ['./table-participants.component.css']
 })
-export class TableParticipantsComponent implements OnInit {
-  participants: participant[];
 
-  constructor() { }
+export class TableParticipantsComponent implements OnInit {
+  selectedName: string;
+  participants: participant[];
+  @Output() participantEvent = new EventEmitter<string>();
+
+  constructor(private participantsService: ParticipantsService) 
+  {}
 
   ngOnInit(): void {
-    this.participants = [
-      {
-        name: "Zacharias Pervolarakis",
-        src1: "../../../assets/icons/rec (3).svg",
-        src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg"
-      },
-      {
-        name: "Stylianos Stamatakis",
-        src1: "../../../assets/icons/rec (3).svg",
-        src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg"
-      },
-      {
-        name: "Antonis Agapakis",
-        src1: "../../../assets/icons/rec (3).svg",
-        src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg"
-      },
-      {
-        name: "Magkoytara",
-        src1: "../../../assets/icons/rec (3).svg",
-        src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg"
-      },
-      {
-        name: "Youla Faturu",
-        src1: "../../../assets/icons/rec (3).svg",
-        src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg"
-      },
-      {
-        name: "Savvidaros o magkas",
-        src1: "../../../assets/icons/rec (3).svg",
-        src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg"
-      },
-      {
-        name: "Asteriakos",
-        src1: "../../../assets/icons/rec (3).svg",
-        src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg"
-      },
-      {
-        name: "Savvidaros o magkas",
-        src1: "../../../assets/icons/rec (3).svg",
-        src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg"
-      },
-      {
-        name: "Asteriakos",
-        src1: "../../../assets/icons/rec (3).svg",
-        src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg"
-      },
-      {
-        name: "Savvidaros o magkas",
-        src1: "../../../assets/icons/rec (3).svg",
-        src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg"
-      },
-      {
-        name: "Asteriakos",
-        src1: "../../../assets/icons/rec (3).svg",
-        src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg"
-      },
-      {
-        name: "Savvidaros o magkas",
-        src1: "../../../assets/icons/rec (3).svg",
-        src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg"
-      },
-      {
-        name: "Asteriakos",
-        src1: "../../../assets/icons/rec (3).svg",
-        src2: "../../../assets/icons/rec (3).svg",
-        src3: "../../../assets/icons/rec (3).svg"
-      },
-      
-    ]
+    this.participantsService.getAll().subscribe(data =>{
+      this.participants = data as participant[];
+    }
+    );        
+  }
+
+  participantClicked(name: string){
+    this.participantEvent.emit(name);
+    if(name == this.selectedName)
+      this.selectedName = undefined;
+    else
+      this.selectedName = name;
   }
 
 }

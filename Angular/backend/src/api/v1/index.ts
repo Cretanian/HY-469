@@ -1,3 +1,6 @@
+import { TvGridController } from './tvgrid/tvgrid.controller';
+import { ActivityController } from './activity/activity.controller';
+import { ParticipantsController } from './participants/participants.controller';
 import { ContactsController } from './contacts/contacts.controller';
 import { MessagesController } from './messages/messages.controller';
 import { UserController } from './user/user.controller';
@@ -109,6 +112,22 @@ apiV1Router
   .use(
     '/teams-list',
     new TeamsListController().applyRoutes()
+  )
+  
+  .use(
+    '/participants',
+    new ParticipantsController().applyRoutes()
+  )
+  
+  .use(
+    '/activity',
+    new ActivityController().applyRoutes()
+  )
+  
+  .use(
+    '/tvgrid',
+    new TvGridController().applyRoutes()
   );
+
   
 export { apiV1Router };
