@@ -17,6 +17,16 @@
   <table-tvgrid></table-tvgrid>
 </div>
 
+<!--Files Window -->
+<div class= "files-container" *ngIf="filesWindowSpawned">
+  <img
+    (click)="this.buttonDeSpawnFiles()"
+    src="../../../../assets/icons/tableXButton.png"
+    style="display: block; height: 71px; margin-right: 0.3vw"
+  />
+  <ami-fullstack-files-window></ami-fullstack-files-window>
+</div>
+
 <!-- Menu Window -->
 <div
   [ngClass]="{ 'spawn-menu': !this.display }"
@@ -44,7 +54,7 @@
       ></g-button>
       <g-button
         class="menu-button"
-        (click)="this.buttonSpawnTvGrid()"
+        (click)="this.buttonSpawnFiles()"
         icon="../../assets/table/buttonFiles.png"
         iconSize="6"
       ></g-button>

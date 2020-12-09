@@ -1,22 +1,22 @@
+
+.gridContainer {
+  grid-template-columns: 9.652vw 9.652vw 9.652vw;
+  padding-left: 0.757vw;
+  padding-top: 0.8201vw;
+}
+
 .gridAndFooter {
     position: absolute;
     border: 1px solid black;
   }
   
-  .footer {
-    display: table-cell;
-    vertical-align: middle;
-    width: 30.22082018927445vw;
-    height: 2.586vw;
-    font-size: 1.514vw;
-    padding-left: 15px;
-    color: white;
-    background-color: #373944;
-  }
-
-  .gridContainer {
-    top: 0px;
-    grid-template-columns: 9.652vw 9.652vw 9.652vw;
-    padding-left: 0.757vw;
-    padding-top: 0.8201vw;
-  }
+.footer {
+  display: table-cell;
+  vertical-align: middle;
+  width: 30.22082018927445vw;
+  height: 2.586vw;
+  font-size: 1.514vw;
+  padding-left: 15px;
+  color: white;
+  background-color: #373944;
+}

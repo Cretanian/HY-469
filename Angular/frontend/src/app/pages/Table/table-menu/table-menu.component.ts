@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from "@angular/core";
 export class TableMenuComponent implements OnInit {
   @Input() enableParticipantSpawn: boolean;
   tvGridWindowSpawned: boolean;
+  filesWindowSpawned: boolean;
   display: boolean;
   muted: boolean;
   iconMuted: string;
@@ -22,6 +23,7 @@ export class TableMenuComponent implements OnInit {
   ngOnInit(): void {
     this.tvGridWindowSpawned = false;
     this.enableParticipantSpawn = true;
+    this.filesWindowSpawned = false;
   }
 
   //Button Functions
@@ -29,6 +31,16 @@ export class TableMenuComponent implements OnInit {
   buttonSpawnParticipants() {
     this.display = false;
     this.enableParticipantSpawn = false;
+  }
+
+  buttonSpawnFiles() {
+    this.display = false;
+    this.filesWindowSpawned = true;
+  }
+
+  buttonDeSpawnFiles() {
+    this.display = false;
+    this.filesWindowSpawned = false;
   }
 
   buttonSpawnTvGrid() {
