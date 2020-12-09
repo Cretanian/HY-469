@@ -1,7 +1,6 @@
 .tv{
     width: 1920px;
     height: 1080px;
-    background-color: #7489ff;
     display: flex;
     flex-direction: row;
 }
@@ -19,5 +18,4 @@
 .chat{
     width: 33.33vw;
     height: 100%;
-    background-color: #02f016;
 }

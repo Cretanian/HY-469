@@ -93,6 +93,8 @@ import { ExplorerTeamConversationComponent } from './pages/Final-Cretanian/explo
 import { ExplorerContactChatComponent } from './pages/Final-Cretanian/explorer-contact-chat/explorer-contact-chat.component';
 import { SetUserComponent } from './pages/set-user/set-user.component';
 import { TvMasterComponent } from './pages/Final-Cretanian/tv-master/tv-master.component';
+import { TvChatComponent } from './pages/TV/tv-chat/tv-chat.component';
+import { TvMessageComponent } from './pages/TV/tv-message/tv-message.component';
 
 @NgModule({
   declarations: [
@@ -178,7 +180,7 @@ import { TvMasterComponent } from './pages/Final-Cretanian/tv-master/tv-master.c
     ManyUsersComponent,
     PinboardComponent,
     FParticipantsComponent,    
-    routingComponents, ControllerCallChatComponent, ExplorerTeamConversationComponent, ExplorerContactChatComponent, SetUserComponent, TvMasterComponent,
+    routingComponents, ControllerCallChatComponent, ExplorerTeamConversationComponent, ExplorerContactChatComponent, SetUserComponent, TvMasterComponent, TvChatComponent, TvMessageComponent,
   ],
   imports: [
     BrowserModule,

@@ -12,7 +12,8 @@ export class TvMasterComponent implements OnInit {
 
   constructor(private socketService: SocketsService) { }
 
-  grid: string = '1main'
+  grid: string = 'chat-on'
+  isMouseHovering = false;
 
   ngOnInit(): void {
     this.socketService.syncMessages('tv/grid').subscribe(

@@ -1,23 +1,59 @@
-<app-tv-incoming-call
-    *ngIf="grid == 'calling'"
-></app-tv-incoming-call>
+<div class='main-container'>
 
-<app-screenshare1main
-    *ngIf="grid == 'screensharing'"
->
-</app-screenshare1main>
+    <app-tv-incoming-call
+        *ngIf="grid == 'calling'"
+    ></app-tv-incoming-call>
 
-<app-tv1main
-    *ngIf="grid == '1main'"
->
-</app-tv1main>
+    <app-screenshare1main
+        *ngIf="grid == 'screensharing'"
+    >
+    </app-screenshare1main>
 
-<app-tv3main
-    *ngIf="grid == '3main'"
->
-</app-tv3main>
+    <app-tv1main
+        *ngIf="grid == '1main'"
+    >
+    </app-tv1main>
 
-<app-tv3x3main
-    *ngIf="grid == '3x3'"
->
-</app-tv3x3main>
+    <app-tv3main
+        *ngIf="grid == '3main'"
+    >
+    </app-tv3main>
+
+    <app-tv3x3main
+        *ngIf="grid == '3x3'"
+    ></app-tv3x3main>
+
+    <app-tv-chat-on
+        *ngIf="grid == 'chat-on'"
+    ></app-tv-chat-on>
+
+    <div
+        class='hoverDetector'
+        (mouseenter)='isMouseHovering = true'
+        (mouseleave)='isMouseHovering = false'
+    ></div>
+
+    <div class='tv-buttons' 
+        [ngClass]="{
+            'buttons-show' : isMouseHovering == true,
+            'buttons-hide' : isMouseHovering == false
+        }"
+    >
+        <g-button
+            background='../../../../assets/tv-buttons/tv_button_background.png'
+            icon='../../../../assets/tv-buttons/tv_record_icon.png'
+            iconSize='3'
+        ></g-button>
+        <g-button
+            background='../../../../assets/tv-buttons/tv_button_background.png'
+            icon='../../../../assets/tv-buttons/tv_screenshare_icon.png'
+            iconSize='3'
+        ></g-button>
+        <g-button
+            background='../../../../assets/tv-buttons/tv_button_background.png'
+            icon='../../../../assets/tv-buttons/tv_mute_icon.png'
+            iconSize='2'
+        ></g-button>
+    </div>
+
+</div>

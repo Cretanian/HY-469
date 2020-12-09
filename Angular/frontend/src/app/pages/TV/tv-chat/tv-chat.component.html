@@ -1,0 +1,22 @@
+<div #mainContainer class='main-container'>
+
+    <div class='messages'> <!-- Here somehow they will be dynamically created. -->
+
+        <!-- This is the HR bar -->
+        <div class='chat-start'>
+            <hr class='chat-start-hr'>
+            <div class='chat-start-text-container'>
+                <p class='chat-start-text'>{{messages[0].name}} started a call</p>
+            </div>
+        </div>
+
+        <tv-message
+            contact={{contact}}
+            teamName={{teamName}}
+            conversationID={{conversationID}}
+            *ngFor='let message of messages'
+                [message]='message'
+        ></tv-message>
+
+    </div>
+</div>

@@ -1,19 +1,22 @@
 <div class="tv">
     <div class="cameras">
         <app-tv-speaker
-        *ngFor="let speaker of speakers_array"
-        [image] = 'speaker.image'
-        [mic] = 'speaker.mic'
-        [speaker] = 'speaker.speaker'
-        width = '32.7vw'
-        height = '27.60vw'
-        paddingleft = '1vw'
-        fontsize = '1.6vw'
-        margin = '0.36vw'
-        top = '40%'
+            *ngFor="let speaker of speakers_array"
+            [image] = 'speaker.image'
+            [mic] = 'speaker.mic'
+            [speaker] = 'speaker.speaker'
+            width = '32.7vw'
+            height = '27.60vw'
+            paddingleft = '1vw'
+            fontsize = '1.6vw'
+            margin = '0.36vw'
+            top = '40%'
         ></app-tv-speaker>
     </div>
-    <div class="chat">
+    <tv-chat
+        class='chat'
+        teamName='YeetFleet'
+        conversationID='0'
+    ></tv-chat>
 
-    </div>
 </div>
