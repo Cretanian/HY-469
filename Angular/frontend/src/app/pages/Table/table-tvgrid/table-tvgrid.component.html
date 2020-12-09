@@ -1,42 +1,45 @@
-
-<div class = gridAndFooter>
-    <div class = "gridContainer">
-        <g-button 
-            class = "gridButton"
-            background='../assets/table-tvgrid/notChosen.png'
-            icon='../assets/table-tvgrid/1 Main.png'
-            backgroundSize='9.21'
-            iconSize='8.21'
-        ></g-button>
-        <g-button 
-            class = "gridButton"
-            background='../assets/table-tvgrid/notChosen.png'
-            icon='../assets/table-tvgrid/1 Main + Chat.png'
-            backgroundSize='9.21'
-            iconSize='8.21'
-        ></g-button>
-        <g-button 
-            class = "gridButton"
-            background='../assets/table-tvgrid/notChosen.png'
-            icon='../assets/table-tvgrid/2x2 Main + Chat.png'
-            backgroundSize='9.21'
-            iconSize='8.21'
-        ></g-button>
-        <g-button 
-            class = "gridButton"
-            background='../assets/table-tvgrid/notChosen.png'
-            icon='../assets/table-tvgrid/3 Main.png'
-            backgroundSize='9.21'
-            iconSize='8.21'
-        ></g-button>
-        <g-button
-            class = "gridButton"
-            background ='../assets/table-tvgrid/notChosen.png'
-            icon='../assets/table-tvgrid/3x3 Main.png'
-            backgroundSize='9.21'
-            iconSize='8.21'
-        ></g-button>
-
-    </div>
-    <div class = footer>TV Grid</div>
+<div class="gridAndFooter">
+  <div class="gridContainer">
+    <g-button
+      (click)="this.select(0)"
+      class="gridButton"
+      background="{{ this.backgrounds[0] }}"
+      icon="{{ this.grids[0].src }}"
+      backgroundSize="9.21"
+      iconSize="8.21"
+    ></g-button>
+    <g-button
+      (click)="this.select(1)"
+      class="gridButton"
+      background="{{ this.backgrounds[1] }}"
+      icon="{{ this.grids[1].src }}"
+      backgroundSize="9.21"
+      iconSize="8.21"
+    ></g-button>
+    <g-button
+      (click)="this.select(2)"
+      class="gridButton"
+      background="{{ this.backgrounds[2] }}"
+      icon="{{ this.grids[2].src }}"
+      backgroundSize="9.21"
+      iconSize="8.21"
+    ></g-button>
+    <g-button
+      (click)="this.select(3)"
+      class="gridButton"
+      background="{{ this.backgrounds[3] }}"
+      icon="{{ this.grids[3].src }}"
+      backgroundSize="9.21"
+      iconSize="8.21"
+    ></g-button>
+    <g-button
+      (click)="this.select(4)"
+      class="gridButton"
+      background="{{ this.backgrounds[4] }}"
+      icon="{{ this.grids[4].src }}"
+      backgroundSize="9.21"
+      iconSize="8.21"
+    ></g-button>
+  </div>
+  <div class="a-footer">TV Grid</div>
 </div>

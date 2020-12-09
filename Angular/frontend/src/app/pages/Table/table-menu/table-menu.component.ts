@@ -1,40 +1,61 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input } from "@angular/core";
 
 @Component({
-  selector: 'app-table-menu',
-  templateUrl: './table-menu.component.html',
-  styleUrls: ['./table-menu.component.css']
+  selector: "app-table-menu",
+  templateUrl: "./table-menu.component.html",
+  styleUrls: ["./table-menu.component.css"],
 })
 export class TableMenuComponent implements OnInit {
-
   @Input() enableParticipantSpawn: boolean;
-  display:boolean;
+  tvGridWindowSpawned: boolean;
+  display: boolean;
+  muted: boolean;
+  iconMuted: string;
 
-  constructor() { 
+  constructor() {
+    this.muted = false;
+    this.iconMuted = "../../assets/table/buttonMute.png";
     this.display = true;
     this.enableParticipantSpawn = true;
   }
 
   ngOnInit(): void {
+    this.tvGridWindowSpawned = false;
     this.enableParticipantSpawn = true;
   }
 
-  spawnParticipantsButton(){
-      this.display = false;
-      this.enableParticipantSpawn = false;
+  //Button Functions
+
+  buttonSpawnParticipants() {
+    this.display = false;
+    this.enableParticipantSpawn = false;
   }
 
-  receiveDisplayParticipantEvent(participantsIsDisplayed: boolean){
+  buttonSpawnTvGrid() {
+    this.display = false;
+    this.tvGridWindowSpawned = true;
+  }
+
+  buttonDespawnTvGrid() {
+    this.tvGridWindowSpawned = false;
+  }
+
+  buttonMute() {
+    this.muted = !this.muted;
+    if (this.muted == true)
+      this.iconMuted = "../../assets/table/buttonUnmute.png";
+    else this.iconMuted = "../../assets/table/buttonMute.png";
+  }
+
+  spawnMenu() {
     this.display = true;
-    this.enableParticipantSpawn = !this.enableParticipantSpawn;
   }
 
-  spawnMenu(){
-    this.display = true;
-  }
-
-  despawnMenu(){
+  despawnMenu() {
     this.display = false;
   }
 
+  receiveDisplayParticipantEvent(participantsIsDisplayed: boolean) {
+    this.enableParticipantSpawn = !this.enableParticipantSpawn;
+  }
 }

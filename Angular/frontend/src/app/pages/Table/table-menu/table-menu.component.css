@@ -1,61 +1,87 @@
+.rotateContainer {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  position: absolute;
+  top: 75px;
+}
+
 .main-container {
-  width: 720px;
-  height: 510px;
+  width: 430px;
+  height: 285px;
   position: relative;
 }
 
-.container {
-  width: 720px;
-  height: auto;
+.menu-container {
   position: absolute;
-  top: 0%;
-  left: 2%;
-  margin: auto;
+  top: 0px;
+  left: 6px;
+  background-color: transparent;
+}
+
+.background {
+  top: 0px;
+  left: 0px;
 }
 
 #menu-buttons {
-  width: 100%;
-  height: auto;
   display: flex;
-  justify-content: space-evenly;
-  margin: auto;
+  align-items: center;
 }
 
 #shortcuts {
-  padding-left: 2vw;
+  display: flex;
 }
 
 #menu-font {
+  font-weight: 550;
   margin: 0;
-  font-size: 3.5em;
+  font-size: 25px;
 }
 
 #hr-menu {
+  width: 100%;
   margin: 0%;
-  margin-bottom: 1vw;
-  border: 4px solid grey;
+  margin-bottom: 0.5vw;
+  border: 2px solid grey;
   border-radius: 4px;
 }
 
 #shortcut-font {
   margin: 0%;
-  font-size: 2em;
+  font-size: 20px;
+  font-weight: 550;
 }
 
 #hr-shortcuts {
+  width: 100%;
   margin: 0%;
   margin-bottom: 0.5vw;
-  border: 3px solid grey;
+  border: 1px solid grey;
   border-radius: 3px;
 }
 
 #x-button {
+  bottom: -90px;
   position: absolute;
-  left: 44.7%;
+  left: 173px;
 }
 
-.menu-container{
-    width: 100px;
-    height: 100px;
-    background-color: black;
+.spawn-menu {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+}
+
+.menu-button {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.tv-grid-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
 }

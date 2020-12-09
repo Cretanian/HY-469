@@ -5,7 +5,7 @@ import { logger } from '../../../utils/logger';
 
 export class TvGridController {
     public data: object[] ;
-    public dataTv: object[];
+    public dataTable: object[];
     /**
      * Apply all routes for example
      *
@@ -14,7 +14,8 @@ export class TvGridController {
     public applyRoutes(): Router {
         const router = Router();       
         router
-            .get('/getAllMobile', this.getAllMobile);
+            .get('/getAllMobile', this.getAllMobile)
+            .get('/getAllTable', this.getAllTable);
         return router;
     }
 
@@ -47,6 +48,34 @@ export class TvGridController {
             },
           ];
 
+          this.dataTable = [
+            {
+              title: '1 Main',
+              src: '../assets/table-tvgrid/1 Main.png',
+              id: 0
+            },
+            {
+              title: '1 Main + Chat',
+              src: '../assets/table-tvgrid/1 Main + Chat.png',
+              id: 1
+            },
+            {
+              title: '3 Main',
+              src: '../assets/table-tvgrid/3 Main.png',
+              id: 2
+            },
+            {
+              title: '2x2 Main + Chat',
+              src: '../assets/table-tvgrid/2x2 Main + Chat.png',
+              id: 3
+            },
+            {
+              title: '3x3 main',
+              src: '../assets/table-tvgrid/3x3 Main.png',
+              id: 4
+            },
+          ];
+
 
     }
 
@@ -60,8 +89,8 @@ export class TvGridController {
     /**
      * Broadcasts a received message to all connected clients
      */
-    public getAllTv = (req: Request, res: Response) => {
-      res.send(this.dataTv);       
+    public getAllTable = (req: Request, res: Response) => {
+      res.send(this.dataTable);       
     }
 
 }
