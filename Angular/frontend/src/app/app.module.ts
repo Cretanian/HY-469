@@ -94,6 +94,10 @@ import { ExplorerContactChatComponent } from './pages/Final-Cretanian/explorer-c
 import { SetUserComponent } from './pages/set-user/set-user.component';
 import { AddButtonComponent } from './pages/Cretanian/add-button/add-button.component';
 import { ReturnOncallButtonComponent } from './pages/Cretanian/return-oncall-button/return-oncall-button.component';
+import { FilesWindowComponent } from './pages/Table/files-window/files-window.component';
+import { FilesWindowListComponent } from './pages/Table/files-window-list/files-window-list.component';
+import { TableFilesComponent } from './pages/Table/table-files/table-files.component';
+import { OpenFileComponent } from './pages/Table/open-file/open-file.component';
 
 @NgModule({
   declarations: [
@@ -179,7 +183,7 @@ import { ReturnOncallButtonComponent } from './pages/Cretanian/return-oncall-but
     ManyUsersComponent,
     PinboardComponent,
     FParticipantsComponent,    
-    routingComponents, ControllerCallChatComponent, ExplorerTeamConversationComponent, ExplorerContactChatComponent, SetUserComponent, AddButtonComponent, ReturnOncallButtonComponent,
+    routingComponents, ControllerCallChatComponent, ExplorerTeamConversationComponent, ExplorerContactChatComponent, SetUserComponent, AddButtonComponent, ReturnOncallButtonComponent, FilesWindowComponent, FilesWindowListComponent, TableFilesComponent, OpenFileComponent,
   ],
   imports: [
     BrowserModule,

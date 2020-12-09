@@ -1,0 +1,15 @@
+<div class="size">
+    <div class="header" (click) = "dropdownOpen = !dropdownOpen">
+      {{header}}
+    </div>
+
+    
+    <div *ngIf ="dropdownOpen === false">
+        <ami-fullstack-table-files
+            *ngFor = "let file_item of file_list"
+            [icon] = 'file_item.image'
+            [name] = 'file_item.name'
+            [last_edit] = 'file_item.last_edit'
+        ></ami-fullstack-table-files>
+      </div>
+</div>
