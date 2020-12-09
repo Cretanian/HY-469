@@ -20,10 +20,12 @@ export class GenDayCalendarComponent implements OnInit {
 class event{
   event:string;
   time:string;
+  color:string;
   constructor(){
     this.event = '';
     this.time = '';
-  }
+    this.color = '';
+    }
 }
 
 

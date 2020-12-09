@@ -41,7 +41,7 @@ class helper{
   team: string;
   date: string;
   month:string;
-  day: string
+  day: string;
 
 }
 class event{

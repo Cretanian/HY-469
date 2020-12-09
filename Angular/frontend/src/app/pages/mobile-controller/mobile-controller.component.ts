@@ -10,11 +10,12 @@ import { MobileControllerMoreComponent } from '../mobile-controller-more/mobile-
 export class MobileControllerComponent implements OnInit{
 
   @Input('callName') callName: string;
-
+  team_name:string;
   moreOpen: boolean = false;
 
   constructor() { 
     this.callName = 'Intelligent Living Room Team';
+    this.team_name = 'YeetFleet'; //to be changed
   }
 
   ngOnInit(): void{

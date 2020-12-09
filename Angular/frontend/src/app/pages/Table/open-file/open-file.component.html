@@ -1,0 +1,37 @@
+
+<div 
+*ngIf = "this.display"
+>
+    <div style = "display:flex; flex-direction: row; align-items:flex-end">
+
+        <div  class = buttonsContainer >
+            <img  
+                class = buttonImg    
+                style = "order:1" 
+                src = "../../../../assets/pin_button.png">
+            <img 
+                class = buttonImg    
+                style = "order:2" 
+                src = "../../../../assets/sharing_button.png">
+                <img 
+                class = buttonImg    
+                style = "order:3" 
+                src = "../../../../assets/draw_button.png">
+            <img 
+                (click) = 'this.emitDisplayEvent()'   
+                class = buttonImg 
+                style = "order:4" 
+                src = "../../../../assets/icons/tableXButton.png">
+        </div>
+
+        <div class = "participants">
+
+            <h4 style="height: 4%; order:1; text-align: right;" >{{name}}</h4>
+
+            <img 
+            style="height: 96%; order:2;border: solid 1px black;"  
+            src = "../../../../assets/file.png">
+        </div>
+
+    </div>
+</div>

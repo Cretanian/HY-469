@@ -9,10 +9,18 @@ export class CalendarEventComponent implements OnInit {
 
   @Input ('event') event: string;
   @Input ('time') time: string;
-
-  constructor() { }
+  @Input () color: string;
+ 
+  constructor() {}
 
   ngOnInit(): void {
+   
+  }
+
+  public getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
   }
 
 }

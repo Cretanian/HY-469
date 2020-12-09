@@ -14,11 +14,11 @@
 }
 
 .gridAndFooter {
-  position: absolute;
+  width: 30.22082018927445vw;
   border: 1px solid black;
 }
 
-.footer {
+.a-footer {
   display: table-cell;
   vertical-align: middle;
   width: 30.22082018927445vw;

@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
-import { ConversationPreview_I, Conversation_I, ContactMessages_I, Message_I } from '../../../../../../backend/src/api/v1/messages/messages.controller'
+import { ConversationPreview_I, Message_I } from '../../../../../../backend/src/api/v1/messages/messages.controller'
 import { MessagesService } from "../../../global/services/messages/messages.service"
 
 @Component({

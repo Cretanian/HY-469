@@ -6,7 +6,6 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./generic-volume-editor.component.css']
 })
 export class GenericVolumeEditorComponent implements OnInit {
-
   @Input("slider-label") label: string;
   constructor() { }
 

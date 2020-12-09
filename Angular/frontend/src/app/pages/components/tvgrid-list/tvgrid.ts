@@ -1,5 +1,7 @@
-export class TvGrid{
-    title: string;
-    grid: string;
-    src: string;
+export class TvGrid {
+  title: string;
+  src: string;
+  id: number;
+
+  constructor() {}
 }

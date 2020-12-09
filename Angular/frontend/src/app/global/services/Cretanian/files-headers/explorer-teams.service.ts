@@ -21,5 +21,10 @@ import * as _ from 'lodash';
         const headers = { 'content-type': 'application/json'}
         return this.http.post(`${this.hostURl}/api/files-headers/getAll`,{person: person},{'headers':headers});
     }
+
+    public getAll2(person: string){
+      const headers = { 'content-type': 'application/json'}
+      return this.http.post(`${this.hostURl}/api/files-headers/getAll2`,{person: person},{'headers':headers});
+  }
   
   }

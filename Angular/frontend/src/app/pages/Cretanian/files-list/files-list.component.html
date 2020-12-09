@@ -1,19 +1,25 @@
 <div class="size">
-    <div class="header">
+    <div class="header" (click) = "dropdownOpen = !dropdownOpen">
       {{header}}
-      
-      <g-button
+
+      <g-button *ngIf = "dropdownOpen === false"
       class='aling-g-button'
-      icon='{{icon}}'
+      icon= '{{icon}}'
+      ></g-button>
+
+      <g-button *ngIf = "dropdownOpen === true"
+      class='aling-g-button'
+      icon= '../../../assets/files/showdown.png'
       ></g-button>
 
     </div>
-  
-        <app-files
-            *ngFor = "let file of file_array"
-            [icon] = 'file.image'
-            [name] = 'file.name'
-            [last_edit] = 'file.last_edit'
-        ></app-files>
 
+    <div *ngIf ="dropdownOpen === false">
+        <app-files
+            *ngFor = "let file_item of file_list"
+            [icon] = 'file_item.image'
+            [name] = 'file_item.name'
+            [last_edit] = 'file_item.last_edit'
+        ></app-files>
+      </div>
 </div>

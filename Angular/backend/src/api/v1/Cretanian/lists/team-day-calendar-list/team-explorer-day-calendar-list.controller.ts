@@ -34,6 +34,7 @@ export class TeamDayCalendarListController {
             month : 'OCT',
             event : 'DND with the boys',
             time : '10:00 - 11:00',
+            color: '#696969',
           },
           {
             team: 'YeetFleet',
@@ -41,6 +42,7 @@ export class TeamDayCalendarListController {
             month : 'OCT',
             event : 'Eat something',
             time : '15:00 - 16:00',
+            color: '#420696',
           },
           {
             team: 'DnD | Reloaded',
@@ -48,6 +50,7 @@ export class TeamDayCalendarListController {
             month : 'OCT',
             event : 'Study HY469',
             time : '19:00 - 21:00',
+            color: '#768805',
           },
           {
             team: 'DnD | Reloaded',
@@ -56,6 +59,7 @@ export class TeamDayCalendarListController {
             day : 'Thu.',
             event : 'DND again and again',
             time : '10:00 - 11:00',
+            color: '#821576',
           },
           {
             team: 'DnD | Reloaded',
@@ -64,6 +68,7 @@ export class TeamDayCalendarListController {
             day : 'Fri.',
             event : 'Running',
             time : '15:00 - 16:00',
+            color: '#659371',
           },
           {
             team: 'DnD | Reloaded',
@@ -71,7 +76,8 @@ export class TeamDayCalendarListController {
             month : 'OCT',
             day : 'Sat.',
             event : 'Cook soup',
-            time : '10:00 - 11:00',
+            time : '19:00 - 20:00',
+            color: '#371598',
           },
           {
             team: 'DnD | Reloaded',
@@ -80,6 +86,7 @@ export class TeamDayCalendarListController {
             day : 'Sun.',
             event : 'DNDDDDDDDD',
             time : '10:00 - 11:00',
+            color: '#465792',
           },
           {
             team: '0',
@@ -87,6 +94,7 @@ export class TeamDayCalendarListController {
             month : 'OCT',
             event : 'DND with the boys',
             time : '10:00 - 11:00',
+            color: '#918255',
           },
           {
             team: '0',
@@ -94,6 +102,7 @@ export class TeamDayCalendarListController {
             month : 'OCT',
             event : 'Eat something',
             time : '15:00 - 16:00',
+            color: '#162534',
           },
           {
             team: '0',
@@ -101,6 +110,7 @@ export class TeamDayCalendarListController {
             month : 'OCT',
             event : 'Study HY469',
             time : '19:00 - 21:00',
+            color: '#465312',
           },
           {
             team: '0',
@@ -109,6 +119,7 @@ export class TeamDayCalendarListController {
             day : 'Thu.',
             event : 'DND again and again',
             time : '10:00 - 11:00',
+            color: '#112932',
           },
           {
             team: '0',
@@ -117,6 +128,7 @@ export class TeamDayCalendarListController {
             day : 'Fri.',
             event : 'Running',
             time : '15:00 - 16:00',
+            color: '#236511',
           },
           {
             team: '0',
@@ -124,7 +136,8 @@ export class TeamDayCalendarListController {
             month : 'OCT',
             day : 'Sat.',
             event : 'Cook soup',
-            time : '10:00 - 11:00',
+            time : '12:00 - 14:00',
+            color: '#542962',
           },
           {
             team: '0',
@@ -133,6 +146,7 @@ export class TeamDayCalendarListController {
             day : 'Sun.',
             event : 'DNDDDDDDDD',
             time : '10:00 - 11:00',
+            color: '#123456',
           },
     ];
   }

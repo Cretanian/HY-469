@@ -7,9 +7,10 @@
 
     <div class="body">     
         <app-files-list
-            *ngFor= 'let files of files_array'
-            [header] = 'files.header'
-            [icon] = 'files.icon'
+            *ngFor= 'let file_item of file'
+            [header] = 'file_item.header'
+            [icon] = 'file_item.icon'
+            [file_list] = 'file_item.file_list'
         ></app-files-list>
     </div>
 

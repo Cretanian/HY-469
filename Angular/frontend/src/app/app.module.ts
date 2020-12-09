@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'; 
 import { ReactiveFormsModule } from '@angular/forms';
 
+
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule , routingComponents} from './app.routing';
@@ -95,6 +96,13 @@ import { SetUserComponent } from './pages/set-user/set-user.component';
 import { TvMasterComponent } from './pages/Final-Cretanian/tv-master/tv-master.component';
 import { TvChatComponent } from './pages/TV/tv-chat/tv-chat.component';
 import { TvMessageComponent } from './pages/TV/tv-message/tv-message.component';
+import { AddButtonComponent } from './pages/Cretanian/add-button/add-button.component';
+import { ReturnOncallButtonComponent } from './pages/Cretanian/return-oncall-button/return-oncall-button.component';
+import { FilesWindowComponent } from './pages/Table/files-window/files-window.component';
+import { FilesWindowListComponent } from './pages/Table/files-window-list/files-window-list.component';
+import { TableFilesComponent } from './pages/Table/table-files/table-files.component';
+import { OpenFileComponent } from './pages/Table/open-file/open-file.component';
+import { FinalTableComponent } from './pages/Table/final-table/final-table.component';
 
 @NgModule({
   declarations: [
@@ -180,7 +188,21 @@ import { TvMessageComponent } from './pages/TV/tv-message/tv-message.component';
     ManyUsersComponent,
     PinboardComponent,
     FParticipantsComponent,    
-    routingComponents, ControllerCallChatComponent, ExplorerTeamConversationComponent, ExplorerContactChatComponent, SetUserComponent, TvMasterComponent, TvChatComponent, TvMessageComponent,
+    TvMasterComponent,
+    TvChatComponent,
+    TvMessageComponent,
+    routingComponents, 
+    ControllerCallChatComponent, 
+    ExplorerTeamConversationComponent, 
+    ExplorerContactChatComponent, 
+    SetUserComponent, 
+    AddButtonComponent, 
+    ReturnOncallButtonComponent, 
+    FilesWindowComponent, 
+    FilesWindowListComponent, 
+    TableFilesComponent, 
+    OpenFileComponent,
+    FinalTableComponent,
   ],
   imports: [
     BrowserModule,

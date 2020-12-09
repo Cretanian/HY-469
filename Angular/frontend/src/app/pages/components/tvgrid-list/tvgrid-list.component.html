@@ -1,6 +1,7 @@
 <tvgrid 
-    *ngFor = "let grid of grids"
-    [title] = "grid.title"
-    [src] = "grid.src"
-    (click)='changeTvGrid(grid.grid)'
-></tvgrid>
+    *ngFor = "let grid of grids" 
+    [grid] = "grid" 
+    [selected] = selected 
+    (selectEvent)="changeSelected($event)"
+>
+</tvgrid>
