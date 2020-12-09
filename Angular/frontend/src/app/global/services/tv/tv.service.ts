@@ -21,11 +21,11 @@ export class TVService {
     this.hostURL = environment.host;
   }
 
-  public changeGrid(gridName: string){
+  public changeGrid(gridID: number){
     return this.http.post(
       `${this.hostURL}/api/tv/changeGrid`,
       {
-          gridName: gridName
+          gridID: gridID
       },
       { headers: this.headers }   
     ).subscribe();

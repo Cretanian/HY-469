@@ -1,30 +1,30 @@
 <div class='main-container'>
 
     <app-tv-incoming-call
-        *ngIf="grid == 'calling'"
+        *ngIf="grid == -1"
     ></app-tv-incoming-call>
 
     <app-screenshare1main
-        *ngIf="grid == 'screensharing'"
+        *ngIf="grid == 10"
     >
     </app-screenshare1main>
 
     <app-tv1main
-        *ngIf="grid == '1main'"
+        *ngIf="grid == 0"
     >
     </app-tv1main>
 
     <app-tv3main
-        *ngIf="grid == '3main'"
+        *ngIf="grid == 2"
     >
     </app-tv3main>
 
     <app-tv3x3main
-        *ngIf="grid == '3x3'"
+        *ngIf="grid == 4"
     ></app-tv3x3main>
 
     <app-tv-chat-on
-        *ngIf="grid == 'chat-on'"
+        *ngIf="grid == 3"
     ></app-tv-chat-on>
 
     <div

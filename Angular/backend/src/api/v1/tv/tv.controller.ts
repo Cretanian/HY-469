@@ -62,9 +62,9 @@ export class TVController {
   }
 
   public changeGrid = (req: Request, res: Response) => {
-    const grid: string = req.body.gridName;
+    const grid: number = req.body.gridID;
     logger.info('TVControlle>> Changing to: ' + grid);
-    this.BroadcastChanges('tv/grid', grid);
+    this.BroadcastChanges('tv/grid', "" + grid);
     res.send('200');
   }
 

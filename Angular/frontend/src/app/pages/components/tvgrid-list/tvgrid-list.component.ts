@@ -28,9 +28,6 @@ export class TvgridListComponent implements OnInit {
 
   changeSelected(id: number){
     this.selected = id;
-  }
-
-  changeTvGrid(tvGrid: string){
-    this.tvService.changeGrid(tvGrid);
+    this.tvService.changeGrid(id);
   }
 }
