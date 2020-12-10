@@ -79,7 +79,7 @@ export class MobileChatComponent {
       if(this.messages[i].name == this.user.username){
         console.log('alignment: ' + this.messages[i].alignment);
         this.messages[i].alignment = 'right';
-        this.messages[i].photo = '';
+        // this.messages[i].photo = '';
       }
     };
   }

@@ -4,6 +4,7 @@ import { ParticipantsController } from './participants/participants.controller';
 import { ContactsController } from './contacts/contacts.controller';
 import { MessagesController } from './messages/messages.controller';
 import { UserController } from './user/user.controller';
+import { PinboardController } from './pinboard/pinboard.controller';
 import { TVController } from './tv/tv.controller';
 import * as express from 'express';
 import { ResourceController } from '../shared';
@@ -67,6 +68,11 @@ apiV1Router
   .use(
     '/user',
     new UserController().applyRoutes()
+  )
+
+  .use(
+    '/pinboard',
+    new PinboardController().applyRoutes()
   )
 
   /* Cretanian */

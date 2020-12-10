@@ -1,0 +1,71 @@
+img{
+    width: 100%;
+    height: 100%;
+}
+
+p{
+    font-size: 22px
+}
+
+.main-container{
+    width: auto;
+    height: auto;
+    max-width: 750px;
+    min-width: 400px;
+    max-height: 400px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.label-pin{
+    width: 30px;
+    height: 30px;
+    z-index: 100;
+}
+
+.label-name{
+    padding-left: 10px;
+    margin-bottom: 0px;
+    margin: 0px;
+}
+
+.label-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+    text-align: center;
+}
+
+.pinned-container{
+    align-self: flex-start;
+    width: 90%;
+    background-color: white;
+    border-radius: 10px;
+
+    max-width: 750px;
+    max-height: 400px;
+
+    position: relative;
+}
+
+.pinned-message{
+    padding: 5px;
+    padding-left: 20px;
+    padding-bottom: 0px;;
+    margin: auto
+}
+
+.pinned-content{
+    width: 80%;
+    height: auto;
+    
+    align-self: center;
+    justify-self: center;
+
+    padding: auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: auto;
+}

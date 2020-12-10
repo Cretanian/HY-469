@@ -1,0 +1,39 @@
+<div class='main-container'>
+
+    <div class='window-header'>
+        <p class='window-label'>Pin Item</p>
+    </div>
+
+    <div class='form-container'>
+
+        <p class='form-label'>Comment on pin:</p>
+        <input 
+            #input
+            class="form-control form-control-lg form"
+            type="text"
+            placeholder="Ex: 'Dont forget to add this!'"
+        >
+
+    </div>
+
+    <div class='buttons-container'>
+
+        <div 
+           class='button cancel'
+           (click)='emitCancel()'
+        >
+            <p class='button-label'>
+                Cancel
+            </p>
+        </div>
+
+        <div 
+            class='button pin'
+            (click)='emitPin()'
+        >
+            <p class='button-label'>Pin</p>
+        </div>
+
+    </div>
+
+</div>

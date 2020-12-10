@@ -25,6 +25,7 @@ import { ExplorerTeamConversationComponent } from './pages/Final-Cretanian/explo
 import { ExplorerContactChatComponent } from './pages/Final-Cretanian/explorer-contact-chat/explorer-contact-chat.component'
 import { SetUserComponent } from './pages/set-user/set-user.component'
 import { TvMasterComponent } from './pages/Final-Cretanian/tv-master/tv-master.component'
+import { ManyUsersComponent } from   './pages/Final-Wall/many-users/many-users.component'
 
 const routes: Routes = [
   { path: '', redirectTo: '/explorer-mobile-team-controller', pathMatch: 'full'},
@@ -36,7 +37,7 @@ const routes: Routes = [
   { path: 'explorer-mobile-team-call-setting', component: OncallCallSettingsComponent },
   { path: 'explorer-mobile-team-participants', component: ParticipantsMobileComponent },
   { path: 'explorer-mobile-team-files', component: OncallFilesComponent },
-  { path: 'explorer-mobile-team-files', component: OncallFilesComponent },
+  { path: 'wall-master', component: ManyUsersComponent },
   /*Mobile*/
   { path: 'explorer-mobile-activities', component: ActivitiesComponent },
   { path: 'explorer-mobile-contacts', component: ContactsComponent },

@@ -11,7 +11,14 @@
             'sender-container-right' : message.alignment == 'right'
         }"
     >
-        <img class='sender-profile' src='{{findPhoto(message.photo)}}' alt=''>
+        <img 
+            [ngClass]="{
+                'sender-profile': message.alignment == 'left' || message.alignment =='',
+                'none': message.alignment == 'right'
+            }"
+            src='{{findPhoto(message.photo)}}' 
+            alt=''
+        >
         <p class='sender-name'>{{message.name}}</p>
     </div>
     <div class='message-container'>
@@ -38,4 +45,5 @@
     class='message-extra'
     (closeEmitter)='closeExtras()'
     (emojiEmitter)="reactTo($event.emojiSrc)"
+    (pinEmitter)='pinMessage($event)'
 ></message-extra>

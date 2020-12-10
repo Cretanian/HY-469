@@ -103,6 +103,8 @@ import { FilesWindowListComponent } from './pages/Table/files-window-list/files-
 import { TableFilesComponent } from './pages/Table/table-files/table-files.component';
 import { OpenFileComponent } from './pages/Table/open-file/open-file.component';
 import { FinalTableComponent } from './pages/Table/final-table/final-table.component';
+import { PinnedComponent } from './pages/Wall/pinned/pinned.component';
+import { MobileAddPinComponent } from './pages/mobile-add-pin/mobile-add-pin.component';
 
 @NgModule({
   declarations: [
@@ -203,6 +205,8 @@ import { FinalTableComponent } from './pages/Table/final-table/final-table.compo
     TableFilesComponent, 
     OpenFileComponent,
     FinalTableComponent,
+    PinnedComponent,
+    MobileAddPinComponent,
   ],
   imports: [
     BrowserModule,

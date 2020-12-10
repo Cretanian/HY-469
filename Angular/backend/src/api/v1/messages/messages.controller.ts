@@ -238,7 +238,7 @@ export class MessagesController {
         messages: [
           {
             id: 0,
-            photo: "profile_picture.png",
+            photo: "zackper.png",
             name: "ZackPer",
             time: "12:25",
             message:

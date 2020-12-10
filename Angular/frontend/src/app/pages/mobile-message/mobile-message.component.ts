@@ -2,7 +2,9 @@ import { HttpClient } from '@angular/common/http';
 import { Component, ElementRef,Input, OnInit, ViewChild } from '@angular/core';
 import { SocketsService } from 'src/app/global/services';
 import { MessagesService } from 'src/app/global/services/messages/messages.service';
+import { PinboardService } from 'src/app/global/services/wall/pinboard.service';
 import { Message, Reaction } from '../Final-Cretanian/conversations/conversations.component';
+import { Pin } from '../Wall/pinned/Pin';
 
 @Component({
   selector: 'mobile-message',
@@ -18,7 +20,11 @@ export class MobileMessageComponent {
 
   extrasOpened: boolean = false;
 
-  constructor(private messageService: MessagesService, private socketService: SocketsService) {}
+  constructor(
+    private messageService: MessagesService,
+    private socketService: SocketsService,
+    private pinboardService: PinboardService
+  ) {}
 
 
   findPhoto(photo: string): string{
@@ -49,5 +55,21 @@ export class MobileMessageComponent {
     }
     
     this.messageService.reactTo(destination,this.message.id, emojiSrc);
+  }
+
+  pinMessage(comment: string): void{
+    console.log('halooo');
+
+    console.log('profile: ' + this.message.photo)
+
+    let message = this.message;
+    let pin: Pin = new Pin(
+      message.name,
+      comment,
+      'message',
+      message
+    )
+
+    this.pinboardService.addPin(pin);
   }
 }

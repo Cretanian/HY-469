@@ -12,7 +12,7 @@ export class TvMasterComponent implements OnInit {
 
   constructor(private socketService: SocketsService) { }
 
-  grid: number = 5;
+  grid: number = 3;
   isMouseHovering = false;
 
   ngOnInit(): void {

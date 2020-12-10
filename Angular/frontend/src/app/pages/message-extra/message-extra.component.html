@@ -59,6 +59,7 @@
             name='Pin'
             fontColor='white'
             fontSize='5'
+            (click)='pinMenuToggler = true'
         ></g-button>
         <g-button
             class='options-button'
@@ -68,5 +69,15 @@
             fontColor='white'
             fontSize='5'
         ></g-button>
+    </div>
+
+    <div *ngIf='pinMenuToggler == true'>
+        <dimmer
+            (click)='pinMenuToggler = false'
+        ></dimmer>
+        <mobile-add-pin
+            (cancelEmitter)='pinMenuToggler = false'
+            (pinEmitter)='emitPin($event)'
+        ></mobile-add-pin>
     </div>
 </div>
