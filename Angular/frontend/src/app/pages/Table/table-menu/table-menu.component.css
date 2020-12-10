@@ -81,3 +81,9 @@
   flex-direction: row;
   align-items: flex-end;
 }
+
+.carouselContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

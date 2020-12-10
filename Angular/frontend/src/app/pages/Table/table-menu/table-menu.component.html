@@ -35,27 +35,64 @@
 
       <div id="menu-buttons">
         <g-button
+          (click)="this.carouselLeft()"
           icon="../../assets/table/leftArrow.png"
           iconSize="2.509"
         ></g-button>
+        <div class="carouselContainer">
+          <g-button
+            [ngStyle]="{ order: this.carousel[0].order }"
+            *ngIf="this.carousel[0].display"
+            class="menu-button"
+            icon="../../assets/table/buttonManageSound.png"
+            iconSize="6"
+          ></g-button>
+
+          <g-button
+            [ngStyle]="{ order: this.carousel[0].order }"
+            *ngIf="this.carousel[1].display"
+            class="menu-button"
+            icon="../../assets/table/buttonFiles.png"
+            iconSize="6"
+          ></g-button>
+
+          <g-button
+            [ngStyle]="{ order: this.carousel[2].order }"
+            *ngIf="this.carousel[2].display"
+            class="menu-button"
+            icon="../../assets/table/buttonShareAScreen.png"
+            iconSize="6"
+          ></g-button>
+
+          <g-button
+            [ngStyle]="{ order: this.carousel[3].order }"
+            *ngIf="this.carousel[3].display"
+            class="menu-button"
+            icon="../../assets/table/buttonRecordAScreen.png"
+            iconSize="6"
+          ></g-button>
+
+          <g-button
+            [ngStyle]="{ order: this.carousel[4].order }"
+            *ngIf="this.carousel[4].display"
+            class="menu-button"
+            (click)="this.buttonSpawnTvGrid()"
+            icon="../../assets/table/buttonTvGrid.png"
+            iconSize="6"
+          ></g-button>
+
+          <g-button
+            [ngStyle]="{ order: this.carousel[5].order }"
+            *ngIf="this.carousel[5].display"
+            class="menu-button"
+            (click)="this.buttonSpawnParticipants()"
+            icon="../../assets/table/buttonParticipants.png"
+            iconSize="6"
+          ></g-button>
+        </div>
+
         <g-button
-          class="menu-button"
-          icon="../../assets/table/buttonManageSound.png"
-          iconSize="6"
-        ></g-button>
-        <g-button
-          class="menu-button"
-          (click)="this.buttonSpawnTvGrid()"
-          icon="../../assets/table/buttonFiles.png"
-          iconSize="6"
-        ></g-button>
-        <g-button
-          class="menu-button"
-          (click)="this.buttonSpawnParticipants()"
-          icon="../../assets/table/buttonParticipants.png"
-          iconSize="6"
-        ></g-button>
-        <g-button
+          (click)="this.carouselRight()"
           icon="../../assets/table/rightArrow.png"
           iconSize="2.509"
         ></g-button>
