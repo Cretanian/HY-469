@@ -1,4 +1,12 @@
-import { Component, OnInit, Input, ViewChild, ElementRef } from "@angular/core";
+import {
+  Component,
+  OnInit,
+  Input,
+  ViewChild,
+  ElementRef,
+  EventEmitter,
+  Output,
+} from "@angular/core";
 
 @Component({
   selector: "app-table-menu",
@@ -6,12 +14,20 @@ import { Component, OnInit, Input, ViewChild, ElementRef } from "@angular/core";
   styleUrls: ["./table-menu.component.css"],
 })
 export class TableMenuComponent implements OnInit {
+  @Input() display: boolean;
+  @Output() despawnEvent = new EventEmitter<void>();
+  @Input() menuCoordX: number;
+  @Input() menuCoordY: number;
+  @Input() tvGridCoordX: number;
+  @Input() tvGridCoordY: number;
+  @Input() participantsCoordX: number;
+  @Input() participantsCoordY: number;
   @Input() enableParticipantSpawn: boolean;
   tvGridWindowSpawned: boolean;
-  display: boolean;
+
   muted: boolean;
   iconMuted: string;
-  @Input() as: string;
+
   carouselLeftIndex: number;
   carousel: any;
 
@@ -23,9 +39,11 @@ export class TableMenuComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.menuCoordX = 0;
+    this.menuCoordY = 0;
     this.tvGridWindowSpawned = false;
     this.enableParticipantSpawn = true;
-    this.carouselLeftIndex = 0;
+    this.carouselLeftIndex = 3;
     this.initializeCarousel();
     this.displayCarousel(3);
   }
@@ -33,12 +51,16 @@ export class TableMenuComponent implements OnInit {
   //Button Functions
 
   buttonSpawnParticipants() {
-    this.display = false;
+    this.despawnMenu();
+    this.participantsCoordX = this.menuCoordX;
+    this.participantsCoordY = this.menuCoordY;
     this.enableParticipantSpawn = false;
   }
 
   buttonSpawnTvGrid() {
-    this.display = false;
+    this.despawnMenu();
+    this.tvGridCoordX = this.menuCoordX;
+    this.tvGridCoordY = this.menuCoordY;
     this.tvGridWindowSpawned = true;
   }
 
@@ -59,8 +81,8 @@ export class TableMenuComponent implements OnInit {
     console.log($event.clientY);
   }
 
-  despawnMenu($event) {
-    this.display = false;
+  despawnMenu() {
+    this.despawnEvent.emit();
   }
 
   receiveDisplayParticipantEvent(participantsIsDisplayed: boolean) {
@@ -111,6 +133,50 @@ export class TableMenuComponent implements OnInit {
   carouselRight() {
     this.carouselLeftIndex = this.incrementIndex(this.carouselLeftIndex);
     this.displayCarousel(3);
+  }
+
+  returnTopTvGrid() {
+    var y = 1080 - this.tvGridCoordY;
+    if (y > 168) y = y - (y - 168);
+    return y + "px";
+  }
+  returnRightTvGrid() {
+    var x = this.tvGridCoordX;
+    if (x < 363) {
+      var safeX = 1020;
+      return safeX + "px";
+    } else {
+      var middleY = 1585 - 250 - x > 0 ? 1585 - 250 - x : 1585 - x;
+      return middleY + "px";
+    }
+  }
+  returnTopParticipants() {
+    var y = 1080 - this.participantsCoordY;
+    if (y > 168) y = y - (y - 168);
+    return y + "px";
+  }
+  returnRightParticipants() {
+    var x = this.participantsCoordX;
+    if (x < 363) {
+      var safeX = 1090;
+      return safeX + "px";
+    } else {
+      var middleY = 1585 - 250 - x > 0 ? 1585 - 250 - x : 1585 - x;
+      return middleY + "px";
+    }
+  }
+
+  returnTop() {
+    if (this.menuCoordY < 750) {
+      var y = 1080 - this.menuCoordY;
+      return "" + (y - 280) + "px";
+    } else return "" + 65 + "px";
+  }
+  returnRight() {
+    var x = this.menuCoordX;
+    if (x < 263) {
+      return 1150 + "px";
+    } else return (1585 - 250 - x > 0 ? 1585 - 250 - x : 1585 - x) + "px";
   }
 }
 

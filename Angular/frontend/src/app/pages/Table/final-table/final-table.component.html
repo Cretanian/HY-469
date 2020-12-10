@@ -1,11 +1,24 @@
-<div class="spawnTable1" id="user1">
+<div class="spawnTable0" id="user0">
+  <div
+    (click)="this.spawnMenu(0, $event)"
+    style="
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: gray;
+    "
+  ></div>
   <app-table-menu
-    style="position: absolute; bottom: 75px; right: 150px"
+    (despawnEvent)="this.despawnMenu(0)"
+    [display]="this.displayMenuUser[0]"
+    [menuCoordX]="this.spawnUserCoordinates[0][0]"
+    [menuCoordY]="this.spawnUserCoordinates[0][1]"
   ></app-table-menu>
 </div>
 
-<div class="spawnTable2" id="user2">
+<!-- <div (click)="this.spawnMenu(1)" class="spawnTable1" id="user1">
   <app-table-menu
-    style="position: absolute; bottom: 0px; left: 0px"
+    [display]="this.displayMenuUser[1]"
+    style="position: absolute; bottom: -25px; left: 0px"
   ></app-table-menu>
-</div>
+</div> -->

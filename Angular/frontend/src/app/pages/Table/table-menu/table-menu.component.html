@@ -1,6 +1,15 @@
-<div class="allContainer">
+<div
+  class="allContainer"
+  *ngIf="tvGridWindowSpawned || !this.enableParticipantSpawn || this.display"
+>
   <!-- Participants Window-->
-  <div>
+  <div
+    [ngStyle]="{
+      position: 'absolute',
+      bottom: this.returnTopParticipants(),
+      right: this.returnRightParticipants()
+    }"
+  >
     <participants-window
       (displayEvent)="receiveDisplayParticipantEvent($event)"
       [display]="!this.enableParticipantSpawn"
@@ -9,126 +18,137 @@
   </div>
 
   <!-- Tv Grid Window -->
-  <div class="tv-grid-container" *ngIf="tvGridWindowSpawned">
-    <img
-      (click)="this.buttonDespawnTvGrid()"
-      src="../../../../assets/icons/tableXButton.png"
-      style="display: block; height: 71px; margin-right: 0.3vw"
-    />
-    <table-tvgrid></table-tvgrid>
+  <div
+    [ngStyle]="{
+      position: 'absolute',
+      bottom: this.returnTopTvGrid(),
+      right: this.returnRightTvGrid()
+    }"
+  >
+    <div class="tv-grid-container" *ngIf="tvGridWindowSpawned">
+      <img
+        (click)="this.buttonDespawnTvGrid()"
+        src="../../../../assets/icons/tableXButton.png"
+        style="display: block; height: 71px; margin-right: 0.3vw"
+      />
+      <table-tvgrid></table-tvgrid>
+    </div>
   </div>
-
   <!-- Menu Window -->
   <div
-    [ngClass]="{ 'spawn-menu': !this.display }"
-    (click)="this.spawnMenu($event)"
-  ></div>
-  <div class="main-container" *ngIf="this.display">
-    <img
-      class="background"
-      src="../../assets/table/background.png"
-      style="width: inherit; height: inherit"
-    />
-    <div class="menu-container">
-      <div id="menu-font">Menus</div>
-      <hr id="hr-menu" />
+    [ngStyle]="{
+      position: 'absolute',
+      bottom: this.returnTop(0),
+      right: this.returnRight(0)
+    }"
+  >
+    <div class="main-container" *ngIf="this.display">
+      <img
+        class="background"
+        src="../../assets/table/background.png"
+        style="width: inherit; height: inherit"
+      />
+      <div class="menu-container">
+        <div id="menu-font">Menus</div>
+        <hr id="hr-menu" />
 
-      <div id="menu-buttons">
-        <g-button
-          (click)="this.carouselLeft()"
-          icon="../../assets/table/leftArrow.png"
-          iconSize="2.509"
-        ></g-button>
-        <div class="carouselContainer">
+        <div id="menu-buttons">
           <g-button
-            [ngStyle]="{ order: this.carousel[0].order }"
-            *ngIf="this.carousel[0].display"
-            class="menu-button"
-            icon="../../assets/table/buttonManageSound.png"
-            iconSize="6"
+            (click)="this.carouselLeft()"
+            icon="../../assets/table/leftArrow.png"
+            iconSize="2.509"
           ></g-button>
+          <div class="carouselContainer">
+            <g-button
+              [ngStyle]="{ order: this.carousel[0].order }"
+              *ngIf="this.carousel[0].display"
+              class="menu-button"
+              icon="../../assets/table/buttonManageSound.png"
+              iconSize="6"
+            ></g-button>
+
+            <g-button
+              [ngStyle]="{ order: this.carousel[0].order }"
+              *ngIf="this.carousel[1].display"
+              class="menu-button"
+              icon="../../assets/table/buttonFiles.png"
+              iconSize="6"
+            ></g-button>
+
+            <g-button
+              [ngStyle]="{ order: this.carousel[2].order }"
+              *ngIf="this.carousel[2].display"
+              class="menu-button"
+              icon="../../assets/table/buttonShareAScreen.png"
+              iconSize="6"
+            ></g-button>
+
+            <g-button
+              [ngStyle]="{ order: this.carousel[3].order }"
+              *ngIf="this.carousel[3].display"
+              class="menu-button"
+              icon="../../assets/table/buttonRecordAScreen.png"
+              iconSize="6"
+            ></g-button>
+
+            <g-button
+              [ngStyle]="{ order: this.carousel[4].order }"
+              *ngIf="this.carousel[4].display"
+              class="menu-button"
+              (click)="this.buttonSpawnTvGrid()"
+              icon="../../assets/table/buttonTvGrid.png"
+              iconSize="6"
+            ></g-button>
+
+            <g-button
+              [ngStyle]="{ order: this.carousel[5].order }"
+              *ngIf="this.carousel[5].display"
+              class="menu-button"
+              (click)="this.buttonSpawnParticipants()"
+              icon="../../assets/table/buttonParticipants.png"
+              iconSize="6"
+            ></g-button>
+          </div>
 
           <g-button
-            [ngStyle]="{ order: this.carousel[0].order }"
-            *ngIf="this.carousel[1].display"
-            class="menu-button"
-            icon="../../assets/table/buttonFiles.png"
-            iconSize="6"
+            (click)="this.carouselRight()"
+            icon="../../assets/table/rightArrow.png"
+            iconSize="2.509"
           ></g-button>
+        </div>
 
-          <g-button
-            [ngStyle]="{ order: this.carousel[2].order }"
-            *ngIf="this.carousel[2].display"
-            class="menu-button"
-            icon="../../assets/table/buttonShareAScreen.png"
-            iconSize="6"
-          ></g-button>
+        <div>
+          <p id="shortcut-font">Shortcuts</p>
+          <hr id="hr-shortcuts" />
 
-          <g-button
-            [ngStyle]="{ order: this.carousel[3].order }"
-            *ngIf="this.carousel[3].display"
-            class="menu-button"
-            icon="../../assets/table/buttonRecordAScreen.png"
-            iconSize="6"
-          ></g-button>
-
-          <g-button
-            [ngStyle]="{ order: this.carousel[4].order }"
-            *ngIf="this.carousel[4].display"
-            class="menu-button"
-            (click)="this.buttonSpawnTvGrid()"
-            icon="../../assets/table/buttonTvGrid.png"
-            iconSize="6"
-          ></g-button>
-
-          <g-button
-            [ngStyle]="{ order: this.carousel[5].order }"
-            *ngIf="this.carousel[5].display"
-            class="menu-button"
-            (click)="this.buttonSpawnParticipants()"
-            icon="../../assets/table/buttonParticipants.png"
-            iconSize="6"
-          ></g-button>
+          <div id="shortcuts">
+            <g-button
+              (click)="this.buttonMute()"
+              class="menu-button"
+              icon="{{ this.iconMuted }}"
+              iconSize="4.5"
+            ></g-button>
+            <g-button
+              class="menu-button"
+              icon="../../assets/table/buttonChat.png"
+              iconSize="4.5"
+            ></g-button>
+            <g-button
+              class="menu-button"
+              icon="../../assets/table/buttonEndCall.png"
+              iconSize="4.5"
+            ></g-button>
+          </div>
         </div>
 
         <g-button
-          (click)="this.carouselRight()"
-          icon="../../assets/table/rightArrow.png"
-          iconSize="2.509"
-        ></g-button>
+          id="x-button"
+          (click)="this.despawnMenu()"
+          icon="../../assets/table/table_x_button.png"
+          iconSize="4.5"
+        >
+        </g-button>
       </div>
-
-      <div>
-        <p id="shortcut-font">Shortcuts</p>
-        <hr id="hr-shortcuts" />
-
-        <div id="shortcuts">
-          <g-button
-            (click)="this.buttonMute()"
-            class="menu-button"
-            icon="{{ this.iconMuted }}"
-            iconSize="4.5"
-          ></g-button>
-          <g-button
-            class="menu-button"
-            icon="../../assets/table/buttonChat.png"
-            iconSize="4.5"
-          ></g-button>
-          <g-button
-            class="menu-button"
-            icon="../../assets/table/buttonEndCall.png"
-            iconSize="4.5"
-          ></g-button>
-        </div>
-      </div>
-
-      <g-button
-        id="x-button"
-        (click)="this.despawnMenu()"
-        icon="../../assets/table/table_x_button.png"
-        iconSize="4.5"
-      >
-      </g-button>
     </div>
   </div>
 </div>
