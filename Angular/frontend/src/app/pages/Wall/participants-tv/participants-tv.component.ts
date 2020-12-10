@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {participantTV} from './participant-tv'
+import { ContactsService } from 'src/app/global/services/contacts/contacts.service';
 
 @Component({
   selector: 'participants-tv',
@@ -8,73 +8,20 @@ import {participantTV} from './participant-tv'
 })
 export class ParticipantsTVComponent implements OnInit {
 
-  participantsTV: participantTV[];
+  participantsTV: Contact[];
 
-  constructor() { }
+  constructor(private contactsService: ContactsService) { }
 
   ngOnInit(): void {
-    this.participantsTV = [
-      {
-        name: "Stylianos Stamatakis",
-        srcProfile: "../../assets/icons/TV Grid 1 Grid.png",
-        srcCamera: "../../assets/icons/theatre-mic.svg",
-        srcMic: "../../assets/icons/theatre-mic.svg",
-      },
-      {
-        name: "Zacharias Pervolarakis",
-        srcProfile: "../../assets/icons/TV Grid 1 Grid.png",
-        srcCamera: "../../assets/icons/theatre-mic.svg",
-        srcMic: "../../assets/icons/theatre-mic.svg",
-      },
-      {
-        name: "Antonis Agapakis",
-        srcProfile: "../../assets/icons/TV Grid 1 Grid.png",
-        srcCamera: "../../assets/icons/theatre-mic.svg",
-        srcMic: "../../assets/icons/theatre-mic.svg",
-      },
-      {
-        name: "Manolis Agapakis",
-        srcProfile: "../../assets/icons/TV Grid 1 Grid.png",
-        srcCamera: "../../assets/icons/theatre-mic.svg",
-        srcMic: "../../assets/icons/theatre-mic.svg",
-      },
-      {
-        name: "Yannis Stamatakis",
-        srcProfile: "../../assets/icons/TV Grid 1 Grid.png",
-        srcCamera: "../../assets/icons/theatre-mic.svg",
-        srcMic: "../../assets/icons/theatre-mic.svg",
-      },
-      {
-        name: "Manos Pervolarakis",
-        srcProfile: "../../assets/icons/TV Grid 1 Grid.png",
-        srcCamera: "../../assets/icons/theatre-mic.svg",
-        srcMic: "../../assets/icons/theatre-mic.svg",
-      },
-      {
-        name: "Antonios Savvidis",
-        srcProfile: "../../assets/icons/TV Grid 1 Grid.png",
-        srcCamera: "../../assets/icons/theatre-mic.svg",
-        srcMic: "../../assets/icons/theatre-mic.svg",
-      },
-      {
-        name: "Asterios Leonidis",
-        srcProfile: "../../assets/icons/TV Grid 1 Grid.png",
-        srcCamera: "../../assets/icons/theatre-mic.svg",
-        srcMic: "../../assets/icons/theatre-mic.svg",
-      },
-      {
-        name: "Constantine Stefanidis",
-        srcProfile: "../../assets/icons/TV Grid 1 Grid.png",
-        srcCamera: "../../assets/icons/theatre-mic.svg",
-        srcMic: "../../assets/icons/theatre-mic.svg",
-      },
-      {
-        name: "Another Dude",
-        srcProfile: "../../assets/icons/TV Grid 1 Grid.png",
-        srcCamera: "../../assets/icons/theatre-mic.svg",
-        srcMic: "../../assets/icons/theatre-mic.svg",
-      },
-    ]
+    this.contactsService.getAll("asd").subscribe(data => {
+      this.participantsTV = data as Contact[];
+    });
   }
 
+}
+
+export class Contact{
+  name:string;
+  srcProfile:string;
+  isFavourite: boolean;
 }
