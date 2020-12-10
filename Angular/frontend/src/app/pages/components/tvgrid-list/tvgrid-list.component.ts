@@ -1,6 +1,7 @@
 import { TvGridService } from './../../../global/services/tvgrid/tvgrid.service';
 import { Component, OnInit } from '@angular/core';
 import {TvGrid} from './tvgrid';
+import { TVService } from '../../../global/services/tv/tv.service'
 
 @Component({
   selector: 'tvgrid-list',
@@ -9,12 +10,14 @@ import {TvGrid} from './tvgrid';
 })
 export class TvgridListComponent implements OnInit {
 
+  constructor(
+    private tvService: TVService,
+    private tvgridService: TvGridService
+  ) { }
   
   grids: TvGrid[];
   selected: number;
   idsToPicture: string[]; 
-
-  constructor(private tvgridService: TvGridService){}
 
   ngOnInit(): void {
 
@@ -25,6 +28,6 @@ export class TvgridListComponent implements OnInit {
 
   changeSelected(id: number){
     this.selected = id;
+    this.tvService.changeGrid(id);
   }
-
 }

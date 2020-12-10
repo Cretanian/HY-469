@@ -93,6 +93,9 @@ import { ControllerCallChatComponent } from './pages/Final-Cretanian/controller-
 import { ExplorerTeamConversationComponent } from './pages/Final-Cretanian/explorer-team-conversation/explorer-team-conversation.component';
 import { ExplorerContactChatComponent } from './pages/Final-Cretanian/explorer-contact-chat/explorer-contact-chat.component';
 import { SetUserComponent } from './pages/set-user/set-user.component';
+import { TvMasterComponent } from './pages/Final-Cretanian/tv-master/tv-master.component';
+import { TvChatComponent } from './pages/TV/tv-chat/tv-chat.component';
+import { TvMessageComponent } from './pages/TV/tv-message/tv-message.component';
 import { AddButtonComponent } from './pages/Cretanian/add-button/add-button.component';
 import { ReturnOncallButtonComponent } from './pages/Cretanian/return-oncall-button/return-oncall-button.component';
 import { FilesWindowComponent } from './pages/Table/files-window/files-window.component';
@@ -185,6 +188,9 @@ import { FinalTableComponent } from './pages/Table/final-table/final-table.compo
     ManyUsersComponent,
     PinboardComponent,
     FParticipantsComponent,    
+    TvMasterComponent,
+    TvChatComponent,
+    TvMessageComponent,
     routingComponents, 
     ControllerCallChatComponent, 
     ExplorerTeamConversationComponent, 
@@ -196,7 +202,6 @@ import { FinalTableComponent } from './pages/Table/final-table/final-table.compo
     FilesWindowListComponent, 
     TableFilesComponent, 
     OpenFileComponent,
-    routingComponents, 
     FinalTableComponent,
   ],
   imports: [

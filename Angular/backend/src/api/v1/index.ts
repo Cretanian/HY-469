@@ -4,6 +4,7 @@ import { ParticipantsController } from './participants/participants.controller';
 import { ContactsController } from './contacts/contacts.controller';
 import { MessagesController } from './messages/messages.controller';
 import { UserController } from './user/user.controller';
+import { TVController } from './tv/tv.controller';
 import * as express from 'express';
 import { ResourceController } from '../shared';
 import { ITask, TaskModel } from '@app/models';
@@ -56,6 +57,11 @@ apiV1Router
   .use(
     '/messages',
     new MessagesController().applyRoutes()
+  )
+
+  .use(
+    '/tv',
+    new TVController().applyRoutes()
   )
   
   .use(

@@ -49,7 +49,7 @@ div.container3 {
     position: relative; 
 }
 
- div.container3 p {
+div.container3 p {
     color: white;
     padding-left:  0.21vw; /*tv default*/
     font-size: 0.37vw; /*tv default*/
