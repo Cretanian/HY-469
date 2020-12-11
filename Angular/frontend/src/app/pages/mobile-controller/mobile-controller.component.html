@@ -6,12 +6,12 @@
 
     <div class='button-container'>
 
-        <!-- Bones -->
-        <img class='bone' id='bone1' src='../../assets/call_mode/controller_bone1.png' alt=''>
-        <img class='bone' id='bone2' src='../../assets/call_mode/controller_bone2.png' alt=''>
-        <img class='bone' id='bone3' src='../../assets/call_mode/controller_bone3.png' alt=''>
-
         <div *ngIf='!moreOpen'>
+            <!-- Bones -->
+            <img class='bone' id='bone1' src='../../assets/call_mode/controller_bone1.png' alt=''>
+            <img class='bone' id='bone2' src='../../assets/call_mode/controller_bone2.png' alt=''>
+            <img class='bone' id='bone3' src='../../assets/call_mode/controller_bone3.png' alt=''>
+
             <g-button 
                 id='mic-button' 
                 class='controller-button'
@@ -34,6 +34,7 @@
             <g-button 
                 id='pin-button' 
                 class='controller-button'
+                routerLink='/explorer-mobile-team-pinboard'
                 #pin
                 background='../../assets/call_mode_icon_background.png'
                 icon='../../assets/pin_icon.png'

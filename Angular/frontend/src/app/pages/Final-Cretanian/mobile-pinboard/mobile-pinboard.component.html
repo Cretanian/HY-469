@@ -1,0 +1,26 @@
+<div class='phone' style='background-color: rgb(228, 228, 228);'>
+
+    <header class='header'
+        style='background-color: #373944;'
+        name = 'Pinboard'
+        src1='../../../../assets/tv-grid/back-header.png'
+        src3='\assets\icons\filter_icon.png'
+        (event1) = 'backClicked()'
+    ></header>
+
+    <div class='body'>
+        <div class='pins-container'>
+
+            <pinned
+                class='pin'
+                *ngFor='let pin of pins'
+                [user]='pin.user'
+                [type]='pin.type'
+                [value]='pin.value'
+                [comment] ='pin.comment'
+            ></pinned>
+    
+        </div>
+    </div>
+
+</div>

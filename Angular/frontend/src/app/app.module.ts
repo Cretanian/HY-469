@@ -105,6 +105,8 @@ import { OpenFileComponent } from './pages/Table/open-file/open-file.component';
 import { FinalTableComponent } from './pages/Table/final-table/final-table.component';
 import { PinnedComponent } from './pages/Wall/pinned/pinned.component';
 import { MobileAddPinComponent } from './pages/mobile-add-pin/mobile-add-pin.component';
+import { MobilePinboardComponent } from './pages/Final-Cretanian/mobile-pinboard/mobile-pinboard.component';
+import { MobilePinComponent } from './pages/mobile-pin/mobile-pin.component';
 
 @NgModule({
   declarations: [
@@ -207,6 +209,8 @@ import { MobileAddPinComponent } from './pages/mobile-add-pin/mobile-add-pin.com
     FinalTableComponent,
     PinnedComponent,
     MobileAddPinComponent,
+    MobilePinboardComponent,
+    MobilePinComponent,
   ],
   imports: [
     BrowserModule,

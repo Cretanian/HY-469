@@ -27,6 +27,7 @@ import { SetUserComponent } from './pages/set-user/set-user.component'
 import { TvMasterComponent } from './pages/Final-Cretanian/tv-master/tv-master.component'
 import { ManyUsersComponent } from   './pages/Final-Wall/many-users/many-users.component'
 import { FinalTableComponent } from   './pages/Table/final-table/final-table.component'
+import { MobilePinboardComponent } from   './pages/Final-Cretanian/mobile-pinboard/mobile-pinboard.component'
 
 const routes: Routes = [
   { path: '', redirectTo: '/explorer-mobile-team-controller', pathMatch: 'full'},
@@ -38,6 +39,7 @@ const routes: Routes = [
   { path: 'explorer-mobile-team-call-setting', component: OncallCallSettingsComponent },
   { path: 'explorer-mobile-team-participants', component: ParticipantsMobileComponent },
   { path: 'explorer-mobile-team-files', component: OncallFilesComponent },
+  { path: 'explorer-mobile-team-pinboard', component: MobilePinboardComponent },
   { path: 'wall-master', component: ManyUsersComponent },
   { path: 'table-master', component: FinalTableComponent},
   /*Mobile*/
@@ -86,3 +88,4 @@ export const routingComponents = [
   ParticipantsMobileComponent,
   NotFoundComponent
 ]; 
+

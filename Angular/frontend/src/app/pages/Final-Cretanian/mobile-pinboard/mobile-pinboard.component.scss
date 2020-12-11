@@ -1,0 +1,19 @@
+.pin{
+    padding-top: 2.5vw;
+    padding-bottom: 2.5vw;
+    width: 90%;
+    height: auto;
+    align-self: center;
+}
+
+.pins-container{
+    padding-top: 10vw;
+    width: 100%;
+    height: 200vw;
+    overflow-y: scroll;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}

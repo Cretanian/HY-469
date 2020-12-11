@@ -4,28 +4,27 @@ img{
 }
 
 p{
-    font-size: 22px
+    font-size: 2em;
 }
 
 .main-container{
     width: auto;
     height: auto;
-    max-width: 750px;
-    min-width: 400px;
-    max-height: 400px;
+    max-width: 46.8em;
+    min-width: 25em;
 
     display: flex;
     flex-direction: column;
 }
 
 .label-pin{
-    width: 30px;
-    height: 30px;
+    width: 1.9em;
+    height: 1.9em;
     z-index: 100;
 }
 
 .label-name{
-    padding-left: 10px;
+    padding-left: 0.625em;
     margin-bottom: 0px;
     margin: 0px;
 }
@@ -40,19 +39,17 @@ p{
 
 .pinned-container{
     align-self: flex-start;
-    width: 90%;
+    width: 100%;
+    height: auto;
     background-color: white;
     border-radius: 10px;
-
-    max-width: 750px;
-    max-height: 400px;
 
     position: relative;
 }
 
 .pinned-message{
-    padding: 5px;
-    padding-left: 20px;
+    padding: 0.3125em;
+    padding-left: 1.25em;
     padding-bottom: 0px;;
     margin: auto
 }
@@ -65,7 +62,7 @@ p{
     justify-self: center;
 
     padding: auto;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 1.25em;
+    padding-bottom: 1.25em;
     margin: auto;
 }
