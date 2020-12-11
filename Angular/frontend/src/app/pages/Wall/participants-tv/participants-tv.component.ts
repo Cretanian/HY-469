@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ContactsService } from 'src/app/global/services/contacts/contacts.service';
+import { ParticipantsService } from 'src/app/global/services/participants/participants.service';
 
 @Component({
   selector: 'participants-tv',
@@ -10,10 +10,10 @@ export class ParticipantsTVComponent implements OnInit {
 
   participantsTV: Contact[];
 
-  constructor(private contactsService: ContactsService) { }
+  constructor(private contactsService: ParticipantsService) { }
 
   ngOnInit(): void {
-    this.contactsService.getAll("asd").subscribe(data => {
+    this.contactsService.getAll().subscribe(data => {
       this.participantsTV = data as Contact[];
     });
   }
@@ -22,6 +22,7 @@ export class ParticipantsTVComponent implements OnInit {
 
 export class Contact{
   name:string;
-  srcProfile:string;
-  isFavourite: boolean;
+  src1:string;
+  src2: string;
+  src3: string;
 }

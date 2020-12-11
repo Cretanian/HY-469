@@ -20,79 +20,79 @@ export class ParticipantsController {
             {
               name: 'Zacharias Pervolarakis',
               src1: '../../../assets/participants-mobile/chat-gray.png',
-              src2: '../../../assets/participants-mobile/sound-gray.png',
+              src2: '../../../assets/profile_photos/zackper.png',
               src3: '../../../assets/participants-mobile/microphone-gray.png'
             },
             {
               name: 'Stylianos Stamatakis',
               src1: '../../../assets/participants-mobile/chat-gray.png',
-              src2: '../../../assets/participants-mobile/sound-gray.png',
+              src2: '../../../assets/profile_photos/steli.png',
               src3: '../../../assets/participants-mobile/microphone-gray.png'
             },
             {
               name: 'Antonis Agapakis',
               src1: '../../../assets/participants-mobile/chat-gray.png',
-              src2: '../../../assets/participants-mobile/sound-gray.png',
+              src2: '../../../assets/profile_photos/agantosProfile.png',
               src3: '../../../assets/participants-mobile/microphone-muted.png'
             },
             {
               name: 'Magkoyths Kwnstantinos',
               src1: '../../../assets/participants-mobile/chat-gray.png',
-              src2: '../../../assets/participants-mobile/sound-gray.png',
+              src2: '../../../assets/profile_photos/profile_picture.png',
               src3: '../../../assets/participants-mobile/microphone-gray.png'
             },
             {
               name: 'Youla Faturu',
               src1: '../../../assets/participants-mobile/chat-gray.png',
-              src2: '../../../assets/participants-mobile/sound-gray.png',
+              src2: '../../../assets/profile_photos/profile_picture.png',
               src3: '../../../assets/participants-mobile/microphone-muted.png'
             },
             {
               name: 'Savvidis Antonis',
               src1: '../../../assets/participants-mobile/chat-gray.png',
-              src2: '../../../assets/participants-mobile/sound-gray.png',
+              src2: '../../../assets/profile_photos/profile_picture.png',
               src3: '../../../assets/participants-mobile/microphone-gray.png'
             },
             {
               name: 'Leonidis Asterios',
               src1: '../../../assets/participants-mobile/chat-gray.png',
-              src2: '../../../assets/participants-mobile/sound-gray.png',
+              src2: '../../../assets/profile_photos/asterios2.png',
               src3: '../../../assets/participants-mobile/microphone-muted.png'
             },
             {
               name: 'Giorgos Georgioy',
               src1: '../../../assets/participants-mobile/chat-gray.png',
-              src2: '../../../assets/participants-mobile/sound-gray.png',
+              src2: '../../../assets/profile_photos/profile_picture.png',
               src3: '../../../assets/participants-mobile/microphone-muted.png'
             },
             {
               name: 'Kwstas Oman',
               src1: '../../../assets/participants-mobile/chat-gray.png',
-              src2: '../../../assets/participants-mobile/sound-gray.png',
+              src2: '../../../assets/profile_photos/profile_picture.png',
               src3: '../../../assets/participants-mobile/microphone-muted.png'
             },
             {
               name: 'Giannhs Iowannoy',
               src1: '../../../assets/participants-mobile/chat-gray.png',
-              src2: '../../../assets/participants-mobile/sound-gray.png',
+              src2: '../../../assets/profile_photos/profile_picture.png',
               src3: '../../../assets/participants-mobile/microphone-muted.png'
             },
             {
               name: 'Maria yas',
               src1: '../../../assets/participants-mobile/chat-gray.png',
-              src2: '../../../assets/participants-mobile/sound-gray.png',
+              src2: '../../../assets/profile_photos/profile_picture.png',
               src3: '../../../assets/participants-mobile/microphone-muted.png'
             },
             {
               name: 'Cool Dude',
               src1: '../../../assets/participants-mobile/chat-gray.png',
-              src2: '../../../assets/participants-mobile/sound-gray.png',
+              src2: '../../../assets/profile_photos/profile_picture.png',
               src3: '../../../assets/participants-mobile/microphone-muted.png'
             },
             {
               name: 'Notcool Dude',
               src1: '../../../assets/participants-mobile/chat-gray.png',
-              src2: '../../../assets/participants-mobile/sound-gray.png',
+              src2: '../../../assets/profile_photos/profile_picture.png',
               src3: '../../../assets/participants-mobile/microphone-muted.png'
             },                     
         ];

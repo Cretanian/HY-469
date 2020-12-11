@@ -15,6 +15,7 @@ export class VolumeSliderComponent implements OnInit {
 
   ngOnInit(): void {
     this.value = 75;
+    this.helper = 75;
   }
 
   mute(){

@@ -16,6 +16,7 @@
 
     <app-calendar-event
     *ngFor = "let events of event_A.events_array"
+    [team] = 'events.team'
     [event] = 'events.event'
     [time] = 'events.time'
     [color] = 'events.color'
