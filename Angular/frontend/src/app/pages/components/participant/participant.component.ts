@@ -1,12 +1,11 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input } from "@angular/core";
 
 @Component({
-  selector: 'participant',
-  templateUrl: './participant.component.html',
-  styleUrls: ['./participant.component.css']
+  selector: "participant",
+  templateUrl: "./participant.component.html",
+  styleUrls: ["./participant.component.css"],
 })
 export class ParticipantComponent implements OnInit {
- 
   @Input() name: string;
   @Input() srcWall: string;
   @Input() src1: string;
@@ -15,7 +14,7 @@ export class ParticipantComponent implements OnInit {
   @Input() maxSize: number;
   @Input() muted: boolean;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
     this.muted = false;
@@ -31,10 +30,8 @@ export class ParticipantComponent implements OnInit {
     if(decr < 2)
       decr = 3;
 
-    if(name.length > this.maxSize)
-      return name.slice(0, name.length-decr)+ "..."
-    else
-      return name;
+    if (name.length > this.maxSize)
+      return name.slice(0, name.length - decr) + "...";
+    else return name;
   }
-
 }

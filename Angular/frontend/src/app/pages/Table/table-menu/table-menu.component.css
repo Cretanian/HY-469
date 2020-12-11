@@ -1,26 +1,14 @@
 .allContainer {
   display: flex;
   flex-direction: row;
+  min-width: 470px;
+  min-height: 344px;
 }
 
 .spawn-menu {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 70vw;
-  height: 30vw;
+  width: 15vw;
+  height: 15vw;
   background-color: gray;
-  z-index: -1;
-}
-
-.rotateContainer {
-  -webkit-transform: rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-  position: absolute;
-  top: 75px;
 }
 
 .main-container {
@@ -33,7 +21,6 @@
   position: absolute;
   top: 0px;
   left: 6px;
-  background-color: transparent;
 }
 
 .background {
@@ -99,4 +86,10 @@
   display: flex;
   flex-direction: row;
   align-items: flex-end;
+}
+
+.carouselContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }

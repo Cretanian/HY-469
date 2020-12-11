@@ -1,4 +1,12 @@
-import { Component, OnInit, Input, ViewChild, ElementRef } from "@angular/core";
+import {
+  Component,
+  OnInit,
+  Input,
+  ViewChild,
+  ElementRef,
+  EventEmitter,
+  Output,
+} from "@angular/core";
 
 @Component({
   selector: "app-table-menu",
@@ -6,15 +14,23 @@ import { Component, OnInit, Input, ViewChild, ElementRef } from "@angular/core";
   styleUrls: ["./table-menu.component.css"],
 })
 export class TableMenuComponent implements OnInit {
+  @Input() display: boolean;
+  @Output() despawnEvent = new EventEmitter<void>();
+  @Input() menuCoordX: number;
+  @Input() menuCoordY: number;
+  @Input() tvGridCoordX: number;
+  @Input() tvGridCoordY: number;
+  @Input() participantsCoordX: number;
+  @Input() participantsCoordY: number;
   @Input() enableParticipantSpawn: boolean;
-  @ViewChild("menu", {static: false}) menuElementRef: ElementRef;
   tvGridWindowSpawned: boolean;
   filesWindowSpawned: boolean;
-  display: boolean;
+
   muted: boolean;
   iconMuted: string;
 
-  @Input() as: string;
+  carouselLeftIndex: number;
+  carousel: any;
 
   constructor() {
     this.muted = false;
@@ -24,15 +40,22 @@ export class TableMenuComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.menuCoordX = 0;
+    this.menuCoordY = 0;
     this.tvGridWindowSpawned = false;
     this.enableParticipantSpawn = true;
     this.filesWindowSpawned = false;
+    this.carouselLeftIndex = 3;
+    this.initializeCarousel();
+    this.displayCarousel(3);
   }
 
   //Button Functions
 
   buttonSpawnParticipants() {
-    this.display = false;
+    this.despawnMenu();
+    this.participantsCoordX = this.menuCoordX;
+    this.participantsCoordY = this.menuCoordY;
     this.enableParticipantSpawn = false;
   }
 
@@ -47,7 +70,9 @@ export class TableMenuComponent implements OnInit {
   }
 
   buttonSpawnTvGrid() {
-    this.display = false;
+    this.despawnMenu();
+    this.tvGridCoordX = this.menuCoordX;
+    this.tvGridCoordY = this.menuCoordY;
     this.tvGridWindowSpawned = true;
   }
 
@@ -68,11 +93,107 @@ export class TableMenuComponent implements OnInit {
     console.log($event.clientY);
   }
 
-  despawnMenu($event) {
-    this.display = false;
+  despawnMenu() {
+    this.despawnEvent.emit();
   }
 
   receiveDisplayParticipantEvent(participantsIsDisplayed: boolean) {
     this.enableParticipantSpawn = !this.enableParticipantSpawn;
   }
+
+  incrementIndex(index: number) {
+    if (index == 5) index = 0;
+    else index++;
+    return index;
+  }
+  decrementIndex(index: number) {
+    if (index == 0) index = 5;
+    else index--;
+    return index;
+  }
+
+  initializeCarousel() {
+    this.carousel = new Array(6);
+    for (var i = 0; i < this.carousel.length; i++) {
+      this.carousel[i] = carouselNode(false);
+      this.carousel[i].order = i;
+    }
+    for (var i = 0; i < this.carousel.length - 1; i++) {
+      this.carousel[i].next = this.carousel[i + 1];
+    }
+    this.carousel[this.carousel.length - 1].next = this.carousel[0];
+    console.log(this.carousel[0]);
+  }
+
+  displayCarousel(numberToDisplay: number) {
+    for (var i = 0; i < this.carousel.length; i++) {
+      this.carousel[i].display = false;
+    }
+    var j = this.carouselLeftIndex;
+    var runner = this.carousel[j];
+    for (var i = 0; i < numberToDisplay; i++) {
+      runner.display = true;
+      runner.order = i + 1;
+      runner = runner.next;
+    }
+  }
+
+  carouselLeft() {
+    this.carouselLeftIndex = this.decrementIndex(this.carouselLeftIndex);
+    this.displayCarousel(3);
+  }
+  carouselRight() {
+    this.carouselLeftIndex = this.incrementIndex(this.carouselLeftIndex);
+    this.displayCarousel(3);
+  }
+
+  returnTopTvGrid() {
+    var y = 1080 - this.tvGridCoordY;
+    if (y > 168) y = y - (y - 168);
+    return y + "px";
+  }
+  returnRightTvGrid() {
+    var x = this.tvGridCoordX;
+    if (x < 363) {
+      var safeX = 1020;
+      return safeX + "px";
+    } else {
+      var middleY = 1585 - 250 - x > 0 ? 1585 - 250 - x : 1585 - x;
+      return middleY + "px";
+    }
+  }
+  returnTopParticipants() {
+    var y = 1080 - this.participantsCoordY;
+    if (y > 168) y = y - (y - 168);
+    return y + "px";
+  }
+  returnRightParticipants() {
+    var x = this.participantsCoordX;
+    if (x < 363) {
+      var safeX = 1090;
+      return safeX + "px";
+    } else {
+      var middleY = 1585 - 250 - x > 0 ? 1585 - 250 - x : 1585 - x;
+      return middleY + "px";
+    }
+  }
+
+  returnTop() {
+    if (this.menuCoordY < 750) {
+      var y = 1080 - this.menuCoordY;
+      return "" + (y - 280) + "px";
+    } else return "" + 65 + "px";
+  }
+  returnRight() {
+    var x = this.menuCoordX;
+    if (x < 263) {
+      return 1150 + "px";
+    } else return (1585 - 250 - x > 0 ? 1585 - 250 - x : 1585 - x) + "px";
+  }
+}
+
+function carouselNode(display: boolean) {
+  var node = { display: true, next: Object, order: 0 };
+  node.display = display;
+  return node;
 }
