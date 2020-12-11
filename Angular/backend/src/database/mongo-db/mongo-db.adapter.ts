@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import { connect, ConnectionOptions } from 'mongoose';
+import { connect, ConnectOptions } from 'mongoose';
 import { config } from '@app/config/environment';
 
 
@@ -7,7 +7,7 @@ export class MongoAdapter {
 
   public static async connect(): Promise<void> {
 
-    const defaultOptions: ConnectionOptions = {
+    const defaultOptions: ConnectOptions = {
       useNewUrlParser: true,            // make all connections set the useNewUrlParser option
       useFindAndModify: false,          // use native `findOneAndUpdate()` rather than `findAndModify()`
       useCreateIndex: true,             // Automatic index builds

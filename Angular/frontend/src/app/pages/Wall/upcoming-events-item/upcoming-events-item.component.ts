@@ -26,12 +26,12 @@ export class UpcomingEventsItemComponent implements OnInit {
     this.color = "white";
     this.fileheadersService.getAll("asd").subscribe(data => {
     this.helper = data as helper[];
+    this.event_array = [];
     for (let entry of this.helper) {
       if(this.team_name == entry.team && 
          this.date === entry.date && 
          this.month === entry.month)
       {
-        this.event_array = [];
         this.event_array.push(new event(entry.event, entry.time, entry.color));
       }
       

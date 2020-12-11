@@ -10,9 +10,7 @@ export class FDisplayUpcomingEventsComponent implements OnInit {
   @Input () team_name: string;
   @Input ()current_events_array:event[];
 
-  constructor() { 
-    
-}
+  constructor() {}
 
   ngOnInit(): void {
 
