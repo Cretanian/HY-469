@@ -6,7 +6,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./participant.component.css']
 })
 export class ParticipantComponent implements OnInit {
-
+ 
   @Input() name: string;
   @Input() srcWall: string;
   @Input() src1: string;
@@ -21,13 +21,13 @@ export class ParticipantComponent implements OnInit {
     this.muted = false;
   }
 
-  setMaxSize(width: number,percentage: number) {
-    this.maxSize = width * (40.27/100) * (30/720);
+  setMaxSize(width: number) {
+    this.maxSize = width * (55.27/100) * (30/720);
   }
 
   format(name: string): string {
     this.maxSize = Math.trunc(this.maxSize); 
-    let decr = name.length-this.maxSize;
+    let decr = name.length - this.maxSize;
     if(decr < 2)
       decr = 3;
 

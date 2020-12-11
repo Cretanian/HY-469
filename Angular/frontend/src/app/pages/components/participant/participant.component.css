@@ -11,7 +11,6 @@
   margin-top: 0px;
   order: 1;
   min-width: 45.138vw;
-  max-width: 45.138vw;
   font-weight: 400;
   font-size: 5.5555vw;
   margin-bottom: 0px;
@@ -21,18 +20,12 @@
 }
 
 .chat {
-  order: 2;
-  flex: 1;
-  margin-left: 12.638vw;
+  width:50%;
+  display: flex;
+  justify-content: flex-start;
 }
-.speaker {
-  order: 3;
-  flex: 1;
-  margin-left: 8.69vw;
-}
+
 .microphone {
-  order: 4;
-  flex: 1;
-  margin-left: 8.05vw;
-  margin-right: 3.611vw;
+  width:50%;
+  margin-right: 3vw;
 }

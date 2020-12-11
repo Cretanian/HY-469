@@ -25,6 +25,7 @@ export class DaysCalendarListComponent implements OnInit {
     this.event_A.date = this.date;
     this.event_A.month = this.month;
     this.event_A.day = this.day;
+    this.event_A.events_array = [];
 
     this.fileheadersService.getAll("asd").subscribe(data => {
       this.helper = data as helper[];
@@ -33,10 +34,8 @@ export class DaysCalendarListComponent implements OnInit {
            this.date === entry.date && 
            this.month === entry.month)
         {
-          this.event_A.events_array = [];
           this.event_A.events_array.push(new event(entry.event, entry.time, entry.color));
         }
-        
       }
     });
   }
