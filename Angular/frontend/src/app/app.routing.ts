@@ -27,6 +27,7 @@ import { SetUserComponent } from './pages/set-user/set-user.component'
 import { TvMasterComponent } from './pages/Final-Cretanian/tv-master/tv-master.component'
 import { ManyUsersComponent } from   './pages/Final-Wall/many-users/many-users.component'
 import { FinalTableComponent } from   './pages/Table/final-table/final-table.component'
+import { TeamsParticipantsComponent } from './pages/Final-Cretanian/teams-participants/teams-participants.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/explorer-mobile-team-controller', pathMatch: 'full'},
@@ -48,6 +49,7 @@ const routes: Routes = [
   { path: 'explorer-mobile-files', component: ExplorerFilesComponent },
   { path: 'explorer-mobile-calendar', component: ExplorerCalendarComponent },
   { path: 'explorer-mobile-smarthome', component: ExplorerSmarthomeComponent },
+  { path: 'explorer-mobile-teams-participants/:team_name', component: TeamsParticipantsComponent },
   { path: 'explorer-mobile-onlinedevices/:team_name', component: ExplorerOnlineDevicesComponent },
   { path: 'explorer-mobile-teams-files/:team_name', component: ExplorerTeamsFilesComponent },
   { path: 'explorer-mobile-teams-calendar/:team_name', component: ExplorerTeamsCalendarComponent },
