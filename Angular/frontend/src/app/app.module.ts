@@ -107,6 +107,7 @@ import { PinnedComponent } from './pages/Wall/pinned/pinned.component';
 import { MobileAddPinComponent } from './pages/mobile-add-pin/mobile-add-pin.component';
 import { MobilePinboardComponent } from './pages/Final-Cretanian/mobile-pinboard/mobile-pinboard.component';
 import { MobilePinComponent } from './pages/mobile-pin/mobile-pin.component';
+import { LoadingCircleComponent } from './pages/components/loading-circle/loading-circle.component';
 
 @NgModule({
   declarations: [
@@ -211,6 +212,7 @@ import { MobilePinComponent } from './pages/mobile-pin/mobile-pin.component';
     MobileAddPinComponent,
     MobilePinboardComponent,
     MobilePinComponent,
+    LoadingCircleComponent,
   ],
   imports: [
     BrowserModule,

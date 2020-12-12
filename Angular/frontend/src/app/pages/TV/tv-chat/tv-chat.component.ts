@@ -77,11 +77,6 @@ export class TvChatComponent {
     this.messages = [];
     for(let i = 0; i < data.length; i++){
       this.messages[i] = new Message(data[i]);
-      if(this.messages[i].name == this.user.username){
-        console.log('alignment: ' + this.messages[i].alignment);
-        this.messages[i].alignment = 'right';
-        this.messages[i].photo = '';
-      }
     };
   }
 

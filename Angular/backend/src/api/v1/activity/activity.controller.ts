@@ -28,31 +28,34 @@ export class ActivityController {
   constructor() {
     this.data = [
       {
-        firstLine: "added you",
-        src: "../../../../assets/activitiesIcons/added to team.png",
-        hasSecondaryText: false,
-        secondLine: "to Team Zoume",
-        personName: "ZackPer",
-        date: "Mon",
-        srcProfile: "../../../../assets/profile_photos/zackper.png",
-      },
-      {
-        firstLine: "replied",
+        firstLine: "replied to YeetFleet",
         src: "../../../../assets/activitiesIcons/reply.png",
         hasSecondaryText: true,
-        secondLine: "HY486 Principles of Distributed ... > Group 3",
+        secondLine: "\'Haha... Welcome to the team @agantos!\'",
         personName: "Steli",
         date: "01/13",
         srcProfile: "../../../../assets/profile_photos/steli.png",
+        redirect: '/explorer-mobile-team-conversation/YeetFleet/0'
+      },
+      {
+        firstLine: "added you",
+        src: "../../../../assets/activitiesIcons/added to team.png",
+        hasSecondaryText: false,
+        secondLine: "to team \'YeetFleet\'",
+        personName: "ZackPer",
+        date: "Mon",
+        srcProfile: "../../../../assets/profile_photos/zackper.png",
+        redirect: '/explorer-mobile-team-conversations/YeetFleet'
       },
       {
         firstLine: "added a file",
         src: "../../../../assets/activitiesIcons/file.png",
         hasSecondaryText: true,
-        secondLine: "HY486 Principles of Distributed ... > Group 3",
+        secondLine: "DnD | Reloaded: \'injury rules.pdf\'",
         personName: "agantos",
         date: "11/12",
         srcProfile: "../../../../assets/profile_photos/agantosProfile.png",
+        redirection: '/explorer-mobile-team-conversations/DnD%20%7C%20Reloaded/1'
       },
     ];
   }
