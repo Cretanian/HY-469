@@ -27,6 +27,7 @@ export class TableMenuComponent implements OnInit {
   @Input() enableParticipantSpawn: boolean;
   tvGridWindowSpawned: boolean;
   filesWindowSpawned: boolean;
+  fileIsOpen: boolean;
 
   muted: boolean;
   iconMuted: string;
@@ -50,6 +51,7 @@ export class TableMenuComponent implements OnInit {
     this.carouselLeftIndex = 3;
     this.initializeCarousel();
     this.displayCarousel(3);
+    this.fileIsOpen = false;
   }
 
   //Button Functions
@@ -70,6 +72,12 @@ export class TableMenuComponent implements OnInit {
 
   buttonDespawnFiles() {
     this.filesWindowSpawned = false;
+    this.fileIsOpen = false;
+  }
+
+  despawnXButton() {
+    console.log(this.fileIsOpen);
+    this.fileIsOpen = true;
   }
 
   buttonSpawnTvGrid() {

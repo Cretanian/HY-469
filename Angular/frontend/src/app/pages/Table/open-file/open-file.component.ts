@@ -9,16 +9,22 @@ export class OpenFileComponent implements OnInit {
   @Input() display: boolean;
   @Input() name: string;
   @Output() displayEvent = new EventEmitter<boolean>();
-
   constructor() {}
 
   ngOnInit(): void {
-    this.name = "cat.pdf"; //remove
-    this.display = true; //remove
+    this.display = true;
   }
 
   emitDisplayEvent() {
     this.display = false;
     this.displayEvent.emit(this.display);
+  }
+
+  appendName() {
+    return (
+      "../../../../assets/files/" +
+      this.name.substr(0, this.name.indexOf(".")) +
+      ".png"
+    );
   }
 }

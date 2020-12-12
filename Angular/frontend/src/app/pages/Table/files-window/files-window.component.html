@@ -1,6 +1,7 @@
-<div class="gridAndFooter">
+<div class="gridAndFooter" *ngIf="!this.fileIsOpen">
   <div class="filesContainer">
     <ami-fullstack-files-window-list
+      (selectEvent)="this.openFile($event)"
       *ngFor="let file_item of file"
       [header]="file_item.header"
       [icon]="file_item.icon"
@@ -9,3 +10,9 @@
   </div>
   <div class="ffooter">Call Files</div>
 </div>
+
+<ami-fullstack-open-file
+  [name]="this.openedFilename"
+  (displayEvent)="this.closeFile()"
+  *ngIf="this.fileIsOpen"
+></ami-fullstack-open-file>
