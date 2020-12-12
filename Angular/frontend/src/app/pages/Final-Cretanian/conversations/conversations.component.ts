@@ -1,7 +1,10 @@
 import { Component, OnInit, Input } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
-import { ConversationPreview_I, Message_I } from '../../../../../../backend/src/api/v1/messages/messages.controller'
-import { MessagesService } from "../../../global/services/messages/messages.service"
+import {
+  ConversationPreview_I,
+  Message_I,
+} from "../../../../../../backend/src/api/v1/messages/messages.controller";
+import { MessagesService } from "../../../global/services/messages/messages.service";
 
 @Component({
   selector: "app-conversations",
@@ -15,20 +18,25 @@ export class ConversationsComponent implements OnInit {
 
   @Input() Team_name: string;
 
-  constructor(private messagesService: MessagesService, private _Activatedroute: ActivatedRoute) {}
+  constructor(
+    private messagesService: MessagesService,
+    private _Activatedroute: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
     this.Team_name = this._Activatedroute.snapshot.paramMap.get("team_name");
 
-    this.messagesService.getTeamConversations(this.Team_name).subscribe((data: ConversationPreview_I[]) => {
-      this.conversations = [];
-      for (let i: number = 0; i < data.length; i++) {
-        let id: number = data[i].id;
-        let message1: Message = new Message(data[i].message1);
-        let message2: Message = new Message(data[i].message2);
-        this.conversations.push(new Conversation(id, message1, message2));
-      }
-    })
+    this.messagesService
+      .getTeamConversations(this.Team_name)
+      .subscribe((data: ConversationPreview_I[]) => {
+        this.conversations = [];
+        for (let i: number = 0; i < data.length; i++) {
+          let id: number = data[i].id;
+          let message1: Message = new Message(data[i].message1);
+          let message2: Message = new Message(data[i].message2);
+          this.conversations.push(new Conversation(id, message1, message2));
+        }
+      });
   }
 
   enableMore() {

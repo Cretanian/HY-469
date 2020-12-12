@@ -1,6 +1,11 @@
 <div
   class="allContainer"
-  *ngIf="tvGridWindowSpawned || !this.enableParticipantSpawn || this.display"
+  *ngIf="
+    tvGridWindowSpawned ||
+    !this.enableParticipantSpawn ||
+    this.filesWindowSpawned ||
+    this.display
+  "
 >
   <!-- Participants Window-->
   <div
@@ -15,6 +20,24 @@
       [display]="!this.enableParticipantSpawn"
     >
     </participants-window>
+  </div>
+
+  <!-- Files Window-->
+  <div
+    [ngStyle]="{
+      position: 'absolute',
+      bottom: this.returnTopFiles(),
+      right: this.returnRightFiles()
+    }"
+  >
+    <div class="files-container" *ngIf="filesWindowSpawned">
+      <img
+        (click)="this.buttonDespawnFiles()"
+        src="../../../../assets/icons/tableXButton.png"
+        style="display: block; height: 71px; margin-right: 0.3vw"
+      />
+      <ami-fullstack-files-window></ami-fullstack-files-window>
+    </div>
   </div>
 
   <!-- Tv Grid Window -->
@@ -34,6 +57,7 @@
       <table-tvgrid></table-tvgrid>
     </div>
   </div>
+
   <!-- Menu Window -->
   <div
     [ngStyle]="{
@@ -63,15 +87,16 @@
               [ngStyle]="{ order: this.carousel[0].order }"
               *ngIf="this.carousel[0].display"
               class="menu-button"
-              icon="../../assets/table/buttonManageSound.png"
+              (click)="this.buttonSpawnFiles()"
+              icon="../../assets/table/buttonFiles.png"
               iconSize="6"
             ></g-button>
 
             <g-button
-              [ngStyle]="{ order: this.carousel[0].order }"
+              [ngStyle]="{ order: this.carousel[1].order }"
               *ngIf="this.carousel[1].display"
               class="menu-button"
-              icon="../../assets/table/buttonFiles.png"
+              icon="../../assets/table/buttonShareAScreen.png"
               iconSize="6"
             ></g-button>
 
@@ -79,7 +104,7 @@
               [ngStyle]="{ order: this.carousel[2].order }"
               *ngIf="this.carousel[2].display"
               class="menu-button"
-              icon="../../assets/table/buttonShareAScreen.png"
+              icon="../../assets/table/buttonRecordAScreen.png"
               iconSize="6"
             ></g-button>
 
@@ -87,22 +112,14 @@
               [ngStyle]="{ order: this.carousel[3].order }"
               *ngIf="this.carousel[3].display"
               class="menu-button"
-              icon="../../assets/table/buttonRecordAScreen.png"
-              iconSize="6"
-            ></g-button>
-
-            <g-button
-              [ngStyle]="{ order: this.carousel[4].order }"
-              *ngIf="this.carousel[4].display"
-              class="menu-button"
               (click)="this.buttonSpawnTvGrid()"
               icon="../../assets/table/buttonTvGrid.png"
               iconSize="6"
             ></g-button>
 
             <g-button
-              [ngStyle]="{ order: this.carousel[5].order }"
-              *ngIf="this.carousel[5].display"
+              [ngStyle]="{ order: this.carousel[4].order }"
+              *ngIf="this.carousel[4].display"
               class="menu-button"
               (click)="this.buttonSpawnParticipants()"
               icon="../../assets/table/buttonParticipants.png"

@@ -1,14 +1,13 @@
-<div style = "position:relative; margin-top: 4.86vw;">
-    <div class = bodyContainer>
-        <img class = profilePic src = {{msg.srcProfile}}>
-        <div class = messageContainer>
-            <activity-message [msg] = "msg"></activity-message>
-        </div>
-        <div class = dateContainer>
-            {{msg.date}}
-        </div>
+<div style="position: relative; margin-top: 4.86vw">
+  <div class="bodyContainer">
+    <img class="profilePic" src="{{ msg.srcProfile }}" />
+    <div class="messageContainer">
+      <activity-message [msg]="msg"></activity-message>
     </div>
+    <div class="dateContainer">
+      {{ msg.date }}
+    </div>
+  </div>
 
-
-<hr class = line>
+  <hr class="line" />
 </div>

@@ -20,6 +20,8 @@ export class TableMenuComponent implements OnInit {
   @Input() menuCoordY: number;
   @Input() tvGridCoordX: number;
   @Input() tvGridCoordY: number;
+  @Input() filesCoordX: number;
+  @Input() filesCoordY: number;
   @Input() participantsCoordX: number;
   @Input() participantsCoordY: number;
   @Input() enableParticipantSpawn: boolean;
@@ -60,12 +62,13 @@ export class TableMenuComponent implements OnInit {
   }
 
   buttonSpawnFiles() {
-    this.display = false;
+    this.despawnMenu();
+    this.filesCoordX = this.menuCoordX;
+    this.filesCoordY = this.menuCoordY;
     this.filesWindowSpawned = true;
   }
 
-  buttonDeSpawnFiles() {
-    this.display = false;
+  buttonDespawnFiles() {
     this.filesWindowSpawned = false;
   }
 
@@ -102,18 +105,18 @@ export class TableMenuComponent implements OnInit {
   }
 
   incrementIndex(index: number) {
-    if (index == 5) index = 0;
+    if (index == this.carousel.length - 1) index = 0;
     else index++;
     return index;
   }
   decrementIndex(index: number) {
-    if (index == 0) index = 5;
+    if (index == 0) index = this.carousel.length - 1;
     else index--;
     return index;
   }
 
   initializeCarousel() {
-    this.carousel = new Array(6);
+    this.carousel = new Array(5);
     for (var i = 0; i < this.carousel.length; i++) {
       this.carousel[i] = carouselNode(false);
       this.carousel[i].order = i;
@@ -169,6 +172,22 @@ export class TableMenuComponent implements OnInit {
   }
   returnRightParticipants() {
     var x = this.participantsCoordX;
+    if (x < 363) {
+      var safeX = 1090;
+      return safeX + "px";
+    } else {
+      var middleY = 1585 - 250 - x > 0 ? 1585 - 250 - x : 1585 - x;
+      return middleY + "px";
+    }
+  }
+
+  returnTopFiles() {
+    var y = 1080 - this.filesCoordY;
+    if (y > 168) y = y - (y - 168);
+    return y + "px";
+  }
+  returnRightFiles() {
+    var x = this.filesCoordX;
     if (x < 363) {
       var safeX = 1090;
       return safeX + "px";
