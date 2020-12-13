@@ -100,8 +100,6 @@ export class TableMenuComponent implements OnInit {
 
   spawnMenu($event) {
     this.display = true;
-    console.log($event.clientX);
-    console.log($event.clientY);
   }
 
   despawnMenu() {
@@ -159,11 +157,24 @@ export class TableMenuComponent implements OnInit {
   }
 
   returnTopTvGrid() {
+    if (this.menuCoordY < 596) {
+      var y = this.menuCoordX;
+      if (y < 60) return 70 + "px";
+      console.log("Y = " + this.menuCoordY);
+      return y + "px";
+    }
     var y = 1080 - this.tvGridCoordY;
     if (y > 168) y = y - (y - 168);
     return y + "px";
   }
   returnRightTvGrid() {
+    if (this.menuCoordY < 596) {
+      var x = this.menuCoordY;
+      if (y < 440) return 140 + "px";
+      var y = 595 - y;
+      console.log("X = " + this.menuCoordX);
+      return y + "px";
+    }
     var x = this.tvGridCoordX;
     if (x < 363) {
       var safeX = 1020;
@@ -174,11 +185,24 @@ export class TableMenuComponent implements OnInit {
     }
   }
   returnTopParticipants() {
+    if (this.menuCoordY < 596) {
+      var y = this.menuCoordX;
+      if (y < 60) return 70 + "px";
+      console.log("Y = " + this.menuCoordY);
+      return y + "px";
+    }
     var y = 1080 - this.participantsCoordY;
-    if (y > 168) y = y - (y - 168);
+    if (y > 168) y = y - (y - 88);
     return y + "px";
   }
   returnRightParticipants() {
+    if (this.menuCoordY < 596) {
+      var x = this.menuCoordY;
+      if (y < 440) return 140 + "px";
+      var y = 595 - y;
+      console.log("X = " + this.menuCoordX);
+      return y + "px";
+    }
     var x = this.participantsCoordX;
     if (x < 363) {
       var safeX = 1090;
@@ -190,11 +214,22 @@ export class TableMenuComponent implements OnInit {
   }
 
   returnTopFiles() {
-    var y = 1080 - this.filesCoordY;
-    if (y > 168) y = y - (y - 168);
-    return y + "px";
+    if (this.menuCoordY < 596) {
+      var y = this.menuCoordX;
+      if (y < 60) return 70 + "px";
+      console.log("Y = " + this.menuCoordY);
+      return y + "px";
+    }
+    return 20 + "px";
   }
   returnRightFiles() {
+    if (this.menuCoordY < 596) {
+      var x = this.menuCoordY;
+      if (y < 440) return 140 + "px";
+      var y = 595 - y;
+      console.log("X = " + this.menuCoordX);
+      return y + "px";
+    }
     var x = this.filesCoordX;
     if (x < 363) {
       var safeX = 1090;
@@ -206,12 +241,22 @@ export class TableMenuComponent implements OnInit {
   }
 
   returnTop() {
+    if (this.menuCoordY < 596) {
+      if (this.menuCoordX < 60) return 70 + "px";
+      return this.menuCoordX + "px";
+    }
+
     if (this.menuCoordY < 750) {
       var y = 1080 - this.menuCoordY;
       return "" + (y - 280) + "px";
     } else return "" + 65 + "px";
   }
   returnRight() {
+    if (this.menuCoordY < 596) {
+      if (this.menuCoordY < 440) return 140 + "px";
+      var y = 595 - this.menuCoordY;
+      return y + "px";
+    }
     var x = this.menuCoordX;
     if (x < 263) {
       return 1150 + "px";
