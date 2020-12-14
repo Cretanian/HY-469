@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import {Location} from '@angular/common';
 import { ParticipantsService } from 'src/app/global/services/participants/participants.service';
+import { participant } from "src/app/pages/components/utils/participant";
 
 @Component({
   selector: 'ami-fullstack-teams-participants',
@@ -50,10 +51,4 @@ export class Contact{
   }
 }
 
-export class participant{
-  name:string;
-  src1:string;
-  src2: string;
-  src3: string;
-  team: string;
-}
+

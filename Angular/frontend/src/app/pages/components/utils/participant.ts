@@ -6,4 +6,9 @@ export class participant {
   srcProfile?: string;
   team: string;
   isMuted: boolean;
+  constructor(name: string, src2: string, isMuted: boolean){
+    this.name = name;
+    this.src2 = src2;
+    this.isMuted = isMuted;
+  }
 }

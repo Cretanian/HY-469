@@ -10,8 +10,8 @@ import { Location } from "@angular/common";
   styleUrls: ["./participants-mobile.component.css"],
 })
 export class ParticipantsMobileComponent implements OnInit {
-  participants: Participant[];
-  helper: Participant[];
+  participants: participant[];
+  helper: participant[];
   Team_name:string;
 
   constructor(
@@ -24,12 +24,13 @@ export class ParticipantsMobileComponent implements OnInit {
     this._location.back();
   }
   ngOnInit(): void {
+    this.Team_name = "YeetFleet";
     this.participantsService.getAll().subscribe((data) => {
-      this.helper = data as Participant[];
-      this.participants = [];
+      this.helper = data as participant[];
+      this.participants = new Array();
       for(let i = 0; i < this.helper.length; i++){
         if(this.helper[i].team == this.Team_name){
-          this.participants.push(new Participant(this.helper[i].name, this.helper[i].src2))
+          this.participants.push(new participant(this.helper[i].name, this.helper[i].src2, this.helper[i].isMuted))
         }
       }
     });
@@ -43,21 +44,8 @@ export class ParticipantsMobileComponent implements OnInit {
 
   loadParticipants() {
     this.participantsService.getAll().subscribe((data) => {
-      this.participants = data as Participant[];
+      this.participants = data as participant[];
       console.log(this.participants);
     });
-  }
-}
-
-export class Participant{
-  name:string;
-  src1:string;
-  src2: string;
-  src3: string;
-  team: string;
-  isMuted: boolean;
-  constructor(name:string,team:string){
-    this.name = name;
-    this.team =team;
   }
 }
