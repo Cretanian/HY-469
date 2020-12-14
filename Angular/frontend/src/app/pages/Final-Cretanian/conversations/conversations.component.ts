@@ -14,7 +14,10 @@ export class ConversationsComponent implements OnInit {
 
   @Input() Team_name: string;
 
-  constructor(private messagesService: MessagesService, private _Activatedroute: ActivatedRoute) {}
+  constructor(
+    private messagesService: MessagesService,
+    private _Activatedroute: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
     this.Team_name = this._Activatedroute.snapshot.paramMap.get("team_name");

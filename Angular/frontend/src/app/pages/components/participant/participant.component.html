@@ -1,34 +1,35 @@
-<div #aname class = "containerAll" >{{this.setMaxSize(aname.offsetWidth)}}
-   <div style="width:70%; display: flex;align-items: center;"> 
-    <h1 class = name>{{this.format(name)}}</h1>
-   </div>
+<div #aname class="containerAll">
+  {{ this.setMaxSize(aname.offsetWidth) }}
+  <div style="width: 70%; display: flex; align-items: center">
+    <h1 class="name">{{ this.format(name) }}</h1>
+  </div>
 
-   <div style="width:30%; display: flex;flex-direction: row;"> 
+  <div style="width: 30%; display: flex; flex-direction: row">
+    <div class="chat">
+      <!-- <g-button
+        icon="../../../assets/participants-mobile/chat-gray.png"
+        iconSize="7.083"
+      ></g-button> -->
+      <img
+        src="../../../assets/participants-mobile/chat-gray.png"
+        style="width: 7vw"
+      />
+    </div>
 
-        <div class="chat">
-            <g-button  
-            icon= "../../../assets/participants-mobile/chat-gray.png"
-            iconSize='7.083'
-        ></g-button>
+    <div class="microphone">
+      <g-button
+        *ngIf="muted === false"
+        (click)="this.mute()"
+        icon="../../../assets/participants-mobile/microphone-gray.png"
+        iconSize="5"
+      ></g-button>
 
-        </div>
-
-        <div class="microphone">
-            <g-button 
-            *ngIf = "muted === false" 
-            (click) = "muted = true"
-            icon= "../../../assets/participants-mobile/microphone-gray.png"
-            iconSize='5'
-            ></g-button>
-
-            <g-button 
-                *ngIf = "muted === true" 
-                (click) = "muted = false"  
-                icon= "../../../assets/participants-mobile/microphone-muted.png"
-                iconSize='5'
-            ></g-button>
-        </div>
-
-   </div>
-      
+      <g-button
+        *ngIf="muted === true"
+        (click)="this.mute()"
+        icon="../../../assets/participants-mobile/microphone-muted.png"
+        iconSize="5"
+      ></g-button>
+    </div>
+  </div>
 </div>

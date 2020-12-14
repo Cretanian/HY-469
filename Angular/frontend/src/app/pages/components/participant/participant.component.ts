@@ -1,3 +1,4 @@
+import { ParticipantsService } from "./../../../global/services/participants/participants.service";
 import { Component, OnInit, Input } from "@angular/core";
 
 @Component({
@@ -14,24 +15,25 @@ export class ParticipantComponent implements OnInit {
   @Input() maxSize: number;
   @Input() muted: boolean;
 
-  constructor() {}
+  constructor(private participantService: ParticipantsService) {}
 
-  ngOnInit(): void {
-    this.muted = false;
-  }
+  ngOnInit(): void {}
 
   setMaxSize(width: number) {
-    this.maxSize = width * (55.27/100) * (30/720);
+    this.maxSize = width * (55.27 / 100) * (30 / 720);
   }
 
   format(name: string): string {
-    this.maxSize = Math.trunc(this.maxSize); 
+    this.maxSize = Math.trunc(this.maxSize);
     let decr = name.length - this.maxSize;
-    if(decr < 2)
-      decr = 3;
+    if (decr < 2) decr = 3;
 
     if (name.length > this.maxSize)
       return name.slice(0, name.length - decr) + "...";
     else return name;
+  }
+
+  mute() {
+    this.participantService.mute(this.name);
   }
 }

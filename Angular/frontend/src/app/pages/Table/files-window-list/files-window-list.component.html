@@ -1,13 +1,14 @@
 <div class="size">
-    <div class="header" (click) = "dropdownOpen = !dropdownOpen">
-      {{header}}
-    </div>
+  <div class="header" (click)="dropdownOpen = !dropdownOpen">
+    {{ header }}
+  </div>
 
-    <ami-fullstack-table-files
-        *ngFor = "let file_item of file_list"
-        [icon] = 'file_item.image'
-        [name] = 'file_item.name'
-        [last_edit] = 'file_item.last_edit'
-    ></ami-fullstack-table-files>
-    
+  <ami-fullstack-table-files
+    (selectFileEvent)="this.fileWasSelected($event)"
+    *ngFor="let file_item of file_list"
+    [icon]="file_item.image"
+    [name]="file_item.name"
+    [last_edit]="file_item.last_edit"
+    [isSelected]="this.isSelected(file_item.name)"
+  ></ami-fullstack-table-files>
 </div>

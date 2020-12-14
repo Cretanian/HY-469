@@ -1,3 +1,4 @@
+import { ParticipantsService } from "./../../../../global/services/participants/participants.service";
 import {
   Component,
   OnInit,
@@ -23,7 +24,7 @@ export class ParticipantsWindowComponent implements OnInit {
 
   participantOptions: boolean;
 
-  constructor() {}
+  constructor(private participantService: ParticipantsService) {}
 
   ngOnInit(): void {}
 
@@ -43,11 +44,16 @@ export class ParticipantsWindowComponent implements OnInit {
       this.selectedParticipantName = name;
       this.participantSelected = true;
     }
-    console.log(name);
   }
 
   emitDisplayEvent() {
     this.display = false;
     this.displayEvent.emit(this.display);
+  }
+
+  muteSelected() {
+    this.participantService.mute(this.selectedParticipantName);
+    this.participantSelected = false;
+    this.selectedParticipantName = undefined;
   }
 }

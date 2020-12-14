@@ -82,7 +82,7 @@
   align-items: flex-end;
 }
 
-.files-container{
+.files-container {
   display: flex;
   flex-direction: row;
   align-items: flex-end;

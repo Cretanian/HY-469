@@ -1,4 +1,6 @@
-<participant 
-    *ngFor = "let participant of participants" 
-        [name] = "participant.name" >
+<participant
+  *ngFor="let participant of participants"
+  [name]="participant.name"
+  [muted]="participant.isMuted"
+>
 </participant>

@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { SocketsService } from './global/services';
+import { Component } from "@angular/core";
+import { SocketsService } from "./global/services";
 
 interface Food {
   value: string;
@@ -7,24 +7,20 @@ interface Food {
 }
 
 @Component({
-  selector: 'ami-fullstack-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  selector: "ami-fullstack-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.scss"],
 })
 export class AppComponent {
-  title = 'ZoomE';
-  
+  title = "ZoomE";
+
   constructor(private socketsService: SocketsService) {
     // Connect to sockets server on startup
     this.socketsService.initAndConnect();
 
-
-
-
     //How to consume an event
-    this.socketsService.syncMessages('eventName').subscribe((data)=>{
-      console.log('The message i received for this event is: ', data);
+    this.socketsService.syncMessages("eventName").subscribe((data) => {
+      console.log("The message i received for this event is: ", data);
     });
-    
   }
 }

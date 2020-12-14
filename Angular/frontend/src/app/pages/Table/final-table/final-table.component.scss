@@ -1,17 +1,17 @@
 .spawnTable1 {
-  width: 1000px;
+  width: 595px;
   height: 485px;
 }
 
 #user1 {
+  top: 55px;
+  left: -55px;
+  position: absolute;
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   -o-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
-  position: absolute;
-  bottom: 285px;
-  left: -220px;
 }
 
 #user0 {

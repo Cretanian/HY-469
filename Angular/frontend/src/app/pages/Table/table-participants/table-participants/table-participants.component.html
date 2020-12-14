@@ -1,6 +1,7 @@
 <table-participant
   *ngFor="let participant of participants"
   [name]="participant.name"
+  [muted]="participant.isMuted"
   [isSelected]="participant.name == this.selectedName"
   src1="../../../assets/participants-mobile/microphone-gray.png"
   (selectEvent)="participantClicked($event)"

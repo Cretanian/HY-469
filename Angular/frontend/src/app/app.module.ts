@@ -1,9 +1,8 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms'; 
-import { ReactiveFormsModule } from '@angular/forms';
-
+import { BrowserModule } from "@angular/platform-browser";
+import { HttpClientModule } from "@angular/common/http";
+import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
+import { ReactiveFormsModule } from "@angular/forms";
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -188,24 +187,24 @@ import { LoadingCircleComponent } from './pages/components/loading-circle/loadin
     MobileControllerCallInfoComponent,
     MobileMeetingDeviceSettingComponent,
     DimmerComponent,
-    ParticipantsSettingsComponent,    
+    ParticipantsSettingsComponent,
     GenericVolumeDropdownComponent,
     ManyUsersComponent,
     PinboardComponent,
-    FParticipantsComponent,    
+    FParticipantsComponent,
     TvMasterComponent,
     TvChatComponent,
     TvMessageComponent,
-    routingComponents, 
-    ControllerCallChatComponent, 
-    ExplorerTeamConversationComponent, 
-    ExplorerContactChatComponent, 
-    SetUserComponent, 
-    AddButtonComponent, 
-    ReturnOncallButtonComponent, 
-    FilesWindowComponent, 
-    FilesWindowListComponent, 
-    TableFilesComponent, 
+    routingComponents,
+    ControllerCallChatComponent,
+    ExplorerTeamConversationComponent,
+    ExplorerContactChatComponent,
+    SetUserComponent,
+    AddButtonComponent,
+    ReturnOncallButtonComponent,
+    FilesWindowComponent,
+    FilesWindowListComponent,
+    TableFilesComponent,
     OpenFileComponent,
     FinalTableComponent,
     PinnedComponent,
@@ -223,6 +222,6 @@ import { LoadingCircleComponent } from './pages/components/loading-circle/loadin
     BrowserAnimationsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
