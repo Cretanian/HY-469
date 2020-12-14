@@ -1,6 +1,5 @@
 <div class="size">
     <div class="header" (click) = "dropdownOpen = !dropdownOpen">
-      {{header}}
 
       <g-button *ngIf = "dropdownOpen === false"
       class='aling-g-button'
@@ -9,8 +8,10 @@
 
       <g-button *ngIf = "dropdownOpen === true"
       class='aling-g-button'
-      icon= '../../../assets/files/showdown.png'
+      icon= '../../../assets/files/showright.png'
       ></g-button>
+
+      {{header}}
 
     </div>
 

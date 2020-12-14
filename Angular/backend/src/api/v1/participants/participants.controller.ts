@@ -19,96 +19,197 @@ export class ParticipantsController {
   constructor() {
     this.data = [
       {
-        name: "Zacharias Pervolarakis",
-        src1: "../../../assets/participants-mobile/chat-gray.png",
-        src2: "../../../assets/participants-mobile/sound-gray.png",
-        src3: "../../../assets/participants-mobile/microphone-gray.png",
-        isMuted: false,
+        name: 'Zacharias Pervolarakis',
+        src1: '../../../assets/participants-mobile/chat-gray.png',
+        src2: '../../../assets/profile_photos/zackper.png',
+        src3: '../../../assets/participants-mobile/microphone-gray.png',
+        team: 'YeetFleet',
+        isMuted: false
       },
       {
-        name: "Stylianos Stamatakis",
-        src1: "../../../assets/participants-mobile/chat-gray.png",
-        src2: "../../../assets/participants-mobile/sound-gray.png",
-        src3: "../../../assets/participants-mobile/microphone-gray.png",
-        isMuted: false,
+        name: 'Stylianos Stamatakis',
+        src1: '../../../assets/participants-mobile/chat-gray.png',
+        src2: '../../../assets/profile_photos/steli.png',
+        src3: '../../../assets/participants-mobile/microphone-gray.png',
+        team: 'YeetFleet',
+        isMuted: false
       },
       {
-        name: "Antonis Agapakis",
-        src1: "../../../assets/participants-mobile/chat-gray.png",
-        src2: "../../../assets/participants-mobile/sound-gray.png",
-        src3: "../../../assets/participants-mobile/microphone-gray.png",
-        isMuted: false,
+        name: 'Antonis Agapakis',
+        src1: '../../../assets/participants-mobile/chat-gray.png',
+        src2: '../../../assets/profile_photos/agantosProfile.png',
+        src3: '../../../assets/participants-mobile/microphone-muted.png',
+        team: 'YeetFleet',
+        isMuted: false
       },
       {
-        name: "Magkoyths Kwnstantinos",
-        src1: "../../../assets/participants-mobile/chat-gray.png",
-        src2: "../../../assets/participants-mobile/sound-gray.png",
-        src3: "../../../assets/participants-mobile/microphone-gray.png",
-        isMuted: false,
+        name: 'Magkoyths Kwnstantinos',
+        src1: '../../../assets/participants-mobile/chat-gray.png',
+        src2: '../../../assets/profile_photos/profile_picture.png',
+        src3: '../../../assets/participants-mobile/microphone-gray.png',
+        team: 'YeetFleet',
+        isMuted: false
       },
       {
-        name: "Youla Faturu",
-        src1: "../../../assets/participants-mobile/chat-gray.png",
-        src2: "../../../assets/participants-mobile/sound-gray.png",
-        src3: "../../../assets/participants-mobile/microphone-gray.png",
-        isMuted: false,
+        name: 'Youla Faturu',
+        src1: '../../../assets/participants-mobile/chat-gray.png',
+        src2: '../../../assets/profile_photos/profile_picture.png',
+        src3: '../../../assets/participants-mobile/microphone-muted.png',
+        team: 'YeetFleet',
+        isMuted: false
       },
       {
-        name: "Savvidis Antonis",
-        src1: "../../../assets/participants-mobile/chat-gray.png",
-        src2: "../../../assets/participants-mobile/sound-gray.png",
-        src3: "../../../assets/participants-mobile/microphone-gray.png",
-        isMuted: false,
+        name: 'Savvidis Antonis',
+        src1: '../../../assets/participants-mobile/chat-gray.png',
+        src2: '../../../assets/profile_photos/profile_picture.png',
+        src3: '../../../assets/participants-mobile/microphone-gray.png',
+        team: 'YeetFleet',
+        isMuted: false
       },
       {
-        name: "Leonidis Asterios",
-        src1: "../../../assets/participants-mobile/chat-gray.png",
-        src2: "../../../assets/participants-mobile/sound-gray.png",
-        src3: "../../../assets/participants-mobile/microphone-gray.png",
-        isMuted: false,
+        name: 'Leonidis Asterios',
+        src1: '../../../assets/participants-mobile/chat-gray.png',
+        src2: '../../../assets/profile_photos/asterios2.png',
+        src3: '../../../assets/participants-mobile/microphone-muted.png',
+        team: 'YeetFleet',
+        isMuted: false
       },
       {
-        name: "Giorgos Georgioy",
-        src1: "../../../assets/participants-mobile/chat-gray.png",
-        src2: "../../../assets/participants-mobile/sound-gray.png",
-        src3: "../../../assets/participants-mobile/microphone-gray.png",
-        isMuted: false,
+        name: 'Giorgos Georgioy',
+        src1: '../../../assets/participants-mobile/chat-gray.png',
+        src2: '../../../assets/profile_photos/profile_picture.png',
+        src3: '../../../assets/participants-mobile/microphone-muted.png',
+        team: 'YeetFleet',
+        isMuted: false
       },
       {
-        name: "Kwstas Oman",
-        src1: "../../../assets/participants-mobile/chat-gray.png",
-        src2: "../../../assets/participants-mobile/sound-gray.png",
-        src3: "../../../assets/participants-mobile/microphone-gray.png",
-        isMuted: false,
+        name: 'Kwstas Oman',
+        src1: '../../../assets/participants-mobile/chat-gray.png',
+        src2: '../../../assets/profile_photos/profile_picture.png',
+        src3: '../../../assets/participants-mobile/microphone-muted.png',
+        team: 'YeetFleet',
+        isMuted: false
       },
       {
-        name: "Giannhs Iowannoy",
-        src1: "../../../assets/participants-mobile/chat-gray.png",
-        src2: "../../../assets/participants-mobile/sound-gray.png",
-        src3: "../../../assets/participants-mobile/microphone-gray.png",
-        isMuted: false,
+        name: 'Giannhs Iowannoy',
+        src1: '../../../assets/participants-mobile/chat-gray.png',
+        src2: '../../../assets/profile_photos/profile_picture.png',
+        src3: '../../../assets/participants-mobile/microphone-muted.png',
+        team: 'YeetFleet',
+        isMuted: false
       },
       {
-        name: "Maria yas",
-        src1: "../../../assets/participants-mobile/chat-gray.png",
-        src2: "../../../assets/participants-mobile/sound-gray.png",
-        src3: "../../../assets/participants-mobile/microphone-gray.png",
-        isMuted: false,
+        name: 'Maria yas',
+        src1: '../../../assets/participants-mobile/chat-gray.png',
+        src2: '../../../assets/profile_photos/profile_picture.png',
+        src3: '../../../assets/participants-mobile/microphone-muted.png',
+        team: 'YeetFleet',
+        isMuted: false
       },
       {
-        name: "Cool Dude",
-        src1: "../../../assets/participants-mobile/chat-gray.png",
-        src2: "../../../assets/participants-mobile/sound-gray.png",
-        src3: "../../../assets/participants-mobile/microphone-gray.png",
-        isMuted: false,
+        name: 'Cool Dude',
+        src1: '../../../assets/participants-mobile/chat-gray.png',
+        src2: '../../../assets/profile_photos/profile_picture.png',
+        src3: '../../../assets/participants-mobile/microphone-muted.png',
+        team: 'YeetFleet',
+        isMuted: false
       },
       {
-        name: "Notcool Dude",
-        src1: "../../../assets/participants-mobile/chat-gray.png",
-        src2: "../../../assets/participants-mobile/sound-gray.png",
-        src3: "../../../assets/participants-mobile/microphone-gray.png",
-        isMuted: false,
-      },
+        name: 'Notcool Dude',
+        src1: '../../../assets/participants-mobile/chat-gray.png',
+        src2: '../../../assets/profile_photos/profile_picture.png',
+        src3: '../../../assets/participants-mobile/microphone-muted.png',
+        team: 'YeetFleet',
+        isMuted: false
+      }, 
+      {
+        name: 'DM',
+        src1: '../../../assets/participants-mobile/chat-gray.png',
+        src2: '../../../assets/profile_photos/profile_picture.png',
+        src3: '../../../assets/participants-mobile/microphone-muted.png',
+        team: 'DnD | Reloaded',
+        isMuted: false
+      }, 
+      {
+        name: 'Ernon (?)',
+        src1: '../../../assets/participants-mobile/chat-gray.png',
+        src2: '../../../assets/profile_photos/profile_picture.png',
+        src3: '../../../assets/participants-mobile/microphone-muted.png',
+        team: 'DnD | Reloaded',
+        isMuted: false
+      }, 
+       {
+        name: 'Thrasttusss',
+        src1: '../../../assets/participants-mobile/chat-gray.png',
+        src2: '../../../assets/profile_photos/profile_picture.png',
+        src3: '../../../assets/participants-mobile/microphone-muted.png',
+        team: 'DnD | Reloaded',
+        isMuted: false
+      }, 
+      {
+        name: 'Balidor Lokiar',
+        src1: '../../../assets/participants-mobile/chat-gray.png',
+        src2: '../../../assets/profile_photos/profile_picture.png',
+        src3: '../../../assets/participants-mobile/microphone-muted.png',
+        team: 'DnD | Reloaded',
+        isMuted: false
+      }, 
+      {
+        name: 'Trent aaawooooooo',
+        src1: '../../../assets/participants-mobile/chat-gray.png',
+        src2: '../../../assets/profile_photos/profile_picture.png',
+        src3: '../../../assets/participants-mobile/microphone-muted.png',
+        team: 'DnD | Reloaded',
+        isMuted: false
+      }, 
+      {
+        name: 'Elos The Smallbrainer',
+        src1: '../../../assets/participants-mobile/chat-gray.png',
+        src2: '../../../assets/profile_photos/profile_picture.png',
+        src3: '../../../assets/participants-mobile/microphone-muted.png',
+        team: 'DnD | Reloaded',
+        isMuted: false
+      }, 
+      {
+        name: 'Pepas Brother',
+        src1: '../../../assets/participants-mobile/chat-gray.png',
+        src2: '../../../assets/profile_photos/profile_picture.png',
+        src3: '../../../assets/participants-mobile/microphone-muted.png',
+        team: 'AMI Living Room',
+        isMuted: false
+      }, 
+      {
+        name: 'Pepa the Pig',
+        src1: '../../../assets/participants-mobile/chat-gray.png',
+        src2: '../../../assets/profile_photos/profile_picture.png',
+        src3: '../../../assets/participants-mobile/microphone-muted.png',
+        team: 'AMI Living Room',
+        isMuted: false
+      }, 
+      {
+        name: 'Katerinio',
+        src1: '../../../assets/participants-mobile/chat-gray.png',
+        src2: '../../../assets/profile_photos/profile_picture.png',
+        src3: '../../../assets/participants-mobile/microphone-muted.png',
+        team: 'AMI Living Room',
+        isMuted: false
+      }, 
+      {
+        name: 'Mariori',
+        src1: '../../../assets/participants-mobile/chat-gray.png',
+        src2: '../../../assets/profile_photos/profile_picture.png',
+        src3: '../../../assets/participants-mobile/microphone-muted.png',
+        team: 'AMI Living Room',
+        isMuted: false
+      }, 
+      {
+        name: 'Panagos',
+        src1: '../../../assets/participants-mobile/chat-gray.png',
+        src2: '../../../assets/profile_photos/profile_picture.png',
+        src3: '../../../assets/participants-mobile/microphone-muted.png',
+        team: 'AMI Living Room',
+        isMuted: false
+      }, 
     ];
   }
 

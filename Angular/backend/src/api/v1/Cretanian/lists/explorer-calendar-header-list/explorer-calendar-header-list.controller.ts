@@ -41,35 +41,60 @@ export class ExplorerCalendarHeaderListController {
               {
                 date : '13',
                 month : 'OCT',
-                day : 'Mon.',
+                day : 'Wed.',
               },
               {
                 date : '14',
                 month : 'OCT',
-                day : 'Tue.',
+                day : 'Thu.',
               },
               {
                 date : '15',
                 month : 'OCT',
-                day : 'Wed.',
+                day : 'Fri.',
               },
               {
                 date : '16',
                 month : 'OCT',
-                day : 'Thu.',
+                day : 'Sat.',
               },
               {
                 date : '17',
                 month : 'OCT',
-                day : 'Fri.',
+                day : 'Sun.',
               },
               {
                 date : '18',
                 month : 'OCT',
-                day : 'Sat.',
+                day : 'Mon.',
               },
               {
                 date : '19',
+                month : 'OCT',
+                day : 'Tue.',
+              },
+              {
+                date : '20',
+                month : 'OCT',
+                day : 'Wed.',
+              },
+              {
+                date : '21',
+                month : 'OCT',
+                day : 'Thu.',
+              },
+              {
+                date : '22',
+                month : 'OCT',
+                day : 'Fri.',
+              },
+              {
+                date : '23',
+                month : 'OCT',
+                day : 'Sat.',
+              },
+              {
+                date : '24',
                 month : 'OCT',
                 day : 'Sun.',
               },

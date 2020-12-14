@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-calendar-event',
@@ -6,21 +7,22 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./calendar-event.component.css']
 })
 export class CalendarEventComponent implements OnInit {
-
+  @Input () team: string;
   @Input ('event') event: string;
   @Input ('time') time: string;
   @Input () color: string;
  
-  constructor() {}
+  Team_name: string;
 
-  ngOnInit(): void {
-   
+  constructor(private _Activatedroute:ActivatedRoute,) {
+    this.Team_name = this._Activatedroute.snapshot.paramMap.get("team_name");
+    if(this.Team_name == null){
+      this.Team_name = '0';
+    }
   }
 
-  public getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+  ngOnInit(): void {
+     
   }
 
 }

@@ -10,7 +10,9 @@ import { Location } from "@angular/common";
   styleUrls: ["./participants-mobile.component.css"],
 })
 export class ParticipantsMobileComponent implements OnInit {
-  participants: participant[];
+  participants: Participant[];
+  helper: Participant[];
+  Team_name:string;
 
   constructor(
     private _location: Location,
@@ -23,7 +25,13 @@ export class ParticipantsMobileComponent implements OnInit {
   }
   ngOnInit(): void {
     this.participantsService.getAll().subscribe((data) => {
-      this.participants = data as participant[];
+      this.helper = data as Participant[];
+      this.participants = [];
+      for(let i = 0; i < this.helper.length; i++){
+        if(this.helper[i].team == this.Team_name){
+          this.participants.push(new Participant(this.helper[i].name, this.helper[i].src2))
+        }
+      }
     });
 
     this.socketService
@@ -35,8 +43,21 @@ export class ParticipantsMobileComponent implements OnInit {
 
   loadParticipants() {
     this.participantsService.getAll().subscribe((data) => {
-      this.participants = data as participant[];
+      this.participants = data as Participant[];
       console.log(this.participants);
     });
+  }
+}
+
+export class Participant{
+  name:string;
+  src1:string;
+  src2: string;
+  src3: string;
+  team: string;
+  isMuted: boolean;
+  constructor(name:string,team:string){
+    this.name = name;
+    this.team =team;
   }
 }

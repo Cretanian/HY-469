@@ -30,11 +30,11 @@ export class DaysCalendarListComponent implements OnInit {
     this.fileheadersService.getAll("asd").subscribe(data => {
       this.helper = data as helper[];
       for (let entry of this.helper) {
-        if(this.team_name == entry.team && 
+        if( (this.team_name == entry.team || this.team_name == "0") && 
            this.date === entry.date && 
            this.month === entry.month)
         {
-          this.event_A.events_array.push(new event(entry.event, entry.time, entry.color));
+          this.event_A.events_array.push(new event(entry.team, entry.event, entry.time, entry.color));
         }
       }
     });
@@ -49,10 +49,12 @@ class helper{
   color: string;
 }
 class event{
+  team:string;
   event:string;
   time:string;
   color: string;
-  constructor(event:string, time:string, color: string){
+  constructor(team:string, event:string, time:string, color: string){
+    this.team = team;
     this.event = event;
     this.time = time;
     this.color = color;
