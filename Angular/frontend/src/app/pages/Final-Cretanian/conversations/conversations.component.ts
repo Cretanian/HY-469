@@ -28,7 +28,8 @@ export class ConversationsComponent implements OnInit {
         let id: number = data[i].id;
         let message1: Message = new Message(data[i].message1);
         let message2: Message = new Message(data[i].message2);
-        this.conversations.push(new Conversation(id, message1, message2));
+        console.log('ID: ' + data[i].id + ' | IsOnCall: ' + data[i].isOnCall);
+        this.conversations.push(new Conversation(id, message1, message2, data[i].isOnCall));
       }
     })
   }
@@ -52,13 +53,15 @@ export class ConversationsComponent implements OnInit {
 
 class Conversation {
   id: number;
+  isOnCall: boolean;
   initialMessage: Message;
   replyMessage: Message;
 
-  constructor(id: number, message1: Message, message2: Message) {
+  constructor(id: number, message1: Message, message2: Message, isOnCall?: boolean) {
     this.id = id;
     this.initialMessage = message1;
     this.replyMessage = message2;
+    this.isOnCall = isOnCall;
   }
 }
 

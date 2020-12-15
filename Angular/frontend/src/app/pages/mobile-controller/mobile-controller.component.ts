@@ -14,7 +14,6 @@ export class MobileControllerComponent implements OnInit{
   moreOpen: boolean = false;
 
   constructor() { 
-    this.callName = 'Intelligent Living Room Team';
     this.team_name = 'YeetFleet'; //to be changed
   }
 

@@ -14,6 +14,7 @@
       *ngFor="let conversation of conversations"
       [initialMessage]="conversation.initialMessage"
       [replyMessage]="conversation.replyMessage"
+      [isOnCall]='conversation.isOnCall'
       [routerLink]="[
         '/explorer-mobile-team-conversation',
         Team_name,

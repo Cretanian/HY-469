@@ -11,7 +11,7 @@ export interface TeamMessages_I{
 
 export interface Conversation_I{
   teamName?: string,
-  callMode?: boolean,
+  isOnCall?: boolean,
   id: number,
   messages: Message_I[]
 }
@@ -19,7 +19,8 @@ export interface Conversation_I{
 export interface ConversationPreview_I{
   id: number,
   message1: Message_I,
-  message2: Message_I
+  message2: Message_I,
+  isOnCall?: boolean
 }
 
 export interface ContactMessages_I {
@@ -127,7 +128,7 @@ export class MessagesController {
         messages: [
           {
             id: 0,
-            photo: "agantos.png",
+            photo: "agantosProfile.png",
             name: "agantos",
             time: "Yesterday at 10:25",
             message:
@@ -267,7 +268,7 @@ export class MessagesController {
               },
               {
                 id: 2,
-                photo: 'agantos.png',
+                photo: 'agantosProfile.png',
                 name: 'agantos',
                 time: 'Today at 9:32',
                 message: "You got it sir.",
@@ -283,7 +284,7 @@ export class MessagesController {
           },
           {
             id: 2,
-            callMode: true,
+            isOnCall: true,
             messages: [
               {
                 id: 0,
@@ -328,7 +329,7 @@ export class MessagesController {
               },
               {
                 id: 3,
-                photo: 'agantos.png',
+                photo: 'agantosProfile.png',
                 name: 'agantos',
                 time: 'Today at 10:36',
                 message: "Come on man, you are embarassing me infront of the wizards.",
@@ -407,6 +408,7 @@ export class MessagesController {
     for(let j = 0; j < conversations.length; j++){
       data.push({
         id: conversations[j].id,
+        isOnCall: conversations[j].isOnCall,
         message1: conversations[j].messages[0],
         message2: conversations[j].messages[conversations[j].messages.length - 1]
       })

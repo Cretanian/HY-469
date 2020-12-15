@@ -6,9 +6,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class MobileMeetingDeviceSettingComponent implements OnInit {
   @Input('label') label: string;
-  @Input('options') dropdownOptions: dropdownOption[];
-
-  toggler: boolean = false;
+  @Input('options') dropdownOptions: dropdownOption[]
+  @Input('toggler') toggler: boolean = false;
   
   constructor() { }
 
