@@ -23,7 +23,7 @@ export class ParticipantsTVComponent implements OnInit {
       {
           if(this.helper[i].team == this.Team_name )
           {
-            this.participantsTV.push(new participant(this.helper[i].name, this.helper[i].src2, this.helper[i].isMuted));
+            this.participantsTV.push(new participant(this.helper[i].name, this.helper[i].src2, this.helper[i].isMuted, this.helper[i].volume));
           }
       }
     });

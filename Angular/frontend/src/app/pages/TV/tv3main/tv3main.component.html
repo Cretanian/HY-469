@@ -1,8 +1,9 @@
 <div class ="tv">
     <app-tv-speaker
-    image = '\assets\tv-speaker\user.png'
-    mic = '\assets\slider\mic.png'
-    speaker = 'Stelios stamatakis'
+    [image] = 'participants[0].src2'
+    [mic] = 'participants[0].isMuted'
+    [speaker] = 'participants[0].name'
+    [volume]= 'participants[0].volume'
     width = '65.625vw'
     height = '1070px'
     paddingleft = '2.4vw'
@@ -12,10 +13,11 @@
     
     <div class="cameras">
         <app-tv-speaker
-        *ngFor="let speaker of speakers_array"
-        [image] = 'speaker.image'
-        [mic] = 'speaker.mic'
-        [speaker] = 'speaker.speaker'
+        *ngFor="let speaker of participants | slice:1:3"
+        [image] = 'speaker.src2'
+        [mic] = 'speaker.isMuted'
+        [speaker] = 'speaker.name'
+        [volume]= 'speaker.volume'
         width = '33vw'
         height = '27.5vw'
         paddingleft = ' 0.83vw'

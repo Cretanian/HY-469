@@ -1,10 +1,11 @@
 <div class="size">
 
     <app-tv-speaker
-    *ngFor="let speaker of speakers_array"
-    [image] = 'speaker.image'
-    [mic] = 'speaker.mic'
-    [speaker] = 'speaker.speaker'
+    *ngFor="let speaker of participants | slice:0:6"
+    [image] = 'speaker.src2'
+    [mic] = 'speaker.isMuted'
+    [speaker] = 'speaker.name'
+    [volume]= 'speaker.volume'
     width = '32.7vw'
     height = '27.60vw'
     paddingleft = '1vw'

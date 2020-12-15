@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./volume-slider.component.css']
 })
 export class VolumeSliderComponent implements OnInit {
-  value : number  = 75;
+  @Input() value : number;
   helper : number = 75;
   @Input('image_url') url: string;
   

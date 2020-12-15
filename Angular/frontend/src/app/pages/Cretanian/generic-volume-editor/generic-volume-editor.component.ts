@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class GenericVolumeEditorComponent implements OnInit {
   @Input("slider-label") label: string;
   @Input() muted: string;
+  @Input() volume: number;
   maxSize: number;
   constructor() { }
 

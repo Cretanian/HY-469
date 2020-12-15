@@ -22,7 +22,7 @@ export class ParticipantsSettingsComponent implements OnInit {
         {
           if(this.helper[i].team == this.Team_name )
           {
-            this.part_array.push(new participant(this.helper[i].name, this.helper[i].src2, this.helper[i].isMuted));
+            this.part_array.push(new participant(this.helper[i].name, this.helper[i].src2, this.helper[i].isMuted,this.helper[i].volume));
           }
         }
     });
