@@ -121,7 +121,6 @@ export class ParticipantsController {
 
   public muteParticipant = (req: Request, res: Response) => {
     let name: string = req.body.name;
-    logger.info(req.body);
     for (var i = 0; i < this.data.length; i++) {
       if (this.data[i].name == name)
         this.data[i].isMuted = !this.data[i].isMuted;
