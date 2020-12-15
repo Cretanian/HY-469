@@ -12,7 +12,7 @@ import { Location } from "@angular/common";
 export class ParticipantsMobileComponent implements OnInit {
   participants: participant[];
   helper: participant[];
-  Team_name:string;
+  Team_name: string;
 
   constructor(
     private _location: Location,
@@ -28,9 +28,17 @@ export class ParticipantsMobileComponent implements OnInit {
     this.participantsService.getAll().subscribe((data) => {
       this.helper = data as participant[];
       this.participants = new Array();
-      for(let i = 0; i < this.helper.length; i++){
-        if(this.helper[i].team == this.Team_name){
-          this.participants.push(new participant(this.helper[i].name, this.helper[i].src2, this.helper[i].isMuted,this.helper[i].volume))
+      for (let i = 0; i < this.helper.length; i++) {
+        if (this.helper[i].team == this.Team_name) {
+          this.participants.push(
+            new participant(
+              this.helper[i].name,
+              this.helper[i].src2,
+              this.helper[i].isMuted,
+              this.helper[i].volume,
+              this.helper[i].prevVolume
+            )
+          );
         }
       }
     });
