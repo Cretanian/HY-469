@@ -20,6 +20,7 @@ export class TvSpeakerComponent implements OnInit {
 
   @ViewChild('sizeRef', {static:true}) sizeRef: ElementRef;
   @ViewChild('sizetext', {static:true}) sizetext: ElementRef;
+  @ViewChild('greenIndicator', {static: false}) greenIndicator: ElementRef;
 
   ngAfterViewInit(): void {
     this.sizeRef.nativeElement.style.width = this.width;
@@ -29,13 +30,24 @@ export class TvSpeakerComponent implements OnInit {
     this.sizetext.nativeElement.style.paddingLeft = this.paddingleft;
     this.sizetext.nativeElement.style.fontSize = this.fontsize;
     this.sizetext.nativeElement.style.top = this.top;
+
+    this.getMyVolume();
   }
 
+  setGreenIndicator(myVolume: number){
+    if(myVolume == undefined)
+      myVolume = 1;
+    this.greenIndicator.nativeElement.style.transform = 
+        'scaleY(' + myVolume + ')'; 
+  };
 
-  constructor() {
-    
+  getMyVolume(){
+    this.setGreenIndicator(2);
+  };
 
-  }
+
+  constructor() {}
+
   ngOnInit(): void {
     
   }
