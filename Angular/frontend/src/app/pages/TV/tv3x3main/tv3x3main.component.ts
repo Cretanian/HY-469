@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
+import { participant } from "src/app/pages/components/utils/participant";
 
 @Component({
   selector: 'app-tv3x3main',
@@ -6,53 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tv3x3main.component.css']
 })
 export class Tv3x3mainComponent implements OnInit {
-  speakers_array:speakers[] = [
-    {
-      "image" : '/assets/tv-speaker/user.png',
-      "mic" : '/assets/slider/mic.png',
-      "speaker" : 'Stelios stamatakis'
-    },
-    {
-      "image" : '/assets/tv-speaker/user.png',
-      "mic" : '/assets/slider/mic.png',
-      "speaker" : 'Stelios stamatakis'
-    },
-       {
-      "image" : '/assets/tv-speaker/user.png',
-      "mic" : '/assets/slider/mic.png',
-      "speaker" : 'Stelios stamatakis'
-    },  {
-      "image" : '/assets/tv-speaker/user.png',
-      "mic" : '/assets/slider/mic.png',
-      "speaker" : 'Stelios stamatakis'
-    },
-    {
-      "image" : '/assets/tv-speaker/user.png',
-      "mic" : '/assets/slider/mic.png',
-      "speaker" : 'Stelios stamatakis'
-    },
-    {
-      "image" : '/assets/tv-speaker/user.png',
-      "mic" : '/assets/slider/mic.png',
-      "speaker" : 'Stelios stamatakis'
-    },
-    
-    ]; 
+  @Input() participants: participant[];
+  
   constructor() { }
 
   ngOnInit(): void {
   }
 
-}
-
-
-class speakers{
-  image:string;
-  mic:string;
-  speaker:string;
-  constructor() { 
-    this.image ='';
-    this.mic ='';
-    this.speaker ='';
-  }
 }

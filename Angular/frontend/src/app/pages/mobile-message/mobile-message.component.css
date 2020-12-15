@@ -75,8 +75,8 @@
 
 .message-time{
     position: absolute;
-    left: 61vw;
-    bottom: 0%;
+    right: 2%;
+    bottom: 2%;
     margin: 0px;
     font-size: 2.8vw;
 }

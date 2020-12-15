@@ -10,7 +10,7 @@ export class ParticipantTVComponent implements OnInit {
   @Input() name: string;
   @Input() srcProfile: string;
   @Input() maxSize: number;
-
+  @Input() muted: number;
   mute:boolean;
   camera:boolean;
 

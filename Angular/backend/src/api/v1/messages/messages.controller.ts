@@ -11,6 +11,7 @@ export interface TeamMessages_I{
 
 export interface Conversation_I{
   teamName?: string,
+  callMode?: boolean,
   id: number,
   messages: Message_I[]
 }
@@ -63,171 +64,19 @@ export class MessagesController {
   constructor() {
     this.contactMessages = [
       {
-        contact: "Stylianos Stamatakis",
+        contact: "steli",
         messages: [
           {
             id: 0,
-            photo: "profile_picture.png",
-            name: "Steli",
-            time: "12:25",
+            photo: "steli.png",
+            name: "steli",
+            time: "Today at 12:25",
             message: "DnD session twice per week. Please.",
             alignment: "left",
             emojis: [
               {
-                amount: 2,
-                emojiSrc: "skeptical_icon.png",
-              },
-            ],
-          },
-          {
-            id: 1,
-            photo: "profile_picture.png",
-            name: "Steli",
-            time: "12:25",
-            message:
-              "For the love of god. Hear me out. I-NEED-THIS. Zack needs this. PLEAAAASE. PLLLLLEEEEAAASEEE.",
-            alignment: "left",
-            emojis: [],
-          },
-          {
-            id: 2,
-            photo: "",
-            name: "agantos",
-            time: "22:20",
-            message: "*cries in DM*.",
-            alignment: "right",
-            emojis: [
-              {
                 amount: 1,
                 emojiSrc: "skeptical_icon.png",
-              },
-            ],
-          },
-        ],
-      },
-      {
-        contact: "Zacharias Pervolarakis",
-        messages: [
-          {
-            id: 0,
-            photo: "profile_picture.png",
-            name: "Zack",
-            time: "12:25",
-            message: "Bro I am telling you... Aramastus is a fucking castle.",
-            alignment: "left",
-            emojis: [
-              {
-                amount: 1,
-                emojiSrc: "tears_of_joy_icon.png",
-              },
-            ],
-          },
-          {
-            id: 1,
-            photo: "",
-            name: "agantos",
-            time: "12:26",
-            message:
-              "But... this makes no sense. Why the fuck does he have to be a castle? All the clues are layed out. You are just dumm.",
-            alignment: "right",
-            emojis: [
-              {
-                amount: 1,
-                emojiSrc: "skeptical_icon.png",
-              },
-            ],
-          },
-          {
-            id: 2,
-            photo: "profile_picture.png",
-            name: "Zack",
-            time: "13:05",
-            message:
-              "You aint fooling me DM. I can tell when the fuck you are lying Mr. 'Third impostor'! I JUST CONFIRMED THAT ARAMASTUS IS A CASTLE",
-            alignment: "left",
-            emojis: [
-              {
-                amount: 1,
-                emojiSrc: "winky_face_icon.png",
-              },
-            ],
-          },
-        ],
-      },
-      {
-        contact: "AMI Lab",
-        messages: [
-          {
-            id: 0,
-            photo: "profile_picture.png",
-            name: "Asterios Leonidis",
-            time: "12:25",
-            message:
-              "Good job everybody! Next time lets so a little bit more spirit, we are all having a blast here arent we?",
-            alignment: "left",
-            emojis: [
-              {
-                amount: 4,
-                emojiSrc: "tears_of_joy_icon.png",
-              },
-            ],
-          },
-          {
-            id: 1,
-            photo: "profile_picture.png",
-            name: "Mallias/Rockas",
-            time: "12:25",
-            message:
-              "Wraia paidia kapoios an blastarei ton asterio mipws? Kathe fora ta idia leme.",
-            alignment: "left",
-            emojis: [
-              {
-                amount: 1,
-                emojiSrc: "hearts_for_eyes_icon.png",
-              },
-            ],
-          },
-          {
-            id: 2,
-            photo: "profile_picture.png",
-            name: "CS",
-            time: "12:25",
-            message:
-              "Σου εχω πει πολλες φορες να μιλας πιο ομορφα Μαλλια. Ειδικα στο παιδι μου τον Αστεριο και στις κορες μου. Προσεχε.",
-            alignment: "left",
-            emojis: [
-              {
-                amount: 4,
-                emojiSrc: "thumbs_up_icon.png",
-              },
-            ],
-          },
-          {
-            id: 3,
-            photo: "profile_picture.png",
-            name: "Mallias/Rockas",
-            time: "12:25",
-            message:
-              "Με συγχωρειτε κυριε CS. Δεν ηξερα οτι ειστε σε αυτο το τσατ. Σας διαβεβαιωνω οτι πρωτη και τελευταια φορα που συμπεριφερομαι ετσι ακοσμα. Καλη σας συνεχεια. Επομενη φορα θα παμε ακομα καλυτερα ομαδα!",
-            alignment: "left",
-            emojis: [],
-          },
-          {
-            id: 4,
-            photo: "",
-            name: "agantos",
-            time: "12:25",
-            message:
-              "Μα καλα πηγε:( Ας μην μαλωνουμε! Θα κανω εδω μεταπτυχιακο οποτε ηρεμηστε!",
-            alignment: "right",
-            emojis: [
-              {
-                amount: 2,
-                emojiSrc: "hearts_for_eyes_icon.png",
-              },
-              {
-                amount: 5,
-                emojiSrc: "tears_of_joy_icon.png",
               },
             ],
           },
@@ -240,13 +89,13 @@ export class MessagesController {
             id: 0,
             photo: "zackper.png",
             name: "ZackPer",
-            time: "12:25",
+            time: "Today at 12:25",
             message:
               "Eukolo tha elega.",
             alignment: "left",
             emojis: [
               {
-                amount: 4,
+                amount: 1,
                 emojiSrc: "tears_of_joy_icon.png",
               },
             ],
@@ -254,25 +103,86 @@ export class MessagesController {
         ],
       },
       {
-        contact: "Trent Awooouu",
+        contact: "vAchilleas",
         messages: [
           {
             id: 0,
             photo: "profile_picture.png",
-            name: "Trent Awooouu",
-            time: "12:25",
+            name: "vAchilleas",
+            time: "Today at 9:25",
             message:
-              "Tha paiksoume re bro. Arakse arakse...",
+              "Phra kati nomismata simera. Den fantazesai, treli agora!",
             alignment: "left",
             emojis: [
               {
-                amount: 4,
+                amount: 1,
                 emojiSrc: "tears_of_joy_icon.png",
               },
             ],
           },
         ],
       },
+      {
+        contact: "agantos",
+        messages: [
+          {
+            id: 0,
+            photo: "agantos.png",
+            name: "agantos",
+            time: "Yesterday at 10:25",
+            message:
+              "DnD got canceled boys. Can I have all the sad reacts of the world?",
+            alignment: "left",
+            emojis: [
+              {
+                amount: 1,
+                emojiSrc: "tears_of_joy_icon.png",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        contact: "Asterios Leonidis",
+        messages: [
+          {
+            id: 0,
+            photo: "asterios.png",
+            name: "Asterios Leonidis",
+            time: "THU at 10:25",
+            message:
+              "Pixel perfect ola paidia.",
+            alignment: "left",
+            emojis: [
+              {
+                amount: 1,
+                emojiSrc: "tears_of_joy_icon.png",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        contact: "steli",
+        messages: [
+          {
+            id: 0,
+            photo: "steli.png",
+            name: "steli",
+            time: "Today at 6:45",
+            message:
+              "Variemai na kanw tin anafora.",
+            alignment: "left",
+            emojis: [
+              {
+                amount: 1,
+                emojiSrc: "skeptical_icon.png",
+              },
+            ],
+          },
+        ],
+      },
+      
     ];
 
     this.teamMessages = [
@@ -284,10 +194,10 @@ export class MessagesController {
             messages: [
               {
                 id: 0,
-                photo: 'profile_picture.png',
-                name: 'China Guy',
-                time: '11:03',
-                message: "Have you EVER seen a koala? They are SUPPERRR cute lmao!",
+                photo: 'zackper.png',
+                name: 'ZackPer',
+                time: 'WED at 11:03',
+                message: "Everybody welcome to the team our newest member, Antonis Agapakis!",
                 alignment: 'left',
                 emojis: [
                   {
@@ -302,19 +212,19 @@ export class MessagesController {
               },
               {
                 id: 1,
-                photo: 'profile_picture.png',
-                name: 'Stylianos Stamatakis',
-                time: '11:03',
-                message: "Yes... like 1m times from youtube. Why are you all so cringy today? ZACK GET ME OUT OF HERE.",
+                photo: 'steli.png',
+                name: 'steli',
+                time: 'WED at 11:23',
+                message: "Haha... Welcome to the team @agantos",
                 alignment: 'left',
                 emojis: []
               },
               {
                 id: 2,
-                photo: 'profile_picture.png',
+                photo: 'asterios.png',
                 name: 'Asterios Leonidis',
-                time: '14:32',
-                message: "Oh my god never in my life haha! They must be SUPER cute!",
+                time: 'THU at 14:32',
+                message: "Welcome agantos, we expect great things from you!",
                 alignment: 'left',
                 emojis: [
                   {
@@ -331,9 +241,56 @@ export class MessagesController {
               {
                 id: 0,
                 photo: 'profile_picture.png',
-                name: 'Aldo Jhaco',
-                time: '11:03',
-                message: "Telikos fanatic, opoios thelei join sto spiti mou gia nargile negroi.",
+                name: 'Chin Yasuo',
+                time: 'Yesterday at 13:32',
+                message: "Hello everyone! Dont forget to send me your monthly progress reports.",
+                alignment: 'left',
+                emojis: [
+                  {
+                    amount: 3,
+                    emojiSrc: 'hearts_for_eyes_icon.png'
+                  },
+                  {
+                    amount: 1,
+                    emojiSrc: 'thumbs_up_icon.png'
+                  }
+                ]
+              },
+              {
+                id: 1,
+                photo: 'steli.png',
+                name: 'steli.png',
+                time: 'Yesterday at 12:03',
+                message: "Already sent!",
+                alignment: 'left',
+                emojis: []
+              },
+              {
+                id: 2,
+                photo: 'agantos.png',
+                name: 'agantos',
+                time: 'Today at 9:32',
+                message: "You got it sir.",
+                alignment: 'left',
+                emojis: [
+                  {
+                    amount: 1,
+                    emojiSrc: 'tears_of_joy_icon.png'
+                  }
+                ]
+              },
+            ]
+          },
+          {
+            id: 2,
+            callMode: true,
+            messages: [
+              {
+                id: 0,
+                photo: 'asterios.png',
+                name: 'Asterios Leonidis',
+                time: 'Today at 10:32',
+                message: "Lets talk about your HY486 projects!",
                 alignment: 'left',
                 emojis: [
                   {
@@ -349,26 +306,40 @@ export class MessagesController {
               {
                 id: 1,
                 photo: 'profile_picture.png',
-                name: 'Stylianos Stamatakis',
-                time: '11:03',
-                message: "Lets go!",
+                name: 'Chin Yasuo',
+                time: 'Today at 10:33',
+                message: "Feel free to ask questions!",
                 alignment: 'left',
                 emojis: []
               },
               {
                 id: 2,
-                photo: 'profile_picture.png',
-                name: 'agantos',
-                time: '14:32',
-                message: "Ti lol re kathusterimene, 2020 exoume",
+                photo: 'zackper.png',
+                name: 'ZackPer',
+                time: 'Today at 10:35',
+                message: "Can we use CGI for the video presentation?",
                 alignment: 'left',
                 emojis: [
                   {
-                    amount: 5,
+                    amount: 1,
                     emojiSrc: 'tears_of_joy_icon.png'
                   }
                 ]
               },
+              {
+                id: 3,
+                photo: 'agantos.png',
+                name: 'agantos',
+                time: 'Today at 10:36',
+                message: "Come on man, you are embarassing me infront of the wizards.",
+                alignment: 'left',
+                emojis: [
+                  {
+                    amount: 1,
+                    emojiSrc: 'tears_of_joy_icon.png'
+                  }
+                ]
+              }
             ]
           }
         ]
@@ -400,7 +371,7 @@ export class MessagesController {
     newMessage = {
       name: sender,
       photo: senderPhoto,
-      time: time,
+      time: "Today at " + time,
       message: message,
       id: messages.length,
       alignment: 'left',

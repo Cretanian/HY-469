@@ -1,0 +1,19 @@
+<div class="phone">
+    <header class='header' style="background-color: #468189;"
+        name= 'Teams Members'
+        src1 = '\assets\tv-grid\back-header.png'
+        src3 = '\assets\fakos.png'
+        (event1) = 'backClicked()'
+    ></header>
+
+    <div class="body">     
+        <contact-list
+            [sameLetterList] = 'this.participants'
+        ></contact-list>
+        <ami-fullstack-add-button></ami-fullstack-add-button>
+        <ami-fullstack-return-oncall-button></ami-fullstack-return-oncall-button>
+    </div>
+
+    <mobile-footer class='footer' activeTab='teams'></mobile-footer>
+
+</div>

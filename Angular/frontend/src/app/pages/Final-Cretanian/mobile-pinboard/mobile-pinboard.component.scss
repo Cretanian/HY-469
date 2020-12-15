@@ -7,13 +7,13 @@
 }
 
 .pins-container{
-    padding-top: 10vw;
+    padding-top: 0vw;
     width: 100%;
     height: 200vw;
     overflow-y: scroll;
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-content: center;
 }

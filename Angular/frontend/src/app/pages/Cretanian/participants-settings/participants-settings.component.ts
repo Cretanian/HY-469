@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ContactsService } from 'src/app/global/services/contacts/contacts.service';
-
+import { ParticipantsService } from 'src/app/global/services/participants/participants.service';
+import { participant } from 'src/app/pages/components/utils/participant'
 @Component({
   selector: 'app-participants-settings',
   templateUrl: './participants-settings.component.html',
@@ -8,19 +8,26 @@ import { ContactsService } from 'src/app/global/services/contacts/contacts.servi
 })
 export class ParticipantsSettingsComponent implements OnInit {
 
-  part_array:Contact[];
-  constructor(private contactsService: ContactsService) { }
+  part_array:participant[];
+  helper: participant[];
+  Team_name:string;
+  constructor(private contactsService: ParticipantsService) { }
 
   ngOnInit(): void {
-    this.contactsService.getAll("asd").subscribe(data => {
-      this.part_array = data as Contact[];
+    this.Team_name = "YeetFleet";
+    this.contactsService.getAll().subscribe(data => {
+      this.helper = data as participant[];
+      this.part_array = new Array();
+      for(let i = 0; i < this.helper.length; i++)
+        {
+          if(this.helper[i].team == this.Team_name )
+          {
+            this.part_array.push(new participant(this.helper[i].name, this.helper[i].src2, this.helper[i].isMuted,this.helper[i].volume));
+          }
+        }
     });
   }
 
 }
 
-export class Contact{
-  name:string;
-  srcProfile:string;
-  isFavourite: boolean;
-}
+

@@ -6,4 +6,5 @@ export class Message{
     date:               string;
     hasSecondaryText:   boolean;
     srcProfile:         string;
+    redirect:           string;
 }

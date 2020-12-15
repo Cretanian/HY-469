@@ -6,6 +6,8 @@
     <app-generic-volume-editor
         *ngFor = "let part of part_array"
         [slider-label] = 'part.name'
+        [muted]="part.isMuted"
+        [volume]="part.volume"
     >
     </app-generic-volume-editor>
 

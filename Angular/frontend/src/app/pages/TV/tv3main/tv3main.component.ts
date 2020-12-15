@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
+import { participant } from '../../components/utils/participant';
 
 @Component({
   selector: 'app-tv3main',
@@ -6,32 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tv3main.component.css']
 })
 export class Tv3mainComponent implements OnInit {
-  speakers_array:speakers[] = [
-    {
-      "image" : '/assets/tv-speaker/user.png',
-      "mic" : '/assets/slider/mic.png',
-      "speaker" : 'Stelios stamatakis'
-    },
-    {
-      "image" : '/assets/tv-speaker/user.png',
-      "mic" : '/assets/slider/mic.png',
-      "speaker" : 'Stelios stamatakis'
-    }  
-    ]; 
-  constructor() { }
+  @Input() participants: participant[];
+
+  constructor() { 
+   
+  }
 
   ngOnInit(): void {
   }
 
-}
-
-class speakers{
-  image:string;
-  mic:string;
-  speaker:string;
-  constructor() { 
-    this.image ='';
-    this.mic ='';
-    this.speaker ='';
-  }
 }

@@ -1,9 +1,11 @@
 <div class = "size">
     <div class = "topcorner">
         <app-tv-speaker
-            image = '\assets\tv-speaker\user.png'
-            mic = '\assets\slider\mic.png'
-            speaker = 'asteriosdapro'
+            *ngFor="let speaker of participants | slice:0:1"
+            [image] = 'speaker.src2'
+            [mic] = 'speaker.isMuted'
+            [speaker] = 'speaker.name'
+            [volume]= 'speaker.volume'
             margin = '0px'
             width = '100%' 
             height = '100%'

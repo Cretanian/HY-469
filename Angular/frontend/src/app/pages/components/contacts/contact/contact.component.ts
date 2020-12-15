@@ -14,7 +14,6 @@ export class ContactComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.srcProfile = "../../../../assets/icons/TV Grid 1 Grid.png";
   }
 
 }

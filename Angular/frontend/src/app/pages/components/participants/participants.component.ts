@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {participant} from '../utils/participant'
-
+import { participant } from '../utils/participant'
 
 @Component({
   selector: 'participants',

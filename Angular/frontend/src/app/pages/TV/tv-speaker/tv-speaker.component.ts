@@ -6,9 +6,9 @@ import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
   styleUrls: ['./tv-speaker.component.css']
 })
 export class TvSpeakerComponent implements OnInit {
-
+  @Input() volume: number;
   @Input('image') image_url: string;
-  @Input('mic') icon: string;
+  @Input() mic: boolean;
   @Input('speaker') name: string;
   @Input('margin') margin: string;
   @Input('width') width: string;

@@ -29,6 +29,7 @@ export class MobileChatComponent {
   user: User_I;
   messages: Message[];
 
+  isContectLoaded: boolean = false;
   extrasOpened: boolean = false;
 
   constructor(
@@ -47,6 +48,7 @@ export class MobileChatComponent {
            (data: User_I) => {
              this.user = data;
              this.loadMessages()
+             this.isContectLoaded = true;
            }
          )
       }

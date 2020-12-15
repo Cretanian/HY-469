@@ -1,6 +1,7 @@
 <participant
   *ngFor="let participant of participants"
   [name]="participant.name"
+  [src2] = "participant.src2"
   [muted]="participant.isMuted"
 >
 </participant>
