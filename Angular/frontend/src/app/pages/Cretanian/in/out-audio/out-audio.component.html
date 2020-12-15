@@ -1,7 +1,7 @@
 <div class = 'size'>
     <app-generic-volume-editor
         slider-label = '{{device}}:'
-        volume = this.volume
+        [volume] = 'volume'
     ></app-generic-volume-editor>
     <app-generic-volume-dropdown
         dropdown-label = '{{device}} Device:'
