@@ -1,14 +1,12 @@
-<div class = "size">
-    <div class= "header">
-        Participants Settings
-    </div>
+<div class="size">
+  <div class="header">Participants Settings</div>
 
-    <app-generic-volume-editor
-        *ngFor = "let part of part_array"
-        [slider-label] = 'part.name'
-        [muted]="part.isMuted"
-        [volume]="part.volume"
-    >
-    </app-generic-volume-editor>
-
+  <app-generic-volume-editor
+    *ngFor="let part of part_array"
+    [slider-label]="part.name"
+    [muted]="part.isMuted"
+    [volume]="part.volume"
+    [prevVolume]="part.prevVolume"
+  >
+  </app-generic-volume-editor>
 </div>

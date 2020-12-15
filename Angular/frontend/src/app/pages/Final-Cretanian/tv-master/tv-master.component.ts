@@ -50,7 +50,8 @@ export class TvMasterComponent implements OnInit {
               this.helper[i].name,
               this.helper[i].src2,
               this.helper[i].isMuted,
-              this.helper[i].volume
+              this.helper[i].volume,
+              this.helper[i].prevVolume
             )
           );
         }

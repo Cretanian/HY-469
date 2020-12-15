@@ -1,4 +1,4 @@
-import { Component, OnInit, Input} from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'dropdown',
@@ -9,16 +9,17 @@ export class DropdownComponent implements OnInit {
   @Input() name:string;
   @Input() dropdownOpen: boolean;
   @Input() dropdownOptions: dropdownOption[];
+  @Output('selectionClicked') selectionClicked: EventEmitter<string> = new EventEmitter<string>();
 
   constructor() {}
 
   ngOnInit(): void {
-    this.name = "Default Device";
     this.dropdownOpen = false;
   }
 
   set_name(device_name:string){
     this.name = device_name;
+    this.selectionClicked.emit(device_name);
   }
 }
 

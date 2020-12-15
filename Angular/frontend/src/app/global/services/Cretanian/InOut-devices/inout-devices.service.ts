@@ -26,4 +26,15 @@ export class InOutDevicesService {
     return this.http.post(`${this.hostURl}/api/in-out-devices/getAll2`,{person: person},{'headers':headers});
   }
 
+  public setInput(selection: string){
+    console.log('Post ot base');
+    const headers = { 'content-type': 'application/json'}
+    return this.http.post(`${this.hostURl}/api/in-out-devices/setInput`,{ selection: selection },{'headers':headers}).subscribe();
+  }
+
+  public setOutput(selection: string){
+    const headers = { 'content-type': 'application/json'}
+    return this.http.post(`${this.hostURl}/api/in-out-devices/setOutput`,{ selection: selection },{'headers':headers}).subscribe();
+  }
+
 }

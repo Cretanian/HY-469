@@ -36,4 +36,19 @@ export class ParticipantsService {
       )
       .subscribe();
   }
+
+  public changeVolume(prevVolume: number, volume: number, name: string) {
+    const headers = { "content-type": "application/json" };
+    return this.http
+      .post(
+        `${this.hostURl}/api/participants/changeVolumeParticipant`,
+        {
+          prevVolume: prevVolume,
+          volume: volume,
+          name: name,
+        },
+        { headers: headers }
+      )
+      .subscribe();
+  }
 }

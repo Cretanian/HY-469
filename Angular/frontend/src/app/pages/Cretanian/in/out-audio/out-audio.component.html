@@ -6,5 +6,6 @@
     <app-generic-volume-dropdown
         dropdown-label = '{{device}} Device:'
         [dropdownOptions] = 'dropdownOptions'
+        (selectionEvent)='postToBase($event)'
     ></app-generic-volume-dropdown>
 </div>

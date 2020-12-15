@@ -6,6 +6,7 @@
         <dropdown 
             class='dropdown'
             [dropdownOptions]='this.dropdownOptions'
+            (selectionClicked)='dropdownChanged($event)'
         ></dropdown>
         <div>
             <img

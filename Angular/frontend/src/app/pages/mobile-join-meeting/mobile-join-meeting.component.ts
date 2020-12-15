@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { InOutDevicesService } from 'src/app/global/services/Cretanian/InOut-devices/inout-devices.service';
+import { SocketsService } from "src/app/global/services";
 import { OutVideoService } from 'src/app/global/services/Cretanian/out-video/out-video.service';
 
 @Component({
@@ -14,16 +15,28 @@ export class MobileJoinMeetingComponent implements OnInit {
   inputOptions: dropdownOption[];
   outputOptions: dropdownOption[];
 
-  constructor(private outvideoService: OutVideoService,private inoutdevicesService: InOutDevicesService) { }
+  constructor(
+    private outvideoService: OutVideoService,
+    private inoutdevicesService: InOutDevicesService,
+    private socketService: SocketsService
+  ) { }
 
   ngOnInit(): void {
+    this.loadIODevices();
+
+    this.socketService.syncMessages("device/changed").subscribe((event) => {
+      this.loadIODevices();
+    });
+  }
+
+  loadIODevices(){
     this.outvideoService.getAll("asd").subscribe(data => {
       this.cameraOptions = data as dropdownOption[];
     });
 
-    this.inoutdevicesService.getAll("asd").subscribe(data => {
-      this.inputOptions = data as dropdownOption[];
-      this.outputOptions = data as dropdownOption[];
+    this.inoutdevicesService.getAll("asd").subscribe((data: any) => {
+      this.inputOptions = data.inputDevices as dropdownOption[];
+      this.outputOptions = data.outputDevices as dropdownOption[];
     });
   }
 }

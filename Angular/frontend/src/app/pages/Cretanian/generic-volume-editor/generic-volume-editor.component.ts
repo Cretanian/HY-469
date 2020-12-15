@@ -9,6 +9,7 @@ export class GenericVolumeEditorComponent implements OnInit {
   @Input("slider-label") label: string;
   @Input() muted: boolean;
   @Input() volume: number;
+  @Input() prevVolume: number;
   maxSize: number;
   constructor() {}
 

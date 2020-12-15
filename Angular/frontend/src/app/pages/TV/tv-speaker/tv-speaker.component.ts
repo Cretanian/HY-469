@@ -38,7 +38,7 @@ export class TvSpeakerComponent implements OnInit {
     if(myVolume == undefined)
       myVolume = 1;
     this.greenIndicator.nativeElement.style.transform = 
-        'scaleY(' + myVolume + ')'; 
+        'scaleY(' + (myVolume * 2 / 100) + ')'; 
   };
 
   getMyVolume(){
