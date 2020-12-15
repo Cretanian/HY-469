@@ -24,7 +24,8 @@ export class ParticipantsController {
         src2: '../../../assets/profile_photos/zackper.png',
         src3: '../../../assets/participants-mobile/microphone-gray.png',
         team: 'YeetFleet',
-        isMuted: false
+        isMuted: false,
+        volume:75
       },
       {
         name: 'Stylianos Stamatakis',
@@ -32,7 +33,8 @@ export class ParticipantsController {
         src2: '../../../assets/profile_photos/steli.png',
         src3: '../../../assets/participants-mobile/microphone-gray.png',
         team: 'YeetFleet',
-        isMuted: false
+        isMuted: false,
+        volume:75
       },
       {
         name: 'Antonis Agapakis',
@@ -40,7 +42,8 @@ export class ParticipantsController {
         src2: '../../../assets/profile_photos/agantosProfile.png',
         src3: '../../../assets/participants-mobile/microphone-muted.png',
         team: 'YeetFleet',
-        isMuted: false
+        isMuted: false,
+        volume:75
       },
       {
         name: 'Magkoyths Kwnstantinos',
@@ -48,7 +51,8 @@ export class ParticipantsController {
         src2: '../../../assets/profile_photos/profile_picture.png',
         src3: '../../../assets/participants-mobile/microphone-gray.png',
         team: 'YeetFleet',
-        isMuted: false
+        isMuted: false,
+        volume:75
       },
       {
         name: 'Youla Faturu',
@@ -56,7 +60,8 @@ export class ParticipantsController {
         src2: '../../../assets/profile_photos/profile_picture.png',
         src3: '../../../assets/participants-mobile/microphone-muted.png',
         team: 'YeetFleet',
-        isMuted: false
+        isMuted: false,
+        volume:75
       },
       {
         name: 'Savvidis Antonis',
@@ -64,7 +69,8 @@ export class ParticipantsController {
         src2: '../../../assets/profile_photos/profile_picture.png',
         src3: '../../../assets/participants-mobile/microphone-gray.png',
         team: 'YeetFleet',
-        isMuted: false
+        isMuted: false,
+        volume:75
       },
       {
         name: 'Leonidis Asterios',
@@ -72,7 +78,8 @@ export class ParticipantsController {
         src2: '../../../assets/profile_photos/asterios2.png',
         src3: '../../../assets/participants-mobile/microphone-muted.png',
         team: 'YeetFleet',
-        isMuted: false
+        isMuted: false,
+        volume:75
       },
       {
         name: 'Giorgos Georgioy',
@@ -80,7 +87,8 @@ export class ParticipantsController {
         src2: '../../../assets/profile_photos/profile_picture.png',
         src3: '../../../assets/participants-mobile/microphone-muted.png',
         team: 'YeetFleet',
-        isMuted: false
+        isMuted: false,
+        volume:75
       },
       {
         name: 'Kwstas Oman',
@@ -88,7 +96,8 @@ export class ParticipantsController {
         src2: '../../../assets/profile_photos/profile_picture.png',
         src3: '../../../assets/participants-mobile/microphone-muted.png',
         team: 'YeetFleet',
-        isMuted: false
+        isMuted: false,
+        volume:75
       },
       {
         name: 'Giannhs Iowannoy',
@@ -96,7 +105,8 @@ export class ParticipantsController {
         src2: '../../../assets/profile_photos/profile_picture.png',
         src3: '../../../assets/participants-mobile/microphone-muted.png',
         team: 'YeetFleet',
-        isMuted: false
+        isMuted: false,
+        volume:75
       },
       {
         name: 'Maria yas',
@@ -104,7 +114,8 @@ export class ParticipantsController {
         src2: '../../../assets/profile_photos/profile_picture.png',
         src3: '../../../assets/participants-mobile/microphone-muted.png',
         team: 'YeetFleet',
-        isMuted: false
+        isMuted: false,
+        volume:75
       },
       {
         name: 'Cool Dude',
@@ -112,7 +123,8 @@ export class ParticipantsController {
         src2: '../../../assets/profile_photos/profile_picture.png',
         src3: '../../../assets/participants-mobile/microphone-muted.png',
         team: 'YeetFleet',
-        isMuted: false
+        isMuted: false,
+        volume:75
       },
       {
         name: 'Notcool Dude',
@@ -120,7 +132,8 @@ export class ParticipantsController {
         src2: '../../../assets/profile_photos/profile_picture.png',
         src3: '../../../assets/participants-mobile/microphone-muted.png',
         team: 'YeetFleet',
-        isMuted: false
+        isMuted: false,
+        volume:75
       }, 
       {
         name: 'DM',
@@ -128,7 +141,8 @@ export class ParticipantsController {
         src2: '../../../assets/profile_photos/profile_picture.png',
         src3: '../../../assets/participants-mobile/microphone-muted.png',
         team: 'DnD | Reloaded',
-        isMuted: false
+        isMuted: false,
+        volume:75
       }, 
       {
         name: 'Ernon (?)',
@@ -136,7 +150,8 @@ export class ParticipantsController {
         src2: '../../../assets/profile_photos/profile_picture.png',
         src3: '../../../assets/participants-mobile/microphone-muted.png',
         team: 'DnD | Reloaded',
-        isMuted: false
+        isMuted: false,
+        volume:75
       }, 
        {
         name: 'Thrasttusss',
@@ -144,7 +159,8 @@ export class ParticipantsController {
         src2: '../../../assets/profile_photos/profile_picture.png',
         src3: '../../../assets/participants-mobile/microphone-muted.png',
         team: 'DnD | Reloaded',
-        isMuted: false
+        isMuted: false,
+        volume:75
       }, 
       {
         name: 'Balidor Lokiar',
@@ -152,7 +168,8 @@ export class ParticipantsController {
         src2: '../../../assets/profile_photos/profile_picture.png',
         src3: '../../../assets/participants-mobile/microphone-muted.png',
         team: 'DnD | Reloaded',
-        isMuted: false
+        isMuted: false,
+        volume:75
       }, 
       {
         name: 'Trent aaawooooooo',
@@ -160,7 +177,8 @@ export class ParticipantsController {
         src2: '../../../assets/profile_photos/profile_picture.png',
         src3: '../../../assets/participants-mobile/microphone-muted.png',
         team: 'DnD | Reloaded',
-        isMuted: false
+        isMuted: false,
+        volume:75
       }, 
       {
         name: 'Elos The Smallbrainer',
@@ -168,7 +186,8 @@ export class ParticipantsController {
         src2: '../../../assets/profile_photos/profile_picture.png',
         src3: '../../../assets/participants-mobile/microphone-muted.png',
         team: 'DnD | Reloaded',
-        isMuted: false
+        isMuted: false,
+        volume:75
       }, 
       {
         name: 'Pepas Brother',
@@ -176,7 +195,8 @@ export class ParticipantsController {
         src2: '../../../assets/profile_photos/profile_picture.png',
         src3: '../../../assets/participants-mobile/microphone-muted.png',
         team: 'AMI Living Room',
-        isMuted: false
+        isMuted: false,
+        volume:75
       }, 
       {
         name: 'Pepa the Pig',
@@ -184,7 +204,8 @@ export class ParticipantsController {
         src2: '../../../assets/profile_photos/profile_picture.png',
         src3: '../../../assets/participants-mobile/microphone-muted.png',
         team: 'AMI Living Room',
-        isMuted: false
+        isMuted: false,
+        volume:75
       }, 
       {
         name: 'Katerinio',
@@ -192,7 +213,8 @@ export class ParticipantsController {
         src2: '../../../assets/profile_photos/profile_picture.png',
         src3: '../../../assets/participants-mobile/microphone-muted.png',
         team: 'AMI Living Room',
-        isMuted: false
+        isMuted: false,
+        volume:75
       }, 
       {
         name: 'Mariori',
@@ -200,7 +222,8 @@ export class ParticipantsController {
         src2: '../../../assets/profile_photos/profile_picture.png',
         src3: '../../../assets/participants-mobile/microphone-muted.png',
         team: 'AMI Living Room',
-        isMuted: false
+        isMuted: false,
+        volume:75
       }, 
       {
         name: 'Panagos',
@@ -208,7 +231,8 @@ export class ParticipantsController {
         src2: '../../../assets/profile_photos/profile_picture.png',
         src3: '../../../assets/participants-mobile/microphone-muted.png',
         team: 'AMI Living Room',
-        isMuted: false
+        isMuted: false,
+        volume:75
       }, 
     ];
   }
@@ -222,7 +246,6 @@ export class ParticipantsController {
 
   public muteParticipant = (req: Request, res: Response) => {
     let name: string = req.body.name;
-    logger.info(req.body);
     for (var i = 0; i < this.data.length; i++) {
       if (this.data[i].name == name)
         this.data[i].isMuted = !this.data[i].isMuted;

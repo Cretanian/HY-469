@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
+import { participant } from '../../components/utils/participant';
 
 @Component({
   selector: 'app-tv1main',
@@ -6,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tv1main.component.css']
 })
 export class Tv1mainComponent implements OnInit {
-
-  constructor() { }
+  @Input() participants: participant[];
+  constructor() {}
 
   ngOnInit(): void {
   }

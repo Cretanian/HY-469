@@ -6,25 +6,30 @@
 
     <app-screenshare1main
         *ngIf="grid == 10"
+        [participants] = 'participants'
     >
     </app-screenshare1main>
 
     <app-tv1main
         *ngIf="grid == 0"
+        [participants] = 'participants'
     >
     </app-tv1main>
 
     <app-tv3main
         *ngIf="grid == 2"
+        [participants] = 'participants'
     >
     </app-tv3main>
 
     <app-tv3x3main
         *ngIf="grid == 4"
+        [participants] = 'participants'
     ></app-tv3x3main>
 
     <app-tv-chat-on
         *ngIf="grid == 3"
+        [participants] = 'participants'
     ></app-tv-chat-on>
 
     <div

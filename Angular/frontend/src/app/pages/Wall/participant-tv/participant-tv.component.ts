@@ -10,14 +10,12 @@ export class ParticipantTVComponent implements OnInit {
   @Input() name: string;
   @Input() srcProfile: string;
   @Input() maxSize: number;
-  @Input() muted: number;
-  mute:boolean;
+  @Input() muted: boolean;
   camera:boolean;
 
   constructor() { }
 
   ngOnInit(): void {    
-    this.mute = true;
     this.camera = true;
   }
 

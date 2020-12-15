@@ -30,7 +30,7 @@ export class ParticipantsMobileComponent implements OnInit {
       this.participants = new Array();
       for(let i = 0; i < this.helper.length; i++){
         if(this.helper[i].team == this.Team_name){
-          this.participants.push(new participant(this.helper[i].name, this.helper[i].src2, this.helper[i].isMuted))
+          this.participants.push(new participant(this.helper[i].name, this.helper[i].src2, this.helper[i].isMuted,this.helper[i].volume))
         }
       }
     });

@@ -6,12 +6,16 @@
         </div>
 
         <div  class="tv-speakers">
-            <app-tv-cameras-wall></app-tv-cameras-wall>
+            <app-tv-cameras-wall
+            [participants] = 'participants'
+            ></app-tv-cameras-wall>
         </div>
     </div>
 
     <div  class="Participants">
-       <app-f-participants></app-f-participants>
+       <app-f-participants
+            [participants] = 'participants'
+       ></app-f-participants>
     </div>
 
     <div  class="calendar">
