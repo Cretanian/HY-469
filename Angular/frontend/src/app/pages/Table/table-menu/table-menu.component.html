@@ -144,9 +144,17 @@
 
           <div id="shortcuts">
             <g-button
+              *ngIf="!this.userData[0].isMuted"
               (click)="this.buttonMute()"
               class="menu-button"
-              icon="{{ this.iconMuted }}"
+              icon="../../assets/table/buttonMute.png"
+              iconSize="4.5"
+            ></g-button>
+            <g-button
+              *ngIf="this.userData[0].isMuted"
+              (click)="this.buttonMute()"
+              class="menu-button"
+              icon="../../assets/table/buttonUnmute.png"
               iconSize="4.5"
             ></g-button>
             <g-button
