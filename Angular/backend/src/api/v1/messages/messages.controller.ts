@@ -328,7 +328,7 @@ export class MessagesController {
                 ]
               },
               {
-                id: 1,
+                id: 3,
                 photo: 'profile_picture.png',
                 name: 'Chin Yasuo',
                 time: 'Today at 10:35',
@@ -337,7 +337,7 @@ export class MessagesController {
                 emojis: []
               },
               {
-                id: 3,
+                id: 4,
                 photo: 'agantosProfile.png',
                 name: 'agantos',
                 time: 'Today at 10:36',
@@ -351,7 +351,7 @@ export class MessagesController {
                 ]
               },
               {
-                id: 3,
+                id: 5,
                 photo: 'asterios.png',
                 name: 'Asterios Leonidis',
                 time: 'Today at 10:37',
