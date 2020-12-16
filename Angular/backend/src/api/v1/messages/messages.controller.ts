@@ -328,11 +328,34 @@ export class MessagesController {
                 ]
               },
               {
+                id: 1,
+                photo: 'profile_picture.png',
+                name: 'Chin Yasuo',
+                time: 'Today at 10:35',
+                message: "There will be no bonus but feel free to do so!",
+                alignment: 'left',
+                emojis: []
+              },
+              {
                 id: 3,
                 photo: 'agantosProfile.png',
                 name: 'agantos',
                 time: 'Today at 10:36',
-                message: "Come on man, you are embarassing me infront of the wizards.",
+                message: "Can we make it as simplistic as it can be and still get the full grade?",
+                alignment: 'left',
+                emojis: [
+                  {
+                    amount: 1,
+                    emojiSrc: 'tears_of_joy_icon.png'
+                  }
+                ]
+              },
+              {
+                id: 3,
+                photo: 'asterios.png',
+                name: 'Asterios Leonidis',
+                time: 'Today at 10:37',
+                message: "Of course. The video's purpose is for us to get a basic grasp of what you have already implemented.",
                 alignment: 'left',
                 emojis: [
                   {

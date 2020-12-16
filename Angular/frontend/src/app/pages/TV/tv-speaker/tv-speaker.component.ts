@@ -1,4 +1,6 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { SocketsService } from 'src/app/global/services';
+import { ParticipantsService } from 'src/app/global/services/participants/participants.service';
 
 @Component({
   selector: 'app-tv-speaker',
@@ -22,6 +24,19 @@ export class TvSpeakerComponent implements OnInit {
   @ViewChild('sizetext', {static:true}) sizetext: ElementRef;
   @ViewChild('greenIndicator', {static: false}) greenIndicator: ElementRef;
 
+  constructor(
+    private socketService: SocketsService,
+    private participantsService: ParticipantsService
+  ) {}
+
+  ngOnInit(): void {
+    this.socketService.syncMessages('participant/' + this.name + '/volume').subscribe(
+      (event) => {
+        this.setGreenIndicator(event.message);
+      }
+    )
+  }
+
   ngAfterViewInit(): void {
     this.sizeRef.nativeElement.style.width = this.width;
     this.sizeRef.nativeElement.style.height = this.height;
@@ -31,7 +46,7 @@ export class TvSpeakerComponent implements OnInit {
     this.sizetext.nativeElement.style.fontSize = this.fontsize;
     this.sizetext.nativeElement.style.top = this.top;
 
-    this.getMyVolume();
+    this.getMyVolume()
   }
 
   setGreenIndicator(myVolume: number){
@@ -42,13 +57,11 @@ export class TvSpeakerComponent implements OnInit {
   };
 
   getMyVolume(){
-    this.setGreenIndicator(2);
+    this.participantsService.getParticipantVolume(this.name).subscribe(
+      ( data: any ) => {
+        console.log('data: ' + data.volume);
+        this.setGreenIndicator(data.volume);
+      }
+    );
   };
-
-
-  constructor() {}
-
-  ngOnInit(): void {
-    
-  }
 }

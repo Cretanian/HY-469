@@ -18,12 +18,15 @@ export class TvMasterComponent implements OnInit {
     private participantsService: ParticipantsService
   ) {}
 
-  grid: number = 3;
+  grid: number = -1;
   isMouseHovering = false;
 
   ngOnInit(): void {
+    this.socketService.syncMessages("call/accept").subscribe((event) => {
+      this.grid = 3;
+    });
+
     this.socketService.syncMessages("tv/grid").subscribe((event) => {
-      console.log("Event arrived! Event message: " + event.message);
       this.grid = event.message;
     });
 

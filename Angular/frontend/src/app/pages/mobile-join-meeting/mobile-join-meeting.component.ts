@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { InOutDevicesService } from 'src/app/global/services/Cretanian/InOut-devices/inout-devices.service';
 import { SocketsService } from "src/app/global/services";
 import { OutVideoService } from 'src/app/global/services/Cretanian/out-video/out-video.service';
+import { UserService } from 'src/app/global/services/user/user.service';
 
 @Component({
   selector: 'mobile-join-meeting',
@@ -18,7 +19,8 @@ export class MobileJoinMeetingComponent implements OnInit {
   constructor(
     private outvideoService: OutVideoService,
     private inoutdevicesService: InOutDevicesService,
-    private socketService: SocketsService
+    private socketService: SocketsService,
+    private userService: UserService
   ) { }
 
   ngOnInit(): void {
@@ -38,6 +40,10 @@ export class MobileJoinMeetingComponent implements OnInit {
       this.inputOptions = data.inputDevices as dropdownOption[];
       this.outputOptions = data.outputDevices as dropdownOption[];
     });
+  }
+
+  joinCall(){
+    this.userService.acceptCall();
   }
 }
 

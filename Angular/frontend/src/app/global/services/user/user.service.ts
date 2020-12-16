@@ -7,6 +7,7 @@ import { map } from "rxjs/operators";
 import { environment } from "src/environments/environment";
 import * as _ from "lodash";
 import { IpService } from './ip.service'
+import { SocketsService } from "../core/sockets.service";
 
 @Injectable({
   providedIn: "root",
@@ -51,5 +52,13 @@ export class UserService {
       },
       { headers: this.headers }   
     )
+  }
+
+  public acceptCall(){
+    return this.http.post(
+      `${this.hostURL}/api/user/acceptCall`,
+      {},
+      { headers: this.headers }   
+    ).subscribe();
   }
 }

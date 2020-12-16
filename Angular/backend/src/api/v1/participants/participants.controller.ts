@@ -13,7 +13,8 @@ export class ParticipantsController {
     router
       .get("/getAll", this.getAll)
       .post("/muteParticipant", this.muteParticipant)
-      .post("/changeVolumeParticipant", this.changeVolumeParticipant);
+      .post("/changeVolumeParticipant", this.changeVolumeParticipant)
+      .post('/getParticipantVolume', this.getParticipantVolume);
     return router;
   }
 
@@ -262,9 +263,11 @@ export class ParticipantsController {
     ];
   }
 
-  /**
-   * Broadcasts a received message to all connected clients
-   */
+  private BroadcastChanges(event: string, message: string): void{
+    const socketService: SocketsService = DIContainer.get(SocketsService);
+    socketService.broadcast(event, message);
+  }
+  
   public getAll = (req: Request, res: Response) => {
     res.send(this.data);
   };
@@ -297,6 +300,8 @@ export class ParticipantsController {
           this.data[i].volume = volume;
           this.data[i].isMuted = false;
         }
+
+        this.BroadcastChanges('participant/' + name + '/volume', '' + volume);
       }
     }
 
@@ -306,4 +311,17 @@ export class ParticipantsController {
 
     res.send("200");
   };
+
+  public getParticipantVolume = (req: Request, res: Response) => {
+    let name: string = req.body.name;
+
+    this.data.forEach((element: any) => {
+      if(element.name == name){
+        res.send({ volume: element.volume });
+        return;
+      }
+    })
+
+    res.send('404');
+  }
 }

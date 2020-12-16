@@ -23,7 +23,8 @@ export class UserController {
     const router = Router();
     router
       .post("/getUserData", this.getUserData)
-      .post("/setUserIP", this.setUserIP);
+      .post("/setUserIP", this.setUserIP)
+      .post('/acceptCall', this.acceptCall);
     return router;
   }
 
@@ -45,6 +46,11 @@ export class UserController {
         profile: "zackper.png",
       },
     ];
+  }
+
+  private BroadcastChanges(event: string, message: string): void{
+    const socketService: SocketsService = DIContainer.get(SocketsService);
+    socketService.broadcast(event, message);
   }
 
   public setUserIP = (req: Request, res: Response) => {
@@ -79,5 +85,11 @@ export class UserController {
     });
 
     return;
+  };
+
+  public acceptCall = (req: Request, res: Response) => {
+    logger.info('broadcasting');
+    this.BroadcastChanges('call/accept', '');
+    res.send('200');
   };
 }

@@ -51,4 +51,16 @@ export class ParticipantsService {
       )
       .subscribe();
   }
+
+  public getParticipantVolume(name: string){
+    const headers = { "content-type": "application/json" };
+    return this.http
+      .post(
+        `${this.hostURl}/api/participants/getParticipantVolume`,
+        {
+          name: name,
+        },
+        { headers: headers }
+      );
+  }
 }
