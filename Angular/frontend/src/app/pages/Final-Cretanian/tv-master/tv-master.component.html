@@ -48,11 +48,20 @@
       iconSize="3"
     ></g-button>
     <g-button
+      *ngIf='this.selfData[0].isMuted == false'
       (mouseover)="isMouseHovering = true"
       (click)="this.muteSelf()"
       background="../../../../assets/tv-buttons/tv_button_background.png"
       icon="../../../../assets/tv-buttons/tv_mute_icon.png"
       iconSize="2"
+    ></g-button>
+    <g-button
+      *ngIf='this.selfData[0].isMuted == true'
+      (mouseover)="isMouseHovering = true"
+      (click)="this.muteSelf()"
+      background="../../../../assets/tv-buttons/tv_button_background.png"
+      icon="../../../../assets/tv-buttons/tv_muted_icon.png"
+      iconSize="2.8"
     ></g-button>
   </div>
   <img

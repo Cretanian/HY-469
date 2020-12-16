@@ -5,6 +5,8 @@ import { MessagesService } from 'src/app/global/services/messages/messages.servi
 import { PinboardService } from 'src/app/global/services/wall/pinboard.service';
 import { Message, Reaction } from '../Final-Cretanian/conversations/conversations.component';
 import { Pin } from '../Wall/pinned/Pin';
+import { UserService } from '../../global/services/user/user.service'
+import { IpService  } from '../../global/services/user/ip.service'
 
 @Component({
   selector: 'mobile-message',
@@ -23,7 +25,9 @@ export class MobileMessageComponent {
   constructor(
     private messageService: MessagesService,
     private socketService: SocketsService,
-    private pinboardService: PinboardService
+    private pinboardService: PinboardService,
+    private ipService: IpService,
+    private userService: UserService
   ) {}
 
 
@@ -58,18 +62,23 @@ export class MobileMessageComponent {
   }
 
   pinMessage(comment: string): void{
-    console.log('halooo');
+    this.ipService.getIPAddress().subscribe(
+      (data: any) => {
+          this.userService.getUserData(data.ip).subscribe(
+            (data: any) => {
+              let username = data.username;
+              let message = this.message;
+              let pin: Pin = new Pin(
+                username,
+                comment,
+                'message',
+                message
+              )
 
-    console.log('profile: ' + this.message.photo)
-
-    let message = this.message;
-    let pin: Pin = new Pin(
-      message.name,
-      comment,
-      'message',
-      message
+              this.pinboardService.addPin(pin);
+           }
+         )
+      }
     )
-
-    this.pinboardService.addPin(pin);
   }
 }
