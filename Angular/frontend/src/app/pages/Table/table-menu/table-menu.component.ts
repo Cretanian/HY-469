@@ -7,6 +7,8 @@ import {
   EventEmitter,
   Output,
 } from "@angular/core";
+import { SocketsService } from "src/app/global/services";
+import { SelfInformationService } from "./../../../global/services/self-info/self-information.service";
 
 @Component({
   selector: "app-table-menu",
@@ -28,6 +30,7 @@ export class TableMenuComponent implements OnInit {
   tvGridWindowSpawned: boolean;
   filesWindowSpawned: boolean;
   fileIsOpen: boolean;
+  userData;
 
   muted: boolean;
   iconMuted: string;
@@ -35,7 +38,10 @@ export class TableMenuComponent implements OnInit {
   carouselLeftIndex: number;
   carousel: any;
 
-  constructor() {
+  constructor(
+    private socketService: SocketsService,
+    private selfInformationService: SelfInformationService
+  ) {
     this.muted = false;
     this.iconMuted = "../../assets/table/buttonMute.png";
     this.display = true;
@@ -52,6 +58,14 @@ export class TableMenuComponent implements OnInit {
     this.initializeCarousel();
     this.displayCarousel(3);
     this.fileIsOpen = false;
+
+    this.socketService
+      .syncMessages("selfInformation/change")
+      .subscribe((event) => {
+        this.loadSelfInfo();
+      });
+
+    this.loadSelfInfo();
   }
 
   //Button Functions
@@ -92,10 +106,7 @@ export class TableMenuComponent implements OnInit {
   }
 
   buttonMute() {
-    this.muted = !this.muted;
-    if (this.muted == true)
-      this.iconMuted = "../../assets/table/buttonUnmute.png";
-    else this.iconMuted = "../../assets/table/buttonMute.png";
+    this.selfInformationService.muteSelf();
   }
 
   spawnMenu($event) {
@@ -261,6 +272,12 @@ export class TableMenuComponent implements OnInit {
     if (x < 263) {
       return 1150 + "px";
     } else return (1585 - 250 - x > 0 ? 1585 - 250 - x : 1585 - x) + "px";
+  }
+
+  loadSelfInfo() {
+    this.selfInformationService.getAll().subscribe((data) => {
+      this.userData = data;
+    });
   }
 }
 

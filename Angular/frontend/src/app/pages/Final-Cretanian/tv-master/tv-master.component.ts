@@ -1,3 +1,4 @@
+import { SelfInformationService } from "./../../../global/services/self-info/self-information.service";
 import { Component, OnInit } from "@angular/core";
 import { SocketsService } from "src/app/global/services";
 import { ParticipantsService } from "src/app/global/services/participants/participants.service";
@@ -12,10 +13,12 @@ export class TvMasterComponent implements OnInit {
   Team_name: string;
   helper: participant[];
   participants: participant[];
+  selfData;
 
   constructor(
     private socketService: SocketsService,
-    private participantsService: ParticipantsService
+    private participantsService: ParticipantsService,
+    private selfInformationService: SelfInformationService
   ) {}
 
   grid: number = -1;
@@ -39,7 +42,14 @@ export class TvMasterComponent implements OnInit {
         this.loadParticipants();
       });
 
+    this.socketService
+      .syncMessages("selfInformation/change")
+      .subscribe((event) => {
+        this.loadSelfInfo();
+      });
+
     this.loadParticipants();
+    this.loadSelfInfo();
   }
 
   loadParticipants() {
@@ -60,5 +70,16 @@ export class TvMasterComponent implements OnInit {
         }
       }
     });
+  }
+
+  loadSelfInfo() {
+    this.selfInformationService.getAll().subscribe((data) => {
+      this.selfData = data;
+    });
+  }
+
+  muteSelf() {
+    this.selfInformationService.muteSelf();
+    this.isMouseHovering = false;
   }
 }

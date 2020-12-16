@@ -1,66 +1,63 @@
-<div class='main-container'>
-
-    <app-tv-incoming-call
+<div class="main-container">
+  <app-tv-incoming-call
         *ngIf="grid == -1"
         group_name='YeetFleet'
         group_image='../../../../assets/teams-button/yeet.png'
     ></app-tv-incoming-call>
+    
+  <app-screenshare1main *ngIf="grid == 10" [participants]="participants">
+  </app-screenshare1main>
 
-    <app-screenshare1main
-        *ngIf="grid == 10"
-        [participants] = 'participants'
-    >
-    </app-screenshare1main>
+  <app-tv1main *ngIf="grid == 0" [participants]="participants"> </app-tv1main>
 
-    <app-tv1main
-        *ngIf="grid == 0"
-        [participants] = 'participants'
-    >
-    </app-tv1main>
+  <app-tv3main *ngIf="grid == 2" [participants]="participants"> </app-tv3main>
 
-    <app-tv3main
-        *ngIf="grid == 2"
-        [participants] = 'participants'
-    >
-    </app-tv3main>
+  <app-tv3x3main
+    *ngIf="grid == 4"
+    [participants]="participants"
+  ></app-tv3x3main>
 
-    <app-tv3x3main
-        *ngIf="grid == 4"
-        [participants] = 'participants'
-    ></app-tv3x3main>
+  <app-tv-chat-on
+    *ngIf="grid == 3"
+    [participants]="participants"
+  ></app-tv-chat-on>
 
-    <app-tv-chat-on
-        *ngIf="grid == 3"
-        [participants] = 'participants'
-    ></app-tv-chat-on>
+  <div
+    class="hoverDetector"
+    (mouseover)="isMouseHovering = true"
+    (mouseout)="isMouseHovering = false"
+  ></div>
 
-    <div
-        class='hoverDetector'
-        (mouseenter)='isMouseHovering = true'
-        (mouseleave)='isMouseHovering = false'
-    ></div>
-
-    <div class='tv-buttons' 
-        [ngClass]="{
-            'buttons-show' : isMouseHovering == true,
-            'buttons-hide' : isMouseHovering == false
-        }"
-    >
-        <g-button
-            background='../../../../assets/tv-buttons/tv_button_background.png'
-            icon='../../../../assets/tv-buttons/tv_record_icon.png'
-            iconSize='3'
-        ></g-button>
-        <g-button
-            background='../../../../assets/tv-buttons/tv_button_background.png'
-            icon='../../../../assets/tv-buttons/tv_screenshare_icon.png'
-            iconSize='3'
-        ></g-button>
-        <g-button
-            background='../../../../assets/tv-buttons/tv_button_background.png'
-            icon='../../../../assets/tv-buttons/tv_mute_icon.png'
-            iconSize='2'
-        ></g-button>
-    </div>
-
+  <div
+    class="tv-buttons"
+    [ngClass]="{
+      'buttons-show': isMouseHovering == true,
+      'buttons-hide': isMouseHovering == false
+    }"
+  >
+    <g-button
+      (mouseover)="isMouseHovering = true"
+      background="../../../../assets/tv-buttons/tv_button_background.png"
+      icon="../../../../assets/tv-buttons/tv_record_icon.png"
+      iconSize="3"
+    ></g-button>
+    <g-button
+      (mouseover)="isMouseHovering = true"
+      background="../../../../assets/tv-buttons/tv_button_background.png"
+      icon="../../../../assets/tv-buttons/tv_screenshare_icon.png"
+      iconSize="3"
+    ></g-button>
+    <g-button
+      (mouseover)="isMouseHovering = true"
+      (click)="this.muteSelf()"
+      background="../../../../assets/tv-buttons/tv_button_background.png"
+      icon="../../../../assets/tv-buttons/tv_mute_icon.png"
+      iconSize="2"
+    ></g-button>
+  </div>
+  <img
+    *ngIf="this.selfData[0].isMuted"
+    src="../../../../assets/tv-master/selfIsMuted.png"
+    style="position: absolute; top: 0.5vw; left: 0px"
+  />
 </div>
