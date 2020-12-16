@@ -11,6 +11,7 @@ export class ConversationPreviewComponent {
 
   @Input('initialMessage') initialMessage: Message;
   @Input('replyMessage') replyMessage: Message;
+  @Input('isOnCall') isOnCall: boolean = false;
 
   @ViewChild('initialMessageRef', {static:true}) initialMessageRef: ElementRef;
   @ViewChild('replyMessageRef', {static:true}) replyMessageRef: ElementRef;
@@ -26,7 +27,6 @@ export class ConversationPreviewComponent {
   }
 
   ngAfterViewInit(): void{
-    
-    
+  
   }
 }

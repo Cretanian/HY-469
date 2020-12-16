@@ -1,0 +1,47 @@
+@keyframes ShowAnim{
+    from{
+        transform: translateY(-100%);
+    }
+    to{
+        transform: translateY(0%);
+    }
+}
+
+.main-container{
+    width: 1920px;
+    height: 1080px;
+}
+
+.tv-buttons{
+    position: fixed;
+    top: 0px;
+    
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+}
+
+g-button{
+    padding: 1vw;
+}
+
+.buttons-show{
+    display: flex;
+    animation-name: ShowAnim;
+    animation-duration: 0.3s;
+}
+
+.buttons-hide{
+    display: none;
+}
+
+.hoverDetector{
+    background-color: back;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+    width: 100vw;
+    height: 50vh;
+}

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { OutVideoService } from 'src/app/global/services/Cretanian/out-video/out-video.service';
 
 @Component({
   selector: 'app-audio-settings-camera',
@@ -7,9 +8,18 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class AudioSettingsCameraComponent implements OnInit {
   @Input("image") image: string;
-  constructor() { }
+  dropdownOptions: dropdownOption[];
+
+  
+  constructor(private outvideoService: OutVideoService) { }
 
   ngOnInit(): void {
+    this.outvideoService.getAll("asd").subscribe(data => {
+      this.dropdownOptions = data as dropdownOption[];
+    });
   }
+}
 
+class dropdownOption{
+  name: string;
 }

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { InOutDevicesService } from '../../../../global/services/Cretanian/InOut-devices/inout-devices.service'
 
 @Component({
   selector: 'app-out-audio',
@@ -7,9 +8,28 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class OutAudioComponent implements OnInit {
   @Input ('device') device: string;
-  constructor() { }
+  @Input ()volume:number;
+  @Input ()dropdownOptions: dropdownOption[];
+    
+  ngOnInit() { }
 
-  ngOnInit(): void {
+  constructor(
+    private inoutService: InOutDevicesService
+  ) { }
+
+  postToBase(selection: string){
+    console.log('asdasdasd ' + this.device);
+    console.log('asdasdasd ' + selection);
+    
+    if(this.device == 'Input'){
+      this.inoutService.setInput(selection);
+    }
+    else if (this.device == 'Output'){
+      this.inoutService.setOutput(selection);
+    }
   }
+}
 
+class dropdownOption{
+  name: string;
 }

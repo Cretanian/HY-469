@@ -1,8 +1,8 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms'; 
-import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserModule } from "@angular/platform-browser";
+import { HttpClientModule } from "@angular/common/http";
+import { NgModule } from "@angular/core";
+import { FormsModule } from "@angular/forms";
+import { ReactiveFormsModule } from "@angular/forms";
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -88,6 +88,26 @@ import { GenericVolumeDropdownComponent } from './pages/Cretanian/generic-volume
 import { ManyUsersComponent } from './pages/Final-Wall/many-users/many-users.component';
 import { PinboardComponent } from './pages/Wall/pinboard/pinboard.component';
 import { FParticipantsComponent } from './pages/Wall/f-participants/f-participants.component';
+import { ControllerCallChatComponent } from './pages/Final-Cretanian/controller-call-chat/controller-call-chat.component';
+import { ExplorerTeamConversationComponent } from './pages/Final-Cretanian/explorer-team-conversation/explorer-team-conversation.component';
+import { ExplorerContactChatComponent } from './pages/Final-Cretanian/explorer-contact-chat/explorer-contact-chat.component';
+import { SetUserComponent } from './pages/set-user/set-user.component';
+import { TvMasterComponent } from './pages/Final-Cretanian/tv-master/tv-master.component';
+import { TvChatComponent } from './pages/TV/tv-chat/tv-chat.component';
+import { TvMessageComponent } from './pages/TV/tv-message/tv-message.component';
+import { AddButtonComponent } from './pages/Cretanian/add-button/add-button.component';
+import { ReturnOncallButtonComponent } from './pages/Cretanian/return-oncall-button/return-oncall-button.component';
+import { FilesWindowComponent } from './pages/Table/files-window/files-window.component';
+import { FilesWindowListComponent } from './pages/Table/files-window-list/files-window-list.component';
+import { TableFilesComponent } from './pages/Table/table-files/table-files.component';
+import { OpenFileComponent } from './pages/Table/open-file/open-file.component';
+import { FinalTableComponent } from './pages/Table/final-table/final-table.component';
+import { PinnedComponent } from './pages/Wall/pinned/pinned.component';
+import { MobileAddPinComponent } from './pages/mobile-add-pin/mobile-add-pin.component';
+import { MobilePinboardComponent } from './pages/Final-Cretanian/mobile-pinboard/mobile-pinboard.component';
+import { MobilePinComponent } from './pages/mobile-pin/mobile-pin.component';
+import { LoadingCircleComponent } from './pages/components/loading-circle/loading-circle.component';
+import { TeamsParticipantsComponent } from './pages/Final-Cretanian/teams-participants/teams-participants.component';
 
 @NgModule({
   declarations: [
@@ -168,12 +188,32 @@ import { FParticipantsComponent } from './pages/Wall/f-participants/f-participan
     MobileControllerCallInfoComponent,
     MobileMeetingDeviceSettingComponent,
     DimmerComponent,
-    ParticipantsSettingsComponent,    
+    ParticipantsSettingsComponent,
     GenericVolumeDropdownComponent,
     ManyUsersComponent,
     PinboardComponent,
-    FParticipantsComponent,    
+    FParticipantsComponent,
+    TvMasterComponent,
+    TvChatComponent,
+    TvMessageComponent,
     routingComponents,
+    ControllerCallChatComponent,
+    ExplorerTeamConversationComponent,
+    ExplorerContactChatComponent,
+    SetUserComponent,
+    AddButtonComponent,
+    ReturnOncallButtonComponent,
+    FilesWindowComponent,
+    FilesWindowListComponent,
+    TableFilesComponent,
+    OpenFileComponent,
+    FinalTableComponent,
+    PinnedComponent,
+    MobileAddPinComponent,
+    MobilePinboardComponent,
+    MobilePinComponent,
+    LoadingCircleComponent,
+    TeamsParticipantsComponent,
   ],
   imports: [
     BrowserModule,
@@ -184,6 +224,6 @@ import { FParticipantsComponent } from './pages/Wall/f-participants/f-participan
     BrowserAnimationsModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

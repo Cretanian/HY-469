@@ -18,4 +18,10 @@
     width: 100%;
     height: 16.85vw;
     background: #F1F1F1;
+
+    display: flex;
+}
+
+pinned{
+    padding: 10px;
 }

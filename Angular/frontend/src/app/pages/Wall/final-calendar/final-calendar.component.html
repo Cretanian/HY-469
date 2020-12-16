@@ -5,15 +5,19 @@
 
     <div class = "today-cal">
         <app-generic-upcoming-events-background
-        date = '13'
-        month = 'JUL'
-        day = 'Today'
+        *ngFor="let event of events_array;"
+        [date] = 'event.date'
+        [month] = 'event.month'
+        [day] = 'event.day'
+        [team_name] = 'Team_name'
         ></app-generic-upcoming-events-background>
     </div>
 
     <div class = "upcomming-cal">
         <app-f-display-upcoming-events
         day = 'Upocming Event'
+        [team_name] = 'Team_name'
+        [current_events_array] = 'current_events_array'
         ></app-f-display-upcoming-events>
     </div>
 </div>

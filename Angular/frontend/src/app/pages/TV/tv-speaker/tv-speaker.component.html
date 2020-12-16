@@ -1,12 +1,30 @@
 <div #sizeRef class = "size">
     <div class = "pic">
-        <img src="{{image_url}}">
+        <img *ngIf = "this.name === 'Zacharias Pervolarakis'" src="../../../../assets/tv-speaker/zak.png">
+        <img *ngIf = "this.name === 'Stylianos Stamatakis'" src="../../../../assets/tv-speaker/stam.png">
+        <img *ngIf = "this.name === 'Antonis Agapakis'" src="../../../../assets/tv-speaker/antos.png">
+        <img *ngIf = "this.name === 'Magkoyths Kwnstantinos'" src="../../../../assets/tv-speaker/kario.png">
+        <img *ngIf = "this.name === 'Youla Faturu'" src="../../../../assets/tv-speaker/fat.png">
+        <img *ngIf = "this.name === 'Savvidis Antonis'" src="../../../../assets/tv-speaker/sav.png">
+        <img *ngIf = "this.name === 'Leonidis Asterios' || 
+                      this.name ==='Giorgos Georgioy'   || 
+                      this.name ==='Kwstas Oman'        || 
+                      this.name ==='Giannhs Iowannoy'   || 
+                      this.name ==='Maria yas'          || 
+                      this.name ==='Cool Dude'          || 
+                      this.name ==='Notcool Dude'"
+         src="../../../../assets/tv-speaker/meme.png">
     </div>
 
     <div class = "bar">
 
         <div class="icon">
-            <img src="{{icon}}">
+
+            <div #greenIndicator class='green-indicator'></div>
+
+            <img *ngIf = '!mic' class='mic' src="\assets\slider\mic.png">
+            <img *ngIf = 'mic' class='mic' src="\assets\slider\muted_mic.png">
+
         </div>
 
         <div class=container3>

@@ -6,42 +6,26 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./f-display-upcoming-events.component.css']
 })
 export class FDisplayUpcomingEventsComponent implements OnInit {
-  @Input ('date') date: string;
-  @Input ('month') month: string;
-  @Input ('day') day: string;
+  @Input () day: string;
+  @Input () team_name: string;
+  @Input ()current_events_array:event[];
 
-  border_array:border_event[] = [
-    {
-      "border_date" : "14",
-      "border_month" : "JUL",
-      "border_day" : "MON"
-    },
-    {
-      "border_date" : "14",
-      "border_month" : "JUL",
-      "border_day" : "MON"
-    },
-    {
-      "border_date" : "14",
-      "border_month" : "JUL",
-      "border_day" : "MON"
-    },
-  
-    ]; 
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
+
   }
 
 }
 
-class border_event{
-  border_date:string;
-  border_month:string;
-  border_day:string;
-  constructor() { 
-    this.border_date ='';
-    this.border_month ='';
-    this.border_day ='';
+class event{
+  date: string;
+  month:string;
+  day: string;
+
+  constructor(date: string, month:string, day: string){
+    this.date = date;
+    this.month = month;
+    this.day = day;
   }
 }

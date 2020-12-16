@@ -1,10 +1,4 @@
-<div class='phone'>
-    <header
-        class='header'
-        name='Current Chat Call'
-        src1 = '\assets\tv-grid\back-header.png'
-        (event1) = 'backClicked()'
-    ></header>
+<div class='main-container'>
     <div class="body">
         <div class='main-container'>
 
@@ -19,26 +13,18 @@
                 </div>
 
                 <mobile-message
+                    contact={{contact}}
+                    teamName={{teamName}}
+                    conversationID={{conversationID}}
                     *ngFor='let message of messages'
                         [message]='message'
-                    (click)='openExtras($event)'
                 ></mobile-message>
 
-                <!-- Extras  for when message is clicked -->
-                <message-extra
-                    *ngIf='extrasOpened'
-                    class='message-extra'
-                    (closeEmitter)='closeExtras()'
-                ></message-extra>
-
             </div>
 
-            <div class='chat-bar-container'>
-                <mobile-chat-bar
-                    #chatBar
-                    class='chat-bar'
-                ></mobile-chat-bar>
-            </div>
+            <loading-circle
+                *ngIf='isContectLoaded == false'
+            ></loading-circle>
         </div>
     </div>
 </div>

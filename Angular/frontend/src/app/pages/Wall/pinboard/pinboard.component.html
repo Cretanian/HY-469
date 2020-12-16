@@ -4,6 +4,12 @@
     </div>
 
     <div  class="board">
-        
+        <pinned
+            *ngFor='let pin of pins'
+            [user]='pin.user'
+            [type]='pin.type'
+            [value]='pin.value'
+            [comment] ='pin.comment'
+        ></pinned>
     </div>
 </div>

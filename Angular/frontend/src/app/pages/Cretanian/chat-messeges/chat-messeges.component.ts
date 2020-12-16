@@ -11,11 +11,9 @@ export class ChatMessegesComponent implements OnInit {
   @Input ('name') name: string;
   @Input ('last_msg') last_msg: string;
   @Input ('active_state') active: string;
+  @Input ('date') date: string;
 
-  date : string;
-  constructor() {
-    this.date = "10:34pm";
-   }
+  constructor() {}
 
   ngOnInit(): void {
   }

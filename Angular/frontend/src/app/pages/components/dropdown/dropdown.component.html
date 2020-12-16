@@ -1,6 +1,6 @@
 <div class="dropdown">
     <div (click) = "dropdownOpen = !dropdownOpen" class = dropdownButtonContainer>   
-        <div class = dropdownButtonText>{{name}}</div>
+        <div class = dropdownButtonText>{{dropdownOptions[0].name}}</div>
         <img class = dropdownButtonImage *ngIf = "dropdownOpen === false" src = "../../../assets/icons/downArrowGray.png">
         <img class = upButtonImage *ngIf = "dropdownOpen === true" src = "../../../assets/icons/upArrowGray.png">
     </div>
@@ -9,7 +9,7 @@
         class = "option" 
         [options]='this.dropdownOptions'
         (click) = "dropdownOpen = !dropdownOpen"
+        (clicked_event) = "set_name($event)"
       ></dropdown-menu>
     </div>
-    
   </div>

@@ -9,7 +9,7 @@ export class CallendaEventWallComponent implements OnInit {
   
   @Input ('event') event: string;
   @Input ('time') time: string;
-
+  @Input ('color') color: string;
   constructor() { }
 
   ngOnInit(): void {

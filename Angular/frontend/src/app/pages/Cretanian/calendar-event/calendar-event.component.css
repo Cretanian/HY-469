@@ -11,7 +11,7 @@
 .color{  
     height: 100%;
     width: 7%;
-    background-color: violet;
+    background-color: #8d0086;
     border-radius: 1vw 0vw 0vw 1vw;
 }
 
@@ -56,4 +56,15 @@ div.container3 {
     position: absolute;
     top: 40%;
     transform: translate(0, -50%); 
+ }
+
+ div.container4 h1 {
+    bottom: 0; right: 0;
+    position: absolute;
+    text-align:right;
+    top: 20%;
+    font-weight: 800;
+    margin-right: 2.5%;
+    font-size: 4vw;
+   
  }

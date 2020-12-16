@@ -6,9 +6,10 @@
         <dropdown 
             class='dropdown'
             [dropdownOptions]='this.dropdownOptions'
+            (selectionClicked)='dropdownChanged($event)'
         ></dropdown>
         <div>
-            <img 
+            <img
                 class='toggler'
                 *ngIf='!toggler'
                 src='../../assets/call_mode/toggler_off.png'

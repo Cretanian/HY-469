@@ -1,6 +1,16 @@
-<div #aname class = "containerAll" >{{this.setMaxSize(aname.offsetWidth, 5.7234220532)}}
-    <img class = imgProfile src = {{srcProfile}} width = "26px" height = "26px">
-    <h1 class = name>{{this.format(name)}}</h1>
-    <img class = imgVideo src = {{srcCamera}}  width = "17px" height = "26px">
-    <img class = imgMic src = {{srcMic}}  width = "17px" height = "26px">
+<div #aname class = "containerAll" >{{this.setMaxSize(aname.offsetWidth, 8.7234220532)}}
+    <div style="width: 90%; display: flex;flex-direction: row;align-items: center;">
+        <img class = imgProfile src = {{srcProfile}} width = "36px" height = "36px">
+        <h1 class = name>{{this.format(name)}}</h1>
+    </div>
+
+    <div style="width: 5%;margin-left: 0.05vw; margin-right: 0.75vw;">
+        <img class = imgVideo *ngIf = "camera === false" src = "../../../../assets/camera-off.png" >
+        <img class = imgVideo *ngIf = "camera === true" src = "../../../../assets/camera-on.png">
+    </div>
+
+    <div style="width: 5%;margin-right: 0.25vw;">
+        <img class = imgMic *ngIf = "muted === false" src = "../../../../assets/mic_wall.png">
+        <img class = imgMic *ngIf = "muted === true" src = "../../../../assets/mic_wall_off.png">
+    </div>
 </div>

@@ -1,0 +1,26 @@
+<div class="phone">
+    <header class='header'
+        name = {{teamName}}
+        src1='../../../../assets/tv-grid/back-header.png'
+        src2='../../../assets/call_icon.png' 
+        src3='../../../assets/team_more_icon.png'
+        (event1)='backClicked()'
+    ></header>
+
+    <div class="body">    
+        <mobile-chat
+            class='chat'
+            teamName={{teamName}}
+            conversationID='{{conversationID}}'
+        ></mobile-chat>
+    </div>
+
+    <mobile-chat-bar
+        teamName={{teamName}}
+        conversationID={{conversationID}}
+    >
+    </mobile-chat-bar>
+
+    <mobile-footer class='footer' activeTab='teams'></mobile-footer>
+
+</div>

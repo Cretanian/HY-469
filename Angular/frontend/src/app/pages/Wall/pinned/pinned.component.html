@@ -1,0 +1,28 @@
+<div class='main-container'>
+    <div class='label-container'>
+        <img class='label-pin' src='../../../../assets/wall/pin.png' alt=''>
+        <p class='label-name'>{{user}}</p>
+    </div>
+
+    <div class='pinned-container'>
+        <p class='pinned-message' >{{pin.comment}}</p>
+
+        <div 
+            class='pinned-content'
+            *ngIf="pin.type == 'image'"
+        >
+            <img src={{pin.value}} alt=''>
+        </div>
+
+        <div 
+            class='pinned-content'
+            *ngIf="pin.type == 'message'"
+        >
+            <tv-message
+                contact='somebody'
+                [message]='pin.value'
+            ></tv-message>
+        </div>
+
+    </div>
+</div>

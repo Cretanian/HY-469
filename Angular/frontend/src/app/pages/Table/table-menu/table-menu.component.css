@@ -1,50 +1,95 @@
-.main-container{
-    width: 720px;
-    height: 510px;
-    position: relative;
+.allContainer {
+  display: flex;
+  flex-direction: row;
+  min-width: 470px;
+  min-height: 344px;
 }
 
-.container{
-    width: 720px;
-    height: auto;;
-    position: absolute;
-    top: 0%;
-    left: 2%;
-    margin: auto;
+.spawn-menu {
+  width: 15vw;
+  height: 15vw;
+  background-color: gray;
 }
 
-#menu-buttons{
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: space-evenly;
-    margin: auto;
+.main-container {
+  width: 430px;
+  height: 285px;
+  position: relative;
 }
 
-#shortcuts{
-    padding-left: 5%;
+.menu-container {
+  position: absolute;
+  top: 0px;
+  left: 6px;
 }
 
-#menu-font{
-    font-size: 3.5em;
+.background {
+  top: 0px;
+  left: 0px;
 }
 
-#hr-menu{
-    border: 4px solid grey;
-    border-radius: 4px;
+#menu-buttons {
+  display: flex;
+  align-items: center;
 }
 
-#shortcut-font{
-    font-size: 2em;
+#shortcuts {
+  display: flex;
 }
 
-#hr-shortcuts{
-    border: 3px solid grey;
-    border-radius: 3px;
+#menu-font {
+  font-weight: 550;
+  margin: 0;
+  font-size: 25px;
 }
 
-#x-button{
-    position: absolute;
-    top: 112%;
-    left: 44.7%;
+#hr-menu {
+  width: 100%;
+  margin: 0%;
+  margin-bottom: 0.5vw;
+  border: 2px solid grey;
+  border-radius: 4px;
+}
+
+#shortcut-font {
+  margin: 0%;
+  font-size: 20px;
+  font-weight: 550;
+}
+
+#hr-shortcuts {
+  width: 100%;
+  margin: 0%;
+  margin-bottom: 0.5vw;
+  border: 1px solid grey;
+  border-radius: 3px;
+}
+
+#x-button {
+  bottom: -90px;
+  position: absolute;
+  left: 173px;
+}
+
+.menu-button {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.tv-grid-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.files-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.carouselContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }

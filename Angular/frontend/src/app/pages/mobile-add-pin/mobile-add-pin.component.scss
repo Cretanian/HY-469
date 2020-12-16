@@ -1,0 +1,83 @@
+@keyframes Entry{
+    from{
+        transform: translateY(250%);
+    }
+    to{
+        transform: translateY(0%);
+    }
+}
+
+.main-container{
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;;
+    justify-content: space-between;
+
+    position: fixed;
+    width: 85.4vw;
+    height: 53vw;
+    top: 50%;
+    left: 50%;
+    margin-top: -35.7vw; /* Negative half of height. */
+    margin-left: -42.7vw; /* Negative half of width. */
+
+    animation-name: Entry;
+    animation-duration: 1s;
+}
+
+.window-header{
+    background-color: #468189;
+    justify-self: flex-start;
+}
+
+.window-label{
+    padding: 2vw;
+    margin: 0px;
+    font-size: 6vw;
+    color: white;
+}
+
+.form-container{
+    padding: 3vw;
+}
+
+.form-label{
+    font-size: 4.5vw;
+}
+
+.form{
+    font-size: 4.5vw
+}
+
+.buttons-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+
+    padding: 1vw;
+    padding-bottom: 1.5vw;;
+}
+
+.button{
+    width: 40%;
+    border-radius: 1.2vw;
+}
+
+.button-label{
+    color: white;
+    font-size: 5vw;
+    margin: auto;
+    text-align: center;;
+
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+}
+
+.cancel{
+    background-color: #C4C4C4;
+}
+
+.pin{
+    background-color: #468189;
+}

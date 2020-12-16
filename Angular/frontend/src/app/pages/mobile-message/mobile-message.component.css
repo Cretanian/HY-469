@@ -1,3 +1,7 @@
+.none{
+    display: none;
+}
+
 .main-container{
     width: 100%;
     height: auto;
@@ -71,8 +75,8 @@
 
 .message-time{
     position: absolute;
-    left: 61vw;
-    bottom: 0%;
+    right: 2%;
+    bottom: 2%;
     margin: 0px;
     font-size: 2.8vw;
 }
@@ -96,4 +100,13 @@
 .emoji{
     padding-left: 1vw;
     padding-right: 1vw;
+}
+
+.message-extra{
+    width: 100vw;
+
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    z-index: 99999;
 }

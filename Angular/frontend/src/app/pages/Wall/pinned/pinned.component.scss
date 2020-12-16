@@ -1,0 +1,68 @@
+img{
+    width: 100%;
+    height: 100%;
+}
+
+p{
+    font-size: 2em;
+}
+
+.main-container{
+    width: auto;
+    height: auto;
+    max-width: 46.8em;
+    min-width: 25em;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.label-pin{
+    width: 1.9em;
+    height: 1.9em;
+    z-index: 100;
+}
+
+.label-name{
+    padding-left: 0.625em;
+    margin-bottom: 0px;
+    margin: 0px;
+}
+
+.label-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+    text-align: center;
+}
+
+.pinned-container{
+    align-self: flex-start;
+    width: 100%;
+    height: auto;
+    background-color: white;
+    border-radius: 10px;
+
+    position: relative;
+}
+
+.pinned-message{
+    padding: 0.3125em;
+    padding-left: 1.25em;
+    padding-bottom: 0px;;
+    margin: auto
+}
+
+.pinned-content{
+    width: 80%;
+    height: auto;
+    
+    align-self: center;
+    justify-self: center;
+
+    padding: auto;
+    padding-top: 1.25em;
+    padding-bottom: 1.25em;
+    margin: auto;
+}

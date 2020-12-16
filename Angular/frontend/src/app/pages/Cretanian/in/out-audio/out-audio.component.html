@@ -1,8 +1,11 @@
 <div class = 'size'>
     <app-generic-volume-editor
         slider-label = '{{device}}:'
+        [volume] = 'volume'
     ></app-generic-volume-editor>
     <app-generic-volume-dropdown
         dropdown-label = '{{device}} Device:'
+        [dropdownOptions] = 'dropdownOptions'
+        (selectionEvent)='postToBase($event)'
     ></app-generic-volume-dropdown>
 </div>

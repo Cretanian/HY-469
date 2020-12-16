@@ -1,5 +1,5 @@
 <div class = "size">
-    <div class="color">
+    <div class="color" [ngStyle] = "{'background-color' : color }">
 
     </div>
 
@@ -9,6 +9,7 @@
         </div>
         <div class="container4">
             <p>{{time}}
+            <h1 *ngIf = 'this.team != this.Team_name'>{{team}}</h1>
         </div>
 
     </div>

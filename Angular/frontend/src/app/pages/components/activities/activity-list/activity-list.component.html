@@ -1,1 +1,7 @@
-<activity *ngFor = "let msg of messageList" [msg] = msg></activity>
+<div *ngIf = "messageList !== undefined">
+    <activity  *ngFor = "let msg of messageList" [msg] = msg></activity>
+</div>
+<div *ngIf = "messageList === undefined || messageList.length === 0">
+    <activity-empty></activity-empty>
+</div>
+

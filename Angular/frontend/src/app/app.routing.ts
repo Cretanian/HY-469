@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { NgModule } from "@angular/core";
+import { Routes, RouterModule } from "@angular/router";
 /*Cretanian*/
 import { ExplorerChatComponent } from './pages/Final-Cretanian/explorer-chat/explorer-chat.component';
 import { ExplorerTeamsComponent } from './pages/Final-Cretanian/explorer-teams/explorer-teams.component';
@@ -20,18 +20,45 @@ import { ParticipantsMobileComponent } from './pages/Final-Cretanian/participant
 import { MobileControllerComponent } from './pages/mobile-controller/mobile-controller.component';
 import { MobileJoinMeetingComponent } from './pages/mobile-join-meeting/mobile-join-meeting.component';
 import { OncallFilesComponent } from './pages/Final-Cretanian/oncall-files/oncall-files.component';
-
+import { ControllerCallChatComponent } from './pages/Final-Cretanian/controller-call-chat/controller-call-chat.component';
+import { ExplorerTeamConversationComponent } from './pages/Final-Cretanian/explorer-team-conversation/explorer-team-conversation.component';
+import { ExplorerContactChatComponent } from './pages/Final-Cretanian/explorer-contact-chat/explorer-contact-chat.component'
+import { SetUserComponent } from './pages/set-user/set-user.component'
+import { TvMasterComponent } from './pages/Final-Cretanian/tv-master/tv-master.component'
+import { ManyUsersComponent } from   './pages/Final-Wall/many-users/many-users.component'
+import { FinalTableComponent } from   './pages/Table/final-table/final-table.component'
+import { TeamsParticipantsComponent } from './pages/Final-Cretanian/teams-participants/teams-participants.component';
+import { MobilePinboardComponent } from "./pages/Final-Cretanian/mobile-pinboard/mobile-pinboard.component";
 
 const routes: Routes = [
-  { path: '', redirectTo: '/explorer-mobile-teams', pathMatch: 'full'},
+  {
+    path: "",
+    redirectTo: "/explorer-mobile-team-controller",
+    pathMatch: "full",
+  },
   /*Oncall*/
-  { path: 'explorer-mobile-team-joinmeeting', component: MobileJoinMeetingComponent },
-  { path: 'explorer-mobile-team-controller', component: MobileControllerComponent },
-  { path: 'explorer-mobile-team-tvgrid', component: TVGridMobileComponent },
-  { path: 'explorer-mobile-team-chat', component: MobileChatComponent },
-  { path: 'explorer-mobile-team-call-setting', component: OncallCallSettingsComponent },
-  { path: 'explorer-mobile-team-participants', component: ParticipantsMobileComponent },
-  { path: 'explorer-mobile-team-files', component: OncallFilesComponent },
+  {
+    path: "explorer-mobile-team-joinmeeting",
+    component: MobileJoinMeetingComponent,
+  },
+  {
+    path: "explorer-mobile-team-controller",
+    component: MobileControllerComponent,
+  },
+  { path: "explorer-mobile-team-tvgrid", component: TVGridMobileComponent },
+  { path: "explorer-mobile-team-chat", component: ControllerCallChatComponent },
+  {
+    path: "explorer-mobile-team-call-setting",
+    component: OncallCallSettingsComponent,
+  },
+  {
+    path: "explorer-mobile-team-participants",
+    component: ParticipantsMobileComponent,
+  },
+  { path: "explorer-mobile-team-files", component: OncallFilesComponent },
+  { path: "explorer-mobile-team-pinboard", component: MobilePinboardComponent },
+  { path: "wall-master", component: ManyUsersComponent },
+  { path: "table-master", component: FinalTableComponent },
   /*Mobile*/
   { path: 'explorer-mobile-activities', component: ActivitiesComponent },
   { path: 'explorer-mobile-contacts', component: ContactsComponent },
@@ -40,18 +67,23 @@ const routes: Routes = [
   { path: 'explorer-mobile-files', component: ExplorerFilesComponent },
   { path: 'explorer-mobile-calendar', component: ExplorerCalendarComponent },
   { path: 'explorer-mobile-smarthome', component: ExplorerSmarthomeComponent },
+  { path: 'explorer-mobile-teams-participants/:team_name', component: TeamsParticipantsComponent },
   { path: 'explorer-mobile-onlinedevices/:team_name', component: ExplorerOnlineDevicesComponent },
   { path: 'explorer-mobile-teams-files/:team_name', component: ExplorerTeamsFilesComponent },
   { path: 'explorer-mobile-teams-calendar/:team_name', component: ExplorerTeamsCalendarComponent },
   { path: 'explorer-mobile-team-conversations/:team_name', component: ConversationsComponent },
+  { path: 'explorer-mobile-team-conversation/:team_name/:conversationID', component: ExplorerTeamConversationComponent },
+  { path: 'explorer-mobile-contact-chat/:contact', component: ExplorerContactChatComponent },
+  { path: 'set-user', component: SetUserComponent},
+  { path: 'tv-master', component: TvMasterComponent},
   { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
 
 export const routingComponents = [
   ActivitiesComponent,
@@ -72,5 +104,5 @@ export const routingComponents = [
   OncallFilesComponent,
   ConversationsComponent,
   ParticipantsMobileComponent,
-  NotFoundComponent
-]; 
+  NotFoundComponent,
+];

@@ -7,12 +7,15 @@
 
     <div class="body">     
         <app-chat-list
-            *ngFor= 'let chat of chats_array'
-            [header] = 'chat.header'
+             *ngFor= 'let chat_item of chat'
+            [header] = 'chat_item.header'
+            [chat] = 'chat_item.chat_list'
         ></app-chat-list>
+        <ami-fullstack-add-button></ami-fullstack-add-button>
+        <ami-fullstack-return-oncall-button></ami-fullstack-return-oncall-button>
     </div>
 
-    <mobile-footer class='footer'></mobile-footer>
+    <mobile-footer class='footer' activeTab='chat'></mobile-footer>
 
     <account-menu
         name='Stylianos Stamatakis'

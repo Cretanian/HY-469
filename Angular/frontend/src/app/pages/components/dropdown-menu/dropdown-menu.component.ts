@@ -1,5 +1,4 @@
-import { dropdownOption } from './dropdown-option';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'dropdown-menu',
@@ -9,11 +8,13 @@ import { Component, OnInit, Input } from '@angular/core';
 export class DropdownMenuComponent implements OnInit {
 
   @Input() options: dropdownOption[];
-  constructor() { }
+  device_name:string;
+  @Output("clicked_event") clicked_emitter:EventEmitter<string> = new EventEmitter<string> ();
 
+  constructor() {}
+ 
   ngOnInit(): void {
     if(this.options == undefined){
-      console.log(this.options);
       this.options = [
         {
           name:"Samsung TV"
@@ -28,4 +29,13 @@ export class DropdownMenuComponent implements OnInit {
     }
   }
 
+  get_name(name:string){
+    this.device_name = name;
+    this.clicked_emitter.emit(this.device_name);
+  }
+
+}
+
+class dropdownOption{
+  name: string;
 }

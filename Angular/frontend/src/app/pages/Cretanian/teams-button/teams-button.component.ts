@@ -14,11 +14,7 @@ export class TeamsButtonComponent implements OnInit {
  
   
   constructor() {
-    // if(this.iconSrc == undefined)  
-    //   this.iconSrc = '../../assets/steli.png'
-
-    // if(this.groupName == undefined)
-    //   this.groupName = 'ZoomE'
+  
   }
 
   ngOnInit(): void {

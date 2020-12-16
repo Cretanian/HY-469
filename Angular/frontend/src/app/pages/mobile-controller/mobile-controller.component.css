@@ -4,12 +4,23 @@
     height: 100vh;
     background-color: #373944;
 
-    overflow: hidden;;
+}
+
+@keyframes Enlarge{
+    from{
+        opacity: 0%;
+    }
+    to{
+        opacity: 100%;
+    }
 }
 
 .more-hamburger{
     position: absolute;
     top: 25%;
+
+    animation-name: Enlarge;
+    animation-duration: 1s;
 }
 
 .bone{

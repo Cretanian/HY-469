@@ -6,33 +6,32 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./files-list.component.css']
 })
 export class FilesListComponent implements OnInit {
-  @Input ('header') header: string;
-  @Input ('icon') icon: string;
-  file_array:file[] = [
-    {
-      "image" : '/assets/files/excel.png',
-      "name" : "cat.xls",
-      "last_edit" : "1.1MB on 21/05/2010"
-    },
-    {
-      "image" : '/assets/files/excel.png',
-      "name" : "cat.xls",
-      "last_edit" : "1.1MB on 21/05/2010"
-    }
-    ]; 
-  constructor() { }
+  @Input() header:string;
+  @Input() icon:string;
+  @Input() file_list:file_list[];
 
-  ngOnInit(): void {
+  dropdownOpen: boolean;
+
+  constructor() {
+    this.dropdownOpen = false;
   }
 
+  ngOnInit(): void {}
+
 }
-class file{
+
+class file_list{
   image:string;
   name:string;
   last_edit:string;
+  Favorites:string;
+  Team:string;
+
   constructor() { 
     this.image ='';
     this.name ='';
     this.last_edit ='';
+    this.Favorites ='';
+    this.Team ='';
   }
 }

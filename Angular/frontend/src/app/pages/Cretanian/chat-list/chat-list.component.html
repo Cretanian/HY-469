@@ -2,13 +2,14 @@
     <div class="header">
        {{header}}
     </div>
-  
-        <app-chat-messeges
-            *ngFor = "let chat of chat_array"
-            [image] = 'chat.image'
-            [name] = 'chat.name'
-            [last_msg] = 'chat.last_msg'
-            [active_state] = 'chat.active_state'
-        ></app-chat-messeges>
 
+    <app-chat-messeges 
+        *ngFor = "let chat_item of chat"
+        [image] = 'chat_item.image'
+        [name] = 'chat_item.name'
+        [last_msg] = 'chat_item.last_msg'
+        [active_state] = 'chat_item.active_state'
+        [date] = 'chat_item.date'
+        [routerLink] = "['/explorer-mobile-contact-chat', chat_item.name]"
+    ></app-chat-messeges>
 </div>

@@ -16,12 +16,28 @@
         iconSize='10'
     ></g-button>
 
-    <input class="form-control form-control-lg form" type="text" placeholder="Write here...">
+    <input 
+        #input
+        class="form-control form-control-lg form"
+        type="text"
+        placeholder="Write here..."
+        (keypress)="keyPress($event)"
+    >
     
     <g-button
+        *ngIf="sendIconActive == false"
         class='emoji button'
         icon='../../assets/emoji_icon.png'
         iconSize='10'
     ></g-button>
+
+    <g-button
+        *ngIf="sendIconActive == true"
+        class='emoji button'
+        icon='../../assets/send_icon.png'
+        iconSize='10'
+        (click)='sendInput()'
+    ></g-button>
+
 
 </div>

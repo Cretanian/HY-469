@@ -33,7 +33,8 @@
 }
 
 .time{
-    transform: translate(20%, 30%);
+    transform: translate(10%, 25%);
+    color: rgb(71, 71, 71);
     font-size: 2.8vw;
     padding-bottom: 0px;
     margin-top: 0px;
@@ -44,7 +45,7 @@
     line-height: 110%;
     width: 100% !important;
     font-size: 3.2vw;
-    margin-top: 0px;
+    margin-top: 1vw;
     margin-bottom: 0px;
 
     color: rgb(19, 19, 19);
@@ -54,15 +55,15 @@
 
 .emoji-area{
     padding-top: 2%;
-    width: 15vw;
+    width: 13vw;
     height: auto;
 
     display: flex;
 }
 
 .emoji{
-    width: 8.8vw;
-    height: 5.8vw;
+    width: 8vw;
+    height: 4.5vw;
 }
 
 @media only screen and (max-width: 660px) {

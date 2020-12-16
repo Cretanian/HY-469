@@ -1,0 +1,22 @@
+<div
+    [ngClass]="{
+        'main-container' : message.alignment == 'left' || message.alignment == '',
+        'main-container-right' : message.alignment == 'right'
+    }"
+    (click)='openExtras($event)'
+>
+    <div class='sender-container'
+        [ngClass]="{ 
+            'sender-container' : message.alignment == 'left' || message.alignment == '',
+            'sender-container-right' : message.alignment == 'right'
+        }"
+    >
+        <img class='sender-profile' src='{{findPhoto(message.photo)}}' alt=''>
+        <p class='sender-name'>{{message.name}}</p>
+    </div>
+    <div class='message-container'>
+        <p class='message-text'>{{message.message}}</p>
+        <p class='message-time'>{{message.time}}</p>
+    </div>
+
+</div>  

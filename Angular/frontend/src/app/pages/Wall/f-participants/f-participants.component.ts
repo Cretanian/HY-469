@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
+import { participant } from '../../components/utils/participant';
 
 @Component({
   selector: 'app-f-participants',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./f-participants.component.css']
 })
 export class FParticipantsComponent implements OnInit {
-
+  @Input() participants: participant[];
   constructor() { }
 
   ngOnInit(): void {

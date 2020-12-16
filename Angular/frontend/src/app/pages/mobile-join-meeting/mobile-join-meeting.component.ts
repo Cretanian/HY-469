@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { dropdownOption } from '../components/dropdown-menu/dropdown-option';
+import { InOutDevicesService } from 'src/app/global/services/Cretanian/InOut-devices/inout-devices.service';
+import { SocketsService } from "src/app/global/services";
+import { OutVideoService } from 'src/app/global/services/Cretanian/out-video/out-video.service';
+import { UserService } from 'src/app/global/services/user/user.service';
 
 @Component({
   selector: 'mobile-join-meeting',
@@ -13,26 +16,37 @@ export class MobileJoinMeetingComponent implements OnInit {
   inputOptions: dropdownOption[];
   outputOptions: dropdownOption[];
 
-  constructor() { }
+  constructor(
+    private outvideoService: OutVideoService,
+    private inoutdevicesService: InOutDevicesService,
+    private socketService: SocketsService,
+    private userService: UserService
+  ) { }
 
   ngOnInit(): void {
+    this.loadIODevices();
 
-  this.cameraOptions = [
-    { name: 'Samsung TV' },
-    { name: 'Samsugn A20e Mobile' }
-  ]
-  this.inputOptions = [
-    { name: 'Samsung TV' },
-    { name: 'Samsugn A20e Mobile' },
-    { name: 'Alexa Home Assistant' }
-  ]
-  this.outputOptions = [
-    { name: 'Samsung TV' },
-    { name: 'Samsugn A20e Mobile' },
-    { name: 'Alexa Home Assistant' },
-    { name: 'Bluetooth 8DD Speaker'}
-  ]
-
+    this.socketService.syncMessages("device/changed").subscribe((event) => {
+      this.loadIODevices();
+    });
   }
 
+  loadIODevices(){
+    this.outvideoService.getAll("asd").subscribe(data => {
+      this.cameraOptions = data as dropdownOption[];
+    });
+
+    this.inoutdevicesService.getAll("asd").subscribe((data: any) => {
+      this.inputOptions = data.inputDevices as dropdownOption[];
+      this.outputOptions = data.outputDevices as dropdownOption[];
+    });
+  }
+
+  joinCall(){
+    this.userService.acceptCall();
+  }
+}
+
+class dropdownOption{
+  name: string;
 }

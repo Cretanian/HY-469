@@ -6,7 +6,12 @@
 
 
     <div class="wrapper">
-        <dropdown class = "test">
+        <dropdown class = "test"
+            [dropdownOptions] = 'dropdownOptions'
+            (selectionClicked)='selectionEmitted($event)'
+        >
         </dropdown>
     </div>
 </div>
+
+<!-- all-settings > generic-volume-down > dropdown -->

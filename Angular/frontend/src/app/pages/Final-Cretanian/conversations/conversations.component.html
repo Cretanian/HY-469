@@ -1,38 +1,40 @@
 <div class="phone">
-    <header class='header'
-        name = {{Team_name}}
-        src1='\assets\Hamburger.png'
-        src2='../../../assets/call_icon.png' 
-        src3='../../../assets/team_more_icon.png'
-        (event1)='enableAccountMenu()'
-        (event3)='this.moreOpen = true'
-    ></header>
+  <header
+    class="header"
+    name="{{ Team_name }}"
+    src1="\assets\Hamburger.png"
+    src2="../../../assets/call_icon.png"
+    src3="../../../assets/team_more_icon.png"
+    (event1)="enableAccountMenu()"
+    (event3)="this.moreOpen = true"
+  ></header>
 
-    <div class="body">    
-        <conversation-preview 
-            *ngFor= 'let conversation of conversations'
-            [initialMessage] = 'conversation.initialMessage'
-            [replyMessage] = 'conversation.replyMessage'
-        ></conversation-preview>
-    </div>
+  <div class="body">
+    <conversation-preview
+      *ngFor="let conversation of conversations"
+      [initialMessage]="conversation.initialMessage"
+      [replyMessage]="conversation.replyMessage"
+      [isOnCall]='conversation.isOnCall'
+      [routerLink]="[
+        '/explorer-mobile-team-conversation',
+        Team_name,
+        conversation.id
+      ]"
+    ></conversation-preview>
+    <ami-fullstack-add-button></ami-fullstack-add-button>
+    <ami-fullstack-return-oncall-button></ami-fullstack-return-oncall-button>
+  </div>
 
-    <mobile-footer class='footer'></mobile-footer>
+  <mobile-footer class="footer" activeTab="teams"></mobile-footer>
 
-    <div 
-        class='team-more-container'
-        *ngIf='moreOpen'
-    >
-        <dimmer
-            (click)='disableMore()'
-        ></dimmer>
-        <mobile-team-more
-            class='team-more'
-            (disableMore) = "disableMore()"
-            [Team_name] = "Team_name"
-        ></mobile-team-more>
-    </div>
+  <div class="team-more-container" *ngIf="moreOpen">
+    <dimmer (click)="disableMore()"></dimmer>
+    <mobile-team-more
+      class="team-more"
+      (disableMore)="disableMore()"
+      [Team_name]="Team_name"
+    ></mobile-team-more>
+  </div>
 
-    <account-menu
-        name='Stylianos Stamatakis'
-    ></account-menu>
+  <account-menu name="Stylianos Stamatakis"></account-menu>
 </div>

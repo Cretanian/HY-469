@@ -1,13 +1,81 @@
 <div class = "size">
-    <app-tv-speaker
-    *ngFor="let speaker of speakers_array"
-    [image] = 'speaker.image'
-    [mic] = 'speaker.mic'
-    [speaker] = 'speaker.speaker'
-    width = '6.17vw'
-    height = '5.20vw'
-    paddingleft = ' 0.21vw'
-    fontsize = '0.37vw'
-    margin = '0.10vw'
-    ></app-tv-speaker>
+    <ng-container *ngIf="grid == 10">
+        <app-tv-speaker
+        *ngFor="let speaker of participants | slice:1:8"
+        [image] = 'speaker.src2'
+        [mic] = 'speaker.isMuted'
+        [speaker] = 'speaker.name'
+        [volume]= 'speaker.volume'
+        style="margin-left: auto;margin-right: auto;"
+        width = '6.17vw'
+        height = '5.20vw'
+        paddingleft = ' 0.21vw'
+        fontsize = '0.37vw'
+        margin = '0.0vw'
+        ></app-tv-speaker>
+    </ng-container>
+
+    <ng-container *ngIf="grid ==  0">
+        <app-tv-speaker
+        *ngFor="let speaker of participants | slice:1:8"
+        [image] = 'speaker.src2'
+        [mic] = 'speaker.isMuted'
+        [speaker] = 'speaker.name'
+        [volume]= 'speaker.volume'
+        style="margin-left: auto;margin-right: auto;"
+        width = '6.17vw'
+        height = '5.20vw'
+        paddingleft = ' 0.21vw'
+        fontsize = '0.37vw'
+        margin = '0.0vw'
+        ></app-tv-speaker>
+    </ng-container>
+
+    <ng-container *ngIf="grid == 2">
+        <app-tv-speaker
+        *ngFor="let speaker of participants | slice:3:10"
+        [image] = 'speaker.src2'
+        [mic] = 'speaker.isMuted'
+        [speaker] = 'speaker.name'
+        [volume]= 'speaker.volume'
+        style="margin-left: auto;margin-right: auto;"
+        width = '6.17vw'
+        height = '5.20vw'
+        paddingleft = ' 0.21vw'
+        fontsize = '0.37vw'
+        margin = '0.0vw'
+        ></app-tv-speaker>
+    </ng-container>
+
+    <ng-container *ngIf="grid == 4">
+        <app-tv-speaker
+        *ngFor="let speaker of participants | slice:6:14"
+        [image] = 'speaker.src2'
+        [mic] = 'speaker.isMuted'
+        [speaker] = 'speaker.name'
+        [volume]= 'speaker.volume'
+        style="margin-left: auto;margin-right: auto;"
+        width = '6.17vw'
+        height = '5.20vw'
+        paddingleft = ' 0.21vw'
+        fontsize = '0.37vw'
+        margin = '0.0vw'
+        ></app-tv-speaker>
+    </ng-container>
+
+    <ng-container *ngIf="grid == 3">
+        <app-tv-speaker
+        *ngFor="let speaker of participants | slice:4:11"
+        [image] = 'speaker.src2'
+        [mic] = 'speaker.isMuted'
+        [speaker] = 'speaker.name'
+        [volume]= 'speaker.volume'
+        style="margin-left: auto;margin-right: auto;"
+        width = '6.17vw'
+        height = '5.20vw'
+        paddingleft = ' 0.21vw'
+        fontsize = '0.37vw'
+        margin = '0.0vw'
+        ></app-tv-speaker>
+    </ng-container>
 </div>

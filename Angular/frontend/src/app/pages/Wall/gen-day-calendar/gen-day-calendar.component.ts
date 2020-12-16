@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 
 @Component({
   selector: 'app-gen-day-calendar',
@@ -7,14 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GenDayCalendarComponent implements OnInit {
 
-  events_array:event[] = [
-    {
-      "event" : 'ela re pame volta',
-      "time" : '11:00 - 5:40'
-    },
-    
-    ]; 
-
+  @Input() event_A: events;
+  
+  
   constructor() { }
 
   ngOnInit(): void {
@@ -25,8 +20,18 @@ export class GenDayCalendarComponent implements OnInit {
 class event{
   event:string;
   time:string;
+  color:string;
   constructor(){
     this.event = '';
     this.time = '';
-  }
+    this.color = '';
+    }
+}
+
+
+class events{
+  day: string;
+  date: string;
+  month: string;
+  events_array: event[];
 }

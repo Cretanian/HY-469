@@ -1,62 +1,183 @@
-<div class='main-container'>
-    <img src='../../assets/table/table_menu_background.png' alt=''>
-    <div class='container col'>
-        
-        <div>
+<div
+  class="allContainer"
+  *ngIf="
+    tvGridWindowSpawned ||
+    !this.enableParticipantSpawn ||
+    this.filesWindowSpawned ||
+    this.display
+  "
+>
+  <!-- Participants Window-->
+  <div
+    [ngStyle]="{
+      position: 'absolute',
+      bottom: this.returnTopParticipants(),
+      right: this.returnRightParticipants()
+    }"
+  >
+    <participants-window
+      (displayEvent)="receiveDisplayParticipantEvent($event)"
+      [display]="!this.enableParticipantSpawn"
+    >
+    </participants-window>
+  </div>
 
-            <br>
-            <p id='menu-font'>Menus</p>
-            <hr id='hr-menu'>
+  <!-- Files Window-->
+  <div
+    [ngStyle]="{
+      position: 'absolute',
+      bottom: this.returnTopFiles(),
+      right: this.returnRightFiles()
+    }"
+  >
+    <div class="files-container" *ngIf="filesWindowSpawned">
+      <img
+        *ngIf="!this.fileIsOpen"
+        (click)="this.buttonDespawnFiles()"
+        src="../../../../assets/icons/tableXButton.png"
+        style="display: block; height: 71px; margin-right: 0.3vw"
+      />
+      <ami-fullstack-files-window
+        (openFileEvent)="this.despawnXButton()"
+        (closeFileEvent)="this.buttonDespawnFiles()"
+      ></ami-fullstack-files-window>
+    </div>
+  </div>
 
-            <div id='menu-buttons' class='row '>
-                <g-button
-                    icon='../../assets/table/table_left_arrow.png'
-                ></g-button>
+  <!-- Tv Grid Window -->
+  <div
+    [ngStyle]="{
+      position: 'absolute',
+      bottom: this.returnTopTvGrid(),
+      right: this.returnRightTvGrid()
+    }"
+  >
+    <div class="tv-grid-container" *ngIf="tvGridWindowSpawned">
+      <img
+        (click)="this.buttonDespawnTvGrid()"
+        src="../../../../assets/icons/tableXButton.png"
+        style="display: block; height: 71px; margin-right: 0.3vw"
+      />
+      <table-tvgrid></table-tvgrid>
+    </div>
+  </div>
 
-                <g-button
-                    icon='../../assets/table/manage_sound.png'
-                    iconSize='10'
-                ></g-button>
-                <g-button
-                    icon='../../assets/table/files.png'
-                    iconSize='10'
-                ></g-button>
-                <g-button
-                    icon='../../assets/table/participants.png'
-                    iconSize='10'
-                ></g-button>
+  <!-- Menu Window -->
+  <div
+    [ngStyle]="{
+      position: 'absolute',
+      bottom: this.returnTop(0),
+      right: this.returnRight(0)
+    }"
+  >
+    <div class="main-container" *ngIf="this.display">
+      <img
+        class="background"
+        src="../../assets/table/background.png"
+        style="width: inherit; height: inherit"
+      />
+      <div class="menu-container">
+        <div id="menu-font">Menus</div>
+        <hr id="hr-menu" />
 
-                <g-button
-                    icon='../../assets/table/table_right_arrow.png'
-                ></g-button>
-            </div>
+        <div id="menu-buttons">
+          <g-button
+            (click)="this.carouselLeft()"
+            icon="../../assets/table/leftArrow.png"
+            iconSize="2.509"
+          ></g-button>
+          <div class="carouselContainer">
+            <g-button
+              [ngStyle]="{ order: this.carousel[0].order }"
+              *ngIf="this.carousel[0].display"
+              class="menu-button"
+              (click)="this.buttonSpawnFiles()"
+              icon="../../assets/table/buttonFiles.png"
+              iconSize="6"
+            ></g-button>
 
+            <g-button
+              [ngStyle]="{ order: this.carousel[1].order }"
+              *ngIf="this.carousel[1].display"
+              class="menu-button"
+              icon="../../assets/table/buttonShareAScreen.png"
+              iconSize="6"
+            ></g-button>
+
+            <g-button
+              [ngStyle]="{ order: this.carousel[2].order }"
+              *ngIf="this.carousel[2].display"
+              class="menu-button"
+              icon="../../assets/table/buttonRecordAScreen.png"
+              iconSize="6"
+            ></g-button>
+
+            <g-button
+              [ngStyle]="{ order: this.carousel[3].order }"
+              *ngIf="this.carousel[3].display"
+              class="menu-button"
+              (click)="this.buttonSpawnTvGrid()"
+              icon="../../assets/table/buttonTvGrid.png"
+              iconSize="6"
+            ></g-button>
+
+            <g-button
+              [ngStyle]="{ order: this.carousel[4].order }"
+              *ngIf="this.carousel[4].display"
+              class="menu-button"
+              (click)="this.buttonSpawnParticipants()"
+              icon="../../assets/table/buttonParticipants.png"
+              iconSize="6"
+            ></g-button>
+          </div>
+
+          <g-button
+            (click)="this.carouselRight()"
+            icon="../../assets/table/rightArrow.png"
+            iconSize="2.509"
+          ></g-button>
         </div>
 
         <div>
-            <p id='shortcut-font'>Shortcuts</p>
-            <hr id='hr-shortcuts'>
+          <p id="shortcut-font">Shortcuts</p>
+          <hr id="hr-shortcuts" />
 
-            <div id='shortcuts' class='row'>
-                <g-button
-                    icon='../../assets/table/mute.png'
-                    iconSize='3'
-                ></g-button>
-                <g-button
-                    icon='../../assets/table/chat.png'
-                    iconSize='3'
-                ></g-button>
-                <g-button
-                    icon='../../assets/table/end_call.png'
-                    iconSize='3'
-                ></g-button>
-            </div>
+          <div id="shortcuts">
+            <g-button
+              *ngIf="!this.userData[0].isMuted"
+              (click)="this.buttonMute()"
+              class="menu-button"
+              icon="../../assets/table/buttonMute.png"
+              iconSize="4.5"
+            ></g-button>
+            <g-button
+              *ngIf="this.userData[0].isMuted"
+              (click)="this.buttonMute()"
+              class="menu-button"
+              icon="../../assets/table/buttonUnmute.png"
+              iconSize="4.5"
+            ></g-button>
+            <g-button
+              class="menu-button"
+              icon="../../assets/table/buttonChat.png"
+              iconSize="4.5"
+            ></g-button>
+            <g-button
+              class="menu-button"
+              icon="../../assets/table/buttonEndCall.png"
+              iconSize="4.5"
+            ></g-button>
+          </div>
         </div>
 
         <g-button
-            id='x-button'
-            icon='../../assets/table/table_x_button.png'
-        ></g-button>
-
+          id="x-button"
+          (click)="this.despawnMenu()"
+          icon="../../assets/table/table_x_button.png"
+          iconSize="4.5"
+        >
+        </g-button>
+      </div>
     </div>
+  </div>
 </div>

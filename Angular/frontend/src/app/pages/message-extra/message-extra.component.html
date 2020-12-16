@@ -8,26 +8,31 @@
             class='emoji'
             icon='../../assets/emojis/thumbs_up_icon.png'
             iconSize='13'
+            (click)="emitEmoji('thumbs_up_icon.png')"
         ></g-button>
         <g-button
             class='emoji'
             icon='../../assets/emojis/winky_face_icon.png'
             iconSize='13'
+            (click)="emitEmoji('winky_face_icon.png')"
         ></g-button>
         <g-button
             class='emoji'
             icon='../../assets/emojis/tears_of_joy_icon.png'
             iconSize='13'
+            (click)="emitEmoji('tears_of_joy_icon.png')"
         ></g-button>
         <g-button
             class='emoji'
             icon='../../assets/emojis/hearts_for_eyes_icon.png'
             iconSize='13'
+            (click)="emitEmoji('hearts_for_eyes_icon.png')"
         ></g-button>
         <g-button
             class='emoji'
             icon='../../assets/emojis/skeptical_icon.png'
             iconSize='13'
+            (click)="emitEmoji('skeptical_icon.png')"
         ></g-button>
     </div>
     <div class='options'>
@@ -54,6 +59,7 @@
             name='Pin'
             fontColor='white'
             fontSize='5'
+            (click)='pinMenuToggler = true'
         ></g-button>
         <g-button
             class='options-button'
@@ -63,5 +69,15 @@
             fontColor='white'
             fontSize='5'
         ></g-button>
+    </div>
+
+    <div *ngIf='pinMenuToggler == true'>
+        <dimmer
+            (click)='pinMenuToggler = false'
+        ></dimmer>
+        <mobile-add-pin
+            (cancelEmitter)='pinMenuToggler = false'
+            (pinEmitter)='emitPin($event)'
+        ></mobile-add-pin>
     </div>
 </div>

@@ -1,20 +1,28 @@
-<div>
+<div 
+    (click) = "select()"
+>
     <div class = ComponentContainer>
-        <label class="CheckboxContainer">
             <div class = "TextAndCheckContainer">
-                <h1 class = "text">{{title}}</h1>
-                <input type="checkbox"  name="radio">
-                <span class="checkmark"></span>
+                <img 
+                    *ngIf = "selected !== grid.id"  
+                    class = "check" 
+                    src = "../../../../assets/tv-grid/notSelected.png"
+                >
+                <img 
+                    *ngIf = "selected === grid.id"  
+                    class = "check" 
+                    src = "../../../../assets/tv-grid/Selected.png"
+                >
+                <h1 class = "text">{{grid.title}}</h1>
             </div>
             
             <div class = "imageContainer">
                 <g-button
                     class='image'
                     iconSize='79.166'
-                    icon='{{src}}'
+                    icon='{{grid.src}}'
                 ></g-button>
-            </div>       
-          </label>     
+            </div>                    
     </div>
     <hr class = "line">
 </div>

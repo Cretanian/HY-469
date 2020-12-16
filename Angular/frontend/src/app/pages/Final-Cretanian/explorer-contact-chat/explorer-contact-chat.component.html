@@ -1,0 +1,24 @@
+<div class="phone">
+    <header 
+        class='header'
+        name = {{contact}}
+        src1='../../../../assets/tv-grid/back-header.png'
+        src3='../../../assets/call_icon.png' 
+        (event1)='backClicked()'
+    ></header>
+
+    <div class="body">    
+        <mobile-chat
+            class='chat'
+            [contact]='contact'
+        ></mobile-chat>
+    </div>
+
+    <mobile-chat-bar
+        [contact]='contact'
+    >
+    </mobile-chat-bar>
+
+    <mobile-footer class='footer' activeTab='chat'></mobile-footer>
+
+</div>

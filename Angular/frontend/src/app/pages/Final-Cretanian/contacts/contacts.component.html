@@ -6,11 +6,13 @@
     ></header>
 
     <div class="body" id = "contactsBody">     
-        <contact-section-list
+        <contact-section-list [sections] = sections
         ></contact-section-list>
+        <ami-fullstack-add-button></ami-fullstack-add-button>
+        <ami-fullstack-return-oncall-button></ami-fullstack-return-oncall-button>
     </div>
 
-    <mobile-footer class='footer'></mobile-footer>
+    <mobile-footer class='footer' activeTab='more'></mobile-footer>
 
     <account-menu
         name='Stylianos Stamatakis'

@@ -8,7 +8,7 @@
 
     <div class="body">     
         <div class = "black">
-            <p class="title"> Online Devices:</p>
+            <p class="title"> Linked Devices:</p>
         </div>
 
         <app-online-devices
@@ -16,8 +16,9 @@
         [icon] = 'device.icon'
         [device_name] = 'device.name'
         ></app-online-devices>
+        <ami-fullstack-return-oncall-button [up] = 'false'></ami-fullstack-return-oncall-button>
     </div>
 
-    <mobile-footer class='footer'></mobile-footer>
+    <mobile-footer class='footer' activeTab='more'></mobile-footer>
 
 </div>

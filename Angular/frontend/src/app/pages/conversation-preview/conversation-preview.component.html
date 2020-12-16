@@ -20,10 +20,14 @@
 
         <div class='reply-button' routerLink='/mobile-chat'>
             <p class='reply-text'>Reply</p>
-            <div class='empty-space'></div>
             <img class='reply-icon' src='../../assets/reply_icon.png' alt=''>
         </div>
 
+    </div>
+
+    <div *ngIf='isOnCall == true' class='oncall-join' routerLink='/explorer-mobile-team-controller-'>
+        <p class='oncall-text'>On Call</p>
+        <img class='oncall-icon' src='../../../assets/icons/join-call-icon.png' alt=''>
     </div>
 
 </div>

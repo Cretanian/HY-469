@@ -5,6 +5,8 @@
     flex-direction: column;
     background-color: #FEFEFE;
     margin-right: 00.52vw;
+    box-shadow: 0.2vw  0.2vw 0.2vw rgba(0, 0, 0, 0.25), 0.2vw 0.2vw 0.2vw rgba(0, 0, 0, 0.25);
+
 }
 
 .color{  
@@ -18,6 +20,7 @@
     background-color: #373944;
     font-size: 0.56vw;
     color: white;
+    
 }
 
 .events{  
@@ -25,6 +28,5 @@
     flex-direction: column;
     width: 100%;
     height: 90%;
-    box-shadow: 0.2vw  0.2vw 0.2vw rgba(0, 0, 0, 0.25), 0.2vw 0.2vw 0.2vw rgba(0, 0, 0, 0.25);
 }
 

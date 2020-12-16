@@ -1,23 +1,25 @@
-<div class="size">
+<div class="size" >
     <div class="header">
         <div class="date">
             <div class="numb">
-                11
+                {{event_A.date}}
             </div>
             <div class="month">
-                Oct
+                {{event_A.month}}
             </div>
         </div>
         
         <div class="day">
-            Today
+            {{event_A.day}}
         </div>
     </div>
 
     <app-calendar-event
-    *ngFor = "let event of events_array"
-    [event] = 'event.event'
-    [time] = 'event.time'
+    *ngFor = "let events of event_A.events_array"
+    [team] = 'events.team'
+    [event] = 'events.event'
+    [time] = 'events.time'
+    [color] = 'events.color'
     ></app-calendar-event>
     
     <hr style="width: 100%;border: 1px solid #000000; margin: 0;">

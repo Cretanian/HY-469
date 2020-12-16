@@ -3,12 +3,13 @@
         {{day}} | {{month}} {{date}} 
     </div>
 
-    <div class = "events" >
+    <div class = "events" [ngStyle] = "{'background-color' : color }">
 
         <app-callenda-event-wall
             *ngFor="let event of event_array;"
-            [event] = event.event_header
-            [time] = event.event_time
+            [event] = event.event
+            [time] = event.time
+            [color] = event.color
         ></app-callenda-event-wall>
       
     </div>

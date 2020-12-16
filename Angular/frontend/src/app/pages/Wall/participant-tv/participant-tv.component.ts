@@ -9,14 +9,14 @@ export class ParticipantTVComponent implements OnInit {
 
   @Input() name: string;
   @Input() srcProfile: string;
-  @Input() srcMic: string;
-  @Input() srcCamera: string;
   @Input() maxSize: number;
-
+  @Input() muted: boolean;
+  camera:boolean;
 
   constructor() { }
 
   ngOnInit(): void {    
+    this.camera = true;
   }
 
   setMaxSize(width: number,percentage: number) {
@@ -25,8 +25,7 @@ export class ParticipantTVComponent implements OnInit {
 
   format(name: string): string {
     this.maxSize = Math.trunc(this.maxSize); 
-    console.log("Max Size is " + this.maxSize);
-    console.log("Name Length is" + name.length);
+
 
     let decr = name.length-this.maxSize;
     if(decr < 2)

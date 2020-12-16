@@ -1,0 +1,32 @@
+.main-container{
+    width: 100vw;
+    height: 100vh;
+
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.gif-container{
+    margin: auto;
+    width: 50%;
+    height: auto;
+}
+
+.gif{
+    width: 100%;
+    height: auto;
+
+    transform-origin: center;
+    transform: scale(2);
+}
+
+.loading-text{
+    text-align: center;
+    font-size: 5.5vw;
+    color: white;
+}
