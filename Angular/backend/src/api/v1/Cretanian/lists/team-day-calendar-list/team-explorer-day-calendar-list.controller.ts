@@ -129,14 +129,6 @@ export class TeamDayCalendarListController {
             color: '#F7CAC9',
           },
           {
-            team: 'YeetFleet',
-            date : '18',
-            month : 'OCT',
-            event : 'Eat something',
-            time : '15:00 - 16:00',
-            color: '#92A8D1',
-          },
-          {
             team: '0',
             date : '19',
             month : 'OCT',

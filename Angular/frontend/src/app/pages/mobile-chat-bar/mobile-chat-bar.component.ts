@@ -65,7 +65,9 @@ export class MobileChatBarComponent {
   keyPress($event: any){
     let form = this.inputForm.nativeElement;
     let input: string = form.value;
-    if(input[0] != undefined && event.keyCode == 13){
+    let ela: any;
+    ela = $event;
+    if(input[0] != undefined && ela.keyCode == 13){
       this.sendInput();
       this.sendIconActive = false;
     }
